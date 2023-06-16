@@ -1,0 +1,11 @@
+import 'package:flutter/material.dart';
+
+class CustomThemes{
+
+}
+
+class CustomColors {
+  static Color primaryColor = const Color(0xFF3A8877);
+  static Color onboardColor = const Color(0xFF91DECE);
+  static Color secondaryColor = const Color(0xFFFFFFFF);
+}
