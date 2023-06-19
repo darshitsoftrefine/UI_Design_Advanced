@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
+import '../bottom_bar.dart';
 import '../home_screens/home_dashboard.dart';
 
 class OtpVerification extends StatefulWidget {
@@ -47,7 +48,7 @@ class _OtpVerificationState extends State<OtpVerification> {
             ElevatedButton(onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeDashboard()),
+                MaterialPageRoute(builder: (context) => BottomBar()),
               );
             },   style: ElevatedButton.styleFrom(
               fixedSize: const Size(350, 50),

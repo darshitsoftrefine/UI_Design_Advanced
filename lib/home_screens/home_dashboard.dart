@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/bottom_bar.dart';
 import 'package:tradly/constants/custom_field.dart';
+import 'package:tradly/home_screens/browse.dart';
+import 'package:tradly/product_details/beverages_product.dart';
+import 'package:tradly/product_details/fruit_product.dart';
+import 'package:tradly/product_details/home_product.dart';
+import 'package:tradly/product_details/pet_product.dart';
+import 'package:tradly/product_details/vegetables_product.dart';
 import 'package:tradly/themes/themes.dart';
+
+import '../product_details/bread_product.dart';
+import '../product_details/egg_product.dart';
+import '../product_details/frozen_product.dart';
 
 class HomeDashboard extends StatefulWidget {
   const HomeDashboard({super.key});
@@ -14,17 +24,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
 
   TextEditingController control = TextEditingController();
 
-  int _selectedIndex = 0 ;
-  final List<Widget> _widgetOptions = <Widget>[
-    const HomeDashboard(),
-
-  ];
-
-  void _onItemTap(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,59 +95,50 @@ class _HomeDashboardState extends State<HomeDashboard> {
           ),
         ),
       ),
-      // appBar: AppBar(
-      //   elevation: 0.0,
-      //   automaticallyImplyLeading: false,
-      //   toolbarHeight: 100,
-      //   backgroundColor: CustomColors.primaryColor,
-      //   title: Text('Groceries', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-      //   actions: <Widget>[
-      //     IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
-      //     const SizedBox(width: 1,),
-      //     IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
-      //
-      //   ],
-      // ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 8, top: 15),
-              child: Row(
-                children: [
-                  Stack(
-                    children: [
-                      Image.asset('assets/images/food_home.png', width: 310,),
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 35, left: 15),
-                            child: Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 15, bottom: 8, right: 25, left: 15),
-                            child: ElevatedButton(onPressed: (){
-
-                            },   style: ElevatedButton.styleFrom(
-                              fixedSize: const Size(180, 35),
-                              backgroundColor: Colors.transparent,
-                              side: BorderSide(color: Colors.white, width: 1),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(32),
-                              ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Stack(
+                      children: [
+                        Image.asset('assets/images/food_home.png', width: 310,),
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 35, left: 15),
+                              child: Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
                             ),
-                              child: const Text(
-                                "START SHOPPING",
-                                style: TextStyle(fontSize: 15, color:Colors.white),
-                              ),),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Image.asset('assets/images/home_side.png'),
-                ],
+                            Padding(
+                              padding: const EdgeInsets.only(top: 15, bottom: 8, right: 25, left: 15),
+                              child: ElevatedButton(onPressed: (){
+
+                              },   style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(180, 35),
+                                backgroundColor: Colors.transparent,
+                                side: BorderSide(color: Colors.white, width: 1),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(32),
+                                ),
+                              ),
+                                child: const Text(
+                                  "START SHOPPING",
+                                  style: TextStyle(fontSize: 15, color:Colors.white),
+                                ),),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Image.asset('assets/images/home_side.png'),
+                    Image.asset('assets/images/bread.png'),
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -157,16 +147,30 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 children: [
                   Stack(
                    children:[
-                    Image.asset('assets/images/Rectangle 28.png', width: 100,),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => BeveragesProduct()),
+                        );
+                      },
+                        child: Image.asset('assets/images/Rectangle 28.png', width: 100,)),
                      Padding(
-                       padding: const EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
+                       padding: const EdgeInsets.only(top: 40.0, left: 12, right: 8, bottom: 20),
                        child: Text("Beverages", style: TextStyle(color: Colors.white, fontSize: 13),),
                      ),
                    ]
     ),
                   Stack(
                       children:[
-                        Image.asset('assets/images/Rectangle 29.png', width: 100,),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => BreadProduct()),
+                              );
+                            },
+                            child: Image.asset('assets/images/Rectangle 29.png', width: 100,)),
                         Padding(
                           padding: const EdgeInsets.only(top: 40.0, bottom: 20),
                           child: Text("Bread Bakery", style: TextStyle(color: Colors.white, fontSize: 13),),
@@ -175,18 +179,32 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Stack(
                       children:[
-                        Image.asset('assets/images/Rectangle 30.png', width: 100,),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => VegetableProduct()),
+                              );
+                            },
+                            child: Image.asset('assets/images/Rectangle 30.png', width: 100,)),
                         Padding(
-                          padding: const EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
+                          padding: const EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
                           child: Text("Vegetables", style: TextStyle(color: Colors.white, fontSize: 13),),
                         ),
                       ]
                   ),
                   Stack(
                       children:[
-                        Image.asset('assets/images/Rectangle 31.png', width: 100,),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => FruitProduct()),
+                              );
+                            },
+                            child: Image.asset('assets/images/Rectangle 31.png', width: 100,)),
                         Padding(
-                          padding: const EdgeInsets.only(top: 40.0, bottom: 20),
+                          padding: const EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
                           child: Text("Fruits", style: TextStyle(color: Colors.white, fontSize: 13),),
                         ),
                       ]
@@ -201,7 +219,14 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 children: [
                   Stack(
                       children:[
-                        Image.asset('assets/images/Rectangle 32.png', width: 100,),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => EggProduct()),
+                              );
+                            },
+                            child: Image.asset('assets/images/Rectangle 32.png', width: 100,)),
                         Padding(
                           padding: const EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
                           child: Text("Egg", style: TextStyle(color: Colors.white, fontSize: 13),),
@@ -210,7 +235,14 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Stack(
                       children:[
-                        Image.asset('assets/images/Rectangle 33.png', width: 100,),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => FrozenProduct()),
+                              );
+                            },
+                            child: Image.asset('assets/images/Rectangle 33.png', width: 100,)),
                         Padding(
                           padding: const EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
                           child: Text("Frozen Veg", style: TextStyle(color: Colors.white, fontSize: 13),),
@@ -219,7 +251,14 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Stack(
                       children:[
-                        Image.asset('assets/images/Rectangle 34.png', width: 100,),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => HomeProduct()),
+                            );
+                          },
+                            child: Image.asset('assets/images/Rectangle 34.png', width: 100,)),
                         Padding(
                           padding: const EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
                           child: Text("Homecare", style: TextStyle(color: Colors.white, fontSize: 13),),
@@ -228,9 +267,16 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Stack(
                       children:[
-                        Image.asset('assets/images/Rectangle 35.png', width: 100,),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => PetProduct()),
+                              );
+                            },
+                            child: Image.asset('assets/images/Rectangle 35.png', width: 100,)),
                         Padding(
-                          padding: const EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
+                          padding: const EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
                           child: Text("Pet Care", style: TextStyle(color: Colors.white, fontSize: 13),),
                         ),
                       ]
@@ -264,15 +310,20 @@ class _HomeDashboardState extends State<HomeDashboard> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Image.asset('assets/images/Product with sale.png'),
-                  SizedBox(width: 15,),
-                  Image.asset('assets/images/Product.png'),
-                  SizedBox(width: 15,),
-                  Image.asset('assets/images/Product with sale1.png'),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/Product with sale.png'),
+                    SizedBox(width: 15,),
+                    Image.asset('assets/images/Product.png'),
+                    SizedBox(width: 15,),
+                    Image.asset('assets/images/Product with sale1.png'),
+                    SizedBox(width: 15,),
+                    Image.asset('assets/images/Product.png'),
 
-                ],
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -300,15 +351,20 @@ class _HomeDashboardState extends State<HomeDashboard> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Image.asset('assets/images/Productfish.png'),
-                  SizedBox(width: 15,),
-                  Image.asset('assets/images/Productshampoo.png'),
-                  SizedBox(width: 15,),
-                  Image.asset('assets/images/Product with sale1.png'),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/Productfish.png'),
+                    SizedBox(width: 15,),
+                    Image.asset('assets/images/Productshampoo.png'),
+                    SizedBox(width: 15,),
+                    Image.asset('assets/images/Product with sale1.png'),
+                    SizedBox(width: 15,),
+                    Image.asset('assets/images/Productshampoo.png'),
 
-                ],
+                  ],
+                ),
               ),
             ),
             Container(
@@ -343,7 +399,13 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Image.asset('assets/images/Store.png'),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/images/Store.png'),
+                        SizedBox(width: 5,),
+                        Image.asset('assets/images/Storing.png'),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -351,7 +413,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomBar()
     );
   }
 }
