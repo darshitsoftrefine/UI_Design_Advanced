@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/bottom_bar.dart';
 import 'package:tradly/constants/custom_field.dart';
 import 'package:tradly/home_screens/browse.dart';
+import 'package:tradly/home_screens/wishlist_screen.dart';
 import 'package:tradly/product_details/beverages_product.dart';
 import 'package:tradly/product_details/fruit_product.dart';
 import 'package:tradly/product_details/home_product.dart';
@@ -9,6 +10,7 @@ import 'package:tradly/product_details/pet_product.dart';
 import 'package:tradly/product_details/vegetables_product.dart';
 import 'package:tradly/themes/themes.dart';
 
+import '../cart/cart_add_address.dart';
 import '../product_details/bread_product.dart';
 import '../product_details/egg_product.dart';
 import '../product_details/frozen_product.dart';
@@ -45,14 +47,20 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   IconButton(
                     icon: Icon(Icons.favorite, color: Colors.white,),
                     onPressed: () {
-// do something
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WishlistScreen()),
+                      );
                     },
                   ),
                   Stack(
                     children:[ IconButton(
                       icon: Icon(Icons.shopping_cart, color: Colors.white,),
                       onPressed: () {
-// do something
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CartAddAddress()),
+                        );
                       },
                     ),
                       Positioned(

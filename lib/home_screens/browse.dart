@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/home_screens/wishlist_screen.dart';
 
 import '../bottom_bar.dart';
+import '../cart/cart_add_address.dart';
 import '../product_details/product_detail.dart';
 import '../themes/themes.dart';
 import 'home_dashboard.dart';
@@ -37,14 +39,20 @@ class _BrowseState extends State<Browse> {
                   IconButton(
                     icon: Icon(Icons.favorite, color: Colors.white,),
                     onPressed: () {
-// do something
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WishlistScreen()),
+                      );
                     },
                   ),
                   Stack(
                     children:[ IconButton(
                       icon: Icon(Icons.shopping_cart, color: Colors.white,),
                       onPressed: () {
-// do something
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CartAddAddress()),
+                        );
                       },
                     ),
                     ],

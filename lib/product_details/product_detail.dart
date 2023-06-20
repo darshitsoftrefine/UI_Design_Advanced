@@ -22,7 +22,9 @@ class ProductDetail extends StatelessWidget {
                       Positioned(child:
                       Row(
                         children: [
-                          IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_rounded, color: Colors.white60,)),
+                          IconButton(onPressed: (){
+                            Navigator.pop(context);
+                          }, icon: Icon(Icons.arrow_back_rounded, color: Colors.white60,)),
                           SizedBox(width: 200,),
                           CircleAvatar(
                             backgroundColor: Colors.transparent,
@@ -138,21 +140,7 @@ class ProductDetail extends StatelessWidget {
                       Text("Home Delievery Available, \n Cash on Delievery")
                     ],
                   ),
-                  ElevatedButton(onPressed: (){
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => SendOtp()),
-                    // );
-                  },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(190, 40),
-                    backgroundColor: CustomColors.primaryColor,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32)),
-                  ),
-                    child: const Text(
-                      "Add to Cart",
-                      style: TextStyle(fontSize: 20, color:Colors.white),
-                    ),),
+
                 ],
               ),
             )
@@ -160,6 +148,24 @@ class ProductDetail extends StatelessWidget {
         ),
           ),
       ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: ElevatedButton(onPressed: (){
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => SendOtp()),
+          // );
+        },   style: ElevatedButton.styleFrom(
+          fixedSize: const Size(190, 40),
+          backgroundColor: CustomColors.primaryColor,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(32)),
+        ),
+          child: const Text(
+            "Add to Cart",
+            style: TextStyle(fontSize: 20, color:Colors.white),
+          ),),
       ),
     );
   }

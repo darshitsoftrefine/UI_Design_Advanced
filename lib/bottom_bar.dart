@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/store/my_store.dart';
 
 import 'home_screens/browse.dart';
 import 'home_screens/home_dashboard.dart';
@@ -16,7 +17,7 @@ class _BottomBarState extends State<BottomBar> {
   final List<Widget> _widgetOptions = <Widget>[
     const HomeDashboard(),
     const Browse(),
-    Container(),
+    const MyStore(),
     Container(),
     Container(),
   ];
