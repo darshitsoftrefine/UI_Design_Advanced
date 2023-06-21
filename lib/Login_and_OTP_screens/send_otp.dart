@@ -38,7 +38,21 @@ class _SendOtpState extends State<SendOtp> {
               Text("We have sent you an SMS with a code to enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
               SizedBox(height: 20,),
               //NumberDropdownTextField(),
-              CustomField(label: '+91  9876543210' , control: control, obs: false),
+    Container(
+      width: 350,
+      child: DropdownButtonFormField<String>(
+      decoration: InputDecoration(
+      ),
+      hint: Text('+ 91 91234567890'),
+      items: <String>['+91', '+56', '+89', '+32'].map((String value) {
+      return DropdownMenuItem<String>(
+      value: value,
+      child: new Text(value),
+      );
+      }).toList(),
+      onChanged: (_) {},
+      ),
+    ),
               SizedBox(height: 100,),
               Text('Or login with Social Network', style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
               SizedBox(height: 20,),

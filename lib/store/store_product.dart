@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../themes/themes.dart';
+import 'add_product_store.dart';
 
 class StoreProduct extends StatelessWidget {
   const StoreProduct({super.key});
@@ -75,6 +76,30 @@ class StoreProduct extends StatelessWidget {
                   ),),
               ],
             ),
+            SizedBox(height: 30,),
+            Text("Remove Store", style: TextStyle(color: Colors.grey),),
+            SizedBox(height: 70,),
+            Text("You don't have product", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            SizedBox(height: 40,),
+            ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AddProductStore()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(290, 60),
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32),
+                  side: BorderSide(
+                      color: CustomColors.primaryColor
+                  )
+              ),
+            ),
+              child: const Text(
+                "Add Product",
+                style: TextStyle(fontSize: 20, color: Color(0xFF3A8877)),
+              ),),
           ],
         ),
       ),

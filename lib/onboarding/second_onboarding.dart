@@ -27,7 +27,7 @@ class _Onboarding_2State extends State<Onboarding_2> {
           ),
           Positioned(
               top: 260,
-              left: 45,
+              left: 37,
               child: Container(
                 color: Colors.white,
                 child: Column(

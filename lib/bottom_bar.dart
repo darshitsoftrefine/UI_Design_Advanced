@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/home_screens/order_history.dart';
+import 'package:tradly/home_screens/profile.dart';
 import 'package:tradly/store/my_store.dart';
+import 'package:tradly/themes/themes.dart';
 
 import 'home_screens/browse.dart';
 import 'home_screens/home_dashboard.dart';
@@ -18,8 +21,8 @@ class _BottomBarState extends State<BottomBar> {
     const HomeDashboard(),
     const Browse(),
     const MyStore(),
-    Container(),
-    Container(),
+    const OrderHistory(),
+    const Profile(),
   ];
 
   void _onItemTap(int index) {
@@ -36,9 +39,9 @@ class _BottomBarState extends State<BottomBar> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: CustomColors.primaryColor,
         backgroundColor: Colors.white,
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         // unselectedItemColor: Colors.black,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

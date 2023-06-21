@@ -144,7 +144,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       ],
                     ),
                     Image.asset('assets/images/home_side.png'),
-                    Image.asset('assets/images/bread.png'),
                   ],
                 ),
               ),
@@ -327,8 +326,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     Image.asset('assets/images/Product.png'),
                     SizedBox(width: 15,),
                     Image.asset('assets/images/Product with sale1.png'),
-                    SizedBox(width: 15,),
-                    Image.asset('assets/images/Product.png'),
 
                   ],
                 ),
@@ -369,7 +366,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     SizedBox(width: 15,),
                     Image.asset('assets/images/Product with sale1.png'),
                     SizedBox(width: 15,),
-                    Image.asset('assets/images/Productshampoo.png'),
 
                   ],
                 ),
@@ -407,12 +403,17 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Image.asset('assets/images/Store.png'),
-                        SizedBox(width: 5,),
-                        Image.asset('assets/images/Storing.png'),
-                      ],
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          Image.asset('assets/images/Store.png'),
+                          SizedBox(width: 5,),
+                          Image.asset('assets/images/Storing.png'),
+                          SizedBox(width: 5,),
+                          Image.asset('assets/images/Product with sale1.png'),
+                        ],
+                      ),
                     ),
                   ),
                 ],
