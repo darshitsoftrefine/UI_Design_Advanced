@@ -32,7 +32,7 @@ class StoreProduct extends StatelessWidget {
                     child: Text('T', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                   ),
                 ),
-            SizedBox(height: 20,),
+            SizedBox(height: 16,),
             Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +43,7 @@ class StoreProduct extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => StoreProduct()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(120, 30),
+                  fixedSize: const Size(106, 23),
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32),
@@ -54,10 +54,10 @@ class StoreProduct extends StatelessWidget {
                 ),
                   child: const Text(
                     "Edit Store",
-                    style: TextStyle(fontSize: 15, color: Color(0xFF3A8877)),
+                    style: TextStyle(fontSize: 12, color: Color(0xFF3A8877)),
                   ),),
 
-                  SizedBox(width: 25,),
+                  SizedBox(width: 17,),
 
                 ElevatedButton(onPressed: (){
                   // Navigator.push(
@@ -65,29 +65,29 @@ class StoreProduct extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => StoreProduct()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(120, 30),
+                  fixedSize: const Size(111, 23),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32)),
                 ),
                   child: const Text(
                     "View Store",
-                    style: TextStyle(fontSize: 15, color:Colors.white),
+                    style: TextStyle(fontSize: 12, color:Colors.white),
                   ),),
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 36,),
             Text("Remove Store", style: TextStyle(color: Colors.grey),),
             SizedBox(height: 70,),
-            Text("You don't have product", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-            SizedBox(height: 40,),
+            Text("You don't have product", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+            SizedBox(height: 37,),
             ElevatedButton(onPressed: (){
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => AddProductStore()),
               );
             },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(290, 60),
+              fixedSize: const Size(219, 48),
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(32),
@@ -98,7 +98,7 @@ class StoreProduct extends StatelessWidget {
             ),
               child: const Text(
                 "Add Product",
-                style: TextStyle(fontSize: 20, color: Color(0xFF3A8877)),
+                style: TextStyle(fontSize: 18, color: Color(0xFF3A8877)),
               ),),
           ],
         ),

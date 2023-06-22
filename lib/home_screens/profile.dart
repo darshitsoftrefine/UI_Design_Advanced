@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/home_screens/wishlist_screen.dart';
 
+import '../cart/cart_add_address.dart';
 import '../themes/themes.dart';
 
 class Profile extends StatelessWidget {
@@ -15,8 +17,18 @@ class Profile extends StatelessWidget {
           title: Text("Profile", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
           backgroundColor: CustomColors.primaryColor,
           actions: <Widget>[
-            IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
-            IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
+            IconButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => WishlistScreen()),
+              );
+            }, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
+            IconButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CartAddAddress()),
+              );
+            }, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
 
           ],
         ),
@@ -36,6 +48,7 @@ class Profile extends StatelessWidget {
               Positioned(
                   top: 150,
                   left: 40,
+                  right: 40,
                   child: Container(
                     width: 335,
                     height: 266,
@@ -44,16 +57,16 @@ class Profile extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-              Text("Edit Profile", style: TextStyle(fontSize: 15),),
-              SizedBox(height: 20,),
-              Text("Language & Currency", style: TextStyle(fontSize: 15),),
-              SizedBox(height: 20,),
-                    Text("Feedback", style: TextStyle(fontSize: 15),),
-                    SizedBox(height: 20,),
-                    Text("Refer a Friend", style: TextStyle(fontSize: 15),),
-                    SizedBox(height: 20,),
-                    Text("Terms & Conditions", style: TextStyle(fontSize: 15),),
-                    SizedBox(height: 20,),
+              Text("Edit Profile", style: TextStyle(fontSize: 14),),
+              SizedBox(height: 22,),
+              Text("Language & Currency", style: TextStyle(fontSize: 14),),
+              SizedBox(height: 22,),
+                    Text("Feedback", style: TextStyle(fontSize: 14),),
+                    SizedBox(height: 22,),
+                    Text("Refer a Friend", style: TextStyle(fontSize: 14),),
+                    SizedBox(height: 22,),
+                    Text("Terms & Conditions", style: TextStyle(fontSize: 14),),
+                    SizedBox(height: 22,),
                     Text("Logout", style: TextStyle(color: CustomColors.primaryColor, fontSize: 15),)
     ]
     ),
@@ -62,7 +75,7 @@ class Profile extends StatelessWidget {
               Container(
                 height: 110,
                 width: 500,
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 color: CustomColors.primaryColor,
                 child: Row(
                   children: [
@@ -74,11 +87,11 @@ class Profile extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 60,
                             backgroundColor: CustomColors.primaryColor,
-                            child: Text("T", style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white),),
+                            child: Text("T", style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold, color: Colors.white),),
                           ),
                         ),
                         Positioned(
-                            top: 40,
+                            top: 70,
                             left: 97,
                             child: CircleAvatar(radius: 7, backgroundColor: Colors.white,))
                       ],

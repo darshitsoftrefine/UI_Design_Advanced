@@ -35,7 +35,24 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Image.asset('assets/images/visa.png'),
+                    Container(
+                      width: 250,
+                      height: 150,
+                      child: Stack(
+                        children: [
+                          Center(child: Image.asset('assets/images/visa.png', height: 140,)),
+                          Positioned(
+                            top: 120,
+                            left: 220,
+                            child: CircleAvatar(
+                              radius: 15,
+                              backgroundColor: CustomColors.onboardColor,
+                              child: Icon(Icons.arrow_forward, color: Colors.white,),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                     SizedBox(width: 15,),
                     DottedBorder(
                       color: Colors.grey, //color of dotted border
@@ -166,18 +183,18 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                         Text("Kualalumpur Malaysia"),
                       ],
                     ),
-                    SizedBox(width: 50,),
+                    SizedBox(width: 15,),
                     ElevatedButton(onPressed: (){
                       Navigator.pop(context);
                     },   style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(110, 30),
+                      fixedSize: const Size(94, 23),
                       backgroundColor: CustomColors.primaryColor,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32)),
                     ),
                       child: const Text(
                         "Change",
-                        style: TextStyle(fontSize: 15, color:Colors.white),
+                        style: TextStyle(fontSize: 12, color:Colors.white),
                       ),),
                   ],
                 ),
@@ -186,31 +203,31 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Price Details", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                 ],
               ),
               SizedBox(height: 20,),
               Row(
                 children: [
                   Text("Price (1 item) "),
-                  SizedBox(width: 225,),
-                  Text("\$ 25")
+                  SizedBox(width: 210,),
+                  Text("\$25")
                 ],
               ),
               SizedBox(height: 10,),
               Row(
                 children: [
                   Text("Delievery Fee"),
-                  SizedBox(width: 225,),
+                  SizedBox(width: 210,),
                   Text("Info")
                 ],
               ),
               SizedBox(height: 30,),
               Row(
                 children: [
-                  Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
-                  SizedBox(width: 141,),
-                  Text("\$ 25", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),)
+                  Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                  SizedBox(width: 160,),
+                  Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
                 ],
               )
             ],

@@ -33,7 +33,14 @@ class _MyHomePageState extends State<TrackOrderConstant> {
             beforeLineStyle: LineStyle(color: Colors.green),
             endChild: Padding(
               padding: EdgeInsets.all(8),
-              child: Text("Order Placed"),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("Order Placed"),
+                  Text('give order'),
+                  Text("jhciks")
+                ],
+              ),
             ),
           ),
           TimelineTile(

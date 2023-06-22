@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/home_screens/wishlist_screen.dart';
 
+import '../cart/cart_add_address.dart';
 import '../themes/themes.dart';
 
 class OrderHistory extends StatelessWidget {
@@ -11,11 +13,21 @@ class OrderHistory extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         automaticallyImplyLeading: false,
-        title: Text("Order History", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: Text("Order History", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
-          IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
-          IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
+          IconButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => WishlistScreen()),
+            );
+          }, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
+          IconButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CartAddAddress()),
+            );
+          }, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
 
         ],
       ),
@@ -25,7 +37,7 @@ class OrderHistory extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text("Transactions", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                Text("Transactions", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
                 SizedBox(width: 10,),
                 Stack(
                   children: [
@@ -54,21 +66,21 @@ class OrderHistory extends StatelessWidget {
     ),
           ],
         ),
-      SizedBox(width: 80,),
+      SizedBox(width: 70,),
       ElevatedButton(onPressed: (){
         // Navigator.push(
         //   context,
         //   MaterialPageRoute(builder: (context) => MyStore()),
         // );
       },   style: ElevatedButton.styleFrom(
-        fixedSize: const Size(145, 10),
+        fixedSize: const Size(96, 25),
         backgroundColor: CustomColors.primaryColor,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(32)),
       ),
         child: const Text(
           "Delievered",
-          style: TextStyle(fontSize: 15, color:Colors.white),
+          style: TextStyle(fontSize: 10, color:Colors.white),
         ),),
       ]
       ),
@@ -89,14 +101,14 @@ class OrderHistory extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 83,),
+                  SizedBox(width: 87,),
                   ElevatedButton(onPressed: (){
                     // Navigator.push(
                     //   context,
                     //   MaterialPageRoute(builder: (context) => MyStore()),
                     // );
                   },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(165, 10),
+                    fixedSize: const Size(106, 25),
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
@@ -108,7 +120,7 @@ class OrderHistory extends StatelessWidget {
                   ),
                     child: const Text(
                       "Order Placed",
-                      style: TextStyle(fontSize: 15, color: Color(0xFF3A8877)),
+                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
                     ),),
                 ]
             ),
@@ -129,14 +141,14 @@ class OrderHistory extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 43,),
+                  SizedBox(width: 42,),
                   ElevatedButton(onPressed: (){
                     // Navigator.push(
                     //   context,
                     //   MaterialPageRoute(builder: (context) => MyStore()),
                     // );
                   },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(205, 20),
+                    fixedSize: const Size(155, 23),
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
@@ -148,7 +160,7 @@ class OrderHistory extends StatelessWidget {
                   ),
                     child: const Text(
                       "Payment Confirmed",
-                      style: TextStyle(fontSize: 15, color: Color(0xFF3A8877)),
+                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
                     ),),
                 ]
             ),
@@ -169,14 +181,14 @@ class OrderHistory extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 83,),
+                  SizedBox(width: 100,),
                   ElevatedButton(onPressed: (){
                     // Navigator.push(
                     //   context,
                     //   MaterialPageRoute(builder: (context) => MyStore()),
                     // );
                   },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(165, 10),
+                    fixedSize: const Size(96, 25),
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
@@ -188,7 +200,7 @@ class OrderHistory extends StatelessWidget {
                   ),
                     child: const Text(
                       "Processed",
-                      style: TextStyle(fontSize: 15, color: Color(0xFF3A8877)),
+                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
                     ),),
                 ]
             ),

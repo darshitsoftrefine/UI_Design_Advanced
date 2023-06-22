@@ -17,7 +17,7 @@ class CreateStore extends StatelessWidget {
         backgroundColor: CustomColors.primaryColor,
       ),
       body: Padding(
-          padding: const EdgeInsets.only(top: 70, left: 40, right: 40, bottom: 10),
+          padding: const EdgeInsets.only(top: 23, left: 20, right: 40, bottom: 10),
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
@@ -25,7 +25,7 @@ class CreateStore extends StatelessWidget {
             Center(child: Image.asset('assets/images/undraw_business_shop_qw5t.png')),
       SizedBox(height: 35,),
                   Text("This information is used to set up"),
-                  Text('your shop'),
+                  Text('your shop', style: TextStyle(fontSize: 14),),
                   SizedBox(height: 20,),
                   Container(
                     alignment: Alignment.topLeft,
@@ -53,7 +53,7 @@ class CreateStore extends StatelessWidget {
     ),
     child: const Text(
     "Create",
-    style: TextStyle(fontSize: 20, color:Colors.white),
+    style: TextStyle(fontSize: 18, color:Colors.white, fontWeight: FontWeight.bold),
     ),),
     ),
     );

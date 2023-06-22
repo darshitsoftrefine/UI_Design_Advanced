@@ -32,24 +32,27 @@ class _PaymentScreenState extends State<PaymentScreen> {
               child: Column(
 
                 children: [
-                  DottedBorder(
-                    color: Colors.grey, //color of dotted border
-                    strokeWidth: 2, //thickness of dots
-                    dashPattern: [8, 4], //length and space between dots
-                    child: Container(
-                      width: 300,
-                      height: 200,
-                      color: Colors.white,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(Icons.add, size: 80, color: Colors.grey,),
-                          Text(
-                            "Add Payment Method", style: TextStyle(color: Colors.grey),
-                            textAlign: TextAlign.center, //also center the text
-                          ),
-                        ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 68, right: 61, top: 30),
+                    child: DottedBorder(
+                      color: Colors.grey, //color of dotted border
+                      strokeWidth: 2, //thickness of dots
+                      dashPattern: [8, 4], //length and space between dots
+                      child: Container(
+                        width: 246,
+                        height: 146,
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(Icons.add, size: 50, color: Colors.grey,),
+                            Text(
+                              "Add Payment Method", style: TextStyle(color: Colors.grey),
+                              textAlign: TextAlign.center, //also center the text
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -162,18 +165,18 @@ class _PaymentScreenState extends State<PaymentScreen> {
                             Text("Kualalumpur Malaysia"),
                           ],
                         ),
-                        SizedBox(width: 50,),
+                        SizedBox(width: 15,),
                         ElevatedButton(onPressed: (){
                           Navigator.pop(context);
                         },   style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(110, 30),
+                          fixedSize: const Size(94, 23),
                           backgroundColor: CustomColors.primaryColor,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(32)),
                         ),
                           child: const Text(
                             "Change",
-                            style: TextStyle(fontSize: 15, color:Colors.white),
+                            style: TextStyle(fontSize: 12, color:Colors.white),
                           ),),
                       ],
                     ),
@@ -182,14 +185,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text("Price Details", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                      Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                     ],
                   ),
                   SizedBox(height: 20,),
                   Row(
                     children: [
                       Text("Price (1 item) "),
-                      SizedBox(width: 225,),
+                      SizedBox(width: 205,),
                       Text("\$ 25")
                     ],
                   ),
@@ -197,16 +200,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   Row(
                     children: [
                       Text("Delievery Fee"),
-                      SizedBox(width: 225,),
+                      SizedBox(width: 205,),
                       Text("Info")
                     ],
                   ),
                   SizedBox(height: 30,),
                   Row(
                     children: [
-                      Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
-                      SizedBox(width: 141,),
-                      Text("\$ 25", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),)
+                      Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                      SizedBox(width: 155,),
+                      Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
                     ],
                   )
                 ],

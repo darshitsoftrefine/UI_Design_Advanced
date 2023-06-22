@@ -34,7 +34,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
         toolbarHeight: 150,
         automaticallyImplyLeading: false,
         flexibleSpace: Container(
-          padding: EdgeInsets.only(bottom: 20.0, top: 20.0, left: 15, right: 15),
+          padding: EdgeInsets.only(bottom: 20.0, top: 20.0, left: 15, right: 14),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,7 +43,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               Row(
                 children: [
                   Text("Groceries", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),),
-                  SizedBox(width: 100,),
+                  SizedBox(width: 104,),
                   IconButton(
                     icon: Icon(Icons.favorite, color: Colors.white,),
                     onPressed: () {

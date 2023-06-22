@@ -46,14 +46,14 @@ class SearchStore extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => SendOtp()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(120, 30),
+                  fixedSize: const Size(112, 31),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),
                     side: BorderSide(width: 1, color: Colors.white),
                   ),
                 ),
-                  icon: Icon(Icons.sort), label: Text("Sort By", style: TextStyle(color: Colors.white),),
+                  icon: Icon(Icons.sort), label: Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
                   // Navigator.push(
@@ -61,14 +61,14 @@ class SearchStore extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => SendOtp()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(130, 30),
+                  fixedSize: const Size(118, 31),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),
                     side: BorderSide(width: 1, color: Colors.white),
                   ),
                 ),
-                  icon: Icon(Icons.location_on), label: Text("Location", style: TextStyle(color: Colors.white),),
+                  icon: Icon(Icons.location_on), label: Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
                   // Navigator.push(
@@ -76,14 +76,14 @@ class SearchStore extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => SendOtp()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(130, 30),
+                  fixedSize: const Size(125, 31),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),
                     side: BorderSide(width: 1, color: Colors.white),
                   ),
                 ),
-                  icon: Icon(Icons.category), label: Text("Category", style: TextStyle(color: Colors.white),),
+                  icon: Icon(Icons.category), label: Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 SizedBox(height: 20,)
               ]
@@ -91,66 +91,70 @@ class SearchStore extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 35, left: 15, right: 10),
-        child: Row(
-          children: [
-            Container(
-              width: 190,
-              height: 190,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.asset('assets/images/apple.png'),
-                  SizedBox(height: 5,),
-                  Text("Apple"),
-                  SizedBox(height: 5,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: CustomColors.primaryColor,
-                        radius: 13,
-                        child: Text('T'),
-                      ),
-                      Text("  Tradly"),
-                      SizedBox(width: 10,),
-                      //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                      SizedBox(width: 5,),
-                      Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                    ],
-                  )
-                ],
+        padding: const EdgeInsets.only(top: 30, left: 28, right: 17),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              Container(
+                width: 160,
+                height: 190,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Image.asset('assets/images/apple.png'),
+                    SizedBox(height: 5,),
+                    Text("Apple"),
+                    SizedBox(height: 5,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: CustomColors.primaryColor,
+                          radius: 13,
+                          child: Text('T'),
+                        ),
+                        Text("  Tradly"),
+                        SizedBox(width: 10,),
+                        //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                        SizedBox(width: 5,),
+                        Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                      ],
+                    )
+                  ],
+                ),
               ),
-            ),
-            Container(
-              width: 190,
-              height: 190,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.asset('assets/images/orange.png'),
-                  SizedBox(height: 5,),
-                  Text("Orange"),
-                  SizedBox(height: 5,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: CustomColors.primaryColor,
-                        radius: 13,
-                        child: Text('T'),
-                      ),
-                      Text("  Tradly"),
-                      SizedBox(width: 10,),
-                      //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                      SizedBox(width: 5,),
-                      Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                    ],
-                  )
-                ],
+              SizedBox(width: 10,),
+              Container(
+                width: 160,
+                height: 190,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Image.asset('assets/images/orange.png'),
+                    SizedBox(height: 5,),
+                    Text("Orange"),
+                    SizedBox(height: 5,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: CustomColors.primaryColor,
+                          radius: 13,
+                          child: Text('T'),
+                        ),
+                        Text("  Tradly"),
+                        SizedBox(width: 10,),
+                        //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                        SizedBox(width: 5,),
+                        Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                      ],
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -11,65 +11,68 @@ class AddCardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        toolbarHeight: 100,
+        toolbarHeight: 80,
         title: Text("Add Card", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
 
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                color: CustomColors.primaryColor,
-              ),
-              Center(child: Container(child: Image.asset('assets/images/mastercard.png')))
-            ],
-          ),
-          Container(
-            padding: EdgeInsets.all(10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
               children: [
-                SizedBox(height: 20,),
-                Text("Card Number", style: TextStyle(color: Colors.grey),),
-                SizedBox(height: 10,),
-                Text("5627 2158 9854 8869", style: TextStyle(fontWeight: FontWeight.w600),),
-                SizedBox(height: 30,),
-                Text("Name", style: TextStyle(color: Colors.grey),),
-                SizedBox(height: 10,),
-                Text("Tradly", style: TextStyle(fontWeight: FontWeight.w600),),
-                SizedBox(height: 30,),
-                Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Expires Dates", style: TextStyle(color: Colors.grey),),
-                        SizedBox(height: 10,),
-                        Text("12/08", style: TextStyle(fontWeight: FontWeight.w600),),
-                      ],
-                    ),
-                    SizedBox(width: 190,),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("CVC", style: TextStyle(color: CustomColors.primaryColor),),
-                        SizedBox(height: 10,),
-                        Text("***",),
-                        Image.asset('assets/images/Path.png')
-                      ],
-                    )
-                  ],
-                )
+                Container(
+                  height: 50,
+                  width: MediaQuery.of(context).size.width,
+                  color: CustomColors.primaryColor,
+                ),
+                Center(child: Container(child: Image.asset('assets/images/mastercard.png')))
               ],
             ),
-          )
-        ],
+            Container(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 70,),
+                  Text("Card Number", style: TextStyle(color: Colors.grey),),
+                  SizedBox(height: 10,),
+                  Text("5627 2158 9854 8869", style: TextStyle(fontWeight: FontWeight.w600),),
+                  SizedBox(height: 30,),
+                  Text("Name", style: TextStyle(color: Colors.grey),),
+                  SizedBox(height: 10,),
+                  Text("Tradly", style: TextStyle(fontWeight: FontWeight.w600),),
+                  SizedBox(height: 30,),
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Expires Dates", style: TextStyle(color: Colors.grey),),
+                          SizedBox(height: 10,),
+                          Text("12/08", style: TextStyle(fontWeight: FontWeight.w600),),
+                        ],
+                      ),
+                      SizedBox(width: 130,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("CVC", style: TextStyle(color: CustomColors.primaryColor),),
+                          SizedBox(height: 10,),
+                          Text("***",),
+                          Image.asset('assets/images/Path.png')
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(8.0),
