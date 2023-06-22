@@ -21,24 +21,27 @@ class _Onboarding_3State extends State<Onboarding_3> {
             color: Colors.white,
           ),
           Container(
-            height: MediaQuery.of(context).size.height / 2,
+            height: MediaQuery.of(context).size.height / 2.5,
             width: MediaQuery.of(context).size.width,
             color: CustomColors.primaryColor,
           ),
           Positioned(
-              top: 260,
-              left: 55,
+              top: 85,
+              left: 31,
+              right: 39,
               child: Container(
                 color: Colors.white,
                 child: Column(
                   children: [
+                    SizedBox(height: 50,),
                     Image.asset('assets/images/Group 4.png'),
                     SizedBox(height: 50,),
                     Text("Donate, Invest and Support", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
                     Text("infrastructure projects", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                    SizedBox(height: 100,),
+                    SizedBox(height: 70,),
 
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CircleAvatar(
                           backgroundColor: CustomColors.onboardColor,
@@ -70,7 +73,7 @@ class _Onboarding_3State extends State<Onboarding_3> {
                         MaterialPageRoute(builder: (context) => Login()),
                       );
                     },   style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(250, 50),
+                      fixedSize: const Size(306, 50),
                       backgroundColor: CustomColors.primaryColor,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32)),

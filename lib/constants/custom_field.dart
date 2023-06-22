@@ -9,14 +9,14 @@ class CustomField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 5, left: 27, right: 27, bottom: 5),
+      padding: const EdgeInsets.only(top: 5, left: 21, right: 21, bottom: 5),
       child: TextFormField(
         enabled: true,
         style: TextStyle(color: Colors.white),
         controller: control,
         obscureText: obs,
         decoration: InputDecoration(
-            labelText: label, labelStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            labelText: label, labelStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),
             fillColor: Colors.white,
 
             // border: OutlineInputBorder(
@@ -27,7 +27,7 @@ class CustomField extends StatelessWidget {
             //   ),
             // ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25.0),
+            borderRadius: BorderRadius.circular(32.0),
             borderSide: BorderSide(
               color: Colors.white,
               width: 1.0,

@@ -42,8 +42,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
               SizedBox(height: 25,),
               Row(
                 children: [
-                  Text("Groceries", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-                  SizedBox(width: 120,),
+                  Text("Groceries", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),),
+                  SizedBox(width: 100,),
                   IconButton(
                     icon: Icon(Icons.favorite, color: Colors.white,),
                     onPressed: () {
@@ -127,7 +127,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               child: ElevatedButton(onPressed: (){
 
                               },   style: ElevatedButton.styleFrom(
-                                fixedSize: const Size(180, 35),
+                                fixedSize: const Size(200, 45),
                                 backgroundColor: Colors.transparent,
                                 side: BorderSide(color: Colors.white, width: 1),
                                 shape: RoundedRectangleBorder(
@@ -150,146 +150,152 @@ class _HomeDashboardState extends State<HomeDashboard> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: Row(
-                children: [
-                  Stack(
-                   children:[
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => BeveragesProduct()),
-                        );
-                      },
-                        child: Image.asset('assets/images/Rectangle 28.png', width: 100,)),
-                     Padding(
-                       padding: const EdgeInsets.only(top: 40.0, left: 12, right: 8, bottom: 20),
-                       child: Text("Beverages", style: TextStyle(color: Colors.white, fontSize: 13),),
-                     ),
-                   ]
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Stack(
+                     children:[
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => BeveragesProduct()),
+                          );
+                        },
+                          child: Image.asset('assets/images/Rectangle 28.png', width: 100,)),
+                       Padding(
+                         padding: const EdgeInsets.only(top: 40.0, left: 12, right: 8, bottom: 20),
+                         child: Text("Beverages", style: TextStyle(color: Colors.white, fontSize: 13),),
+                       ),
+                     ]
     ),
-                  Stack(
-                      children:[
-                        GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => BreadProduct()),
-                              );
-                            },
-                            child: Image.asset('assets/images/Rectangle 29.png', width: 100,)),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40.0, bottom: 20),
-                          child: Text("Bread Bakery", style: TextStyle(color: Colors.white, fontSize: 13),),
-                        ),
-                      ]
-                  ),
-                  Stack(
-                      children:[
-                        GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => VegetableProduct()),
-                              );
-                            },
-                            child: Image.asset('assets/images/Rectangle 30.png', width: 100,)),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
-                          child: Text("Vegetables", style: TextStyle(color: Colors.white, fontSize: 13),),
-                        ),
-                      ]
-                  ),
-                  Stack(
-                      children:[
-                        GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => FruitProduct()),
-                              );
-                            },
-                            child: Image.asset('assets/images/Rectangle 31.png', width: 100,)),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
-                          child: Text("Fruits", style: TextStyle(color: Colors.white, fontSize: 13),),
-                        ),
-                      ]
-                  ),
+                    Stack(
+                        children:[
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => BreadProduct()),
+                                );
+                              },
+                              child: Image.asset('assets/images/Rectangle 29.png', width: 100,)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 40.0, bottom: 20),
+                            child: Text("Bread Bakery", style: TextStyle(color: Colors.white, fontSize: 13),),
+                          ),
+                        ]
+                    ),
+                    Stack(
+                        children:[
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => VegetableProduct()),
+                                );
+                              },
+                              child: Image.asset('assets/images/Rectangle 30.png', width: 100,)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
+                            child: Text("Vegetables", style: TextStyle(color: Colors.white, fontSize: 13),),
+                          ),
+                        ]
+                    ),
+                    Stack(
+                        children:[
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => FruitProduct()),
+                                );
+                              },
+                              child: Image.asset('assets/images/Rectangle 31.png', width: 100,)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
+                            child: Text("Fruits", style: TextStyle(color: Colors.white, fontSize: 13),),
+                          ),
+                        ]
+                    ),
 
-                ],
+                  ],
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 1),
-              child: Row(
-                children: [
-                  Stack(
-                      children:[
-                        GestureDetector(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Stack(
+                        children:[
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => EggProduct()),
+                                );
+                              },
+                              child: Image.asset('assets/images/Rectangle 32.png', width: 100,)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
+                            child: Text("Egg", style: TextStyle(color: Colors.white, fontSize: 13),),
+                          ),
+                        ]
+                    ),
+                    Stack(
+                        children:[
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => FrozenProduct()),
+                                );
+                              },
+                              child: Image.asset('assets/images/Rectangle 33.png', width: 100,)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
+                            child: Text("Frozen Veg", style: TextStyle(color: Colors.white, fontSize: 13),),
+                          ),
+                        ]
+                    ),
+                    Stack(
+                        children:[
+                          GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => EggProduct()),
+                                MaterialPageRoute(builder: (context) => HomeProduct()),
                               );
                             },
-                            child: Image.asset('assets/images/Rectangle 32.png', width: 100,)),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
-                          child: Text("Egg", style: TextStyle(color: Colors.white, fontSize: 13),),
-                        ),
-                      ]
-                  ),
-                  Stack(
-                      children:[
-                        GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => FrozenProduct()),
-                              );
-                            },
-                            child: Image.asset('assets/images/Rectangle 33.png', width: 100,)),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
-                          child: Text("Frozen Veg", style: TextStyle(color: Colors.white, fontSize: 13),),
-                        ),
-                      ]
-                  ),
-                  Stack(
-                      children:[
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => HomeProduct()),
-                            );
-                          },
-                            child: Image.asset('assets/images/Rectangle 34.png', width: 100,)),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
-                          child: Text("Homecare", style: TextStyle(color: Colors.white, fontSize: 13),),
-                        ),
-                      ]
-                  ),
-                  Stack(
-                      children:[
-                        GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => PetProduct()),
-                              );
-                            },
-                            child: Image.asset('assets/images/Rectangle 35.png', width: 100,)),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
-                          child: Text("Pet Care", style: TextStyle(color: Colors.white, fontSize: 13),),
-                        ),
-                      ]
-                  ),
+                              child: Image.asset('assets/images/Rectangle 34.png', width: 100,)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
+                            child: Text("Homecare", style: TextStyle(color: Colors.white, fontSize: 13),),
+                          ),
+                        ]
+                    ),
+                    Stack(
+                        children:[
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => PetProduct()),
+                                );
+                              },
+                              child: Image.asset('assets/images/Rectangle 35.png', width: 100,)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
+                            child: Text("Pet Care", style: TextStyle(color: Colors.white, fontSize: 13),),
+                          ),
+                        ]
+                    ),
 
-                ],
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -297,7 +303,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("New Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                  Text("New Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                   SizedBox(width: 100,),
                   ElevatedButton(onPressed: (){
 
@@ -336,8 +342,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Popular Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-                  SizedBox(width: 50,),
+                  Text("Popular Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                  SizedBox(width: 65,),
                   ElevatedButton(onPressed: (){
 
                   },
@@ -383,8 +389,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("Store to Follow", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),),
-                        SizedBox(width: 60,),
+                        Text("Store to Follow", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),),
+                        SizedBox(width: 70,),
                         ElevatedButton(onPressed: (){
 
                         },

@@ -27,52 +27,36 @@ class _SendOtpState extends State<SendOtp> {
         elevation: 0.0,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 22, fontWeight: FontWeight.bold),),
-              SizedBox(height: 40,),
-              Text("We have sent you an SMS with a code to enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
-              SizedBox(height: 20,),
-              //NumberDropdownTextField(),
-    Container(
-      width: 350,
-      child: DropdownButtonFormField<String>(
-      decoration: InputDecoration(
-      ),
-      hint: Text('+ 91 91234567890'),
-      items: <String>['+91', '+56', '+89', '+32'].map((String value) {
-      return DropdownMenuItem<String>(
-      value: value,
-      child: new Text(value),
-      );
-      }).toList(),
-      onChanged: (_) {},
-      ),
-    ),
-              SizedBox(height: 100,),
-              Text('Or login with Social Network', style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
-              SizedBox(height: 20,),
-              ElevatedButton(onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => OtpVerification()),
-                );
-              },   style: ElevatedButton.styleFrom(
-                fixedSize: const Size(350, 50),
-                backgroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32)),
-              ),
-                child: const Text(
-                  "Next",
-                  style: TextStyle(fontSize: 20, color:Color(0xFF13B58C)),
-                ),),
-            ],
-          ),
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 24, fontWeight: FontWeight.w500),),
+            SizedBox(height: 40,),
+            Text("We have sent you an SMS with a code to enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
+            SizedBox(height: 20,),
+            //NumberDropdownTextField(),
+            CustomField(label: '+91  9876543210', control: control, obs: false),
+            SizedBox(height: 64,),
+            Text('Or login with Social Network', style: TextStyle(color: CustomColors.secondaryColor, fontSize: 18, fontWeight: FontWeight.w400),),
+            SizedBox(height: 20,),
+            ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => OtpVerification()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(314, 48),
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Next",
+                style: TextStyle(fontSize: 16, color:Color(0xFF13B58C)),
+              ),),
+          ],
         ),
       ),
     );

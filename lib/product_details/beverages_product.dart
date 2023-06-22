@@ -9,7 +9,7 @@ class BeveragesProduct extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: CustomColors.primaryColor,
-          toolbarHeight: 70,
+          toolbarHeight: 90,
           centerTitle: true,
           title: Text("Beverages", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),),
           bottom: PreferredSize(
@@ -23,14 +23,14 @@ class BeveragesProduct extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => SendOtp()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(120, 30),
+                  fixedSize: const Size(110, 30),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32),
-                    side: BorderSide(width: 1, color: Colors.white),
+                    side: BorderSide(width: 1, color: Colors.white,),
                   ),
                 ),
-                  icon: Icon(Icons.sort), label: Text("Sort By", style: TextStyle(color: Colors.white),),
+                  icon: Icon(Icons.sort), label: Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                   ),
                 ElevatedButton.icon(onPressed: (){
                   // Navigator.push(
@@ -38,14 +38,14 @@ class BeveragesProduct extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => SendOtp()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(130, 30),
+                  fixedSize: const Size(118, 30),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),
                     side: BorderSide(width: 1, color: Colors.white),
                   ),
                 ),
-                  icon: Icon(Icons.location_on), label: Text("Location", style: TextStyle(color: Colors.white),),
+                  icon: Icon(Icons.location_on), label: Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
                   // Navigator.push(
@@ -53,14 +53,14 @@ class BeveragesProduct extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => SendOtp()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(130, 30),
+                  fixedSize: const Size(125, 30),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),
                     side: BorderSide(width: 1, color: Colors.white),
                   ),
                 ),
-                  icon: Icon(Icons.category), label: Text("Category", style: TextStyle(color: Colors.white),),
+                  icon: Icon(Icons.category), label: Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
           ]
           ),
@@ -68,194 +68,209 @@ class BeveragesProduct extends StatelessWidget {
         ),
 
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Container(
-                  width: 190,
-                  height: 190,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+        padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
                   children: [
-                    Image.asset('assets/images/strawberry.png'),
-                    SizedBox(height: 5,),
-                    Text("Strawberry Punch"),
-                    SizedBox(height: 10,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Container(
+                      width: 160,
+                      height: 190,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        CircleAvatar(
-                          backgroundColor: CustomColors.primaryColor,
-                          radius: 13,
-                          child: Text('T'),
-                        ),
-                        Text("  Tradly"),
-                        SizedBox(width: 10,),
-                        Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                        SizedBox(width: 5,),
-                        Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                        Image.asset('assets/images/strawberry.png'),
+                        SizedBox(height: 5,),
+                        Text("Strawberry Punch"),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: CustomColors.primaryColor,
+                              radius: 13,
+                              child: Text('T'),
+                            ),
+                            Text("  Tradly"),
+                            SizedBox(width: 10,),
+                            Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                            SizedBox(width: 5,),
+                            Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                          ],
+                        )
                       ],
-                    )
+                    ),
+            ),
+                    SizedBox(width: 9,),
+                    Container(
+                      width: 160,
+                      height: 190,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Image.asset('assets/images/lemonade.png'),
+                          SizedBox(height: 5,),
+                          Text("Lemonade"),
+                          SizedBox(height: 5,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: CustomColors.primaryColor,
+                                radius: 13,
+                                child: Text('T'),
+                              ),
+                              Text("  Tradly"),
+                              SizedBox(width: 10,),
+                              //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                              SizedBox(width: 5,),
+                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+
                   ],
                 ),
-          ),
-                Container(
-                  width: 190,
-                  height: 190,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.asset('assets/images/lemonade.png'),
-                      SizedBox(height: 5,),
-                      Text("Lemonade"),
-                      SizedBox(height: 5,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+              ),
+              SizedBox(height: 10,),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 160,
+                      height: 190,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          CircleAvatar(
-                            backgroundColor: CustomColors.primaryColor,
-                            radius: 13,
-                            child: Text('T'),
-                          ),
-                          Text("  Tradly"),
-                          SizedBox(width: 10,),
-                          //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                          SizedBox(width: 5,),
-                          Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                          Image.asset('assets/images/chocolate.png'),
+                          SizedBox(height: 5,),
+                          Text("Chocolate"),
+                          SizedBox(height: 10,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: CustomColors.primaryColor,
+                                radius: 13,
+                                child: Text('T'),
+                              ),
+                              Text("  Tradly"),
+                              SizedBox(width: 10,),
+                              Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                              SizedBox(width: 5,),
+                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                            ],
+                          )
                         ],
-                      )
-                    ],
-                  ),
-                ),
-
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              children: [
-                Container(
-                  width: 190,
-                  height: 190,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.asset('assets/images/chocolate.png'),
-                      SizedBox(height: 5,),
-                      Text("Chocolate"),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      ),
+                    ),
+                    SizedBox(width: 9,),
+                    Container(
+                      width: 160,
+                      height: 190,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          CircleAvatar(
-                            backgroundColor: CustomColors.primaryColor,
-                            radius: 13,
-                            child: Text('T'),
-                          ),
-                          Text("  Tradly"),
-                          SizedBox(width: 10,),
-                          Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                          SizedBox(width: 5,),
-                          Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                          Image.asset('assets/images/whisky.png'),
+                          SizedBox(height: 5,),
+                          Text("Whisky"),
+                          SizedBox(height: 10,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: CustomColors.primaryColor,
+                                radius: 13,
+                                child: Text('T'),
+                              ),
+                              Text("  Tradly"),
+                              SizedBox(width: 10,),
+                              //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                              SizedBox(width: 5,),
+                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                            ],
+                          )
                         ],
-                      )
-                    ],
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  width: 190,
-                  height: 190,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.asset('assets/images/whisky.png'),
-                      SizedBox(height: 5,),
-                      Text("Whisky"),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+              ),
+              SizedBox(height: 10,),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 160,
+                      height: 190,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          CircleAvatar(
-                            backgroundColor: CustomColors.primaryColor,
-                            radius: 13,
-                            child: Text('T'),
-                          ),
-                          Text("  Tradly"),
-                          SizedBox(width: 10,),
-                          //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                          SizedBox(width: 5,),
-                          Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                          Image.asset('assets/images/choco_bakery.png'),
+                          SizedBox(height: 5,),
+                          Text("Chocolate Bakery"),
+                          SizedBox(height: 10,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: CustomColors.primaryColor,
+                                radius: 13,
+                                child: Text('T'),
+                              ),
+                              Text("  Tradly"),
+                              SizedBox(width: 10,),
+                              Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                              SizedBox(width: 5,),
+                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                            ],
+                          )
                         ],
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              children: [
-                Container(
-                  width: 190,
-                  height: 190,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.asset('assets/images/choco_bakery.png'),
-                      SizedBox(height: 5,),
-                      Text("Chocolate Bakery"),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      ),
+                    ),
+                    SizedBox(width: 9,),
+                    Container(
+                      width: 160,
+                      height: 190,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          CircleAvatar(
-                            backgroundColor: CustomColors.primaryColor,
-                            radius: 13,
-                            child: Text('T'),
-                          ),
-                          Text("  Tradly"),
-                          SizedBox(width: 10,),
-                          Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                          SizedBox(width: 5,),
-                          Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                          Image.asset('assets/images/fruit_punch.png'),
+                          SizedBox(height: 5,),
+                          Text("Fruit Punch"),
+                          SizedBox(height: 10,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: CustomColors.primaryColor,
+                                radius: 13,
+                                child: Text('T'),
+                              ),
+                              Text("  Tradly"),
+                              SizedBox(width: 10,),
+                              //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                              SizedBox(width: 5,),
+                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                            ],
+                          )
                         ],
-                      )
-                    ],
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  width: 190,
-                  height: 190,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.asset('assets/images/fruit_punch.png'),
-                      SizedBox(height: 5,),
-                      Text("Fruit Punch"),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: CustomColors.primaryColor,
-                            radius: 13,
-                            child: Text('T'),
-                          ),
-                          Text("  Tradly"),
-                          SizedBox(width: 10,),
-                          //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                          SizedBox(width: 5,),
-                          Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            )
+              )
     ]
+          ),
         ),
       ),
 

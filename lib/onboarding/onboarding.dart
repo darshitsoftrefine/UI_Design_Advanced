@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'second_onboarding.dart';
 
 class Onboarding extends StatefulWidget {
@@ -11,6 +11,8 @@ class Onboarding extends StatefulWidget {
 }
 
 class _OnboardingState extends State<Onboarding> {
+
+  final pushButtonTextStyle = GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,35 +24,40 @@ class _OnboardingState extends State<Onboarding> {
             color: Colors.white,
           ),
           Container(
-            height: MediaQuery.of(context).size.height / 2,
+            height: MediaQuery.of(context).size.height / 2.7,
             width: MediaQuery.of(context).size.width,
             color: CustomColors.primaryColor,
           ),
           Positioned(
-            top: 260,
-              left: 50,
+            top: 90,
+              left: 31,
+              right: 39,
               child: Container(
                 color: Colors.white,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('assets/images/Group6.png'),
-                 SizedBox(height: 40,),
-                Text("Empowering Artisans", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                Text("Farmers and Micro Business", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                SizedBox(height: 100,),
+                const SizedBox(height: 50,),
+                Image.asset('assets/images/Group6.png', width: 285, height: 243,),
+                 const SizedBox(height: 40,),
+                Text("Empowering Artisans \n Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
+                //Text("Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
+                const SizedBox(height: 40,),
 
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircleAvatar(
                       backgroundColor: CustomColors.primaryColor,
                       radius: 7,
                     ),
-                    SizedBox(width: 8,),
+                    const SizedBox(width: 8,),
                     CircleAvatar(
                       backgroundColor: CustomColors.onboardColor,
                       radius: 7,
                     ),
-                    SizedBox(width: 8,),
+                    const SizedBox(width: 8,),
                     CircleAvatar(
                       backgroundColor: CustomColors.onboardColor,
                       radius: 7,
@@ -60,14 +67,14 @@ class _OnboardingState extends State<Onboarding> {
 
                 // Adding Three Dots preview
 
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
                 ElevatedButton(onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Onboarding_2()),
+                    MaterialPageRoute(builder: (context) => const Onboarding_2()),
                   );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(250, 50),
+                  fixedSize: const Size(306, 48),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32)),
@@ -78,15 +85,7 @@ class _OnboardingState extends State<Onboarding> {
                   ),),
               ],
             ),
-          ))
-          // Container(
-          //   child: Center(
-          //     child: Image.asset('assets/images/Group6.png'),
-          //   ),
-          // ),
-          // Container(
-          //   child: Text('Empowering Artisans,', style: TextStyle(color: CustomColors.primaryColor),),
-          // )
+          )),
         ],
       ),
     );

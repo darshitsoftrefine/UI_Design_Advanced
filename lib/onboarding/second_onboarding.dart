@@ -21,24 +21,28 @@ class _Onboarding_2State extends State<Onboarding_2> {
             color: Colors.white,
           ),
           Container(
-            height: MediaQuery.of(context).size.height / 2,
+            height: MediaQuery.of(context).size.height / 2.5,
             width: MediaQuery.of(context).size.width,
             color: CustomColors.primaryColor,
           ),
           Positioned(
-              top: 260,
-              left: 37,
+              top: 85,
+              left: 31,
+              right: 39,
+
               child: Container(
                 color: Colors.white,
                 child: Column(
                   children: [
+                    SizedBox(height: 50,),
                     Image.asset('assets/images/Group (1).png'),
                     SizedBox(height: 50,),
                     Text("Connecting NGOs, Social", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
                     Text("Enterprises with Communities", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                    SizedBox(height: 100,),
+                    SizedBox(height: 40,),
 
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CircleAvatar(
                           backgroundColor: CustomColors.onboardColor,
@@ -65,7 +69,7 @@ class _Onboarding_2State extends State<Onboarding_2> {
                         MaterialPageRoute(builder: (context) => Onboarding_3()),
                       );
                     },   style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(250, 50),
+                      fixedSize: const Size(306, 50),
                       backgroundColor: CustomColors.primaryColor,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32)),

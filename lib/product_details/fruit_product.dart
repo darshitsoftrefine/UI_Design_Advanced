@@ -9,7 +9,7 @@ class FruitProduct extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: CustomColors.primaryColor,
-        toolbarHeight: 70,
+        toolbarHeight: 90,
         centerTitle: true,
         title: Text("Fruit", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),),
         bottom: PreferredSize(
@@ -23,7 +23,7 @@ class FruitProduct extends StatelessWidget {
                   //   MaterialPageRoute(builder: (context) => SendOtp()),
                   // );
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(120, 30),
+                  fixedSize: const Size(110, 30),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),

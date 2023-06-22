@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:tradly/Login_and_OTP_screens/login.dart';
 import 'package:tradly/themes/themes.dart';
 
 import 'onboarding/onboarding.dart';
@@ -21,7 +19,7 @@ class _SplashState extends State<Splash> {
     Timer(
         const Duration(seconds: 5),
             () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => Onboarding())));
+            MaterialPageRoute(builder: (context) => const Onboarding())));
   }
 
   @override

@@ -26,13 +26,13 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Welcome to Tradly", style: TextStyle(color: Colors.white, fontSize: 20),),
-            SizedBox(height: 50,),
-            Text("Login to your account", style: TextStyle(color: Colors.white),),
+            Text("Welcome to tradly", style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500),),
+            SizedBox(height: 66,),
+            Text("Login to your account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),),
             SizedBox(height: 30,),
-            CustomField(label: 'Email/Phone Number', control: email, obs: false),
+            CustomField(label: '  Email/Mobile Number', control: email, obs: false),
             SizedBox(height: 10,),
-            CustomField(label: 'Password', control: pass, obs: true),
+            CustomField(label: '  Password', control: pass, obs: true),
             SizedBox(height: 40,),
             ElevatedButton(onPressed: (){
               Navigator.push(
@@ -40,7 +40,7 @@ class _LoginState extends State<Login> {
                 MaterialPageRoute(builder: (context) => SendOtp()),
               );
             },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(350, 50),
+              fixedSize: const Size(311, 50),
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(32)),
@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account?", style: TextStyle(color: Colors.white, fontSize: 20),),
+                Text("Don't have an account? ", style: TextStyle(color: Colors.white, fontSize: 20),),
                 GestureDetector(
                   onTap: (){
                     Navigator.push(
