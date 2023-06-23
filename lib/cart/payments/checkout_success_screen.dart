@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/cart/payments/track_order_constant.dart';
 import 'package:tradly/home_screens/home_dashboard.dart';
 import '../../themes/themes.dart';
 
@@ -103,7 +104,8 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
               const Text('Order ID - 123455'),
               const SizedBox(height: 10,),
               Image.asset('assets/images/Line 2.png'),
-              Image.asset('assets/images/Fill 33.png'),
+              const TrackOrderConstant(),
+              //Image.asset('assets/images/Fill 33.png'),
               const Text("Delievery Address", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
               const SizedBox(height: 25,),
               const Text("Tradly Team"),

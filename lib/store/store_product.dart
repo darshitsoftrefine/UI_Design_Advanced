@@ -12,7 +12,7 @@ class StoreProduct extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         automaticallyImplyLeading: false,
-        title: Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
           IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
@@ -29,11 +29,11 @@ class StoreProduct extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 30,
                     backgroundColor: CustomColors.primaryColor,
-                    child: Text('T', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                    child: const Text('T', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                   ),
                 ),
-            SizedBox(height: 16,),
-            Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+            const SizedBox(height: 16,),
+            const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -57,7 +57,7 @@ class StoreProduct extends StatelessWidget {
                     style: TextStyle(fontSize: 12, color: Color(0xFF3A8877)),
                   ),),
 
-                  SizedBox(width: 17,),
+                  const SizedBox(width: 17,),
 
                 ElevatedButton(onPressed: (){
                   // Navigator.push(
@@ -76,15 +76,15 @@ class StoreProduct extends StatelessWidget {
                   ),),
               ],
             ),
-            SizedBox(height: 36,),
-            Text("Remove Store", style: TextStyle(color: Colors.grey),),
-            SizedBox(height: 70,),
-            Text("You don't have product", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-            SizedBox(height: 37,),
+            const SizedBox(height: 36,),
+            const Text("Remove Store", style: TextStyle(color: Colors.grey),),
+            const SizedBox(height: 70,),
+            const Text("You don't have product", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+            const SizedBox(height: 37,),
             ElevatedButton(onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AddProductStore()),
+                MaterialPageRoute(builder: (context) => const AddProductStore()),
               );
             },   style: ElevatedButton.styleFrom(
               fixedSize: const Size(219, 48),

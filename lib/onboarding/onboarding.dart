@@ -71,7 +71,7 @@ class _OnboardingState extends State<Onboarding> {
                 ElevatedButton(onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Onboarding_2()),
+                    MaterialPageRoute(builder: (context) => const Onboarding2()),
                   );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(306, 48),

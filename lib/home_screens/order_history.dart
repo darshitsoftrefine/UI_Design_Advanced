@@ -13,19 +13,19 @@ class OrderHistory extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         automaticallyImplyLeading: false,
-        title: Text("Order History", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("Order History", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
           IconButton(onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => WishlistScreen()),
+              MaterialPageRoute(builder: (context) => const WishlistScreen()),
             );
           }, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
           IconButton(onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CartAddAddress()),
+              MaterialPageRoute(builder: (context) => const CartAddAddress()),
             );
           }, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
 
@@ -37,8 +37,8 @@ class OrderHistory extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text("Transactions", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
-                SizedBox(width: 10,),
+                const Text("Transactions", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
+                const SizedBox(width: 10,),
                 Stack(
                   children: [
                     Image.asset('assets/images/Day.png'),
@@ -47,26 +47,26 @@ class OrderHistory extends StatelessWidget {
                 )
               ],
             ),
-        SizedBox(height: 50,),
+        const SizedBox(height: 50,),
         Row(
     children: [
     Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-    SizedBox(width: 20,),
+    const SizedBox(width: 20,),
     Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-    Text("Coca Cola", style: TextStyle(),),
-    SizedBox(height: 5,),
+    const Text("Coca Cola", style: TextStyle(),),
+    const SizedBox(height: 5,),
     Row(
     children: [
     Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-    SizedBox(width: 10,),
-    Text(" 50% off"),
+    const SizedBox(width: 10,),
+    const Text(" 50% off"),
     ],
     ),
           ],
         ),
-      SizedBox(width: 70,),
+      const SizedBox(width: 70,),
       ElevatedButton(onPressed: (){
         // Navigator.push(
         //   context,
@@ -84,16 +84,16 @@ class OrderHistory extends StatelessWidget {
         ),),
       ]
       ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             Row(
                 children: [
                   Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                  SizedBox(width: 20,),
+                  const SizedBox(width: 20,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Coca Cola", style: TextStyle(),),
-                      SizedBox(height: 5,),
+                      const Text("Coca Cola", style: TextStyle(),),
+                      const SizedBox(height: 5,),
                       Row(
                         children: [
                           Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
@@ -101,7 +101,7 @@ class OrderHistory extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 87,),
+                  const SizedBox(width: 87,),
                   ElevatedButton(onPressed: (){
                     // Navigator.push(
                     //   context,
@@ -124,16 +124,16 @@ class OrderHistory extends StatelessWidget {
                     ),),
                 ]
             ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             Row(
                 children: [
                   Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                  SizedBox(width: 20,),
+                  const SizedBox(width: 20,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Coca Cola", style: TextStyle(),),
-                      SizedBox(height: 5,),
+                      const Text("Coca Cola", style: TextStyle(),),
+                      const SizedBox(height: 5,),
                       Row(
                         children: [
                           Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
@@ -141,7 +141,7 @@ class OrderHistory extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 42,),
+                  const SizedBox(width: 42,),
                   ElevatedButton(onPressed: (){
                     // Navigator.push(
                     //   context,
@@ -164,16 +164,16 @@ class OrderHistory extends StatelessWidget {
                     ),),
                 ]
             ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             Row(
                 children: [
                   Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                  SizedBox(width: 20,),
+                  const SizedBox(width: 20,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Coca Cola", style: TextStyle(),),
-                      SizedBox(height: 5,),
+                      const Text("Coca Cola", style: TextStyle(),),
+                      const SizedBox(height: 5,),
                       Row(
                         children: [
                           Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
@@ -181,7 +181,7 @@ class OrderHistory extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 100,),
+                  const SizedBox(width: 100,),
                   ElevatedButton(onPressed: (){
                     // Navigator.push(
                     //   context,

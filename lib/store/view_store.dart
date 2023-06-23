@@ -12,7 +12,7 @@ class ViewStore extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         centerTitle: true,
-        title: Text("Tradly Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("Tradly Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
           IconButton(onPressed: ()
@@ -34,16 +34,16 @@ class ViewStore extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: CustomColors.primaryColor,
-                      child: Text("T", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 40),),
+                      child: const Text("T", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 40),),
                     ),
                     Column(
-                      children: [
+                      children: const [
                         Text("Tradly Store", style: TextStyle(fontSize: 14),),
                         SizedBox(height: 5,),
                         Text("tradly.app", style: TextStyle(fontSize: 12, color: Colors.grey),)
                       ],
                     ),
-                    SizedBox(width: 40,),
+                    const SizedBox(width: 40,),
                     ElevatedButton(onPressed: (){
 
                     },
@@ -60,9 +60,9 @@ class ViewStore extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
-              Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic'),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
+              const Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic'),
+              const SizedBox(height: 20,),
               Row(
                 children: [
                   ElevatedButton.icon(
@@ -72,10 +72,10 @@ class ViewStore extends StatelessWidget {
                           borderRadius: BorderRadius.circular(32)),
                     ),
                     icon: const Icon(Icons.close, size: 18),
-                    label: Text('Groceries'),
+                    label: const Text('Groceries'),
                     onPressed: null,
                   ),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       fixedSize: const Size(145, 20),
@@ -84,37 +84,37 @@ class ViewStore extends StatelessWidget {
                           borderRadius: BorderRadius.circular(32)),
                     ),
                     icon: const Icon(Icons.close, size: 18),
-                    label: Text('Vegetables'),
+                    label: const Text('Vegetables'),
                     onPressed: null,
                   ),
                 ],
               ),
-              SizedBox(height: 76,),
+              const SizedBox(height: 76,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
-                    children: [
+                    children: const [
                       Text("Total Followers"),
                       Text("0")
                     ],
                   ),
-                  SizedBox(width: 59,),
+                  const SizedBox(width: 59,),
                   Column(
-                    children: [
+                    children: const [
                       Text("Total Products"),
                       Text("0")
                     ],
                   ),
                 ],
               ),
-              SizedBox(height: 54,),
+              const SizedBox(height: 54,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
                       ElevatedButton(onPressed: (){
                         // Navigator.push(
                         //   context,
@@ -125,12 +125,12 @@ class ViewStore extends StatelessWidget {
                         backgroundColor: CustomColors.primaryColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
-                          side: BorderSide(width: 1, color: Colors.white),
+                          side: const BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
-                        child: Text("All Product",),
+                        child: const Text("All Product",),
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       ElevatedButton(onPressed: (){
                         // Navigator.push(
                         //   context,
@@ -141,12 +141,12 @@ class ViewStore extends StatelessWidget {
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
-                          side: BorderSide(width: 1, color: Colors.black),
+                          side: const BorderSide(width: 1, color: Colors.black),
                         ),
                       ),
-                        child: Text('Fruit', style: TextStyle(color: Colors.black),),
+                        child: const Text('Fruit', style: TextStyle(color: Colors.black),),
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       ElevatedButton(onPressed: (){
                         // Navigator.push(
                         //   context,
@@ -157,12 +157,12 @@ class ViewStore extends StatelessWidget {
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
-                          side: BorderSide(width: 1, color: Colors.black),
+                          side: const BorderSide(width: 1, color: Colors.black),
                         ),
                       ),
-                        child: Text('Vegetables', style: TextStyle(color: Colors.black),),
+                        child: const Text('Vegetables', style: TextStyle(color: Colors.black),),
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       ElevatedButton(onPressed: (){
                         // Navigator.push(
                         //   context,
@@ -173,12 +173,12 @@ class ViewStore extends StatelessWidget {
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
-                          side: BorderSide(width: 1, color: Colors.black),
+                          side: const BorderSide(width: 1, color: Colors.black),
                         ),
                       ),
-                        child: Text('Home', style: TextStyle(color: Colors.black),),
+                        child: const Text('Home', style: TextStyle(color: Colors.black),),
                       ),
-                      SizedBox(height: 20,)
+                      const SizedBox(height: 20,)
                     ]
                 ),
               ),
@@ -186,57 +186,57 @@ class ViewStore extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 160,
                       height: 190,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/apple.png'),
-                          SizedBox(height: 5,),
-                          Text("Apple"),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
+                          const Text("Apple"),
+                          const SizedBox(height: 5,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
                               //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )
                         ],
                       ),
                     ),
-                    SizedBox(width: 10,),
-                    Container(
+                    const SizedBox(width: 10,),
+                    SizedBox(
                       width: 160,
                       height: 190,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/orange.png'),
-                          SizedBox(height: 5,),
-                          Text("Orange"),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
+                          const Text("Orange"),
+                          const SizedBox(height: 5,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
                               //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )
@@ -246,62 +246,62 @@ class ViewStore extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 160,
                       height: 190,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/moist.png'),
-                          SizedBox(height: 5,),
-                          Text("Moisturizer"),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
+                          const Text("Moisturizer"),
+                          const SizedBox(height: 5,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
                               //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )
                         ],
                       ),
                     ),
-                    SizedBox(width: 10,),
-                    Container(
+                    const SizedBox(width: 10,),
+                    SizedBox(
                       width: 160,
                       height: 190,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/broc.png'),
-                          SizedBox(height: 5,),
-                          Text("Brocolli"),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
+                          const Text("Brocolli"),
+                          const SizedBox(height: 5,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
                               //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )

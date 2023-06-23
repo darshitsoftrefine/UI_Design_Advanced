@@ -19,7 +19,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         toolbarHeight: 100,
-        title: Text("My Cart", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("My Cart", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
       ),
@@ -29,56 +29,54 @@ class _CartAddAddressState extends State<CartAddAddress> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              Container(
-                child: GestureDetector(
-                  onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AddNewAddress()),
-                    );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(onPressed: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => AddNewAddress()),
-                        );
-                      }, icon: Icon(Icons.add)),
-                      // SizedBox(width: 10,),
-                      Text("Add New Address")
-                    ],
-                  ),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AddNewAddress()),
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const AddNewAddress()),
+                      );
+                    }, icon: const Icon(Icons.add)),
+                    // SizedBox(width: 10,),
+                    const Text("Add New Address")
+                  ],
                 ),
               ),
-              SizedBox(height: 50,),
+              const SizedBox(height: 50,),
               Column(
                 children: [
                   Row(
                     children: [
                       Image.asset('assets/images/Rectangle 292.png'),
-                      SizedBox(width: 20,),
+                      const SizedBox(width: 20,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Coca Cola", style: TextStyle(),),
-                          SizedBox(height: 10,),
+                          const Text("Coca Cola", style: TextStyle(),),
+                          const SizedBox(height: 10,),
                           Row(
                             children: [
                               Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 25),),
-                              SizedBox(width: 10,),
-                              Text("\$50", style: TextStyle(decoration: TextDecoration.lineThrough),),
-                              Text(" 50% off")
+                              const SizedBox(width: 10,),
+                              const Text("\$50", style: TextStyle(decoration: TextDecoration.lineThrough),),
+                              const Text(" 50% off")
                             ],
                           ),
     Row(
           children: [
-            Text("Qty: "),
+            const Text("Qty: "),
 
             DropdownButton<int>(
               value: 1, //selected
-              icon: Icon(Icons.arrow_drop_down),
+              icon: const Icon(Icons.arrow_drop_down),
               iconSize: 24,
               elevation: 16,
 
@@ -99,38 +97,38 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   )
                 ],
               ),
-              Divider(
+              const Divider(
                 height: 20,
                 thickness: 0.5,
                 indent: 20,
                 endIndent: 20,
                 color: Colors.grey,
               ),
-              Text("Remove", style: TextStyle(color: Colors.grey),),
+              const Text("Remove", style: TextStyle(color: Colors.grey),),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 76,),
-                  Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-                  SizedBox(height: 0,),
+                  const SizedBox(height: 76,),
+                  const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                  const SizedBox(height: 0,),
                   Row(
-                    children: [
+                    children: const [
                       Text("Price (1 item) "),
                       SizedBox(width: 194,),
                       Text("\$ 25")
                     ],
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   Row(
-                    children: [
+                    children: const [
                       Text("Delievery Fee"),
                       SizedBox(width: 194,),
                       Text("Info")
                     ],
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   Row(
-                    children: [
+                    children: const [
                       Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                       SizedBox(width: 144,),
                       Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
@@ -138,7 +136,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   )
                 ],
               ),
-              SizedBox(height: 190,),
+              const SizedBox(height: 190,),
               // Container(
               //   child: ElevatedButton(onPressed: (){},   style: ElevatedButton.styleFrom(
               //     fixedSize: const Size(311, 50),
@@ -156,7 +154,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child:ElevatedButton(onPressed: (){
         },   style: ElevatedButton.styleFrom(
           fixedSize: const Size(150, 40),

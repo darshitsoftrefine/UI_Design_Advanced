@@ -27,7 +27,7 @@ class AddProductStore extends StatelessWidget {
                   DottedBorder(
                     color: Colors.grey, //color of dotted border
                     strokeWidth: 2, //thickness of dots
-                    dashPattern: [8, 4], //length and space between dots
+                    dashPattern: const [8, 4], //length and space between dots
                     child: Container(
                       width: 140,
                       height: 102,
@@ -35,13 +35,13 @@ class AddProductStore extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.add, size: 40, color: Colors.grey,),
-                          const Text(
+                        children: const [
+                          Icon(Icons.add, size: 40, color: Colors.grey,),
+                          Text(
                             "Add Photos", style: TextStyle(color: Colors.grey, fontSize: 14),
                             textAlign: TextAlign.center, //also center the text
                           ),
-                          const Text("1600 x 1200  for hi res", style: TextStyle(color: Colors.grey, fontSize: 10),)
+                          Text("1600 x 1200  for hi res", style: TextStyle(color: Colors.grey, fontSize: 10),)
                         ],
                       ),
                     ),
@@ -49,9 +49,9 @@ class AddProductStore extends StatelessWidget {
                   Expanded(child: Stack(
                     children: [
                       Image.asset('assets/images/add_product.png'),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 15.0, top: 10.0),
-                        child: const Align(
+                      const Padding(
+                        padding: EdgeInsets.only(right: 15.0, top: 10.0),
+                        child: Align(
                           alignment: Alignment.topRight,
                           child: CircleAvatar(
                             radius: 15,
@@ -79,19 +79,19 @@ class AddProductStore extends StatelessWidget {
                   const SizedBox(height: 20,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("Price", style: TextStyle(color: Colors.grey),),
-                      const SizedBox(height: 10,),
-                      const Text("\$        30", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                    children: const [
+                      Text("Price", style: TextStyle(color: Colors.grey),),
+                      SizedBox(height: 10,),
+                      Text("\$        30", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
                     ],
                   ),
                   const SizedBox(width: 127,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("Offer Price", style: TextStyle(color: Colors.grey),),
-                      const SizedBox(height: 10,),
-                      const Text("\$        15", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
+                    children: const [
+                      Text("Offer Price", style: TextStyle(color: Colors.grey),),
+                      SizedBox(height: 10,),
+                      Text("\$        15", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
                     ],
                   )
 
@@ -101,10 +101,10 @@ class AddProductStore extends StatelessWidget {
               const Text("Location Details", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 6,),
               Row(
-                children: [
-                  const Text("Kualalumpur, Malaysia", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
-                  const SizedBox(width: 100,),
-                  const Icon(Icons.bar_chart, color: Colors.grey,)
+                children: const [
+                  Text("Kualalumpur, Malaysia", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
+                  SizedBox(width: 100,),
+                  Icon(Icons.bar_chart, color: Colors.grey,)
                 ],
               ),
               const SizedBox(height: 28,),

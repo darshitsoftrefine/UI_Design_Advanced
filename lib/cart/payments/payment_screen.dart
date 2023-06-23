@@ -20,7 +20,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 100,
-        title: Text("Payment Option", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("Payment Option", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
       ),
@@ -37,7 +37,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     child: DottedBorder(
                       color: Colors.grey, //color of dotted border
                       strokeWidth: 2, //thickness of dots
-                      dashPattern: [8, 4], //length and space between dots
+                      dashPattern: const [8, 4], //length and space between dots
                       child: Container(
                         width: 246,
                         height: 146,
@@ -45,7 +45,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                          children: const [
                             Icon(Icons.add, size: 50, color: Colors.grey,),
                             Text(
                               "Add Payment Method", style: TextStyle(color: Colors.grey),
@@ -56,7 +56,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -64,13 +64,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         backgroundColor: CustomColors.primaryColor,
                         radius: 5,
                       ),
-                      SizedBox(width: 15,),
-                      CircleAvatar(
+                      const SizedBox(width: 15,),
+                      const CircleAvatar(
                         backgroundColor: Colors.grey,
                         radius: 5,
                       ),
-                      SizedBox(width: 15,),
-                      CircleAvatar(
+                      const SizedBox(width: 15,),
+                      const CircleAvatar(
                         backgroundColor: Colors.grey,
                         radius: 5,
                       ),
@@ -88,7 +88,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Navigator.push( //navigate to a new route
                           context,
                           MaterialPageRoute(builder: (context) {
-                            return AddCardScreen(); //the widget to display for other option
+                            return const AddCardScreen(); //the widget to display for other option
                           }),
                         );
                       },
@@ -155,17 +155,17 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     child: Row(
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text("Deliever to Tradly Team. 75119"),
                             Text("Kualalumpur Malaysia"),
                           ],
                         ),
-                        SizedBox(width: 15,),
+                        const SizedBox(width: 15,),
                         ElevatedButton(onPressed: (){
                           Navigator.pop(context);
                         },   style: ElevatedButton.styleFrom(
@@ -181,32 +181,32 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Row(
-                    children: [
+                    children: const [
                       Text("Price (1 item) "),
                       SizedBox(width: 205,),
                       Text("\$ 25")
                     ],
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   Row(
-                    children: [
+                    children: const [
                       Text("Delievery Fee"),
                       SizedBox(width: 205,),
                       Text("Info")
                     ],
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   Row(
-                    children: [
+                    children: const [
                       Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                       SizedBox(width: 155,),
                       Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
@@ -218,7 +218,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           ),
         ),
         bottomNavigationBar: Padding(
-    padding: EdgeInsets.all(8.0),
+    padding: const EdgeInsets.all(8.0),
     child:ElevatedButton(onPressed: null,   style: ElevatedButton.styleFrom(
       fixedSize: const Size(190, 40),
       backgroundColor: CustomColors.primaryColor,

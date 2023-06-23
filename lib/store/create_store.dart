@@ -12,7 +12,7 @@ class CreateStore extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 100,
-        title: Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
       ),
@@ -23,14 +23,14 @@ class CreateStore extends StatelessWidget {
             child: Column(
                 children: [
             Center(child: Image.asset('assets/images/undraw_business_shop_qw5t.png')),
-      SizedBox(height: 35,),
-                  Text("This information is used to set up"),
-                  Text('your shop', style: TextStyle(fontSize: 14),),
-                  SizedBox(height: 20,),
+      const SizedBox(height: 35,),
+                  const Text("This information is used to set up"),
+                  const Text('your shop', style: TextStyle(fontSize: 14),),
+                  const SizedBox(height: 20,),
                   Container(
                     alignment: Alignment.topLeft,
                       child: Column(
-                        children: [
+                        children: const [
                           CreateStoreConstant()
                         ],
                       )),
@@ -39,11 +39,11 @@ class CreateStore extends StatelessWidget {
           ),
       ),
         bottomNavigationBar: Padding(
-    padding: EdgeInsets.all(8.0),
+    padding: const EdgeInsets.all(8.0),
     child: ElevatedButton(onPressed: (){
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => StoreProduct()),
+      MaterialPageRoute(builder: (context) => const StoreProduct()),
     );
     },   style: ElevatedButton.styleFrom(
     fixedSize: const Size(190, 40),

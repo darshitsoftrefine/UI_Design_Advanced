@@ -34,36 +34,36 @@ class _HomeDashboardState extends State<HomeDashboard> {
         toolbarHeight: 150,
         automaticallyImplyLeading: false,
         flexibleSpace: Container(
-          padding: EdgeInsets.only(bottom: 20.0, top: 20.0, left: 15, right: 14),
+          padding: const EdgeInsets.only(bottom: 20.0, top: 20.0, left: 15, right: 14),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               Row(
                 children: [
-                  Text("Groceries", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),),
-                  SizedBox(width: 104,),
+                  const Text("Groceries", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),),
+                  const SizedBox(width: 104,),
                   IconButton(
-                    icon: Icon(Icons.favorite, color: Colors.white,),
+                    icon: const Icon(Icons.favorite, color: Colors.white,),
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WishlistScreen()),
+                        MaterialPageRoute(builder: (context) => const WishlistScreen()),
                       );
                     },
                   ),
                   Stack(
                     children:[ IconButton(
-                      icon: Icon(Icons.shopping_cart, color: Colors.white,),
+                      icon: const Icon(Icons.shopping_cart, color: Colors.white,),
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CartAddAddress()),
+                          MaterialPageRoute(builder: (context) => const CartAddAddress()),
                         );
                       },
                     ),
-                      Positioned(
+                      const Positioned(
                         top: 10,
                         left: 15,
                         right: 5,
@@ -76,21 +76,21 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                 ],
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Expanded(
               child: Center(
                 child: TextFormField(
                   enabled: true,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   controller: control,
                   decoration: InputDecoration(
                     filled: true,
                     hintText: 'Search Product',
                     fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: const Icon(Icons.search),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(32.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.white,
                         width: 1.0,
                       ),
@@ -118,8 +118,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         Image.asset('assets/images/food_home.png', width: 310,),
                         Column(
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 35, left: 15),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 35, left: 15),
                               child: Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
                             ),
                             Padding(
@@ -129,7 +129,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               },   style: ElevatedButton.styleFrom(
                                 fixedSize: const Size(200, 45),
                                 backgroundColor: Colors.transparent,
-                                side: BorderSide(color: Colors.white, width: 1),
+                                side: const BorderSide(color: Colors.white, width: 1),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(32),
                                 ),
@@ -160,12 +160,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => BeveragesProduct()),
+                            MaterialPageRoute(builder: (context) => const BeveragesProduct()),
                           );
                         },
                           child: Image.asset('assets/images/Rectangle 28.png', width: 100,)),
-                       Padding(
-                         padding: const EdgeInsets.only(top: 40.0, left: 12, right: 8, bottom: 20),
+                       const Padding(
+                         padding: EdgeInsets.only(top: 40.0, left: 12, right: 8, bottom: 20),
                          child: Text("Beverages", style: TextStyle(color: Colors.white, fontSize: 13),),
                        ),
                      ]
@@ -176,12 +176,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => BreadProduct()),
+                                  MaterialPageRoute(builder: (context) => const BreadProduct()),
                                 );
                               },
                               child: Image.asset('assets/images/Rectangle 29.png', width: 100,)),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40.0, bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40.0, bottom: 20),
                             child: Text("Bread Bakery", style: TextStyle(color: Colors.white, fontSize: 13),),
                           ),
                         ]
@@ -192,12 +192,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => VegetableProduct()),
+                                  MaterialPageRoute(builder: (context) => const VegetableProduct()),
                                 );
                               },
                               child: Image.asset('assets/images/Rectangle 30.png', width: 100,)),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
                             child: Text("Vegetables", style: TextStyle(color: Colors.white, fontSize: 13),),
                           ),
                         ]
@@ -208,12 +208,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => FruitProduct()),
+                                  MaterialPageRoute(builder: (context) => const FruitProduct()),
                                 );
                               },
                               child: Image.asset('assets/images/Rectangle 31.png', width: 100,)),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
                             child: Text("Fruits", style: TextStyle(color: Colors.white, fontSize: 13),),
                           ),
                         ]
@@ -235,12 +235,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => EggProduct()),
+                                  MaterialPageRoute(builder: (context) => const EggProduct()),
                                 );
                               },
                               child: Image.asset('assets/images/Rectangle 32.png', width: 100,)),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
                             child: Text("Egg", style: TextStyle(color: Colors.white, fontSize: 13),),
                           ),
                         ]
@@ -251,12 +251,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => FrozenProduct()),
+                                  MaterialPageRoute(builder: (context) => const FrozenProduct()),
                                 );
                               },
                               child: Image.asset('assets/images/Rectangle 33.png', width: 100,)),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
                             child: Text("Frozen Veg", style: TextStyle(color: Colors.white, fontSize: 13),),
                           ),
                         ]
@@ -267,12 +267,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => HomeProduct()),
+                                MaterialPageRoute(builder: (context) => const HomeProduct()),
                               );
                             },
                               child: Image.asset('assets/images/Rectangle 34.png', width: 100,)),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
                             child: Text("Homecare", style: TextStyle(color: Colors.white, fontSize: 13),),
                           ),
                         ]
@@ -283,12 +283,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => PetProduct()),
+                                  MaterialPageRoute(builder: (context) => const PetProduct()),
                                 );
                               },
                               child: Image.asset('assets/images/Rectangle 35.png', width: 100,)),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
                             child: Text("Pet Care", style: TextStyle(color: Colors.white, fontSize: 13),),
                           ),
                         ]
@@ -303,8 +303,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("New Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-                  SizedBox(width: 100,),
+                  const Text("New Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                  const SizedBox(width: 100,),
                   ElevatedButton(onPressed: (){
 
                   },
@@ -328,9 +328,9 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 child: Row(
                   children: [
                     Image.asset('assets/images/Product with sale.png'),
-                    SizedBox(width: 15,),
+                    const SizedBox(width: 15,),
                     Image.asset('assets/images/Product.png'),
-                    SizedBox(width: 15,),
+                    const SizedBox(width: 15,),
                     Image.asset('assets/images/Product with sale1.png'),
 
                   ],
@@ -342,8 +342,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Popular Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-                  SizedBox(width: 65,),
+                  const Text("Popular Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                  const SizedBox(width: 65,),
                   ElevatedButton(onPressed: (){
 
                   },
@@ -367,11 +367,11 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 child: Row(
                   children: [
                     Image.asset('assets/images/Productfish.png'),
-                    SizedBox(width: 15,),
+                    const SizedBox(width: 15,),
                     Image.asset('assets/images/Productshampoo.png'),
-                    SizedBox(width: 15,),
+                    const SizedBox(width: 15,),
                     Image.asset('assets/images/Product with sale1.png'),
-                    SizedBox(width: 15,),
+                    const SizedBox(width: 15,),
 
                   ],
                 ),
@@ -389,8 +389,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("Store to Follow", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),),
-                        SizedBox(width: 70,),
+                        const Text("Store to Follow", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),),
+                        const SizedBox(width: 70,),
                         ElevatedButton(onPressed: (){
 
                         },
@@ -414,9 +414,9 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       child: Row(
                         children: [
                           Image.asset('assets/images/Store.png'),
-                          SizedBox(width: 5,),
+                          const SizedBox(width: 5,),
                           Image.asset('assets/images/Storing.png'),
-                          SizedBox(width: 5,),
+                          const SizedBox(width: 5,),
                           Image.asset('assets/images/Product with sale1.png'),
                         ],
                       ),

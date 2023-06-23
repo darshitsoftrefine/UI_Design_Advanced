@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:tradly/Login_and_OTP_screens/login.dart';
 import 'package:tradly/themes/themes.dart';
 
-class Onboarding_3 extends StatefulWidget {
-  const Onboarding_3({super.key});
+class Onboarding3 extends StatefulWidget {
+  const Onboarding3({super.key});
 
   @override
-  State<Onboarding_3> createState() => _Onboarding_3State();
+  State<Onboarding3> createState() => _Onboarding3State();
 }
 
-class _Onboarding_3State extends State<Onboarding_3> {
+class _Onboarding3State extends State<Onboarding3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,12 +33,12 @@ class _Onboarding_3State extends State<Onboarding_3> {
                 color: Colors.white,
                 child: Column(
                   children: [
-                    SizedBox(height: 50,),
+                    const SizedBox(height: 50,),
                     Image.asset('assets/images/Group 4.png'),
-                    SizedBox(height: 50,),
+                    const SizedBox(height: 50,),
                     Text("Donate, Invest and Support", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
                     Text("infrastructure projects", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                    SizedBox(height: 70,),
+                    const SizedBox(height: 70,),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -47,30 +47,24 @@ class _Onboarding_3State extends State<Onboarding_3> {
                           backgroundColor: CustomColors.onboardColor,
                           radius: 7,
                         ),
-                        SizedBox(width: 8,),
+                        const SizedBox(width: 8,),
                         CircleAvatar(
                           backgroundColor: CustomColors.onboardColor,
                           radius: 7,
                         ),
-                        SizedBox(width: 8,),
+                        const SizedBox(width: 8,),
                         CircleAvatar(
                           backgroundColor: CustomColors.primaryColor,
                           radius: 7,
                         ),
                       ],
                     ),
-
-
-                    SizedBox(height: 40,),
-
-
-
-
+                    const SizedBox(height: 40,),
 
                     ElevatedButton(onPressed: (){
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Login()),
+                        MaterialPageRoute(builder: (context) => const Login()),
                       );
                     },   style: ElevatedButton.styleFrom(
                       fixedSize: const Size(306, 50),
@@ -85,14 +79,6 @@ class _Onboarding_3State extends State<Onboarding_3> {
                   ],
                 ),
               ))
-          // Container(
-          //   child: Center(
-          //     child: Image.asset('assets/images/Group6.png'),
-          //   ),
-          // ),
-          // Container(
-          //   child: Text('Empowering Artisans,', style: TextStyle(color: CustomColors.primaryColor),),
-          // )
         ],
       ),
     );

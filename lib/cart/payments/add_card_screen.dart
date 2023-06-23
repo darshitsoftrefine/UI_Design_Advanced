@@ -12,7 +12,7 @@ class AddCardScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         toolbarHeight: 80,
-        title: Text("Add Card", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("Add Card", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
 
@@ -29,40 +29,40 @@ class AddCardScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   color: CustomColors.primaryColor,
                 ),
-                Center(child: Container(child: Image.asset('assets/images/mastercard.png')))
+                Center(child: Image.asset('assets/images/mastercard.png'))
               ],
             ),
             Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 70,),
-                  Text("Card Number", style: TextStyle(color: Colors.grey),),
-                  SizedBox(height: 10,),
-                  Text("5627 2158 9854 8869", style: TextStyle(fontWeight: FontWeight.w600),),
-                  SizedBox(height: 30,),
-                  Text("Name", style: TextStyle(color: Colors.grey),),
-                  SizedBox(height: 10,),
-                  Text("Tradly", style: TextStyle(fontWeight: FontWeight.w600),),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 70,),
+                  const Text("Card Number", style: TextStyle(color: Colors.grey),),
+                  const SizedBox(height: 10,),
+                  const Text("5627 2158 9854 8869", style: TextStyle(fontWeight: FontWeight.w600),),
+                  const SizedBox(height: 30,),
+                  const Text("Name", style: TextStyle(color: Colors.grey),),
+                  const SizedBox(height: 10,),
+                  const Text("Tradly", style: TextStyle(fontWeight: FontWeight.w600),),
+                  const SizedBox(height: 30,),
                   Row(
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text("Expires Dates", style: TextStyle(color: Colors.grey),),
                           SizedBox(height: 10,),
                           Text("12/08", style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
-                      SizedBox(width: 130,),
+                      const SizedBox(width: 130,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("CVC", style: TextStyle(color: CustomColors.primaryColor),),
-                          SizedBox(height: 10,),
-                          Text("***",),
+                          const SizedBox(height: 10,),
+                          const Text("***",),
                           Image.asset('assets/images/Path.png')
                         ],
                       )
@@ -75,11 +75,11 @@ class AddCardScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child:ElevatedButton(onPressed: (){
             Navigator.push( //navigate to a new route
              context,
-            MaterialPageRoute(builder: (context) => NewPaymentScreen())
+            MaterialPageRoute(builder: (context) => const NewPaymentScreen())
             );
         },   style: ElevatedButton.styleFrom(
           fixedSize: const Size(150, 50),

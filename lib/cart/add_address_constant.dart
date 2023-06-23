@@ -9,7 +9,7 @@ class AddAddressConstant extends StatelessWidget {
       padding: const EdgeInsets.only(left: 15, top: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           SizedBox(height: 20,),
 
       Text("Name", style: TextStyle(color: Colors.grey),),

@@ -11,7 +11,7 @@ class WishlistScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        title: Text("Wishlist", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("Wishlist", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
       ),
@@ -25,7 +25,7 @@ class WishlistScreen extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
       children: [
-      Container(
+      SizedBox(
       width: 160,
       height: 190,
       child: Column(
@@ -35,54 +35,54 @@ class WishlistScreen extends StatelessWidget {
       onTap: () {
       Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ProductDetail()),
+      MaterialPageRoute(builder: (context) => const ProductDetail()),
       );
       },
       child: Image.asset('assets/images/apple.png')),
-      SizedBox(height: 5,),
-      Text("Apple"),
-      SizedBox(height: 10,),
+      const SizedBox(height: 5,),
+      const Text("Apple"),
+      const SizedBox(height: 10,),
       Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
       radius: 13,
-      child: Text('T'),
+      child: const Text('T'),
       ),
-      Text("  Tradly"),
-      SizedBox(width: 10,),
+      const Text("  Tradly"),
+      const SizedBox(width: 10,),
       //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-      SizedBox(width: 5,),
+      const SizedBox(width: 5,),
       Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
       ],
       )
       ],
       ),
       ),
-      SizedBox(width: 9,),
-      Container(
+      const SizedBox(width: 9,),
+      SizedBox(
       width: 160,
       height: 190,
       child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
       Image.asset('assets/images/orange.png'),
-      SizedBox(height: 5,),
-      Text("Orange"),
-      SizedBox(height: 5,),
+      const SizedBox(height: 5,),
+      const Text("Orange"),
+      const SizedBox(height: 5,),
       Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
       radius: 13,
-      child: Text('T'),
+      child: const Text('T'),
       ),
-      Text("  Tradly"),
-      SizedBox(width: 10,),
+      const Text("  Tradly"),
+      const SizedBox(width: 10,),
       //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-      SizedBox(width: 5,),
+      const SizedBox(width: 5,),
       Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
       ],
       )
@@ -93,62 +93,62 @@ class WishlistScreen extends StatelessWidget {
       ],
       ),
     ),
-    SizedBox(height: 10,),
+    const SizedBox(height: 10,),
     SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
       children: [
-      Container(
+      SizedBox(
       width: 160,
       height: 190,
       child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
       Image.asset('assets/images/moist.png'),
-      SizedBox(height: 5,),
-      Text("Moisturizer"),
-      SizedBox(height: 10,),
+      const SizedBox(height: 5,),
+      const Text("Moisturizer"),
+      const SizedBox(height: 10,),
       Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
       radius: 13,
-      child: Text('T'),
+      child: const Text('T'),
       ),
-      Text("  Tradly"),
-      SizedBox(width: 10,),
+      const Text("  Tradly"),
+      const SizedBox(width: 10,),
       //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-      SizedBox(width: 5,),
+      const SizedBox(width: 5,),
       Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
       ],
       )
       ],
       ),
       ),
-      SizedBox(width: 9,),
-      Container(
+      const SizedBox(width: 9,),
+      SizedBox(
       width: 160,
       height: 190,
       child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
       Image.asset('assets/images/broc.png'),
-      SizedBox(height: 5,),
-      Text("Brocolli"),
-      SizedBox(height: 10,),
+      const SizedBox(height: 5,),
+      const Text("Brocolli"),
+      const SizedBox(height: 10,),
       Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
       radius: 13,
-      child: Text('T'),
+      child: const Text('T'),
       ),
-      Text("  Tradly"),
-      SizedBox(width: 10,),
+      const Text("  Tradly"),
+      const SizedBox(width: 10,),
       //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-      SizedBox(width: 5,),
+      const SizedBox(width: 5,),
       Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
       ],
       )

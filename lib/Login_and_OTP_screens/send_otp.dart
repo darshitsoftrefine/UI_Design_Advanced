@@ -14,8 +14,6 @@ class SendOtp extends StatefulWidget {
 class _SendOtpState extends State<SendOtp> {
 
   TextEditingController control = TextEditingController();
-  String? _selectedValue;
-  List<String> _items = ["+91", "+90", "+78", "+65", "+34"];
 
   @override
   Widget build(BuildContext context) {
@@ -33,18 +31,18 @@ class _SendOtpState extends State<SendOtp> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 24, fontWeight: FontWeight.w500),),
-            SizedBox(height: 40,),
+            const SizedBox(height: 40,),
             Text("We have sent you an SMS with a code to enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             //NumberDropdownTextField(),
             CustomField(label: '+91  9876543210', control: control, obs: false),
-            SizedBox(height: 64,),
+            const SizedBox(height: 64,),
             Text('Or login with Social Network', style: TextStyle(color: CustomColors.secondaryColor, fontSize: 18, fontWeight: FontWeight.w400),),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             ElevatedButton(onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => OtpVerification()),
+                MaterialPageRoute(builder: (context) => const OtpVerification()),
               );
             },   style: ElevatedButton.styleFrom(
               fixedSize: const Size(314, 48),

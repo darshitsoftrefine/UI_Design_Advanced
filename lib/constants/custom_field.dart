@@ -12,11 +12,11 @@ class CustomField extends StatelessWidget {
       padding: const EdgeInsets.only(top: 5, left: 21, right: 21, bottom: 5),
       child: TextFormField(
         enabled: true,
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         controller: control,
         obscureText: obs,
         decoration: InputDecoration(
-            labelText: label, labelStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),
+            labelText: label, labelStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),
             fillColor: Colors.white,
 
             // border: OutlineInputBorder(
@@ -28,7 +28,7 @@ class CustomField extends StatelessWidget {
             // ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(32.0),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.white,
               width: 1.0,
             ),

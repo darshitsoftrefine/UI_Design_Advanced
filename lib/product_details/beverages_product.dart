@@ -11,9 +11,9 @@ class BeveragesProduct extends StatelessWidget {
           backgroundColor: CustomColors.primaryColor,
           toolbarHeight: 90,
           centerTitle: true,
-          title: Text("Beverages", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),),
+          title: const Text("Beverages", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),),
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(50),
+            preferredSize: const Size.fromHeight(50),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -27,10 +27,10 @@ class BeveragesProduct extends StatelessWidget {
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32),
-                    side: BorderSide(width: 1, color: Colors.white,),
+                    side: const BorderSide(width: 1, color: Colors.white,),
                   ),
                 ),
-                  icon: Icon(Icons.sort), label: Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                   ),
                 ElevatedButton.icon(onPressed: (){
                   // Navigator.push(
@@ -42,10 +42,10 @@ class BeveragesProduct extends StatelessWidget {
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),
-                    side: BorderSide(width: 1, color: Colors.white),
+                    side: const BorderSide(width: 1, color: Colors.white),
                   ),
                 ),
-                  icon: Icon(Icons.location_on), label: Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
                   // Navigator.push(
@@ -57,10 +57,10 @@ class BeveragesProduct extends StatelessWidget {
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),
-                    side: BorderSide(width: 1, color: Colors.white),
+                    side: const BorderSide(width: 1, color: Colors.white),
                   ),
                 ),
-                  icon: Icon(Icons.category), label: Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
           ]
           ),
@@ -85,28 +85,28 @@ class BeveragesProduct extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset('assets/images/strawberry.png'),
-                        SizedBox(height: 5,),
-                        Text("Strawberry Punch"),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 5,),
+                        const Text("Strawberry Punch"),
+                        const SizedBox(height: 10,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CircleAvatar(
                               backgroundColor: CustomColors.primaryColor,
                               radius: 13,
-                              child: Text('T'),
+                              child: const Text('T'),
                             ),
-                            Text("  Tradly"),
-                            SizedBox(width: 10,),
-                            Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                            SizedBox(width: 5,),
+                            const Text("  Tradly"),
+                            const SizedBox(width: 10,),
+                            const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                            const SizedBox(width: 5,),
                             Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                           ],
                         )
                       ],
                     ),
             ),
-                    SizedBox(width: 9,),
+                    const SizedBox(width: 9,),
                     Container(
                       width: 160,
                       height: 190,
@@ -114,21 +114,21 @@ class BeveragesProduct extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/lemonade.png'),
-                          SizedBox(height: 5,),
-                          Text("Lemonade"),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
+                          const Text("Lemonade"),
+                          const SizedBox(height: 5,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
                               //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )
@@ -139,7 +139,7 @@ class BeveragesProduct extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -151,28 +151,28 @@ class BeveragesProduct extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/chocolate.png'),
-                          SizedBox(height: 5,),
-                          Text("Chocolate"),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 5,),
+                          const Text("Chocolate"),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
-                              Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
+                              const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )
                         ],
                       ),
                     ),
-                    SizedBox(width: 9,),
+                    const SizedBox(width: 9,),
                     Container(
                       width: 160,
                       height: 190,
@@ -180,21 +180,21 @@ class BeveragesProduct extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/whisky.png'),
-                          SizedBox(height: 5,),
-                          Text("Whisky"),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 5,),
+                          const Text("Whisky"),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
                               //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )
@@ -204,7 +204,7 @@ class BeveragesProduct extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -216,28 +216,28 @@ class BeveragesProduct extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/choco_bakery.png'),
-                          SizedBox(height: 5,),
-                          Text("Chocolate Bakery"),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 5,),
+                          const Text("Chocolate Bakery"),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
-                              Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
+                              const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )
                         ],
                       ),
                     ),
-                    SizedBox(width: 9,),
+                    const SizedBox(width: 9,),
                     Container(
                       width: 160,
                       height: 190,
@@ -245,21 +245,21 @@ class BeveragesProduct extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset('assets/images/fruit_punch.png'),
-                          SizedBox(height: 5,),
-                          Text("Fruit Punch"),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 5,),
+                          const Text("Fruit Punch"),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 backgroundColor: CustomColors.primaryColor,
                                 radius: 13,
-                                child: Text('T'),
+                                child: const Text('T'),
                               ),
-                              Text("  Tradly"),
-                              SizedBox(width: 10,),
+                              const Text("  Tradly"),
+                              const SizedBox(width: 10,),
                               //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              SizedBox(width: 5,),
+                              const SizedBox(width: 5,),
                               Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                             ],
                           )

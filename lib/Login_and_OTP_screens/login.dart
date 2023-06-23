@@ -26,18 +26,18 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Welcome to tradly", style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500),),
-            SizedBox(height: 66,),
-            Text("Login to your account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),),
-            SizedBox(height: 30,),
+            const Text("Welcome to tradly", style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500),),
+            const SizedBox(height: 66,),
+            const Text("Login to your account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),),
+            const SizedBox(height: 30,),
             CustomField(label: '  Email/Mobile Number', control: email, obs: false),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             CustomField(label: '  Password', control: pass, obs: true),
-            SizedBox(height: 40,),
+            const SizedBox(height: 40,),
             ElevatedButton(onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SendOtp()),
+                MaterialPageRoute(builder: (context) => const SendOtp()),
               );
             },   style: ElevatedButton.styleFrom(
               fixedSize: const Size(311, 50),
@@ -49,21 +49,21 @@ class _LoginState extends State<Login> {
                 "Login",
                 style: TextStyle(fontSize: 20, color:Color(0xFF13B58C)),
               ),),
-            SizedBox(height: 40,),
-            Text("Forgot your password ?", style: TextStyle(color: Colors.white, fontSize: 20),),
-            SizedBox(height: 30,),
+            const SizedBox(height: 40,),
+            const Text("Forgot your password ?", style: TextStyle(color: Colors.white, fontSize: 20),),
+            const SizedBox(height: 30,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account? ", style: TextStyle(color: Colors.white, fontSize: 20),),
+                const Text("Don't have an account? ", style: TextStyle(color: Colors.white, fontSize: 20),),
                 GestureDetector(
                   onTap: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SignUp()),
+                      MaterialPageRoute(builder: (context) => const SignUp()),
                     );
                   },
-                    child: Text("Sign Up", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),))
+                    child: const Text("Sign Up", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),))
               ],
             )
           ],

@@ -30,27 +30,27 @@ class _OtpVerificationState extends State<OtpVerification> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text("Phone Verification", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 24, fontWeight: FontWeight.w500),),
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               Text("Enter your OTP code here.", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16, fontWeight: FontWeight.w400),),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               OtpTextField(
-                textStyle: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
+                textStyle: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
                 numberOfFields: 6,
-                borderColor: Color(0xFFFFFFFF),
+                borderColor: const Color(0xFFFFFFFF),
                 showFieldAsBox: false,
 
                 onCodeChanged: (String code) {
                 },
               ),
-              SizedBox(height: 70,),
+              const SizedBox(height: 70,),
               Text("Didn't you receive any code?", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 18, fontWeight: FontWeight.w400),),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Text('Resent new code', style: TextStyle(color: CustomColors.secondaryColor, fontSize: 18, fontWeight: FontWeight.w400),),
-              SizedBox(height: 60,),
+              const SizedBox(height: 60,),
               ElevatedButton(onPressed: (){
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BottomBar()),
+                  MaterialPageRoute(builder: (context) => const BottomBar()),
                 );
               },   style: ElevatedButton.styleFrom(
                 fixedSize: const Size(314, 48),

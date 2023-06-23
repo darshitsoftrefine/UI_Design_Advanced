@@ -14,19 +14,19 @@ class MyStore extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         automaticallyImplyLeading: false,
-        title: Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
           IconButton(onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => WishlistScreen()),
+              MaterialPageRoute(builder: (context) => const WishlistScreen()),
             );
           }, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
           IconButton(onPressed: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CartAddAddress()),
+              MaterialPageRoute(builder: (context) => const CartAddAddress()),
             );
           }, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
 
@@ -37,13 +37,13 @@ class MyStore extends StatelessWidget {
         child: Column(
           children: [
             Center(child: Image.asset('assets/images/undraw_business_shop_qw5t.png')),
-            SizedBox(height: 28,),
-            Text("You Don't Have a Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-            SizedBox(height: 37,),
+            const SizedBox(height: 28,),
+            const Text("You Don't Have a Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+            const SizedBox(height: 37,),
             ElevatedButton(onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CreateStore()),
+                MaterialPageRoute(builder: (context) => const CreateStore()),
               );
             },   style: ElevatedButton.styleFrom(
               fixedSize: const Size(219, 48),

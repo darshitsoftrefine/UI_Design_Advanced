@@ -14,7 +14,7 @@ class MyStoreAddedProduct extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         automaticallyImplyLeading: false,
-        title: Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
           IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
@@ -34,21 +34,21 @@ class MyStoreAddedProduct extends StatelessWidget {
       child: CircleAvatar(
       radius: 30,
       backgroundColor: CustomColors.primaryColor,
-      child: Text('T', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+      child: const Text('T', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
       ),
       ),
-      SizedBox(height: 16,),
+      const SizedBox(height: 16,),
       Container(
         alignment: Alignment.center,
-          child: Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),)),
-      SizedBox(height: 20,),
+          child: const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),)),
+      const SizedBox(height: 20,),
       Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
       ElevatedButton(onPressed: (){
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => EditStore()),
+        MaterialPageRoute(builder: (context) => const EditStore()),
       );
       },   style: ElevatedButton.styleFrom(
       fixedSize: const Size(106, 23),
@@ -65,12 +65,12 @@ class MyStoreAddedProduct extends StatelessWidget {
       style: TextStyle(fontSize: 12, color: Color(0xFF3A8877)),
       ),),
 
-      SizedBox(width: 30,),
+      const SizedBox(width: 30,),
 
       ElevatedButton(onPressed: (){
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ViewStore()),
+        MaterialPageRoute(builder: (context) => const ViewStore()),
       );
       },   style: ElevatedButton.styleFrom(
       fixedSize: const Size(111, 23),
@@ -84,24 +84,24 @@ class MyStoreAddedProduct extends StatelessWidget {
       ),),
       ],
       ),
-      SizedBox(height: 30,),
-      Center(child: Text("Remove Store", style: TextStyle(color: Colors.grey),)),
-        SizedBox(height: 42,),
+      const SizedBox(height: 30,),
+      const Center(child: Text("Remove Store", style: TextStyle(color: Colors.grey),)),
+        const SizedBox(height: 42,),
         Padding(
           padding: const EdgeInsets.only(left: 23, right: 17),
           child: TextFormField(
             enabled: true,
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
             controller: control,
             decoration: InputDecoration(
               filled: true,
               hintText: 'Search Product',
-              hintStyle: TextStyle(color: Colors.grey),
+              hintStyle: const TextStyle(color: Colors.grey),
               fillColor: Colors.white,
               prefixIcon: Icon(Icons.search, color: CustomColors.primaryColor,),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(32.0),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: Colors.white,
                   width: 1.0,
                 ),
@@ -109,15 +109,15 @@ class MyStoreAddedProduct extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 27,),
-        Text("Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-        SizedBox(height: 16,),
+        const SizedBox(height: 27,),
+        const Text("Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+        const SizedBox(height: 16,),
         Row(
           children: [
             Stack(
               children: [
                 Image.asset('assets/images/Product.png'),
-                Positioned(
+                const Positioned(
                   top: 40,
                   left: 40,
                   right: 80,
@@ -128,7 +128,7 @@ class MyStoreAddedProduct extends StatelessWidget {
                     child: Icon(Icons.edit, color: Colors.white,),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   top: 40,
                   left: 100,
                   right: 80,
@@ -141,7 +141,7 @@ class MyStoreAddedProduct extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(width: 12),
+            const SizedBox(width: 12),
             DottedBorder(
               color: Colors.grey, //color of dotted border
               strokeWidth: 2, //thickness of dots
@@ -153,7 +153,7 @@ class MyStoreAddedProduct extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     Icon(Icons.add, size: 52, color: Colors.grey,),
                     Text(
                       "Add Product", style: TextStyle(color: Colors.grey, fontSize: 18),

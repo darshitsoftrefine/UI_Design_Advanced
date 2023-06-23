@@ -21,7 +21,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 100,
-        title: Text("Payment Option", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text("Payment Option", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
       ),
@@ -35,7 +35,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 250,
                       height: 150,
                       child: Stack(
@@ -47,17 +47,17 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                             child: CircleAvatar(
                               radius: 15,
                               backgroundColor: CustomColors.onboardColor,
-                              child: Icon(Icons.arrow_forward, color: Colors.white,),
+                              child: const Icon(Icons.arrow_forward, color: Colors.white,),
                             ),
                           )
                         ],
                       ),
                     ),
-                    SizedBox(width: 15,),
+                    const SizedBox(width: 15,),
                     DottedBorder(
                       color: Colors.grey, //color of dotted border
                       strokeWidth: 2, //thickness of dots
-                      dashPattern: [8, 4], //length and space between dots
+                      dashPattern: const [8, 4], //length and space between dots
                       child: Container(
                         width: 200,
                         height: 133,
@@ -65,7 +65,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                          children: const [
                             Icon(Icons.add, size: 80, color: Colors.grey,),
                             Text(
                               "Add Payment Method", style: TextStyle(color: Colors.grey),
@@ -78,7 +78,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -86,19 +86,19 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                     backgroundColor: CustomColors.primaryColor,
                     radius: 5,
                   ),
-                  SizedBox(width: 15,),
-                  CircleAvatar(
+                  const SizedBox(width: 15,),
+                  const CircleAvatar(
                     backgroundColor: Colors.grey,
                     radius: 5,
                   ),
-                  SizedBox(width: 15,),
-                  CircleAvatar(
+                  const SizedBox(width: 15,),
+                  const CircleAvatar(
                     backgroundColor: Colors.grey,
                     radius: 5,
                   ),
                 ],
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               ListTile(
                 title: const Text('Debit/Credit Card'),
                 leading: Radio<SingingCharacter>(
@@ -171,19 +171,19 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                   }),
                 ),
               ),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Container(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 child: Row(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text("Deliever to Tradly Team. 75119"),
                         Text("Kualalumpur Malaysia"),
                       ],
                     ),
-                    SizedBox(width: 15,),
+                    const SizedBox(width: 15,),
                     ElevatedButton(onPressed: (){
                       Navigator.pop(context);
                     },   style: ElevatedButton.styleFrom(
@@ -199,32 +199,32 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                children: const [
                   Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                 ],
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Row(
-                children: [
+                children: const [
                   Text("Price (1 item) "),
                   SizedBox(width: 210,),
                   Text("\$25")
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Row(
-                children: [
+                children: const [
                   Text("Delievery Fee"),
                   SizedBox(width: 210,),
                   Text("Info")
                 ],
               ),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Row(
-                children: [
+                children: const [
                   Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                   SizedBox(width: 160,),
                   Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
@@ -235,11 +235,11 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child:ElevatedButton(onPressed: (){
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => CheckoutSuccessScreen()),
+            MaterialPageRoute(builder: (context) => const CheckoutSuccessScreen()),
           );
         },   style: ElevatedButton.styleFrom(
           fixedSize: const Size(190, 40),
