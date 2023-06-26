@@ -388,7 +388,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         width: 160,
                         height: 190,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300)
+                          border: Border.all(color: Colors.grey.shade300),
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -433,7 +434,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       fixedSize: const Size(100, 20),
                       backgroundColor: CustomColors.primaryColor,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32)),
+                          borderRadius: BorderRadius.circular(32),
+                      ),
                     ),
                     child: const Text(
                       "See All",
@@ -454,7 +456,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         width: 160,
                         height: 200,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300)
+                          border: Border.all(color: Colors.grey.shade300),
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -520,11 +523,155 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          Image.asset('assets/images/Store.png'),
-                          const SizedBox(width: 5,),
-                          Image.asset('assets/images/Storing.png'),
-                          const SizedBox(width: 5,),
-                          Image.asset('assets/images/Store.png'),
+                          Container(
+                            width: 160,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.grey.shade300),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+                            ),
+                            child: Stack(
+                              children: [
+                                Image.asset('assets/images/trad_store.png'),
+                                Positioned(
+                                  right: 50,
+                                  top: 30,
+                                  bottom: 60,
+                                  left: 50,
+                                  child: CircleAvatar(
+                                    backgroundColor: CustomColors.primaryColor,
+                                    radius: 30,
+                                    child: Text('T', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 120,
+                                    left: 30,
+                                    right: 30,
+
+                                    child: Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.w500),)),
+                                Positioned(
+                                  top: 140,
+                                  left: 36,
+                                  right: 30,
+                                  child:  ElevatedButton(onPressed: (){
+
+                                },
+                                  style: ElevatedButton.styleFrom(
+                                    fixedSize: const Size(56, 20),
+                                    backgroundColor: CustomColors.primaryColor,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(32),
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    "Follow",
+                                    style: TextStyle(fontSize: 12, color:Colors.white),
+                                  ),),)
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 10,),
+                          Container(
+                            width: 160,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.grey.shade300),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+                            ),
+                            child: Stack(
+                              children: [
+                                Image.asset('assets/images/groc_stor.png'),
+                                Positioned(
+                                  right: 50,
+                                  top: 30,
+                                  bottom: 60,
+                                  left: 50,
+                                  child: CircleAvatar(
+                                    backgroundColor: CustomColors.circColor,
+                                    radius: 30,
+                                    child: Text('A', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
+                                  ),
+                                ),
+                                Positioned(
+                                    top: 120,
+                                    left: 20,
+                                    right: 10,
+
+                                    child: Text("Groceries Store", style: TextStyle(fontWeight: FontWeight.w500),)),
+                                Positioned(
+                                  top: 140,
+                                  left: 36,
+                                  right: 30,
+                                  child:  ElevatedButton(onPressed: (){
+
+                                  },
+                                    style: ElevatedButton.styleFrom(
+                                      fixedSize: const Size(56, 20),
+                                      backgroundColor: CustomColors.primaryColor,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(32),
+                                      ),
+                                    ),
+                                    child: const Text(
+                                      "Follow",
+                                      style: TextStyle(fontSize: 12, color:Colors.white),
+                                    ),),)
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 10,),
+                          Container(
+                            width: 160,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: Colors.grey.shade300),
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+                            ),
+                            child: Stack(
+                              children: [
+                                Image.asset('assets/images/trad_store.png'),
+                                Positioned(
+                                  right: 50,
+                                  top: 30,
+                                  bottom: 60,
+                                  left: 50,
+                                  child: CircleAvatar(
+                                    backgroundColor: CustomColors.primaryColor,
+                                    radius: 30,
+                                    child: Text('T', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
+                                  ),
+                                ),
+                                Positioned(
+                                    top: 120,
+                                    left: 30,
+                                    right: 30,
+
+                                    child: Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.w500),)),
+                                Positioned(
+                                  top: 140,
+                                  left: 36,
+                                  right: 30,
+                                  child:  ElevatedButton(onPressed: (){
+
+                                  },
+                                    style: ElevatedButton.styleFrom(
+                                      fixedSize: const Size(56, 20),
+                                      backgroundColor: CustomColors.primaryColor,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(32),
+                                      ),
+                                    ),
+                                    child: const Text(
+                                      "Follow",
+                                      style: TextStyle(fontSize: 12, color:Colors.white),
+                                    ),),)
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
