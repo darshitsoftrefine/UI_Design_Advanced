@@ -24,12 +24,13 @@ class WishlistScreen extends StatelessWidget {
     children: [SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
       SizedBox(
       width: 160,
       height: 190,
       child: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
        children: [
       GestureDetector(
       onTap: () {
@@ -43,7 +44,7 @@ class WishlistScreen extends StatelessWidget {
       const Text("Apple"),
       const SizedBox(height: 10,),
       Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
@@ -97,6 +98,7 @@ class WishlistScreen extends StatelessWidget {
     SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
       SizedBox(
       width: 160,

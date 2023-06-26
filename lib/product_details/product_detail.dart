@@ -19,19 +19,18 @@ class ProductDetail extends StatelessWidget {
                     Image.asset('assets/images/Rectangle 54.png'),
                     Positioned(child:
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(onPressed: (){
                           Navigator.pop(context);
                         }, icon: const Icon(Icons.arrow_back_rounded, color: Colors.white,)),
-                        const SizedBox(width: 199,),
+                        const SizedBox(width: 189,),
                         CircleAvatar(
                           backgroundColor: Colors.transparent,
                             child: IconButton(onPressed: (){}, icon: const Icon(Icons.share, color: Colors.white,))),
-                        const SizedBox(width: 4,),
                         CircleAvatar(
                           backgroundColor: Colors.transparent,
                             child: IconButton(onPressed: (){}, icon: const Icon(Icons.favorite_border_outlined, color: Colors.white,))),
-                        const SizedBox(width: 4,),
                         CircleAvatar(
                           backgroundColor: Colors.transparent,
                             child: IconButton(onPressed: (){}, icon: const Icon(Icons.card_travel, color: Colors.white,))),
@@ -71,7 +70,7 @@ class ProductDetail extends StatelessWidget {
                 child: const Text('T', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),),
               ),
               const Text("  Tradly Store", style: TextStyle(fontSize: 20),),
-              const SizedBox(width: 100,),
+              const SizedBox(width: 87,),
               ElevatedButton(onPressed: (){
                 // Navigator.push(
                 //   context,

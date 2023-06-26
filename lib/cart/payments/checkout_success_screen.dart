@@ -121,7 +121,8 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
                     MaterialPageRoute(builder: (context) => const HomeDashboard()),
                   );
                 },
-                  child: const Text("Back to Home", style: TextStyle(fontWeight: FontWeight.bold),)),)
+                  child: const Text("Back to Home", style: TextStyle(fontWeight: FontWeight.bold),)),),
+              SizedBox(height: 15,),
           ],
           ),
         ),

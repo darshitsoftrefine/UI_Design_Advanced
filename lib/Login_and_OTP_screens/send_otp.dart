@@ -32,10 +32,49 @@ class _SendOtpState extends State<SendOtp> {
           children: [
             Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 24, fontWeight: FontWeight.w500),),
             const SizedBox(height: 40,),
-            Text("We have sent you an SMS with a code to enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
+            Text("We have sent you an SMS with a code to", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
+            Text("enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17),),
             const SizedBox(height: 20,),
             //NumberDropdownTextField(),
-            CustomField(label: '+91  9876543210', control: control, obs: false),
+            TextFormField(
+              enabled: true,
+              style: const TextStyle(color: Colors.white),
+              controller: control,
+              obscureText: false,
+              decoration: InputDecoration(
+                labelText: '+91 9876543210', labelStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                fillColor: Colors.white,
+                focusColor: Colors.white,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(32.0),
+              borderSide: const BorderSide(
+                color: Colors.white,
+                width: 1.0,
+              ),
+            ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                ),
+
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(32.0),
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                    style: BorderStyle.solid
+                  ),
+                ),
+                // enabledBorder: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(32.0),
+                //   borderSide: const BorderSide(
+                //     color: Colors.white,
+                //     width: 1.0,
+                //   ),
+                // ),
+
+
+              ),
+            ),
+            //CustomField(label: '+91  9876543210', control: control, obs: false),
             const SizedBox(height: 64,),
             Text('Or login with Social Network', style: TextStyle(color: CustomColors.secondaryColor, fontSize: 18, fontWeight: FontWeight.w400),),
             const SizedBox(height: 20,),

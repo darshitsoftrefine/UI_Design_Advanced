@@ -34,6 +34,7 @@ class _BrowseState extends State<Browse> {
             children: <Widget>[
               const SizedBox(height: 25,),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text("Browse", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
                   const SizedBox(width: 109,),
@@ -143,7 +144,7 @@ class _BrowseState extends State<Browse> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
+        padding: const EdgeInsets.only(top: 30, left: 23, right: 23, bottom: 20),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(

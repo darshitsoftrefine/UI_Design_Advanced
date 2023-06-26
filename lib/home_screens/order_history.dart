@@ -49,6 +49,7 @@ class OrderHistory extends StatelessWidget {
             ),
         const SizedBox(height: 50,),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
     Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
     const SizedBox(width: 20,),
@@ -86,6 +87,7 @@ class OrderHistory extends StatelessWidget {
       ),
             const SizedBox(height: 30,),
             Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
                   const SizedBox(width: 20,),
@@ -126,6 +128,7 @@ class OrderHistory extends StatelessWidget {
             ),
             const SizedBox(height: 30,),
             Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
                   const SizedBox(width: 20,),
@@ -166,6 +169,7 @@ class OrderHistory extends StatelessWidget {
             ),
             const SizedBox(height: 30,),
             Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
                   const SizedBox(width: 20,),

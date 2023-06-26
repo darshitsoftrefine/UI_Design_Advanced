@@ -38,7 +38,8 @@ class _OtpVerificationState extends State<OtpVerification> {
                 numberOfFields: 6,
                 borderColor: const Color(0xFFFFFFFF),
                 showFieldAsBox: false,
-
+                enabledBorderColor: Colors.white,
+                focusedBorderColor: Colors.white,
                 onCodeChanged: (String code) {
                 },
               ),

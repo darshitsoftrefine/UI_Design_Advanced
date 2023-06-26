@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //locale: DevicePreview.of(context).locale,
       debugShowCheckedModeBanner: false,
       title: 'Tradly',
       theme: ThemeData(

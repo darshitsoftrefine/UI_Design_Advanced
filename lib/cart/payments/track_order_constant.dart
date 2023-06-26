@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:order_tracker/order_tracker.dart';
-import 'package:timeline_tile/timeline_tile.dart';
 
 class TrackOrderConstant extends StatefulWidget {
   const TrackOrderConstant({Key? key}) : super(key: key);
@@ -18,38 +16,37 @@ class _MyHomePageState extends State<TrackOrderConstant> {
     return Stepper(
       currentStep: _currentStep, //the index of the current step
       onStepTapped: (int index) {
-//handle the tap event on the step
       },
       onStepContinue: () {
-//handle the continue event on the step
       },
       onStepCancel: () {
-//handle the cancel event on the step
       },
-      steps: <Step>[
+      steps: const <Step>[
         Step(
-          title: Text("Order Placed"), 
-          subtitle: Text("Godd Morning hjkfcfchjcz"),//the title of the step
-          content: Text("Your order has been placed successfully."), //the content of the step
-          state: StepState.complete, //the state of the step
+          title: Text("Order Placed"),
+          subtitle: Text("Order #123455 from Fashion Point"),//the title of the step
+          content: Text(""), //the content of the step, //the state of the step
           isActive: true, //whether the step is active or not
         ),
         Step(
-          title: Text("Order Confirmed"),
+          title: Text("Payment Confirmed"),
+          subtitle: Text("Payment Confirmed Status"),
           content: Text("Your order has been confirmed by the seller."),
           state: StepState.indexed,
           isActive: true,
         ),
         Step(
-          title: Text("Order Shipped"),
+          title: Text("Processed"),
+          subtitle: Text("Processed Status"),
           content: Text("Your order has been shipped by the courier."),
           state: StepState.indexed,
           isActive: true,
         ),
         Step(
-          title: Text("Order Delivered"),
+          title: Text("Delivered"),
+          subtitle: Text("Delievered Status"),
           content: Text("Your order will be delivered soon."),
-          state: StepState.disabled,
+          state: StepState.complete,
           isActive: false,
         ),
       ],
