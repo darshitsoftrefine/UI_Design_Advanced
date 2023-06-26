@@ -124,139 +124,149 @@ class _HomeDashboardState extends State<HomeDashboard> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              child: GridView(
+                shrinkWrap: true,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 4,  ),
                 children: [
                   CustomWidgets().grid_cards('assets/images/Rectangle 28.png', "Beverages", 40, 20, 12, 8, () {
                     Navigator.push(
                       context,
+                      MaterialPageRoute(builder: (context) => const BeveragesProduct()),
+                    );
+                  },),
+                  CustomWidgets().grid_cards('assets/images/Rectangle 29.png', "Bread&Bakery", 40, 20, 12, 8, () {
+                    Navigator.push(
+                      context,
                       MaterialPageRoute(builder: (context) => const BreadProduct()),
                     );
                   },),
+                  CustomWidgets().grid_cards('assets/images/Rectangle 30.png', "Vegetables", 40.0, 20, 10, 8, () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const VegetableProduct()),
+                    );
+                  },)
 
                 ],
                 
               ),
-                child: Row(
-                  children: [
-                    CustomWidgets().grid_cards('assets/images/Rectangle 28.png', "Beverages", 40, 20, 12, 8, () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const BreadProduct()),
-                      );
-                    },),
-                    Stack(
-                        children:[
-                          GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => const VegetableProduct()),
-                                );
-                              },
-                              child: Image.asset('assets/images/Rectangle 30.png', width: 100,)),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
-                            child: Text("Vegetables", style: TextStyle(color: Colors.white, fontSize: 13),),
-                          ),
-                        ]
-                    ),
-                    Stack(
-                        children:[
-                          GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => const FruitProduct()),
-                                );
-                              },
-                              child: Image.asset('assets/images/Rectangle 31.png', width: 100,)),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
-                            child: Text("Fruits", style: TextStyle(color: Colors.white, fontSize: 13),),
-                          ),
-                        ]
-                    ),
-
-                  ],
-                ),
-              ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 1),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Stack(
-                        children:[
-                          GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => const EggProduct()),
-                                );
-                              },
-                              child: Image.asset('assets/images/Rectangle 32.png', width: 100,)),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
-                            child: Text("Egg", style: TextStyle(color: Colors.white, fontSize: 13),),
-                          ),
-                        ]
-                    ),
-                    Stack(
-                        children:[
-                          GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => const FrozenProduct()),
-                                );
-                              },
-                              child: Image.asset('assets/images/Rectangle 33.png', width: 100,)),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
-                            child: Text("Frozen Veg", style: TextStyle(color: Colors.white, fontSize: 13),),
-                          ),
-                        ]
-                    ),
-                    Stack(
-                        children:[
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => const HomeProduct()),
-                              );
-                            },
-                              child: Image.asset('assets/images/Rectangle 34.png', width: 100,)),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
-                            child: Text("Homecare", style: TextStyle(color: Colors.white, fontSize: 13),),
-                          ),
-                        ]
-                    ),
-                    Stack(
-                        children:[
-                          GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => const PetProduct()),
-                                );
-                              },
-                              child: Image.asset('assets/images/Rectangle 35.png', width: 100,)),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
-                            child: Text("Pet Care", style: TextStyle(color: Colors.white, fontSize: 13),),
-                          ),
-                        ]
-                    ),
-
-                  ],
-                ),
-              ),
-            ),
+            //     child: Row(
+            //       children: [
+            //
+            //         Stack(
+            //             children:[
+            //               GestureDetector(
+            //                   onTap: () {
+            //                     Navigator.push(
+            //                       context,
+            //                       MaterialPageRoute(builder: (context) => const VegetableProduct()),
+            //                     );
+            //                   },
+            //                   child: Image.asset('assets/images/Rectangle 30.png', width: 100,)),
+            //               const Padding(
+            //                 padding: EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
+            //                 child: Text("Vegetables", style: TextStyle(color: Colors.white, fontSize: 13),),
+            //               ),
+            //             ]
+            //         ),
+            //         Stack(
+            //             children:[
+            //               GestureDetector(
+            //                   onTap: () {
+            //                     Navigator.push(
+            //                       context,
+            //                       MaterialPageRoute(builder: (context) => const FruitProduct()),
+            //                     );
+            //                   },
+            //                   child: Image.asset('assets/images/Rectangle 31.png', width: 100,)),
+            //               const Padding(
+            //                 padding: EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
+            //                 child: Text("Fruits", style: TextStyle(color: Colors.white, fontSize: 13),),
+            //               ),
+            //             ]
+            //         ),
+            //
+            //       ],
+            //     ),
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 1),
+            //   child: SingleChildScrollView(
+            //     scrollDirection: Axis.horizontal,
+            //     child: Row(
+            //       children: [
+            //         Stack(
+            //             children:[
+            //               GestureDetector(
+            //                   onTap: () {
+            //                     Navigator.push(
+            //                       context,
+            //                       MaterialPageRoute(builder: (context) => const EggProduct()),
+            //                     );
+            //                   },
+            //                   child: Image.asset('assets/images/Rectangle 32.png', width: 100,)),
+            //               const Padding(
+            //                 padding: EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
+            //                 child: Text("Egg", style: TextStyle(color: Colors.white, fontSize: 13),),
+            //               ),
+            //             ]
+            //         ),
+            //         Stack(
+            //             children:[
+            //               GestureDetector(
+            //                   onTap: () {
+            //                     Navigator.push(
+            //                       context,
+            //                       MaterialPageRoute(builder: (context) => const FrozenProduct()),
+            //                     );
+            //                   },
+            //                   child: Image.asset('assets/images/Rectangle 33.png', width: 100,)),
+            //               const Padding(
+            //                 padding: EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
+            //                 child: Text("Frozen Veg", style: TextStyle(color: Colors.white, fontSize: 13),),
+            //               ),
+            //             ]
+            //         ),
+            //         Stack(
+            //             children:[
+            //               GestureDetector(
+            //                 onTap: () {
+            //                   Navigator.push(
+            //                     context,
+            //                     MaterialPageRoute(builder: (context) => const HomeProduct()),
+            //                   );
+            //                 },
+            //                   child: Image.asset('assets/images/Rectangle 34.png', width: 100,)),
+            //               const Padding(
+            //                 padding: EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
+            //                 child: Text("Homecare", style: TextStyle(color: Colors.white, fontSize: 13),),
+            //               ),
+            //             ]
+            //         ),
+            //         Stack(
+            //             children:[
+            //               GestureDetector(
+            //                   onTap: () {
+            //                     Navigator.push(
+            //                       context,
+            //                       MaterialPageRoute(builder: (context) => const PetProduct()),
+            //                     );
+            //                   },
+            //                   child: Image.asset('assets/images/Rectangle 35.png', width: 100,)),
+            //               const Padding(
+            //                 padding: EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
+            //                 child: Text("Pet Care", style: TextStyle(color: Colors.white, fontSize: 13),),
+            //               ),
+            //             ]
+            //         ),
+            //
+            //       ],
+            //     ),
+            //   ),
+            // ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
