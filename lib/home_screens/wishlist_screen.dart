@@ -21,16 +21,20 @@ class WishlistScreen extends StatelessWidget {
     scrollDirection: Axis.vertical,
     child: Column(
     mainAxisAlignment: MainAxisAlignment.start,
-    children: [SingleChildScrollView(
+    children: [
+      SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-      SizedBox(
-      width: 160,
-      height: 190,
+      Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey.shade300)
+        ),
+        width: 160,
+        height: 200,
       child: Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
        children: [
       GestureDetector(
       onTap: () {
@@ -41,10 +45,10 @@ class WishlistScreen extends StatelessWidget {
       },
       child: Image.asset('assets/images/apple.png')),
       const SizedBox(height: 5,),
-      const Text("Apple"),
+      const Text(" Apple", style: TextStyle(fontWeight: FontWeight.w500),),
       const SizedBox(height: 10,),
       Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
@@ -62,18 +66,22 @@ class WishlistScreen extends StatelessWidget {
       ),
       ),
       const SizedBox(width: 9,),
-      SizedBox(
-      width: 160,
-      height: 190,
+      Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey.shade300)
+        ),
+        width: 160,
+        height: 200,
       child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
       Image.asset('assets/images/orange.png'),
       const SizedBox(height: 5,),
-      const Text("Orange"),
+      const Text(" Orange", style: TextStyle(fontWeight: FontWeight.w500),),
       const SizedBox(height: 5,),
       Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
@@ -100,18 +108,22 @@ class WishlistScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-      SizedBox(
-      width: 160,
-      height: 190,
+      Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey.shade300)
+        ),
+        width: 160,
+        height: 200,
       child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
       Image.asset('assets/images/moist.png'),
       const SizedBox(height: 5,),
-      const Text("Moisturizer"),
+      const Text(" Moisturizer", style: TextStyle(fontWeight: FontWeight.w500),),
       const SizedBox(height: 10,),
       Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,
@@ -129,18 +141,22 @@ class WishlistScreen extends StatelessWidget {
       ),
       ),
       const SizedBox(width: 9,),
-      SizedBox(
-      width: 160,
-      height: 190,
+      Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey.shade300)
+        ),
+        width: 160,
+        height: 200,
       child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
       Image.asset('assets/images/broc.png'),
       const SizedBox(height: 5,),
-      const Text("Brocolli"),
+      const Text(" Brocolli", style: TextStyle(fontWeight: FontWeight.w500),),
       const SizedBox(height: 10,),
       Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
       CircleAvatar(
       backgroundColor: CustomColors.primaryColor,

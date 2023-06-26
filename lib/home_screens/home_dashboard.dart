@@ -118,9 +118,10 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         Padding(
                           padding: const EdgeInsets.only(top: 40, left: 15),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
-                              SizedBox(height: 17,),
+                              Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 14),),
+                              SizedBox(height: 10,),
                               ElevatedButton(onPressed: (){
 
                               },   style: ElevatedButton.styleFrom(
@@ -140,7 +141,64 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         ),
                       ],
                     ),
-                    Image.asset('assets/images/home_side.png'),
+                    SizedBox(width: 10,),
+                    Stack(
+                      children: [
+                        Image.asset('assets/images/food_home.png'),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 40, left: 15),
+                          child: Column(
+                            children: [
+                              Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
+                              SizedBox(height: 17,),
+                              ElevatedButton(onPressed: (){
+
+                              },   style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(151, 28),
+                                backgroundColor: Colors.transparent,
+                                side: const BorderSide(color: Colors.white, width: 1),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(32),
+                                ),
+                              ),
+                                child: const Text(
+                                  "START SHOPPING",
+                                  style: TextStyle(fontSize: 12, color:Colors.white),
+                                ),),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 10,),
+                    Stack(
+                      children: [
+                        Image.asset('assets/images/food_home.png'),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 40, left: 15),
+                          child: Column(
+                            children: [
+                              Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
+                              SizedBox(height: 17,),
+                              ElevatedButton(onPressed: (){
+
+                              },   style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(151, 28),
+                                backgroundColor: Colors.transparent,
+                                side: const BorderSide(color: Colors.white, width: 1),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(32),
+                                ),
+                              ),
+                                child: const Text(
+                                  "START SHOPPING",
+                                  style: TextStyle(fontSize: 12, color:Colors.white),
+                                ),),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -318,23 +376,30 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 200,
-                  child: ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: List.generate(newProductList.length, (index) {
-                        return Column(
+            SizedBox(
+              height: 200,
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                children: List.generate(newProductList.length, (index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 5, left: 5),
+                      child: Container(
+                        width: 160,
+                        height: 190,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                        ),
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset(newProductList[index].image),
                             SizedBox(height: 10,),
-                            Text(newProductList[index].productName, style: TextStyle(fontWeight: FontWeight.w500),),
+                            Text(" "+newProductList[index].productName, style: TextStyle(fontWeight: FontWeight.w500),),
                             SizedBox(height: 10,),
                             Row(
                               children: [
+                                SizedBox(width: 2,),
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
                                   radius: 10,
@@ -343,28 +408,16 @@ class _HomeDashboardState extends State<HomeDashboard> {
                                 SizedBox(width: 3,),
                                 Text(newProductList[index].logoText),
                                 SizedBox(width: 55,),
-                                Text(newProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                                Text(newProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
+                                //SizedBox(width: 15,)
                               ],
-                            )
+                            ),
                           ],
-                        );
-                      })
-                    ),
+                        ),
+                      ),
+                    );
+                  })
                 ),
-
-              //   SingleChildScrollView(
-              //     scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     children: [
-              //       Image.asset('assets/images/Product with sale.png'),
-              //       const SizedBox(width: 15,),
-              //       Image.asset('assets/images/Product.png'),
-              //       const SizedBox(width: 15,),
-              //       Image.asset('assets/images/Product with sale1.png'),
-              //
-              //     ],
-              //   ),
-              // ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -389,57 +442,51 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200,
-                child: ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: List.generate(popularProductList.length, (index) {
-                      return Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(popularProductList[index].image),
-                          SizedBox(height: 10,),
-                          Text(popularProductList[index].productName, style: TextStyle(fontWeight: FontWeight.w500),),
-                          SizedBox(height: 10,),
-                          Row(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: CustomColors.primaryColor,
-                                radius: 10,
-                                child: Text('T'),
-                              ),
-                              SizedBox(width: 3,),
-                              Text(popularProductList[index].logoText),
-                              SizedBox(width: 55,),
-                              Text(popularProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                      );
-                    })
-                ),
+            SizedBox(
+              height: 200,
+              child: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: List.generate(popularProductList.length, (index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 5.0, left: 5.0),
+                      child: Container(
+                        width: 160,
+                        height: 200,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(popularProductList[index].image),
+                            SizedBox(height: 10,),
+                            Text(" "+popularProductList[index].productName, style: TextStyle(fontWeight: FontWeight.w500),),
+                            SizedBox(height: 10,),
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundColor: CustomColors.primaryColor,
+                                  radius: 10,
+                                  child: Text('T'),
+                                ),
+                                SizedBox(width: 3,),
+                                Text(popularProductList[index].logoText),
+                                SizedBox(width: 55,),
+                                Text(popularProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  })
               ),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     children: [
-              //       Image.asset('assets/images/Productfish.png'),
-              //       const SizedBox(width: 15,),
-              //       Image.asset('assets/images/Productshampoo.png'),
-              //       const SizedBox(width: 15,),
-              //       Image.asset('assets/images/Product with sale1.png'),
-              //       const SizedBox(width: 15,),
-              //
-              //     ],
-              //   ),
-              // ),
             ),
+            SizedBox(height: 10,),
             Container(
               width: 500,
-              height: 500,
+              height: 300,
               color: CustomColors.primaryColor,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -477,7 +524,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                           const SizedBox(width: 5,),
                           Image.asset('assets/images/Storing.png'),
                           const SizedBox(width: 5,),
-                          Image.asset('assets/images/Product with sale1.png'),
+                          Image.asset('assets/images/Store.png'),
                         ],
                       ),
                     ),

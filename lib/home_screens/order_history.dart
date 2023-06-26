@@ -32,7 +32,7 @@ class OrderHistory extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 10, bottom: 10, right: 10),
+        padding: const EdgeInsets.only(top: 30, left: 10, bottom: 10, right: 10),
         child: Column(
           children: [
             Row(
@@ -47,7 +47,7 @@ class OrderHistory extends StatelessWidget {
                 )
               ],
             ),
-        const SizedBox(height: 50,),
+        const SizedBox(height: 30,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [

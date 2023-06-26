@@ -11,5 +11,5 @@ class PopularProductList {
 List<PopularProductList> popularProductList = [
   PopularProductList(image: 'assets/images/fish_pop.png', productName: 'Fish', logoText: 'Tradly', price: '\$15'),
   PopularProductList(image: 'assets/images/shampoo_pop.png', productName: 'Shampoo', logoText: 'Tradly', price: '\$25'),
-  //NewProductList(image: 'assets/images/cocacola.png', productName: 'CocaCola', logoText: 'Tradly', price: '\$25'),
+  PopularProductList(image: 'assets/images/shampoo_pop.png', productName: 'Shampoo', logoText: 'Tradly', price: '\$25'),
 ];

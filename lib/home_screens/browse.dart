@@ -154,11 +154,15 @@ class _BrowseState extends State<Browse> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      SizedBox(
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                        ),
                         width: 160,
-                        height: 190,
+                        height: 200,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GestureDetector(
                                 onTap: () {
@@ -169,10 +173,10 @@ class _BrowseState extends State<Browse> {
                                 },
                                 child: Image.asset('assets/images/apple.png')),
                             const SizedBox(height: 5,),
-                            const Text("Apple"),
+                            const Text(" Apple", style: TextStyle(fontWeight: FontWeight.w500),),
                             const SizedBox(height: 10,),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
@@ -190,18 +194,22 @@ class _BrowseState extends State<Browse> {
                         ),
                       ),
                       const SizedBox(width: 9,),
-                      SizedBox(
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         width: 160,
-                        height: 190,
+                        height: 200,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset('assets/images/orange.png'),
                             const SizedBox(height: 5,),
-                            const Text("Orange"),
+                            const Text(" Orange", style: TextStyle(fontWeight: FontWeight.w500),),
                             const SizedBox(height: 5,),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
@@ -227,18 +235,22 @@ class _BrowseState extends State<Browse> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      SizedBox(
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         width: 160,
-                        height: 190,
+                        height: 200,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset('assets/images/moist.png'),
                             const SizedBox(height: 5,),
-                            const Text("Moisturizer"),
+                            const Text(" Moisturizer", style: TextStyle(fontWeight: FontWeight.w500),),
                             const SizedBox(height: 10,),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
@@ -256,18 +268,22 @@ class _BrowseState extends State<Browse> {
                         ),
                       ),
                       const SizedBox(width: 9,),
-                      SizedBox(
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         width: 160,
-                        height: 190,
+                        height: 200,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset('assets/images/broc.png'),
                             const SizedBox(height: 5,),
-                            const Text("Brocolli"),
+                            const Text(" Brocolli" , style: TextStyle(fontWeight: FontWeight.w500),),
                             const SizedBox(height: 10,),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
@@ -292,18 +308,22 @@ class _BrowseState extends State<Browse> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      SizedBox(
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         width: 160,
-                        height: 190,
+                        height: 200,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset('assets/images/brown.png'),
                             const SizedBox(height: 5,),
-                            const Text("Brown Egg"),
+                            const Text(" Brown Egg", style: TextStyle(fontWeight: FontWeight.w500),),
                             const SizedBox(height: 10,),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
@@ -321,18 +341,22 @@ class _BrowseState extends State<Browse> {
                         ),
                       ),
                       const SizedBox(width: 9,),
-                      SizedBox(
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300)
+                        ),
                         width: 160,
-                        height: 190,
+                        height: 200,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset('assets/images/fruit_punch.png'),
                             const SizedBox(height: 5,),
-                            const Text("Fruit Punch"),
+                            const Text(" Fruit Punch", style: TextStyle(fontWeight: FontWeight.w500),),
                             const SizedBox(height: 10,),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,

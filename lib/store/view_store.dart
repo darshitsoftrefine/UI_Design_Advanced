@@ -186,9 +186,12 @@ class ViewStore extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    SizedBox(
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -215,9 +218,12 @@ class ViewStore extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 10,),
-                    SizedBox(
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -251,9 +257,12 @@ class ViewStore extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    SizedBox(
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -280,9 +289,12 @@ class ViewStore extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 10,),
-                    SizedBox(
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [

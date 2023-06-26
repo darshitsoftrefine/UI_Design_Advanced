@@ -68,11 +68,11 @@ class AddProductStore extends StatelessWidget {
               const SizedBox(height: 45,),
               const Text("Product Name", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 12,),
-              const Text("Brocolli", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+              const Text("Brocolli", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
               const SizedBox(height: 22,),
               const Text("Category Product", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
-              const Text("Vegetables", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+              const Text("Vegetables", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
               const SizedBox(height: 24,),
               Row(
                 children: [
@@ -82,7 +82,7 @@ class AddProductStore extends StatelessWidget {
                     children: const [
                       Text("Price", style: TextStyle(color: Colors.grey),),
                       SizedBox(height: 10,),
-                      Text("\$        30", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                      Text("\$        30", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
                     ],
                   ),
                   const SizedBox(width: 127,),
@@ -91,7 +91,7 @@ class AddProductStore extends StatelessWidget {
                     children: const [
                       Text("Offer Price", style: TextStyle(color: Colors.grey),),
                       SizedBox(height: 10,),
-                      Text("\$        15", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
+                      Text("\$        15", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
                     ],
                   )
 
@@ -102,7 +102,7 @@ class AddProductStore extends StatelessWidget {
               const SizedBox(height: 6,),
               Row(
                 children: const [
-                  Text("Kualalumpur, Malaysia", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
+                  Text("Kualalumpur, Malaysia", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
                   SizedBox(width: 100,),
                   Icon(Icons.bar_chart, color: Colors.grey,)
                 ],
@@ -114,7 +114,7 @@ class AddProductStore extends StatelessWidget {
               const SizedBox(height: 20,),
               const Text("Price Type", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
-              const Text("Fixed", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
+              const Text("Fixed", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
               const SizedBox(height: 20,),
               const Text("Additional Details"),
               const SizedBox(height: 4,),

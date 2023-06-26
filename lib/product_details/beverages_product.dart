@@ -79,8 +79,11 @@ class BeveragesProduct extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -108,8 +111,11 @@ class BeveragesProduct extends StatelessWidget {
             ),
                     const SizedBox(width: 9,),
                     Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -145,8 +151,11 @@ class BeveragesProduct extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -174,8 +183,11 @@ class BeveragesProduct extends StatelessWidget {
                     ),
                     const SizedBox(width: 9,),
                     Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -210,8 +222,11 @@ class BeveragesProduct extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -239,8 +254,11 @@ class BeveragesProduct extends StatelessWidget {
                     ),
                     const SizedBox(width: 9,),
                     Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
                       width: 160,
-                      height: 190,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [

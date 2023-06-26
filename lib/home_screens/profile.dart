@@ -99,7 +99,7 @@ class Profile extends StatelessWidget {
                     Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          Text("Tradly Team", style: TextStyle(fontSize: 15,color: Colors.white),),
+                          Text("Tradly Team", style: TextStyle(fontSize: 15,color: Colors.white, fontWeight: FontWeight.w700),),
                           SizedBox(height: 5,),
                           Text("+1 9998887776", style: TextStyle(fontSize: 15, color: Colors.white),),
                           SizedBox(height: 5,),
