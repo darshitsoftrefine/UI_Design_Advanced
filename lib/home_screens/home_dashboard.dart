@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/bottom_bar.dart';
 import 'package:tradly/constants/custom_field.dart';
+import 'package:tradly/custom_widgets.dart';
 import 'package:tradly/home_screens/browse.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
 import 'package:tradly/models/new_product_list.dart';
@@ -46,7 +47,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text("Groceries", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),),
-                  const SizedBox(width: 104,),
+                  SizedBox(width: 100,),
                   IconButton(
                     icon: const Icon(Icons.favorite, color: Colors.white,),
                     onPressed: () {
@@ -56,6 +57,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       );
                     },
                   ),
+
                   Stack(
                     children:[ IconButton(
                       icon: const Icon(Icons.shopping_cart, color: Colors.white,),
@@ -103,7 +105,6 @@ class _HomeDashboardState extends State<HomeDashboard> {
         ),
       ),
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Padding(
@@ -112,135 +113,38 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Stack(
-                      children: [
-                        Image.asset('assets/images/food_home.png'),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40, left: 15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 14),),
-                              SizedBox(height: 10,),
-                              ElevatedButton(onPressed: (){
-
-                              },   style: ElevatedButton.styleFrom(
-                                fixedSize: const Size(151, 28),
-                                backgroundColor: Colors.transparent,
-                                side: const BorderSide(color: Colors.white, width: 1),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(32),
-                                ),
-                              ),
-                                child: const Text(
-                                  "START SHOPPING",
-                                  style: TextStyle(fontSize: 12, color:Colors.white),
-                                ),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    CustomWidgets().card_home_dashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME'),
                     SizedBox(width: 10,),
-                    Stack(
-                      children: [
-                        Image.asset('assets/images/food_home.png'),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40, left: 15),
-                          child: Column(
-                            children: [
-                              Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
-                              SizedBox(height: 17,),
-                              ElevatedButton(onPressed: (){
-
-                              },   style: ElevatedButton.styleFrom(
-                                fixedSize: const Size(151, 28),
-                                backgroundColor: Colors.transparent,
-                                side: const BorderSide(color: Colors.white, width: 1),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(32),
-                                ),
-                              ),
-                                child: const Text(
-                                  "START SHOPPING",
-                                  style: TextStyle(fontSize: 12, color:Colors.white),
-                                ),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    CustomWidgets().card_home_dashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME'),
                     SizedBox(width: 10,),
-                    Stack(
-                      children: [
-                        Image.asset('assets/images/food_home.png'),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40, left: 15),
-                          child: Column(
-                            children: [
-                              Text("READY TO DELIVER TO \n YOUR HOME", style: TextStyle(color: Colors.white, fontSize: 15),),
-                              SizedBox(height: 17,),
-                              ElevatedButton(onPressed: (){
-
-                              },   style: ElevatedButton.styleFrom(
-                                fixedSize: const Size(151, 28),
-                                backgroundColor: Colors.transparent,
-                                side: const BorderSide(color: Colors.white, width: 1),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(32),
-                                ),
-                              ),
-                                child: const Text(
-                                  "START SHOPPING",
-                                  style: TextStyle(fontSize: 12, color:Colors.white),
-                                ),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    CustomWidgets().card_home_dashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME'),
                   ],
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
+              child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,  ),
+                children: [
+                  CustomWidgets().grid_cards('assets/images/Rectangle 28.png', "Beverages", 40, 20, 12, 8, () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const BreadProduct()),
+                    );
+                  },),
+
+                ],
+                
+              ),
                 child: Row(
                   children: [
-                    Stack(
-                     children:[
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const BeveragesProduct()),
-                          );
-                        },
-                          child: Image.asset('assets/images/Rectangle 28.png', width: 100,)),
-                       const Padding(
-                         padding: EdgeInsets.only(top: 40.0, left: 12, right: 8, bottom: 20),
-                         child: Text("Beverages", style: TextStyle(color: Colors.white, fontSize: 13),),
-                       ),
-                     ]
-    ),
-                    Stack(
-                        children:[
-                          GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => const BreadProduct()),
-                                );
-                              },
-                              child: Image.asset('assets/images/Rectangle 29.png', width: 100,)),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 40.0, bottom: 20),
-                            child: Text("Bread Bakery", style: TextStyle(color: Colors.white, fontSize: 13),),
-                          ),
-                        ]
-                    ),
+                    CustomWidgets().grid_cards('assets/images/Rectangle 28.png', "Beverages", 40, 20, 12, 8, () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const BreadProduct()),
+                      );
+                    },),
                     Stack(
                         children:[
                           GestureDetector(
@@ -519,7 +423,11 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: SingleChildScrollView(
+                    child:
+
+
+
+                    SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
