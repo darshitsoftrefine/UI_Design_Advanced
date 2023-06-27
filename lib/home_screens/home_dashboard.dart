@@ -124,18 +124,19 @@ class _HomeDashboardState extends State<HomeDashboard> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: GridView(
+              child: GridView.count(
                 shrinkWrap: true,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,  ),
+                mainAxisSpacing: 2,
+                crossAxisSpacing: 2,
+                crossAxisCount: 4,
                 children: [
-                  CustomWidgets().grid_cards('assets/images/Rectangle 28.png', "Beverages", 40, 20, 12, 8, () {
+                  CustomWidgets().grid_cards('assets/images/Rectangle 28.png', "Beverages", 40, 20, 8, 7, () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const BeveragesProduct()),
                     );
                   },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 29.png', "Bread&Bakery", 40, 20, 12, 8, () {
+                  CustomWidgets().grid_cards('assets/images/Rectangle 29.png', "Bread&Bakery", 40, 20, 0, 0, () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const BreadProduct()),
@@ -146,127 +147,42 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       context,
                       MaterialPageRoute(builder: (context) => const VegetableProduct()),
                     );
+                  },),
+                  CustomWidgets().grid_cards('assets/images/Rectangle 31.png', "Fruits", 40, 20, 27, 0,  () {
+                        Navigator.push(
+                         context,
+                           MaterialPageRoute(builder: (context) => const FruitProduct()),
+                      );
+                      },),
+                  CustomWidgets().grid_cards('assets/images/Rectangle 32.png', "Egg", 40, 20, 35, 8,  () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const EggProduct()),
+                    );
+                  },),
+                  CustomWidgets().grid_cards('assets/images/Rectangle 33.png', "Frozen Veg", 40, 20, 8, 8,  () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FrozenProduct()),
+                    );
+                  },),
+                  CustomWidgets().grid_cards('assets/images/Rectangle 34.png', "Homecare", 40, 20, 13, 8,  () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomeProduct()),
+                    );
+                  },),
+                  CustomWidgets().grid_cards('assets/images/Rectangle 35.png', "Pet Care", 40, 20, 22, 8,  () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PetProduct()),
+                    );
                   },)
-
                 ],
                 
               ),
             ),
-            //     child: Row(
-            //       children: [
-            //
-            //         Stack(
-            //             children:[
-            //               GestureDetector(
-            //                   onTap: () {
-            //                     Navigator.push(
-            //                       context,
-            //                       MaterialPageRoute(builder: (context) => const VegetableProduct()),
-            //                     );
-            //                   },
-            //                   child: Image.asset('assets/images/Rectangle 30.png', width: 100,)),
-            //               const Padding(
-            //                 padding: EdgeInsets.only(top: 40.0, left: 10, right: 8, bottom: 20),
-            //                 child: Text("Vegetables", style: TextStyle(color: Colors.white, fontSize: 13),),
-            //               ),
-            //             ]
-            //         ),
-            //         Stack(
-            //             children:[
-            //               GestureDetector(
-            //                   onTap: () {
-            //                     Navigator.push(
-            //                       context,
-            //                       MaterialPageRoute(builder: (context) => const FruitProduct()),
-            //                     );
-            //                   },
-            //                   child: Image.asset('assets/images/Rectangle 31.png', width: 100,)),
-            //               const Padding(
-            //                 padding: EdgeInsets.only(top: 40.0, bottom: 20, left: 27),
-            //                 child: Text("Fruits", style: TextStyle(color: Colors.white, fontSize: 13),),
-            //               ),
-            //             ]
-            //         ),
-            //
-            //       ],
-            //     ),
-            //   ),
-            // ),
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 1),
-            //   child: SingleChildScrollView(
-            //     scrollDirection: Axis.horizontal,
-            //     child: Row(
-            //       children: [
-            //         Stack(
-            //             children:[
-            //               GestureDetector(
-            //                   onTap: () {
-            //                     Navigator.push(
-            //                       context,
-            //                       MaterialPageRoute(builder: (context) => const EggProduct()),
-            //                     );
-            //                   },
-            //                   child: Image.asset('assets/images/Rectangle 32.png', width: 100,)),
-            //               const Padding(
-            //                 padding: EdgeInsets.only(top: 40.0, left: 35, right: 8, bottom: 20),
-            //                 child: Text("Egg", style: TextStyle(color: Colors.white, fontSize: 13),),
-            //               ),
-            //             ]
-            //         ),
-            //         Stack(
-            //             children:[
-            //               GestureDetector(
-            //                   onTap: () {
-            //                     Navigator.push(
-            //                       context,
-            //                       MaterialPageRoute(builder: (context) => const FrozenProduct()),
-            //                     );
-            //                   },
-            //                   child: Image.asset('assets/images/Rectangle 33.png', width: 100,)),
-            //               const Padding(
-            //                 padding: EdgeInsets.only(top: 40.0, left: 8, right: 8, bottom: 20),
-            //                 child: Text("Frozen Veg", style: TextStyle(color: Colors.white, fontSize: 13),),
-            //               ),
-            //             ]
-            //         ),
-            //         Stack(
-            //             children:[
-            //               GestureDetector(
-            //                 onTap: () {
-            //                   Navigator.push(
-            //                     context,
-            //                     MaterialPageRoute(builder: (context) => const HomeProduct()),
-            //                   );
-            //                 },
-            //                   child: Image.asset('assets/images/Rectangle 34.png', width: 100,)),
-            //               const Padding(
-            //                 padding: EdgeInsets.only(top: 40.0, left: 13, right: 8, bottom: 20),
-            //                 child: Text("Homecare", style: TextStyle(color: Colors.white, fontSize: 13),),
-            //               ),
-            //             ]
-            //         ),
-            //         Stack(
-            //             children:[
-            //               GestureDetector(
-            //                   onTap: () {
-            //                     Navigator.push(
-            //                       context,
-            //                       MaterialPageRoute(builder: (context) => const PetProduct()),
-            //                     );
-            //                   },
-            //                   child: Image.asset('assets/images/Rectangle 35.png', width: 100,)),
-            //               const Padding(
-            //                 padding: EdgeInsets.only(top: 40.0, left: 22, right: 8, bottom: 20),
-            //                 child: Text("Pet Care", style: TextStyle(color: Colors.white, fontSize: 13),),
-            //               ),
-            //             ]
-            //         ),
-            //
-            //       ],
-            //     ),
-            //   ),
-            // ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -434,162 +350,15 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child:
-
-
-
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          Container(
-                            width: 160,
-                            height: 200,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-                            ),
-                            child: Stack(
-                              children: [
-                                Image.asset('assets/images/trad_store.png'),
-                                Positioned(
-                                  right: 50,
-                                  top: 30,
-                                  bottom: 60,
-                                  left: 50,
-                                  child: CircleAvatar(
-                                    backgroundColor: CustomColors.primaryColor,
-                                    radius: 30,
-                                    child: Text('T', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-                                  ),
-                                ),
-                                Positioned(
-                                  top: 120,
-                                    left: 30,
-                                    right: 30,
-
-                                    child: Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.w500),)),
-                                Positioned(
-                                  top: 140,
-                                  left: 36,
-                                  right: 30,
-                                  child:  ElevatedButton(onPressed: (){
-
-                                },
-                                  style: ElevatedButton.styleFrom(
-                                    fixedSize: const Size(56, 20),
-                                    backgroundColor: CustomColors.primaryColor,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                  ),
-                                  child: const Text(
-                                    "Follow",
-                                    style: TextStyle(fontSize: 12, color:Colors.white),
-                                  ),),)
-                              ],
-                            ),
-                          ),
+                          CustomWidgets().store_fol('assets/images/trad_store.png', CustomColors.primaryColor, 'T', 'Tradly Store'),
                           SizedBox(width: 10,),
-                          Container(
-                            width: 160,
-                            height: 200,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-                            ),
-                            child: Stack(
-                              children: [
-                                Image.asset('assets/images/groc_stor.png'),
-                                Positioned(
-                                  right: 50,
-                                  top: 30,
-                                  bottom: 60,
-                                  left: 50,
-                                  child: CircleAvatar(
-                                    backgroundColor: CustomColors.circColor,
-                                    radius: 30,
-                                    child: Text('A', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-                                  ),
-                                ),
-                                Positioned(
-                                    top: 120,
-                                    left: 20,
-                                    right: 10,
-
-                                    child: Text("Groceries Store", style: TextStyle(fontWeight: FontWeight.w500),)),
-                                Positioned(
-                                  top: 140,
-                                  left: 36,
-                                  right: 30,
-                                  child:  ElevatedButton(onPressed: (){
-
-                                  },
-                                    style: ElevatedButton.styleFrom(
-                                      fixedSize: const Size(56, 20),
-                                      backgroundColor: CustomColors.primaryColor,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(32),
-                                      ),
-                                    ),
-                                    child: const Text(
-                                      "Follow",
-                                      style: TextStyle(fontSize: 12, color:Colors.white),
-                                    ),),)
-                              ],
-                            ),
-                          ),
+                          CustomWidgets().store_fol('assets/images/groc_stor.png', CustomColors.circColor, 'A', 'Groceries Store'),
                           SizedBox(width: 10,),
-                          Container(
-                            width: 160,
-                            height: 200,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-                            ),
-                            child: Stack(
-                              children: [
-                                Image.asset('assets/images/trad_store.png'),
-                                Positioned(
-                                  right: 50,
-                                  top: 30,
-                                  bottom: 60,
-                                  left: 50,
-                                  child: CircleAvatar(
-                                    backgroundColor: CustomColors.primaryColor,
-                                    radius: 30,
-                                    child: Text('T', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-                                  ),
-                                ),
-                                Positioned(
-                                    top: 120,
-                                    left: 30,
-                                    right: 30,
-
-                                    child: Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.w500),)),
-                                Positioned(
-                                  top: 140,
-                                  left: 36,
-                                  right: 30,
-                                  child:  ElevatedButton(onPressed: (){
-
-                                  },
-                                    style: ElevatedButton.styleFrom(
-                                      fixedSize: const Size(56, 20),
-                                      backgroundColor: CustomColors.primaryColor,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(32),
-                                      ),
-                                    ),
-                                    child: const Text(
-                                      "Follow",
-                                      style: TextStyle(fontSize: 12, color:Colors.white),
-                                    ),),)
-                              ],
-                            ),
-                          ),
+                          CustomWidgets().store_fol('assets/images/trad_store.png', CustomColors.primaryColor, 'T', 'Tradly Store'),
                         ],
                       ),
                     ),

@@ -139,23 +139,6 @@ class CartAddedAddress extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 137,),
-                  // Container(
-                  //   child: ElevatedButton(onPressed: (){
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(builder: (context) => PaymentScreen()),
-                  //     );
-                  //   },   style: ElevatedButton.styleFrom(
-                  //     fixedSize: const Size(350, 50),
-                  //     backgroundColor: CustomColors.primaryColor,
-                  //     shape: RoundedRectangleBorder(
-                  //         borderRadius: BorderRadius.circular(32)),
-                  //   ),
-                  //     child: const Text(
-                  //       "Coninue to Payment",
-                  //       style: TextStyle(fontSize: 20, color:Colors.white),
-                  //     ),),
-                  // ),
                 ],
               ),
             ),

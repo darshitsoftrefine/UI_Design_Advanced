@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/store/search_store.dart';
 
+import '../custom_widgets.dart';
 import '../themes/themes.dart';
 
 class ViewStore extends StatelessWidget {
@@ -115,11 +116,9 @@ class ViewStore extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       const SizedBox(height: 20,),
+
                       ElevatedButton(onPressed: (){
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => SendOtp()),
-                        // );
+
                       },   style: ElevatedButton.styleFrom(
                         fixedSize: const Size(120, 30),
                         backgroundColor: CustomColors.primaryColor,
@@ -131,11 +130,8 @@ class ViewStore extends StatelessWidget {
                         child: const Text("All Product",),
                       ),
                       const SizedBox(width: 10,),
+
                       ElevatedButton(onPressed: (){
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => SendOtp()),
-                        // );
                       },   style: ElevatedButton.styleFrom(
                         fixedSize: const Size(90, 30),
                         backgroundColor: Colors.white,
@@ -147,11 +143,8 @@ class ViewStore extends StatelessWidget {
                         child: const Text('Fruit', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
+
                       ElevatedButton(onPressed: (){
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => SendOtp()),
-                        // );
                       },   style: ElevatedButton.styleFrom(
                         fixedSize: const Size(130, 30),
                         backgroundColor: Colors.white,
@@ -163,11 +156,8 @@ class ViewStore extends StatelessWidget {
                         child: const Text('Vegetables', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
+
                       ElevatedButton(onPressed: (){
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => SendOtp()),
-                        // );
                       },   style: ElevatedButton.styleFrom(
                         fixedSize: const Size(90, 30),
                         backgroundColor: Colors.white,
@@ -186,69 +176,9 @@ class ViewStore extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey.shade300)
-                      ),
-                      width: 160,
-                      height: 200,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/apple.png'),
-                          const SizedBox(height: 5,),
-                          const Text("Apple"),
-                          const SizedBox(height: 5,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: CustomColors.primaryColor,
-                                radius: 13,
-                                child: const Text('T'),
-                              ),
-                              const Text("  Tradly"),
-                              const SizedBox(width: 10,),
-                              //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              const SizedBox(width: 5,),
-                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
+                    CustomWidgets().product_list('assets/images/apple.png', 'Apple', ''),
                     const SizedBox(width: 10,),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300)
-                      ),
-                      width: 160,
-                      height: 200,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/orange.png'),
-                          const SizedBox(height: 5,),
-                          const Text("Orange"),
-                          const SizedBox(height: 5,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: CustomColors.primaryColor,
-                                radius: 13,
-                                child: const Text('T'),
-                              ),
-                              const Text("  Tradly"),
-                              const SizedBox(width: 10,),
-                              //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              const SizedBox(width: 5,),
-                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
+                    CustomWidgets().product_list('assets/images/orange.png', 'Orange', ''),
                   ],
                 ),
               ),
@@ -257,69 +187,9 @@ class ViewStore extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300)
-                      ),
-                      width: 160,
-                      height: 200,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/moist.png'),
-                          const SizedBox(height: 5,),
-                          const Text("Moisturizer"),
-                          const SizedBox(height: 5,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: CustomColors.primaryColor,
-                                radius: 13,
-                                child: const Text('T'),
-                              ),
-                              const Text("  Tradly"),
-                              const SizedBox(width: 10,),
-                              //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              const SizedBox(width: 5,),
-                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
+                    CustomWidgets().product_list('assets/images/moist.png', 'Moisturizer', ''),
                     const SizedBox(width: 10,),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300)
-                      ),
-                      width: 160,
-                      height: 200,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/broc.png'),
-                          const SizedBox(height: 5,),
-                          const Text("Brocolli"),
-                          const SizedBox(height: 5,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: CustomColors.primaryColor,
-                                radius: 13,
-                                child: const Text('T'),
-                              ),
-                              const Text("  Tradly"),
-                              const SizedBox(width: 10,),
-                              //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                              const SizedBox(width: 5,),
-                              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
+                    CustomWidgets().product_list('assets/images/broc.png', 'Brocolli', ''),
                   ],
                 ),
               ),

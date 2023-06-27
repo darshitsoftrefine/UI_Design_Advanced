@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
+import '../custom_widgets.dart';
+
 class FrozenProduct extends StatelessWidget {
   const FrozenProduct({super.key});
 
@@ -18,10 +20,6 @@ class FrozenProduct extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(110, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -33,10 +31,6 @@ class FrozenProduct extends StatelessWidget {
                   icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(118, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -48,10 +42,6 @@ class FrozenProduct extends StatelessWidget {
                   icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(125, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -78,70 +68,9 @@ class FrozenProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/ice_cream.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Ice Cream"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/ice_cream.png', 'Ice Cream', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/manggo.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Manggo Ice"),
-                            const SizedBox(height: 5,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-
+                      CustomWidgets().product_list('assets/images/manggo.png', 'Manggo Ice', ''),
                     ],
                   ),
                 ),
@@ -150,69 +79,9 @@ class FrozenProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/straw_ice.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Strawberry Ice"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/straw_ice.png', 'Strawberry Ice', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/matcha.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Matcha"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/matcha.png', 'Matcha', ''),
                     ],
                   ),
                 ),
@@ -221,69 +90,9 @@ class FrozenProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/grape.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Grape Ice Cream"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/grape.png', 'Grape Ice Cream', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/frozen_bottle.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Frozen Bottle"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/frozen_bottle.png', 'Frozen Bottle', ''),
                     ],
                   ),
                 )
@@ -291,8 +100,6 @@ class FrozenProduct extends StatelessWidget {
           ),
         ),
       ),
-
-
     );
   }
 }

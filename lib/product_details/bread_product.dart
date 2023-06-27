@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
+import '../custom_widgets.dart';
+
 class BreadProduct extends StatelessWidget {
   const BreadProduct({super.key});
 
@@ -78,70 +80,9 @@ class BreadProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/bread_chocolate.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Bread Chocolate"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/bread_chocolate.png', 'Bread Chocolate', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/circle_bakery.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Circle Bakery"),
-                            const SizedBox(height: 5,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-
+                      CustomWidgets().product_list('assets/images/circle_bakery.png', 'Circle Bakery', ''),
                     ],
                   ),
                 ),
@@ -150,69 +91,9 @@ class BreadProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/cookies.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Cookies"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/cookies.png', 'Cookies', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/long_bread.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Long Bread"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/long_bread.png', 'Long Bread', ''),
                     ],
                   ),
                 ),
@@ -221,69 +102,9 @@ class BreadProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/donut.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Donut"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/donut.png', 'Donut', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/bread.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Bread"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/bread.png', 'Bread', '\$35'),
                     ],
                   ),
                 )

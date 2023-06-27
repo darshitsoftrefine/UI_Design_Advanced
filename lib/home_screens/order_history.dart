@@ -105,10 +105,7 @@ class OrderHistory extends StatelessWidget {
                   ),
                   const SizedBox(width: 87,),
                   ElevatedButton(onPressed: (){
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => MyStore()),
-                    // );
+
                   },   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(106, 25),
                     backgroundColor: Colors.white,
@@ -146,10 +143,7 @@ class OrderHistory extends StatelessWidget {
                   ),
                   const SizedBox(width: 42,),
                   ElevatedButton(onPressed: (){
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => MyStore()),
-                    // );
+
                   },   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(155, 23),
                     backgroundColor: Colors.white,

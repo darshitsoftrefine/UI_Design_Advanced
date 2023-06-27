@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/custom_widgets.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
 
 import '../cart/cart_add_address.dart';
@@ -54,22 +55,7 @@ class Profile extends StatelessWidget {
                     height: 266,
                     padding: const EdgeInsets.all(20),
                   color: Colors.white,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-              const Text("Edit Profile", style: TextStyle(fontSize: 14),),
-              const SizedBox(height: 22,),
-              const Text("Language & Currency", style: TextStyle(fontSize: 14),),
-              const SizedBox(height: 22,),
-                    const Text("Feedback", style: TextStyle(fontSize: 14),),
-                    const SizedBox(height: 22,),
-                    const Text("Refer a Friend", style: TextStyle(fontSize: 14),),
-                    const SizedBox(height: 22,),
-                    const Text("Terms & Conditions", style: TextStyle(fontSize: 14),),
-                    const SizedBox(height: 22,),
-                    Text("Logout", style: TextStyle(color: CustomColors.primaryColor, fontSize: 15),)
-    ]
-    ),
+                  child: CustomWidgets().profile_wid()
     )
               ),
               Container(

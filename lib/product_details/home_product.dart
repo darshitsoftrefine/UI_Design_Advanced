@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
+import '../custom_widgets.dart';
+
 class HomeProduct extends StatelessWidget {
   const HomeProduct({super.key});
 
@@ -18,10 +20,6 @@ class HomeProduct extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(110, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -33,10 +31,6 @@ class HomeProduct extends StatelessWidget {
                   icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(118, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -48,10 +42,6 @@ class HomeProduct extends StatelessWidget {
                   icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(125, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -78,70 +68,9 @@ class HomeProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/moist.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Moisturizer"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/moist.png', 'Moisturizer', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/vita.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Vitamin Bundle"),
-                            const SizedBox(height: 5,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-
+                      CustomWidgets().product_list('assets/images/vita.png', 'Vitamin Bundle', ''),
                     ],
                   ),
                 ),
@@ -150,69 +79,9 @@ class HomeProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/shower.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Shower Gel"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/shower.png', 'Shower Gel', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/facial.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Facial Wash"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/facial.png', 'Facial Wash', ''),
                     ],
                   ),
                 ),
@@ -221,69 +90,9 @@ class HomeProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/onne.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Onne"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/onne.png', 'Onne', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/fur.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Fur Moisturizer"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/fur.png', 'Fur Moisturizer', ''),
                     ],
                   ),
                 )
@@ -291,8 +100,6 @@ class HomeProduct extends StatelessWidget {
           ),
         ),
       ),
-
-
     );
   }
 }

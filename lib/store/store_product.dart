@@ -38,10 +38,7 @@ class StoreProduct extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => StoreProduct()),
-                  // );
+
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(106, 23),
                   backgroundColor: Colors.white,
@@ -60,10 +57,7 @@ class StoreProduct extends StatelessWidget {
                   const SizedBox(width: 17,),
 
                 ElevatedButton(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => StoreProduct()),
-                  // );
+
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(111, 23),
                   backgroundColor: CustomColors.primaryColor,

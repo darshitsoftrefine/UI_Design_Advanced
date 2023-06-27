@@ -13,7 +13,7 @@ class PaymentScreen extends StatefulWidget {
 }
 
 class _PaymentScreenState extends State<PaymentScreen> {
-  SingingCharacter? _character = SingingCharacter.card;
+  SingingCharacter? _character = SingingCharacter.net;
 
   @override
   Widget build(BuildContext context) {

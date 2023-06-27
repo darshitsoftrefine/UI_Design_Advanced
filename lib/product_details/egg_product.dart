@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
+import '../custom_widgets.dart';
+
 class EggProduct extends StatelessWidget {
   const EggProduct({super.key});
 
@@ -18,10 +20,6 @@ class EggProduct extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(110, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -33,10 +31,6 @@ class EggProduct extends StatelessWidget {
                   icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(118, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -48,10 +42,6 @@ class EggProduct extends StatelessWidget {
                   icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
                 ),
                 ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
                 },   style: ElevatedButton.styleFrom(
                   fixedSize: const Size(125, 30),
                   backgroundColor: CustomColors.primaryColor,
@@ -78,70 +68,9 @@ class EggProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/brown.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Brown Egg"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/brown.png', 'Brown Egg', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/fresh.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Fresh Egg"),
-                            const SizedBox(height: 5,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-
+                      CustomWidgets().product_list('assets/images/fresh.png', 'Fresh Egg', ''),
                     ],
                   ),
                 ),
@@ -150,69 +79,9 @@ class EggProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/bundle.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Bundle Egg"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/bundle.png', 'Bundle Egg', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/blue.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Blue Egg"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/blue.png', 'Blue Egg', ''),
                     ],
                   ),
                 ),
@@ -221,69 +90,9 @@ class EggProduct extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/bird.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Bird Egg"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                const Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/bird.png', 'Bird Egg', '\$35'),
                       const SizedBox(width: 9,),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300)
-                        ),
-                        width: 160,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/egg.png'),
-                            const SizedBox(height: 5,),
-                            const Text("Egg"),
-                            const SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 13,
-                                  child: const Text('T'),
-                                ),
-                                const Text("  Tradly"),
-                                const SizedBox(width: 10,),
-                                //Text('\$35', style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                                const SizedBox(width: 5,),
-                                Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
+                      CustomWidgets().product_list('assets/images/egg.png', 'Egg', ''),
                     ],
                   ),
                 )
