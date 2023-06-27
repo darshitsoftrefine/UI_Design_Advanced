@@ -6,33 +6,97 @@ class CustomWidgets{
 
 
   //Card in home dashboard
-  Widget card_home_dashboard(String image, String title){
-    return Stack(
+  Widget cardhomedashboard(String image, String title){
+    return Row(
       children: [
-        Image.asset(image),
-        Padding(
-          padding: const EdgeInsets.only(top: 40, left: 15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: TextStyle(color: Colors.white, fontSize: 14),),
-              SizedBox(height: 10,),
-              ElevatedButton(onPressed: (){
+        Stack(
+          children: [
+            Image.asset(image),
+            Padding(
+              padding: const EdgeInsets.only(top: 40, left: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title, style: TextStyle(color: Colors.white, fontSize: 14),),
+                  SizedBox(height: 10,),
+                  ElevatedButton(onPressed: (){
 
-              },   style: ElevatedButton.styleFrom(
-                fixedSize: const Size(151, 28),
-                backgroundColor: Colors.transparent,
-                side: const BorderSide(color: Colors.white, width: 1),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32),
-                ),
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(151, 28),
+                    backgroundColor: Colors.transparent,
+                    side: const BorderSide(color: Colors.white, width: 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                  ),
+                    child: const Text(
+                      "START SHOPPING",
+                      style: TextStyle(fontSize: 12, color:Colors.white),
+                    ),),
+                ],
               ),
-                child: const Text(
-                  "START SHOPPING",
-                  style: TextStyle(fontSize: 12, color:Colors.white),
-                ),),
-            ],
-          ),
+            ),
+          ],
+        ),
+        SizedBox(width: 10,),
+        Stack(
+          children: [
+            Image.asset(image),
+            Padding(
+              padding: const EdgeInsets.only(top: 40, left: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title, style: TextStyle(color: Colors.white, fontSize: 14),),
+                  SizedBox(height: 10,),
+                  ElevatedButton(onPressed: (){
+
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(151, 28),
+                    backgroundColor: Colors.transparent,
+                    side: const BorderSide(color: Colors.white, width: 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                  ),
+                    child: const Text(
+                      "START SHOPPING",
+                      style: TextStyle(fontSize: 12, color:Colors.white),
+                    ),),
+                ],
+              ),
+            ),
+          ],
+        ),
+        SizedBox(width: 10,),
+        Stack(
+          children: [
+            Image.asset(image),
+            Padding(
+              padding: const EdgeInsets.only(top: 40, left: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title, style: TextStyle(color: Colors.white, fontSize: 14),),
+                  SizedBox(height: 10,),
+                  ElevatedButton(onPressed: (){
+
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(151, 28),
+                    backgroundColor: Colors.transparent,
+                    side: const BorderSide(color: Colors.white, width: 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                  ),
+                    child: const Text(
+                      "START SHOPPING",
+                      style: TextStyle(fontSize: 12, color:Colors.white),
+                    ),),
+                ],
+              ),
+            ),
+          ],
         ),
       ],
     );
@@ -40,15 +104,13 @@ class CustomWidgets{
 
 
   // Grid in Home Dashboard
-  Widget grid_cards(String image, String title, double top, double bottom, double left, double right, Function() onTap){
+  Widget gridcards(String image, String title, double top, double left, double right, double bottom){
     return Container(
       width: 93,
       height: 93,
       child: Stack(
           children:[
-            GestureDetector(
-                onTap: onTap,
-                child: Image.asset(image, width: 100,)),
+          Image.asset(image, width: 100,),
             Padding(
               padding: EdgeInsets.only(top: top, left: left, right: right, bottom: bottom),
               child: Text(title, style: TextStyle(color: Colors.white, fontSize: 11),),
@@ -56,59 +118,8 @@ class CustomWidgets{
           ]
       ),
     );
-  }
 
 
-  Widget store_fol(String image, Color color, String circtext, String title){
-    return Container(
-      width: 160,
-      height: 200,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(color: Colors.grey.shade300),
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-      ),
-      child: Stack(
-        children: [
-          Image.asset(image),
-          Positioned(
-            right: 50,
-            top: 30,
-            bottom: 60,
-            left: 50,
-            child: CircleAvatar(
-              backgroundColor: color,
-              radius: 30,
-              child: Text(circtext, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-            ),
-          ),
-          Positioned(
-              top: 120,
-              left: 20,
-              right: 18,
-
-              child: Center(child: Text(title, style: TextStyle(fontWeight: FontWeight.w500),))),
-          Positioned(
-            top: 140,
-            left: 36,
-            right: 30,
-            child:  ElevatedButton(onPressed: (){
-
-            },
-              style: ElevatedButton.styleFrom(
-                fixedSize: const Size(56, 20),
-                backgroundColor: CustomColors.primaryColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32),
-                ),
-              ),
-              child: const Text(
-                "Follow",
-                style: TextStyle(fontSize: 12, color:Colors.white),
-              ),),)
-        ],
-      ),
-    );
   }
 
   // Product Details Widget
@@ -148,7 +159,7 @@ class CustomWidgets{
 
 
   // Profile Widget
-  Widget profile_wid(){
+  Widget profilewid(){
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -169,7 +180,7 @@ class CustomWidgets{
 
 
   // Order History Widget
-  Widget order_hist(String butText, double wid, double hei){
+  Widget orderhist(String butText, double wid, double hei){
     return  Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

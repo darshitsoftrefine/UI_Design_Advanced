@@ -32,8 +32,8 @@ class _SendOtpState extends State<SendOtp> {
           children: [
             Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 24, fontWeight: FontWeight.w500),),
             const SizedBox(height: 40,),
-            Text("We have sent you an SMS with a code to", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17,),),
-            Text("enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 17),),
+            Text("We have sent you an SMS with a code to", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16,),),
+            Text("enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16),),
             const SizedBox(height: 20,),
             //NumberDropdownTextField(),
             TextFormField(

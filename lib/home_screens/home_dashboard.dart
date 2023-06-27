@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tradly/bottom_bar.dart';
-import 'package:tradly/constants/custom_field.dart';
 import 'package:tradly/custom_widgets.dart';
-import 'package:tradly/home_screens/browse.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
+import 'package:tradly/models/fol_store_list.dart';
 import 'package:tradly/models/new_product_list.dart';
+import 'package:tradly/models/product_grid_list.dart';
 import 'package:tradly/product_details/beverages_product.dart';
 import 'package:tradly/product_details/fruit_product.dart';
 import 'package:tradly/product_details/home_product.dart';
@@ -47,7 +46,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text("Groceries", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),),
-                  SizedBox(width: 100,),
+                  const SizedBox(width: 100,),
                   IconButton(
                     icon: const Icon(Icons.favorite, color: Colors.white,),
                     onPressed: () {
@@ -111,75 +110,66 @@ class _HomeDashboardState extends State<HomeDashboard> {
               padding: const EdgeInsets.only(left: 8, top: 15),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomWidgets().card_home_dashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME'),
-                    SizedBox(width: 10,),
-                    CustomWidgets().card_home_dashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME'),
-                    SizedBox(width: 10,),
-                    CustomWidgets().card_home_dashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME'),
-                  ],
-                ),
+                child: CustomWidgets().cardhomedashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME')
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: GridView.count(
+              child: GridView.builder(
                 shrinkWrap: true,
-                mainAxisSpacing: 2,
-                crossAxisSpacing: 2,
-                crossAxisCount: 4,
-                children: [
-                  CustomWidgets().grid_cards('assets/images/Rectangle 28.png', "Beverages", 40, 20, 8, 7, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const BeveragesProduct()),
-                    );
-                  },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 29.png', "Bread&Bakery", 40, 20, 0, 0, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const BreadProduct()),
-                    );
-                  },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 30.png', "Vegetables", 40.0, 20, 10, 8, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const VegetableProduct()),
-                    );
-                  },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 31.png', "Fruits", 40, 20, 27, 0,  () {
-                        Navigator.push(
-                         context,
-                           MaterialPageRoute(builder: (context) => const FruitProduct()),
-                      );
-                      },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 32.png', "Egg", 40, 20, 35, 8,  () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const EggProduct()),
-                    );
-                  },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 33.png', "Frozen Veg", 40, 20, 8, 8,  () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const FrozenProduct()),
-                    );
-                  },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 34.png', "Homecare", 40, 20, 13, 8,  () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const HomeProduct()),
-                    );
-                  },),
-                  CustomWidgets().grid_cards('assets/images/Rectangle 35.png', "Pet Care", 40, 20, 22, 8,  () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PetProduct()),
-                    );
-                  },)
-                ],
-                
+                itemCount: prodList.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisSpacing: 2,
+                    crossAxisSpacing: 2,
+                    crossAxisCount: 4),
+                itemBuilder: (BuildContext context, int index) {
+                  return GestureDetector(
+                      onTap: () {
+                       if(prodList[index].productName == "Beverages"){
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const BeveragesProduct()),
+                         );
+                       }else if(prodList[index].productName == "Bread&Bakery"){
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const BreadProduct()),
+                         );
+                       }else if(prodList[index].productName == "Vegetables"){
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const VegetableProduct()),
+                         );
+                       }else if(prodList[index].productName == "Fruits"){
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const FruitProduct()),
+                          );
+                       }else if(prodList[index].productName == "Egg"){
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const EggProduct()),
+                         );
+                       }else if(prodList[index].productName == "Frozen Veg"){
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const FrozenProduct()),
+                         );
+                       }else if(prodList[index].productName == "Homecare"){
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const HomeProduct()),
+                         );
+                       }else if(prodList[index].productName == "Pet Care"){
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const PetProduct()),
+                         );
+                       }
+                      },
+                      child: CustomWidgets().gridcards(prodList[index].image, prodList[index].productName, prodList[index].top, prodList[index].left, prodList[index].right, prodList[index].bottom));
+                },
+
               ),
             ),
 
@@ -219,26 +209,26 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         height: 190,
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey.shade300),
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+                          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset(newProductList[index].image),
-                            SizedBox(height: 10,),
-                            Text(" "+newProductList[index].productName, style: TextStyle(fontWeight: FontWeight.w500),),
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
+                            Text(" ${newProductList[index].productName}", style: const TextStyle(fontWeight: FontWeight.w500),),
+                            const SizedBox(height: 10,),
                             Row(
                               children: [
-                                SizedBox(width: 2,),
+                                const SizedBox(width: 2,),
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
                                   radius: 10,
-                                  child: Text('T'),
+                                  child: const Text('T'),
                                 ),
-                                SizedBox(width: 3,),
+                                const SizedBox(width: 3,),
                                 Text(newProductList[index].logoText),
-                                SizedBox(width: 55,),
+                                const SizedBox(width: 55,),
                                 Text(newProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
                                 //SizedBox(width: 15,)
                               ],
@@ -287,25 +277,25 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         height: 200,
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey.shade300),
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+                          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset(popularProductList[index].image),
-                            SizedBox(height: 10,),
-                            Text(" "+popularProductList[index].productName, style: TextStyle(fontWeight: FontWeight.w500),),
-                            SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
+                            Text(" ${popularProductList[index].productName}", style: const TextStyle(fontWeight: FontWeight.w500),),
+                            const SizedBox(height: 10,),
                             Row(
                               children: [
                                 CircleAvatar(
                                   backgroundColor: CustomColors.primaryColor,
                                   radius: 10,
-                                  child: Text('T'),
+                                  child: const Text('T'),
                                 ),
-                                SizedBox(width: 3,),
+                                const SizedBox(width: 3,),
                                 Text(popularProductList[index].logoText),
-                                SizedBox(width: 55,),
+                                const SizedBox(width: 55,),
                                 Text(popularProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
                               ],
                             )
@@ -316,7 +306,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   })
               ),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Container(
               width: 500,
               height: 300,
@@ -349,19 +339,67 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child:
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          CustomWidgets().store_fol('assets/images/trad_store.png', CustomColors.primaryColor, 'T', 'Tradly Store'),
-                          SizedBox(width: 10,),
-                          CustomWidgets().store_fol('assets/images/groc_stor.png', CustomColors.circColor, 'A', 'Groceries Store'),
-                          SizedBox(width: 10,),
-                          CustomWidgets().store_fol('assets/images/trad_store.png', CustomColors.primaryColor, 'T', 'Tradly Store'),
-                        ],
+                    child: SizedBox(
+                      height: 200,
+                      child: ListView(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        children: List.generate(folProductList.length, (index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(left: 8, right: 8),
+                            child: Container(
+                              width: 160,
+                              height: 200,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(color: Colors.grey.shade300),
+                                borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+                              ),
+                              child: Stack(
+                                children: [
+                                  Image.asset(folProductList[index].image),
+                                  Positioned(
+                                    right: 50,
+                                    top: 30,
+                                    bottom: 60,
+                                    left: 50,
+                                    child: CircleAvatar(
+                                      backgroundColor: folProductList[index].color,
+                                      radius: 30,
+                                      child: Text(folProductList[index].logo, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
+                                    ),
+                                  ),
+                                  Positioned(
+                                      top: 120,
+                                      left: 20,
+                                      right: 18,
+
+                                      child: Center(child: Text(folProductList[index].logoText, style: const TextStyle(fontWeight: FontWeight.w500),))),
+                                  Positioned(
+                                    top: 140,
+                                    left: 36,
+                                    right: 30,
+                                    child:  ElevatedButton(onPressed: (){
+
+                                    },
+                                      style: ElevatedButton.styleFrom(
+                                        fixedSize: const Size(56, 20),
+                                        backgroundColor: CustomColors.primaryColor,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(32),
+                                        ),
+                                      ),
+                                      child: const Text(
+                                        "Follow",
+                                        style: TextStyle(fontSize: 12, color:Colors.white),
+                                      ),),)
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
                       ),
-                    ),
+                    )
                   ),
                 ],
               ),

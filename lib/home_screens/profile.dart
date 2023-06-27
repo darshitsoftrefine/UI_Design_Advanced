@@ -55,7 +55,7 @@ class Profile extends StatelessWidget {
                     height: 266,
                     padding: const EdgeInsets.all(20),
                   color: Colors.white,
-                  child: CustomWidgets().profile_wid()
+                  child: CustomWidgets().profilewid()
     )
               ),
               Container(
