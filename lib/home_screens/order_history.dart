@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/custom_widgets.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
+import 'package:tradly/models/order_history_list.dart';
 
 import '../cart/cart_add_address.dart';
 import '../themes/themes.dart';
@@ -34,6 +36,7 @@ class OrderHistory extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(top: 30, left: 10, bottom: 10, right: 10),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -48,160 +51,174 @@ class OrderHistory extends StatelessWidget {
               ],
             ),
         const SizedBox(height: 30,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-    Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-    const SizedBox(width: 20,),
-    Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-    const Text("Coca Cola", style: TextStyle(),),
-    const SizedBox(height: 5,),
-    Row(
-    children: [
-    Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-    const SizedBox(width: 10,),
-    const Text(" 50% off"),
-    ],
-    ),
-          ],
+
+        ListView(
+          itemExtent: 70,
+          shrinkWrap: true,
+          children: List.generate(orderHistList.length, (index) {
+            return CustomWidgets().orderhist(
+                orderHistList[index].image,
+                orderHistList[index].productName,
+                orderHistList[index].butText,
+                orderHistList[index].wid,
+                orderHistList[index].hei,
+                orderHistList[index].butColor,
+                orderHistList[index].textColor,
+                orderHistList[index].widspacing
+            );
+          }),
         ),
-      const SizedBox(width: 70,),
-      ElevatedButton(onPressed: (){
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => MyStore()),
-        // );
-      },   style: ElevatedButton.styleFrom(
-        fixedSize: const Size(96, 25),
-        backgroundColor: CustomColors.primaryColor,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(32)),
-      ),
-        child: const Text(
-          "Delievered",
-          style: TextStyle(fontSize: 10, color:Colors.white),
-        ),),
-      ]
-      ),
-            const SizedBox(height: 30,),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                  const SizedBox(width: 20,),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("Coca Cola", style: TextStyle(),),
-                      const SizedBox(height: 5,),
-                      Row(
-                        children: [
-                          Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(width: 87,),
-                  ElevatedButton(onPressed: (){
-
-                  },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(106, 25),
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32),
-                      side: BorderSide(
-                        color: CustomColors.primaryColor,
-                        width: 1,
-                      )
-                    ),
-                  ),
-                    child: const Text(
-                      "Order Placed",
-                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
-                    ),),
-                ]
-            ),
-            const SizedBox(height: 30,),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                  const SizedBox(width: 20,),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("Coca Cola", style: TextStyle(),),
-                      const SizedBox(height: 5,),
-                      Row(
-                        children: [
-                          Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(width: 42,),
-                  ElevatedButton(onPressed: (){
-
-                  },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(155, 23),
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32),
-                        side: BorderSide(
-                          color: CustomColors.primaryColor,
-                          width: 1,
-                        )
-                    ),
-                  ),
-                    child: const Text(
-                      "Payment Confirmed",
-                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
-                    ),),
-                ]
-            ),
-            const SizedBox(height: 30,),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                  const SizedBox(width: 20,),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("Coca Cola", style: TextStyle(),),
-                      const SizedBox(height: 5,),
-                      Row(
-                        children: [
-                          Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(width: 100,),
-                  ElevatedButton(onPressed: (){
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => MyStore()),
-                    // );
-                  },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(96, 25),
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32),
-                        side: BorderSide(
-                          color: CustomColors.primaryColor,
-                          width: 1,
-                        )
-                    ),
-                  ),
-                    child: const Text(
-                      "Processed",
-                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
-                    ),),
-                ]
-            ),
+    //     Row(
+    //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    // children: [
+    // Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+    // const SizedBox(width: 20,),
+    // Column(
+    // crossAxisAlignment: CrossAxisAlignment.start,
+    // children: [
+    // const Text("Coca Cola", style: TextStyle(),),
+    // const SizedBox(height: 5,),
+    // Row(
+    // children: [
+    // Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+    // const SizedBox(width: 10,),
+    // const Text(" 50% off"),
+    // ],
+    // ),
+    //       ],
+    //     ),
+    //   const SizedBox(width: 70,),
+    //   ElevatedButton(onPressed: (){
+    //     // Navigator.push(
+    //     //   context,
+    //     //   MaterialPageRoute(builder: (context) => MyStore()),
+    //     // );
+    //   },   style: ElevatedButton.styleFrom(
+    //     fixedSize: const Size(96, 25),
+    //     backgroundColor: CustomColors.primaryColor,
+    //     shape: RoundedRectangleBorder(
+    //         borderRadius: BorderRadius.circular(32)),
+    //   ),
+    //     child: const Text(
+    //       "Delievered",
+    //       style: TextStyle(fontSize: 10, color:Colors.white),
+    //     ),),
+    //   ]
+    //   ),
+    //         const SizedBox(height: 30,),
+    //         Row(
+    //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //             children: [
+    //               Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+    //               const SizedBox(width: 20,),
+    //               Column(
+    //                 crossAxisAlignment: CrossAxisAlignment.start,
+    //                 children: [
+    //                   const Text("Coca Cola", style: TextStyle(),),
+    //                   const SizedBox(height: 5,),
+    //                   Row(
+    //                     children: [
+    //                       Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+    //                     ],
+    //                   ),
+    //                 ],
+    //               ),
+    //               const SizedBox(width: 87,),
+    //               ElevatedButton(onPressed: (){
+    //
+    //               },   style: ElevatedButton.styleFrom(
+    //                 fixedSize: const Size(106, 25),
+    //                 backgroundColor: Colors.white,
+    //                 shape: RoundedRectangleBorder(
+    //                     borderRadius: BorderRadius.circular(32),
+    //                   side: BorderSide(
+    //                     color: CustomColors.primaryColor,
+    //                     width: 1,
+    //                   )
+    //                 ),
+    //               ),
+    //                 child: const Text(
+    //                   "Order Placed",
+    //                   style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
+    //                 ),),
+    //             ]
+    //         ),
+    //         const SizedBox(height: 30,),
+    //         Row(
+    //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //             children: [
+    //               Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+    //               const SizedBox(width: 20,),
+    //               Column(
+    //                 crossAxisAlignment: CrossAxisAlignment.start,
+    //                 children: [
+    //                   const Text("Coca Cola", style: TextStyle(),),
+    //                   const SizedBox(height: 5,),
+    //                   Row(
+    //                     children: [
+    //                       Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+    //                     ],
+    //                   ),
+    //                 ],
+    //               ),
+    //               const SizedBox(width: 42,),
+    //               ElevatedButton(onPressed: (){
+    //
+    //               },   style: ElevatedButton.styleFrom(
+    //                 fixedSize: const Size(155, 23),
+    //                 backgroundColor: Colors.white,
+    //                 shape: RoundedRectangleBorder(
+    //                     borderRadius: BorderRadius.circular(32),
+    //                     side: BorderSide(
+    //                       color: CustomColors.primaryColor,
+    //                       width: 1,
+    //                     )
+    //                 ),
+    //               ),
+    //                 child: const Text(
+    //                   "Payment Confirmed",
+    //                   style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
+    //                 ),),
+    //             ]
+    //         ),
+    //         const SizedBox(height: 30,),
+    //         Row(
+    //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //             children: [
+    //               Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+    //               const SizedBox(width: 20,),
+    //               Column(
+    //                 crossAxisAlignment: CrossAxisAlignment.start,
+    //                 children: [
+    //                   const Text("Coca Cola", style: TextStyle(),),
+    //                   const SizedBox(height: 5,),
+    //                   Row(
+    //                     children: [
+    //                       Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+    //                     ],
+    //                   ),
+    //                 ],
+    //               ),
+    //               const SizedBox(width: 100,),
+    //               ElevatedButton(onPressed: (){
+    //
+    //               },   style: ElevatedButton.styleFrom(
+    //                 fixedSize: const Size(96, 25),
+    //                 backgroundColor: Colors.white,
+    //                 shape: RoundedRectangleBorder(
+    //                     borderRadius: BorderRadius.circular(32),
+    //                     side: BorderSide(
+    //                       color: CustomColors.primaryColor,
+    //                       width: 1,
+    //                     )
+    //                 ),
+    //               ),
+    //                 child: const Text(
+    //                   "Processed",
+    //                   style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
+    //                 ),),
+    //             ]
+    //         ),
       ]
     )
       )

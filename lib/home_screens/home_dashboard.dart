@@ -202,41 +202,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 children: List.generate(newProductList.length, (index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 5, left: 5),
-                      child: Container(
-                        width: 160,
-                        height: 190,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300),
-                          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(newProductList[index].image),
-                            const SizedBox(height: 10,),
-                            Text(" ${newProductList[index].productName}", style: const TextStyle(fontWeight: FontWeight.w500),),
-                            const SizedBox(height: 10,),
-                            Row(
-                              children: [
-                                const SizedBox(width: 2,),
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 10,
-                                  child: const Text('T'),
-                                ),
-                                const SizedBox(width: 3,),
-                                Text(newProductList[index].logoText),
-                                const SizedBox(width: 55,),
-                                Text(newProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
-                                //SizedBox(width: 15,)
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
+                  return CustomWidgets().newProduct(newProductList[index].image, newProductList[index].productName, newProductList[index].logoText, newProductList[index].price);
                   })
                 ),
             ),
@@ -270,39 +236,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   children: List.generate(popularProductList.length, (index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 5.0, left: 5.0),
-                      child: Container(
-                        width: 160,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300),
-                          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(popularProductList[index].image),
-                            const SizedBox(height: 10,),
-                            Text(" ${popularProductList[index].productName}", style: const TextStyle(fontWeight: FontWeight.w500),),
-                            const SizedBox(height: 10,),
-                            Row(
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: CustomColors.primaryColor,
-                                  radius: 10,
-                                  child: const Text('T'),
-                                ),
-                                const SizedBox(width: 3,),
-                                Text(popularProductList[index].logoText),
-                                const SizedBox(width: 55,),
-                                Text(popularProductList[index].price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    );
+                    return CustomWidgets().newProduct(popularProductList[index].image, popularProductList[index].productName, popularProductList[index].logoText, popularProductList[index].price);
                   })
               ),
             ),
@@ -345,58 +279,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
                         children: List.generate(folProductList.length, (index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(left: 8, right: 8),
-                            child: Container(
-                              width: 160,
-                              height: 200,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(color: Colors.grey.shade300),
-                                borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
-                              ),
-                              child: Stack(
-                                children: [
-                                  Image.asset(folProductList[index].image),
-                                  Positioned(
-                                    right: 50,
-                                    top: 30,
-                                    bottom: 60,
-                                    left: 50,
-                                    child: CircleAvatar(
-                                      backgroundColor: folProductList[index].color,
-                                      radius: 30,
-                                      child: Text(folProductList[index].logo, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-                                    ),
-                                  ),
-                                  Positioned(
-                                      top: 120,
-                                      left: 20,
-                                      right: 18,
+                           return CustomWidgets().storfollow(folProductList[index].image, folProductList[index].color, folProductList[index].logo, folProductList[index].logoText);
 
-                                      child: Center(child: Text(folProductList[index].logoText, style: const TextStyle(fontWeight: FontWeight.w500),))),
-                                  Positioned(
-                                    top: 140,
-                                    left: 36,
-                                    right: 30,
-                                    child:  ElevatedButton(onPressed: (){
-
-                                    },
-                                      style: ElevatedButton.styleFrom(
-                                        fixedSize: const Size(56, 20),
-                                        backgroundColor: CustomColors.primaryColor,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(32),
-                                        ),
-                                      ),
-                                      child: const Text(
-                                        "Follow",
-                                        style: TextStyle(fontSize: 12, color:Colors.white),
-                                      ),),)
-                                ],
-                              ),
-                            ),
-                          );
                         }),
                       ),
                     )
