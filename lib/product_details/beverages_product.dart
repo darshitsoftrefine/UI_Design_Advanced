@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/custom_widgets.dart';
+import 'package:tradly/models/beverages_list.dart';
 import 'package:tradly/themes/themes.dart';
 
 class BeveragesProduct extends StatelessWidget {
@@ -58,47 +59,19 @@ class BeveragesProduct extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomWidgets().product_list('assets/images/strawberry.png', 'Strawberry Punch', '\$35'),
-                    const SizedBox(width: 9,),
-                    CustomWidgets().product_list('assets/images/lemonade.png', 'Lemonade', ''),
 
-                  ],
-                ),
-              ),
-              const SizedBox(height: 10,),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomWidgets().product_list('assets/images/chocolate.png', 'Chocolate', '\$35'),
-                    const SizedBox(width: 9,),
-                    CustomWidgets().product_list('assets/images/whisky.png', 'Whisky', ''),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 10,),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomWidgets().product_list('assets/images/choco_bakery.png', 'Chocolate Bakery', '\$35'),
-                    const SizedBox(width: 9,),
-                    CustomWidgets().product_list('assets/images/fruit_punch.png', 'Fruit Punch', ''),
-                  ],
-                ),
-              )
-    ]
-          ),
-        ),
+          child: GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: browseList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 2),
+              itemBuilder: (context, index){
+                return CustomWidgets().product_list(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price, browseList[index].cancelPrice);
+              })
       ),
 
 

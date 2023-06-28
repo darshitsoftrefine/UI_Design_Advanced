@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
 import '../custom_widgets.dart';
+import '../models/home_list.dart';
 
 class HomeProduct extends StatelessWidget {
   const HomeProduct({super.key});
@@ -59,46 +60,18 @@ class HomeProduct extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/moist.png', 'Moisturizer', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/vita.png', 'Vitamin Bundle', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/shower.png', 'Shower Gel', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/facial.png', 'Facial Wash', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/onne.png', 'Onne', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/fur.png', 'Fur Moisturizer', ''),
-                    ],
-                  ),
-                )
-              ]
-          ),
-        ),
+          child: GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: homeList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 2),
+              itemBuilder: (context, index){
+                return CustomWidgets().product_list(homeList[index].image, homeList[index].productName, homeList[index].logoText, homeList[index].price, homeList[index].cancelPrice);
+              })
       ),
     );
   }

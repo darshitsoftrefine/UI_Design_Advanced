@@ -123,7 +123,7 @@ class CustomWidgets{
   }
 
   // Product Details Widget
-  Widget product_list(String image, String title, String cancelPrice){
+  Widget product_list(String image, String title, String logoText, String price, String cancelPrice){
     return Container(
       decoration: BoxDecoration(
           border: Border.all(color: Colors.grey.shade300)
@@ -145,11 +145,11 @@ class CustomWidgets{
                 radius: 13,
                 child: const Text('T'),
               ),
-              const Text("  Tradly"),
+              Text(logoText),
               const SizedBox(width: 10,),
                Text(cancelPrice, style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
               const SizedBox(width: 5,),
-              Text('\$25', style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+              Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
             ],
           )
         ],

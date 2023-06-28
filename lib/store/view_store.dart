@@ -172,27 +172,27 @@ class ViewStore extends StatelessWidget {
                     ]
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomWidgets().product_list('assets/images/apple.png', 'Apple', ''),
-                    const SizedBox(width: 10,),
-                    CustomWidgets().product_list('assets/images/orange.png', 'Orange', ''),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 10,),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomWidgets().product_list('assets/images/moist.png', 'Moisturizer', ''),
-                    const SizedBox(width: 10,),
-                    CustomWidgets().product_list('assets/images/broc.png', 'Brocolli', ''),
-                  ],
-                ),
-              ),
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     children: [
+              //       CustomWidgets().product_list('assets/images/apple.png', 'Apple', ''),
+              //       const SizedBox(width: 10,),
+              //       CustomWidgets().product_list('assets/images/orange.png', 'Orange', ''),
+              //     ],
+              //   ),
+              // ),
+              // const SizedBox(height: 10,),
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     children: [
+              //       CustomWidgets().product_list('assets/images/moist.png', 'Moisturizer', ''),
+              //       const SizedBox(width: 10,),
+              //       CustomWidgets().product_list('assets/images/broc.png', 'Brocolli', ''),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),

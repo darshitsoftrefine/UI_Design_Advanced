@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
 import '../custom_widgets.dart';
+import '../models/frozen_list.dart';
 
 class FrozenProduct extends StatelessWidget {
   const FrozenProduct({super.key});
@@ -59,46 +60,18 @@ class FrozenProduct extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/ice_cream.png', 'Ice Cream', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/manggo.png', 'Manggo Ice', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/straw_ice.png', 'Strawberry Ice', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/matcha.png', 'Matcha', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/grape.png', 'Grape Ice Cream', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/frozen_bottle.png', 'Frozen Bottle', ''),
-                    ],
-                  ),
-                )
-              ]
-          ),
-        ),
+          child: GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: frozenList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 2),
+              itemBuilder: (context, index){
+                return CustomWidgets().product_list(frozenList[index].image, frozenList[index].productName, frozenList[index].logoText, frozenList[index].price, frozenList[index].cancelPrice);
+              })
       ),
     );
   }

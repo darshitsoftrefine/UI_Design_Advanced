@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
 import '../custom_widgets.dart';
+import '../models/egg_list.dart';
 
 class EggProduct extends StatelessWidget {
   const EggProduct({super.key});
@@ -59,46 +60,18 @@ class EggProduct extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/brown.png', 'Brown Egg', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/fresh.png', 'Fresh Egg', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/bundle.png', 'Bundle Egg', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/blue.png', 'Blue Egg', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/bird.png', 'Bird Egg', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/egg.png', 'Egg', ''),
-                    ],
-                  ),
-                )
-              ]
-          ),
-        ),
+          child: GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: eggList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 2),
+              itemBuilder: (context, index){
+                return CustomWidgets().product_list(eggList[index].image, eggList[index].productName, eggList[index].logoText, eggList[index].price, eggList[index].cancelPrice);
+              })
       ),
 
 

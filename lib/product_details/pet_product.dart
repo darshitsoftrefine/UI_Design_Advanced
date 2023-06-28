@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
 import '../custom_widgets.dart';
+import '../models/pet_list.dart';
 
 class PetProduct extends StatelessWidget {
   const PetProduct({super.key});
@@ -59,21 +60,29 @@ class PetProduct extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomWidgets().product_list('assets/images/snack.png', 'Pet Snack', '\$35'),
-                    const SizedBox(width: 9,),
-                    CustomWidgets().product_list('assets/images/potion.png', 'Potion Pet', ''),
-                  ]
-                ),
-              )
-        ]
-        )
+          child: GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: petList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 2),
+              itemBuilder: (context, index){
+                return CustomWidgets().product_list(petList[index].image, petList[index].productName, petList[index].logoText, petList[index].price, petList[index].cancelPrice);
+              }),
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     children: [
+              //       CustomWidgets().product_list('assets/images/snack.png', 'Pet Snack', '\$35'),
+              //       const SizedBox(width: 9,),
+              //       CustomWidgets().product_list('assets/images/potion.png', 'Potion Pet', ''),
+              //     ]
+              //   ),
+              // )
+
       )
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 
 import '../custom_widgets.dart';
+import '../models/bread_list.dart';
 
 class BreadProduct extends StatelessWidget {
   const BreadProduct({super.key});
@@ -71,46 +72,18 @@ class BreadProduct extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 30, left: 23, right: 23),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/bread_chocolate.png', 'Bread Chocolate', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/circle_bakery.png', 'Circle Bakery', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/cookies.png', 'Cookies', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/long_bread.png', 'Long Bread', ''),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CustomWidgets().product_list('assets/images/donut.png', 'Donut', '\$35'),
-                      const SizedBox(width: 9,),
-                      CustomWidgets().product_list('assets/images/bread.png', 'Bread', '\$35'),
-                    ],
-                  ),
-                )
-              ]
-          ),
-        ),
+          child: GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: browseList.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 2),
+              itemBuilder: (context, index){
+                return CustomWidgets().product_list(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price, browseList[index].cancelPrice);
+              })
       ),
 
 
