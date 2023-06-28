@@ -70,18 +70,8 @@ class PetProduct extends StatelessWidget {
                   crossAxisSpacing: 10,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
-                return CustomWidgets().product_list(petList[index].image, petList[index].productName, petList[index].logoText, petList[index].price, petList[index].cancelPrice);
+                return CustomWidgets().productList(petList[index].image, petList[index].productName, petList[index].logoText, petList[index].price, petList[index].cancelPrice);
               }),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     children: [
-              //       CustomWidgets().product_list('assets/images/snack.png', 'Pet Snack', '\$35'),
-              //       const SizedBox(width: 9,),
-              //       CustomWidgets().product_list('assets/images/potion.png', 'Potion Pet', ''),
-              //     ]
-              //   ),
-              // )
 
       )
     );

@@ -6,7 +6,7 @@ class CustomWidgets{
 
 
   //Card in home dashboard
-  Widget cardhomedashboard(String image, String title){
+  Widget cardHomeDashboard(String image, String title){
     return Row(
       children: [
         Stack(
@@ -17,8 +17,8 @@ class CustomWidgets{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: TextStyle(color: Colors.white, fontSize: 14),),
-                  SizedBox(height: 10,),
+                  Text(title, style: const TextStyle(color: Colors.white, fontSize: 14),),
+                  const SizedBox(height: 10,),
                   ElevatedButton(onPressed: (){
 
                   },   style: ElevatedButton.styleFrom(
@@ -38,7 +38,7 @@ class CustomWidgets{
             ),
           ],
         ),
-        SizedBox(width: 10,),
+        const SizedBox(width: 10,),
         Stack(
           children: [
             Image.asset(image),
@@ -47,8 +47,8 @@ class CustomWidgets{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: TextStyle(color: Colors.white, fontSize: 14),),
-                  SizedBox(height: 10,),
+                  Text(title, style: const TextStyle(color: Colors.white, fontSize: 14),),
+                  const SizedBox(height: 10,),
                   ElevatedButton(onPressed: (){
 
                   },   style: ElevatedButton.styleFrom(
@@ -68,7 +68,7 @@ class CustomWidgets{
             ),
           ],
         ),
-        SizedBox(width: 10,),
+        const SizedBox(width: 10,),
         Stack(
           children: [
             Image.asset(image),
@@ -77,8 +77,8 @@ class CustomWidgets{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: TextStyle(color: Colors.white, fontSize: 14),),
-                  SizedBox(height: 10,),
+                  Text(title, style: const TextStyle(color: Colors.white, fontSize: 14),),
+                  const SizedBox(height: 10,),
                   ElevatedButton(onPressed: (){
 
                   },   style: ElevatedButton.styleFrom(
@@ -104,8 +104,8 @@ class CustomWidgets{
 
 
   // Grid in Home Dashboard
-  Widget gridcards(String image, String title, double top, double left, double right, double bottom){
-    return Container(
+  Widget gridCards(String image, String title, double top, double left, double right, double bottom){
+    return SizedBox(
       width: 93,
       height: 93,
       child: Stack(
@@ -113,7 +113,7 @@ class CustomWidgets{
           Image.asset(image, width: 100,),
             Padding(
               padding: EdgeInsets.only(top: top, left: left, right: right, bottom: bottom),
-              child: Text(title, style: TextStyle(color: Colors.white, fontSize: 11),),
+              child: Text(title, style: const TextStyle(color: Colors.white, fontSize: 11),),
             ),
           ]
       ),
@@ -123,7 +123,7 @@ class CustomWidgets{
   }
 
   // Product Details Widget
-  Widget product_list(String image, String title, String logoText, String price, String cancelPrice){
+  Widget productList(String image, String title, String logoText, String price, String cancelPrice){
     return Container(
       decoration: BoxDecoration(
           border: Border.all(color: Colors.grey.shade300)
@@ -147,7 +147,7 @@ class CustomWidgets{
               ),
               Text(logoText),
               const SizedBox(width: 10,),
-               Text(cancelPrice, style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+               Text(cancelPrice, style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
               const SizedBox(width: 5,),
               Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
             ],
@@ -185,11 +185,11 @@ class CustomWidgets{
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Image.asset(image, width: 47, height: 47,),
-          SizedBox(width: 10,),
+          const SizedBox(width: 10,),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: TextStyle(),),
+              Text(title, style: const TextStyle(),),
               const SizedBox(height: 5,),
               Row(
                 children: [
@@ -222,20 +222,20 @@ class CustomWidgets{
 
   Widget newProduct(String image, String productName, String logoText, String price){
     return Padding(
-      padding: const EdgeInsets.only(right: 5, left: 5),
+      padding: const EdgeInsets.only(right: 10, left: 10),
       child: Container(
         width: 160,
         height: 190,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey.shade300),
-          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(image),
             const SizedBox(height: 10,),
-            Text(productName, style: const TextStyle(fontWeight: FontWeight.w500),),
+            Text(" $productName", style: const TextStyle(fontWeight: FontWeight.w500),),
             const SizedBox(height: 10,),
             Row(
               children: [
@@ -246,8 +246,8 @@ class CustomWidgets{
                   child: const Text('T'),
                 ),
                 const SizedBox(width: 3,),
-                Text(logoText),
-                const SizedBox(width: 55,),
+                Text(" $logoText"),
+                const SizedBox(width: 45,),
                 Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
                 //SizedBox(width: 15,)
               ],
@@ -267,7 +267,7 @@ class CustomWidgets{
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: Colors.grey.shade300),
-          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32)),
+          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
         ),
         child: Stack(
           children: [
@@ -316,26 +316,28 @@ class CustomWidgets{
   Widget browsepage(String image, String title){
     return Container(
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey.shade300)
+          border: Border.all(color: Colors.grey.shade300),
+        borderRadius: const BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(10), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
       ),
-      width: 160,
-      height: 200,
+      width: double.infinity,
+      height: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(image),
+          Image.asset(image, fit: BoxFit.fill,),
           const SizedBox(height: 5,),
-          Text(title),
+          Text("  $title"),
           const SizedBox(height: 10,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CircleAvatar(
                 backgroundColor: CustomColors.primaryColor,
                 radius: 13,
                 child: const Text('T'),
               ),
-              const Text("  Tradly"),
+              const Text(" Tradly"),
               const SizedBox(width: 10,),
               //Text(cancelPrice, style: TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
               const SizedBox(width: 5,),

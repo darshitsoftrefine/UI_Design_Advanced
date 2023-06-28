@@ -70,7 +70,7 @@ class EggProduct extends StatelessWidget {
                   crossAxisSpacing: 10,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
-                return CustomWidgets().product_list(eggList[index].image, eggList[index].productName, eggList[index].logoText, eggList[index].price, eggList[index].cancelPrice);
+                return CustomWidgets().productList(eggList[index].image, eggList[index].productName, eggList[index].logoText, eggList[index].price, eggList[index].cancelPrice);
               })
       ),
 

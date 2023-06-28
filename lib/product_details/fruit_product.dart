@@ -70,7 +70,7 @@ class FruitProduct extends StatelessWidget {
                 crossAxisSpacing: 10,
                 crossAxisCount: 2),
             itemBuilder: (context, index){
-              return CustomWidgets().product_list(vegeList[index].image, vegeList[index].productName, vegeList[index].logoText, vegeList[index].price, vegeList[index].cancelPrice);
+              return CustomWidgets().productList(vegeList[index].image, vegeList[index].productName, vegeList[index].logoText, vegeList[index].price, vegeList[index].cancelPrice);
             }),
       ),
     );

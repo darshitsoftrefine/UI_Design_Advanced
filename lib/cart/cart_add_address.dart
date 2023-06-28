@@ -112,6 +112,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 0,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
                       Text("Price (1 item) "),
                       SizedBox(width: 194,),
@@ -120,6 +121,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   ),
                   const SizedBox(height: 10,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
                       Text("Delievery Fee"),
                       SizedBox(width: 194,),
@@ -128,6 +130,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   ),
                   const SizedBox(height: 30,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
                       Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                       SizedBox(width: 144,),
@@ -137,18 +140,6 @@ class _CartAddAddressState extends State<CartAddAddress> {
                 ],
               ),
               const SizedBox(height: 190,),
-              // Container(
-              //   child: ElevatedButton(onPressed: (){},   style: ElevatedButton.styleFrom(
-              //     fixedSize: const Size(311, 50),
-              //     backgroundColor: CustomColors.onboardColor,
-              //     shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(32)),
-              //   ),
-              //     child: const Text(
-              //       "Coninue to Payment",
-              //       style: TextStyle(fontSize: 18, color:Colors.white),
-              //     ),),
-              // ),
             ],
           ),
         ),

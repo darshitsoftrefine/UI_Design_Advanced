@@ -76,13 +76,13 @@ class BreadProduct extends StatelessWidget {
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
               itemCount: browseList.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   childAspectRatio: 0.8,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
-                return CustomWidgets().product_list(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price, browseList[index].cancelPrice);
+                return CustomWidgets().productList(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price, browseList[index].cancelPrice);
               })
       ),
 

@@ -41,7 +41,7 @@ class _OnboardingState extends State<Onboarding> {
                 const SizedBox(height: 50,),
                 Image.asset('assets/images/Group6.png', width: 285, height: 243,),
                  const SizedBox(height: 40,),
-                Text("Empowering Artisans \n Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
+                Center(child: Text("Empowering Artisans Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500)))),
                 //Text("Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
                 const SizedBox(height: 40,),
 

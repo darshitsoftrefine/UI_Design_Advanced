@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradly/store/search_store.dart';
 
 import '../custom_widgets.dart';
+import '../models/browse_list.dart';
 import '../themes/themes.dart';
 
 class ViewStore extends StatelessWidget {
@@ -171,6 +172,21 @@ class ViewStore extends StatelessWidget {
                       const SizedBox(height: 20,)
                     ]
                 ),
+              ),
+              Padding(
+                  padding: const EdgeInsets.only(top: 30, left: 23, right: 23, bottom: 20),
+                  child: GridView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      itemCount: browseList.length,
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          childAspectRatio: 0.8,
+                          mainAxisSpacing: 10,
+                          crossAxisSpacing: 10,
+                          crossAxisCount: 2),
+                      itemBuilder: (context, index){
+                        return CustomWidgets().browsepage(browseList[index].image, browseList[index].productName);
+                      })
               ),
               // SingleChildScrollView(
               //   scrollDirection: Axis.horizontal,

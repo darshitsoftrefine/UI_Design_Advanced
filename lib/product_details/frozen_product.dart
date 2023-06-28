@@ -70,7 +70,7 @@ class FrozenProduct extends StatelessWidget {
                   crossAxisSpacing: 10,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
-                return CustomWidgets().product_list(frozenList[index].image, frozenList[index].productName, frozenList[index].logoText, frozenList[index].price, frozenList[index].cancelPrice);
+                return CustomWidgets().productList(frozenList[index].image, frozenList[index].productName, frozenList[index].logoText, frozenList[index].price, frozenList[index].cancelPrice);
               })
       ),
     );

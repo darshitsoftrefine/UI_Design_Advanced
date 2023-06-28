@@ -33,7 +33,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: CustomColors.primaryColor,
-        toolbarHeight: 163,
+        toolbarHeight: 187,
         automaticallyImplyLeading: false,
         flexibleSpace: Container(
           padding: const EdgeInsets.only(bottom: 20.0, top: 20.0, left: 15, right: 14),
@@ -80,7 +80,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   ),
                 ],
               ),
-              const SizedBox(height: 20,),
+              const SizedBox(height: 15,),
               TextFormField(
                 enabled: true,
                 style: const TextStyle(color: Colors.white),
@@ -107,15 +107,16 @@ class _HomeDashboardState extends State<HomeDashboard> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 8, top: 15),
+              padding: const EdgeInsets.only(left: 8, top: 15, right: 8),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: CustomWidgets().cardhomedashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME')
+                child: CustomWidgets().cardHomeDashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME')
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: GridView.builder(
+                physics: AlwaysScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: prodList.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -167,7 +168,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                          );
                        }
                       },
-                      child: CustomWidgets().gridcards(prodList[index].image, prodList[index].productName, prodList[index].top, prodList[index].left, prodList[index].right, prodList[index].bottom));
+                      child: CustomWidgets().gridCards(prodList[index].image, prodList[index].productName, prodList[index].top, prodList[index].left, prodList[index].right, prodList[index].bottom));
                 },
 
               ),

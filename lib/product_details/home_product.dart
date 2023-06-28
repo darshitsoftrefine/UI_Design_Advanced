@@ -70,7 +70,7 @@ class HomeProduct extends StatelessWidget {
                   crossAxisSpacing: 10,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
-                return CustomWidgets().product_list(homeList[index].image, homeList[index].productName, homeList[index].logoText, homeList[index].price, homeList[index].cancelPrice);
+                return CustomWidgets().productList(homeList[index].image, homeList[index].productName, homeList[index].logoText, homeList[index].price, homeList[index].cancelPrice);
               })
       ),
     );

@@ -66,13 +66,13 @@ class VegetableProduct extends StatelessWidget {
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
           itemCount: vegeList.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               childAspectRatio: 0.8,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               crossAxisCount: 2),
           itemBuilder: (context, index){
-            return CustomWidgets().product_list(vegeList[index].image, vegeList[index].productName, vegeList[index].logoText, vegeList[index].price, vegeList[index].cancelPrice);
+            return CustomWidgets().productList(vegeList[index].image, vegeList[index].productName, vegeList[index].logoText, vegeList[index].price, vegeList[index].cancelPrice);
           }),
       ),
     );

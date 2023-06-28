@@ -26,6 +26,7 @@ class CartAddedAddress extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(5),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,6 +114,7 @@ class CartAddedAddress extends StatelessWidget {
                         const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                         const SizedBox(height: 20,),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: const [
                             Text("Price (1 item) "),
                             SizedBox(width: 180,),
@@ -121,6 +123,7 @@ class CartAddedAddress extends StatelessWidget {
                         ),
                         const SizedBox(height: 10,),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: const [
                             Text("Delievery Fee"),
                             SizedBox(width: 180,),
@@ -129,6 +132,7 @@ class CartAddedAddress extends StatelessWidget {
                         ),
                         const SizedBox(height: 30,),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: const [
                             Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                             SizedBox(width: 130,),

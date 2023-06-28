@@ -24,9 +24,8 @@ class _BrowseState extends State<Browse> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         backgroundColor: CustomColors.primaryColor,
-        toolbarHeight: 160,
+        toolbarHeight: 190,
         automaticallyImplyLeading: false,
         flexibleSpace: Container(
           padding: const EdgeInsets.only(bottom: 20.0, top: 20.0, left: 15, right: 10),
@@ -91,48 +90,51 @@ class _BrowseState extends State<Browse> {
         ),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const SizedBox(height: 20,),
-                ElevatedButton.icon(onPressed: (){
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const SizedBox(height: 40,),
+                  ElevatedButton.icon(onPressed: (){
 
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(110, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(110, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                ElevatedButton.icon(onPressed: (){
+                    icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                  ElevatedButton.icon(onPressed: (){
 
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(118, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(118, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                ElevatedButton.icon(onPressed: (){
+                    icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                  ElevatedButton.icon(onPressed: (){
 
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(125, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(125, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                const SizedBox(height: 20,)
-              ]
+                    icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                  const SizedBox(height: 30,)
+                ]
+            ),
           ),
         ),
       ),
@@ -142,10 +144,10 @@ class _BrowseState extends State<Browse> {
           shrinkWrap: true,
             scrollDirection: Axis.vertical,
             itemCount: browseList.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 0.8,
-              mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                mainAxisSpacing: 5,
+                childAspectRatio: 0.9,
+                crossAxisSpacing: 5,
                 crossAxisCount: 2),
             itemBuilder: (context, index){
             return CustomWidgets().browsepage(browseList[index].image, browseList[index].productName);

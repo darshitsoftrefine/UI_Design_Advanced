@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tradly/Login_and_OTP_screens/number_drop.dart';
 import 'package:tradly/Login_and_OTP_screens/otp_verification.dart';
 import 'package:tradly/constants/custom_field.dart';
 import 'package:tradly/themes/themes.dart';
@@ -30,10 +29,10 @@ class _SendOtpState extends State<SendOtp> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 24, fontWeight: FontWeight.w500),),
+            Center(child: Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 22, fontWeight: FontWeight.w500),)),
             const SizedBox(height: 40,),
             Text("We have sent you an SMS with a code to", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16,),),
-            Text("enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16),),
+            Center(child: Text("enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16),)),
             const SizedBox(height: 20,),
             //NumberDropdownTextField(),
             TextFormField(
