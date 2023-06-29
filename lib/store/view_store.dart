@@ -23,96 +23,116 @@ class ViewStore extends StatelessWidget {
           icon: const Icon(Icons.search, size: 30, color: Colors.white,)),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 16, bottom: 10, right: 10),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              Container(
-                padding: const EdgeInsets.only(top: 20, left: 16, bottom: 10, right: 39),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: CustomColors.primaryColor,
-                      child: const Text("T", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 40),),
-                    ),
-                    Column(
-                      children: const [
-                        Text("Tradly Store", style: TextStyle(fontSize: 14),),
-                        SizedBox(height: 5,),
-                        Text("tradly.app", style: TextStyle(fontSize: 12, color: Colors.grey),)
-                      ],
-                    ),
-                    const SizedBox(width: 40,),
-                    ElevatedButton(onPressed: (){
-
-                    },
-                      style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(86, 23),
-                        backgroundColor: CustomColors.primaryColor,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(32)),
-                      ),
-                      child: const Text(
-                        "Follow",
-                        style: TextStyle(fontSize: 12, color:Colors.white),
-                      ),),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20,),
-              const Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic'),
-              const SizedBox(height: 20,),
-              Row(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(top: 20, left: 16, bottom: 10, right: 39),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton.icon(
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: CustomColors.primaryColor,
+                    child: const Text("T", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 40),),
+                  ),
+                  Column(
+                    children: const [
+                      Text("Tradly Store", style: TextStyle(fontSize: 14),),
+                      SizedBox(height: 5,),
+                      Text("tradly.app", style: TextStyle(fontSize: 12, color: Colors.grey),)
+                    ],
+                  ),
+                  const SizedBox(width: 40,),
+                  ElevatedButton(onPressed: (){
+
+                  },
                     style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(127, 24),
+                      fixedSize: const Size(86, 23),
+                      backgroundColor: CustomColors.primaryColor,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32)),
                     ),
-                    icon: const Icon(Icons.close, size: 18),
-                    label: const Text('Groceries'),
+                    child: const Text(
+                      "Follow",
+                      style: TextStyle(fontSize: 12, color:Colors.white),
+                    ),),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20,),
+            Container(
+              padding: EdgeInsets.only(left: 30, right: 30),
+                child: const Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic', style: TextStyle(fontSize: 12),)),
+            const SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.only(left: 35, right: 35),
+              child: Row(
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(129, 24),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32)),
+                    ),
                     onPressed: null,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Groceries"),
+                        Icon(Icons.close)
+                      ],
+                    ),
                   ),
                   const SizedBox(width: 10,),
-                  ElevatedButton.icon(
+                  ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       fixedSize: const Size(145, 20),
                       backgroundColor: CustomColors.primaryColor,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32)),
                     ),
-                    icon: const Icon(Icons.close, size: 18),
-                    label: const Text('Vegetables'),
                     onPressed: null,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Vegetables"),
+                        Icon(Icons.close)
+                      ],
+                    ),
                   ),
                 ],
               ),
-              const SizedBox(height: 76,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    children: const [
-                      Text("Total Followers"),
-                      Text("0")
-                    ],
-                  ),
-                  const SizedBox(width: 59,),
-                  Column(
-                    children: const [
-                      Text("Total Products"),
-                      Text("0")
-                    ],
-                  ),
-                ],
-              ),
-              const SizedBox(height: 54,),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
+            ),
+            SizedBox(height: 15,),
+            Divider(color: Colors.grey.shade200, thickness: 20,),
+            const SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: const [
+                    Text("Total Followers"),
+                    Text("0")
+                  ],
+                ),
+                const SizedBox(width: 59,),
+                Column(
+                  children: const [
+                    Text("Total Products"),
+                    Text("0")
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 10,),
+            Divider(color: Colors.grey.shade200, thickness: 20,),
+            const SizedBox(height: 14,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -134,7 +154,7 @@ class ViewStore extends StatelessWidget {
 
                       ElevatedButton(onPressed: (){
                       },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(90, 30),
+                        fixedSize: const Size(70, 30),
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
@@ -147,7 +167,7 @@ class ViewStore extends StatelessWidget {
 
                       ElevatedButton(onPressed: (){
                       },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(130, 30),
+                        fixedSize: const Size(120, 30),
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
@@ -160,7 +180,7 @@ class ViewStore extends StatelessWidget {
 
                       ElevatedButton(onPressed: (){
                       },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(90, 30),
+                        fixedSize: const Size(80, 30),
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
@@ -173,44 +193,24 @@ class ViewStore extends StatelessWidget {
                     ]
                 ),
               ),
-              Padding(
-                  padding: const EdgeInsets.only(top: 30, left: 23, right: 23, bottom: 20),
-                  child: GridView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      itemCount: browseList.length,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          childAspectRatio: 0.8,
-                          mainAxisSpacing: 10,
-                          crossAxisSpacing: 10,
-                          crossAxisCount: 2),
-                      itemBuilder: (context, index){
-                        return CustomWidgets().browsepage(browseList[index].image, browseList[index].productName);
-                      })
-              ),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     children: [
-              //       CustomWidgets().product_list('assets/images/apple.png', 'Apple', ''),
-              //       const SizedBox(width: 10,),
-              //       CustomWidgets().product_list('assets/images/orange.png', 'Orange', ''),
-              //     ],
-              //   ),
-              // ),
-              // const SizedBox(height: 10,),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     children: [
-              //       CustomWidgets().product_list('assets/images/moist.png', 'Moisturizer', ''),
-              //       const SizedBox(width: 10,),
-              //       CustomWidgets().product_list('assets/images/broc.png', 'Brocolli', ''),
-              //     ],
-              //   ),
-              // ),
-            ],
-          ),
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 30, left: 23, right: 23, bottom: 20),
+                child: GridView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    itemCount: browseList.length,
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        childAspectRatio: 0.8,
+                        mainAxisSpacing: 2,
+                        crossAxisSpacing: 2,
+                        crossAxisCount: 2),
+                    itemBuilder: (context, index){
+                      return CustomWidgets().browsepage(browseList[index].image, browseList[index].productName);
+                    })
+            ),
+
+          ],
         ),
       ),
     );

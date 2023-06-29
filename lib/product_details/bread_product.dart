@@ -17,55 +17,58 @@ class BreadProduct extends StatelessWidget {
         title: const Text("Bread & Bakery", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(110, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton.icon(onPressed: (){
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => SendOtp()),
+                    // );
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(110, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12.5),),
-                ),
-                ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(119, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                    icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12.5),),
                   ),
-                ),
-                  icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(125, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                  ElevatedButton.icon(onPressed: (){
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => SendOtp()),
+                    // );
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(119, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-              ]
+                    icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                  ElevatedButton.icon(onPressed: (){
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => SendOtp()),
+                    // );
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(125, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
+                  ),
+                    icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                ]
+            ),
           ),
         ),
       ),
@@ -78,8 +81,8 @@ class BreadProduct extends StatelessWidget {
               itemCount: browseList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   childAspectRatio: 0.8,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 2,
+                  crossAxisSpacing: 2,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
                 return CustomWidgets().productList(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price, browseList[index].cancelPrice);

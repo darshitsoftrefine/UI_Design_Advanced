@@ -12,11 +12,13 @@ class ProductDetail extends StatelessWidget {
           scrollDirection: Axis.vertical,
           child: Column(
            // mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Stack(
                   children: [
-                    Image.asset('assets/images/Rectangle 54.png'),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                        child: Image.asset('assets/images/Rectangle 54.png', fit: BoxFit.cover,)),
                     Positioned(child:
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,14 +57,20 @@ class ProductDetail extends StatelessWidget {
                             const Text('50% Off')
                           ],
                         ),
-                        const SizedBox(height: 30,)
+                        const SizedBox(height: 8,)
                       ],
                     )),
+              ),
+              Divider(
+                color: Colors.grey.shade200,
+                thickness: 7,
+                indent: 0,
+                endIndent: 0,
               ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CircleAvatar(
                 backgroundColor: CustomColors.primaryColor,
@@ -72,10 +80,7 @@ class ProductDetail extends StatelessWidget {
               const Text("  Tradly Store", style: TextStyle(fontSize: 20),),
               const SizedBox(width: 87,),
               ElevatedButton(onPressed: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => SendOtp()),
-                // );
+
               },   style: ElevatedButton.styleFrom(
                 fixedSize: const Size(86, 23),
                 backgroundColor: CustomColors.primaryColor,
@@ -89,7 +94,13 @@ class ProductDetail extends StatelessWidget {
               ],
             ),
         ),
-              const SizedBox(height: 20,),
+              Divider(
+                color: Colors.grey.shade200,
+                thickness: 7,
+                indent: 0,
+                endIndent: 0,
+              ),
+              const SizedBox(height: 10,),
               Stack(
                 children:[
                   Padding(
@@ -168,7 +179,7 @@ class ProductDetail extends StatelessWidget {
           //   MaterialPageRoute(builder: (context) => SendOtp()),
           // );
         },   style: ElevatedButton.styleFrom(
-          fixedSize: const Size(190, 40),
+          fixedSize: const Size(86, 23),
           backgroundColor: CustomColors.primaryColor,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32)),

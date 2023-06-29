@@ -17,11 +17,11 @@ class StoreProduct extends StatelessWidget {
         actions: <Widget>[
           IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
           IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
-
+          SizedBox(width: 10,),
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 20.0, left: 8, right: 8),
+        padding: const EdgeInsets.only(top: 20.0,),
         child: Column(
           children: [
                 Container(
@@ -34,13 +34,14 @@ class StoreProduct extends StatelessWidget {
                 ),
             const SizedBox(height: 16,),
             const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+            SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(onPressed: (){
 
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(106, 23),
+                  fixedSize: const Size(106, 17),
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32),
@@ -59,7 +60,7 @@ class StoreProduct extends StatelessWidget {
                 ElevatedButton(onPressed: (){
 
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(111, 23),
+                  fixedSize: const Size(111, 17),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32)),
@@ -70,9 +71,22 @@ class StoreProduct extends StatelessWidget {
                   ),),
               ],
             ),
-            const SizedBox(height: 36,),
+            SizedBox(height: 36, child: Divider(color: Colors.grey.shade300, thickness: 1,),),
             const Text("Remove Store", style: TextStyle(color: Colors.grey),),
-            const SizedBox(height: 70,),
+            SizedBox(height: 10,),
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade400.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 19,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+               ),
+            SizedBox(height: 50,),
             const Text("You don't have product", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
             const SizedBox(height: 37,),
             ElevatedButton(onPressed: (){
@@ -86,13 +100,14 @@ class StoreProduct extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(32),
                   side: BorderSide(
+                    width: 1,
                       color: CustomColors.primaryColor
                   )
               ),
             ),
               child: const Text(
                 "Add Product",
-                style: TextStyle(fontSize: 18, color: Color(0xFF3A8877)),
+                style: TextStyle(fontSize: 18, color: Color(0xFF3A8877), fontWeight: FontWeight.bold),
               ),),
           ],
         ),

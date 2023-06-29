@@ -23,15 +23,15 @@ class Profile extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (context) => const WishlistScreen()),
               );
-            }, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
+            }, icon: const Icon(Icons.favorite,  color: Colors.white,)),
             const SizedBox(width: 10,),
             IconButton(onPressed: (){
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const CartAddAddress()),
               );
-            }, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
-
+            }, icon: const Icon(Icons.shopping_cart, color: Colors.white,)),
+            SizedBox(width: 15,),
           ],
         ),
         body: Stack(
@@ -68,18 +68,24 @@ class Profile extends StatelessWidget {
                   children: [
                     Stack(
                       children: [
-                        CircleAvatar(
-                          radius: 75,
-                          backgroundColor: Colors.white,
+                        Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.white, width: 1)
+                          ),
                           child: CircleAvatar(
-                            radius: 60,
-                            backgroundColor: CustomColors.primaryColor,
-                            child: const Text("T", style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold, color: Colors.white),),
+                            radius: 65,
+                            backgroundColor: Colors.white,
+                            child: CircleAvatar(
+                              radius: 60,
+                              backgroundColor: CustomColors.primaryColor,
+                              child: const Text("T", style: TextStyle(fontSize: 55, fontWeight: FontWeight.bold, color: Colors.white),),
+                            ),
                           ),
                         ),
                         const Positioned(
                             top: 70,
-                            left: 97,
+                            left: 94,
                             child: CircleAvatar(radius: 7, backgroundColor: Colors.white,))
                       ],
                     ),

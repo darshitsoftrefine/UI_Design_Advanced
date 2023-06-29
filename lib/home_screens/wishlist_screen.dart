@@ -25,9 +25,9 @@ class WishlistScreen extends StatelessWidget {
               scrollDirection: Axis.vertical,
               itemCount: browseList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  childAspectRatio: 0.8,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
+                  childAspectRatio: 0.9,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
                 return CustomWidgets().newProduct(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price);

@@ -36,57 +36,51 @@ class SearchStore extends StatelessWidget {
           ),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(70),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const SizedBox(height: 20,),
-                ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(112, 31),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const SizedBox(height: 20,),
+                  ElevatedButton.icon(onPressed: (){
+
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(112, 31),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(118, 31),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                    icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                   ),
-                ),
-                  icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                ElevatedButton.icon(onPressed: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SendOtp()),
-                  // );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(125, 31),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                  ElevatedButton.icon(onPressed: (){
+
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(118, 31),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                const SizedBox(height: 20,)
-              ]
+                    icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                  ElevatedButton.icon(onPressed: (){
+
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(125, 31),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
+                  ),
+                    icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                  const SizedBox(height: 20,)
+                ]
+            ),
           ),
         ),
       ),

@@ -11,7 +11,7 @@ class AddCardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        toolbarHeight: 80,
+        toolbarHeight: 70,
         title: const Text("Add Card", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
@@ -41,19 +41,20 @@ class AddCardScreen extends StatelessWidget {
                   const Text("Card Number", style: TextStyle(color: Colors.grey),),
                   const SizedBox(height: 10,),
                   const Text("5627 2158 9854 8869", style: TextStyle(fontWeight: FontWeight.w600),),
-                  const SizedBox(height: 30,),
+                  SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),),
                   const Text("Name", style: TextStyle(color: Colors.grey),),
                   const SizedBox(height: 10,),
                   const Text("Tradly", style: TextStyle(fontWeight: FontWeight.w600),),
-                  const SizedBox(height: 30,),
+                  SizedBox(height: 30,child: Divider(color: Colors.grey.shade200, thickness: 1,),),
                   Row(
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text("Expires Dates", style: TextStyle(color: Colors.grey),),
                           SizedBox(height: 10,),
                           Text("12/08", style: TextStyle(fontWeight: FontWeight.w600),),
+                          SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),)
                         ],
                       ),
                       const SizedBox(width: 130,),
@@ -76,21 +77,32 @@ class AddCardScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
-        child:ElevatedButton(onPressed: (){
-            Navigator.push( //navigate to a new route
-             context,
-            MaterialPageRoute(builder: (context) => const NewPaymentScreen())
-            );
-        },   style: ElevatedButton.styleFrom(
-          fixedSize: const Size(150, 50),
-          backgroundColor: CustomColors.primaryColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(32)),
+        child:Container(
+          decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade400, //set the shadow color
+                  blurRadius: 60.0, //set the blur radius
+                  offset: Offset(0, -5), //set the offset to be on top of the button
+                )
+              ]
+          ),
+          child: ElevatedButton(onPressed: (){
+              Navigator.push( //navigate to a new route
+               context,
+              MaterialPageRoute(builder: (context) => const NewPaymentScreen())
+              );
+          },   style: ElevatedButton.styleFrom(
+            fixedSize: const Size(150, 50),
+            backgroundColor: CustomColors.primaryColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(32)),
+          ),
+            child: const Text(
+              "Add Credit Card",
+              style: TextStyle(fontSize: 20, color:Colors.white),
+            ),),
         ),
-          child: const Text(
-            "Add Credit Card",
-            style: TextStyle(fontSize: 20, color:Colors.white),
-          ),),
       ),
     );
   }

@@ -139,18 +139,25 @@ class _BrowseState extends State<Browse> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 30, left: 23, right: 23, bottom: 20),
+        padding: const EdgeInsets.only(top: 30, left: 10, right: 10, bottom: 20),
         child: GridView.builder(
           shrinkWrap: true,
             scrollDirection: Axis.vertical,
             itemCount: browseList.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                mainAxisSpacing: 10,
-                childAspectRatio: 0.9,
-                crossAxisSpacing: 10,
+                mainAxisSpacing: 2,
+                childAspectRatio: 0.8,
+                crossAxisSpacing: 2,
                 crossAxisCount: 2),
             itemBuilder: (context, index){
-            return CustomWidgets().newProduct(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price);
+            return GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductDetail()),
+                );
+              },
+                child: CustomWidgets().productList(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price, browseList[index].cancelPrice));
         })
       ),
     );

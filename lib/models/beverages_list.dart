@@ -9,7 +9,7 @@ class BeverageList {
 
 
 }
-List<BeverageList> browseList = [
+List<BeverageList> beverageList = [
   BeverageList(image: 'assets/images/strawberry.png', productName: ' Strawberry Punch', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
   BeverageList(image: 'assets/images/lemonade.png', productName: ' Lemonade', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
   BeverageList(image: 'assets/images/chocolate.png', productName: ' Chocolate', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),

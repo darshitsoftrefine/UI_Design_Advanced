@@ -23,19 +23,19 @@ class _CartAddAddressState extends State<CartAddAddress> {
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AddNewAddress()),
-                  );
-                },
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AddNewAddress()),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(top: 15, right: 10, left: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -44,14 +44,18 @@ class _CartAddAddressState extends State<CartAddAddress> {
                         context,
                         MaterialPageRoute(builder: (context) => const AddNewAddress()),
                       );
-                    }, icon: const Icon(Icons.add)),
+                    }, icon: const Icon(Icons.add,size: 10,)),
                     // SizedBox(width: 10,),
                     const Text("Add New Address")
                   ],
                 ),
               ),
-              const SizedBox(height: 50,),
-              Column(
+            ),
+            Divider(color: Colors.grey.shade200, thickness: 10,),
+            const SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, right: 10),
+              child: Column(
                 children: [
                   Row(
                     children: [
@@ -64,17 +68,17 @@ class _CartAddAddressState extends State<CartAddAddress> {
                           const SizedBox(height: 10,),
                           Row(
                             children: [
-                              Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 25),),
+                              Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 18),),
                               const SizedBox(width: 10,),
                               const Text("\$50", style: TextStyle(decoration: TextDecoration.lineThrough),),
                               const Text(" 50% off")
                             ],
                           ),
     Row(
-          children: [
-            const Text("Qty: "),
+        children: [
+          const Text("Qty: "),
 
-            DropdownButton<int>(
+          DropdownButton<int>(
               value: 1, //selected
               icon: const Icon(Icons.arrow_drop_down),
               iconSize: 24,
@@ -88,8 +92,8 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   child: Text(value.toString()),
                 );
               }).toList(),
-            )
-          ],
+          )
+        ],
     ),
                         ],
                       )
@@ -97,66 +101,88 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   )
                 ],
               ),
-              const Divider(
-                height: 20,
-                thickness: 0.5,
-                indent: 20,
-                endIndent: 20,
-                color: Colors.grey,
+            ),
+            Divider(
+              height: 20,
+              thickness: 0.5,
+              color: Colors.grey.shade300,
+            ),
+            const Text("Remove", style: TextStyle(color: Colors.grey),),
+            SizedBox(height: 9,),
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade400.withOpacity(0.5),
+                    spreadRadius: 8,
+                    blurRadius: 19,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
               ),
-              const Text("Remove", style: TextStyle(color: Colors.grey),),
-              Column(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, right: 16),
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 76,),
+                  const SizedBox(height: 66,),
                   const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-                  const SizedBox(height: 0,),
+                  const SizedBox(height: 15,),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text("Price (1 item) "),
-                      SizedBox(width: 194,),
                       Text("\$ 25")
                     ],
                   ),
                   const SizedBox(height: 10,),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text("Delievery Fee"),
-                      SizedBox(width: 194,),
                       Text("Info")
                     ],
                   ),
-                  const SizedBox(height: 30,),
+                  SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-                      SizedBox(width: 144,),
+
                       Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
                     ],
                   )
                 ],
               ),
-              const SizedBox(height: 190,),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child:ElevatedButton(onPressed: (){
-        },   style: ElevatedButton.styleFrom(
-          fixedSize: const Size(150, 40),
-          backgroundColor: CustomColors.onboardColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(32)),
+        padding: const EdgeInsets.only(left: 16, right: 16),
+        child:Container(
+          decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey, //set the shadow color
+                  blurRadius: 50.0, //set the blur radius
+                  offset: Offset(0, -5), //set the offset to be on top of the button
+                )
+              ]
+          ),
+          child: ElevatedButton(onPressed: (){
+          },   style: ElevatedButton.styleFrom(
+            fixedSize: const Size(150, 40),
+            backgroundColor: CustomColors.onboardColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(32)),
+          ),
+            child: const Text(
+              "Coninue to Payment",
+              style: TextStyle(fontSize: 18, color:Colors.white),
+            ),),
         ),
-          child: const Text(
-            "Coninue to Payment",
-            style: TextStyle(fontSize: 18, color:Colors.white),
-          ),),
       ),
     );
   }

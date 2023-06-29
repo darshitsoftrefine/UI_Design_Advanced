@@ -19,7 +19,7 @@ class MyStoreAddedProduct extends StatelessWidget {
         actions: <Widget>[
           IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
           IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
-
+          SizedBox(width: 10,),
         ],
       ),
     body: Padding(
@@ -86,7 +86,8 @@ class MyStoreAddedProduct extends StatelessWidget {
       ),
       const SizedBox(height: 30,),
       const Center(child: Text("Remove Store", style: TextStyle(color: Colors.grey),)),
-        const SizedBox(height: 42,),
+        Divider(color: Colors.grey.shade100, thickness: 15,),
+        SizedBox(height: 5,),
         Padding(
           padding: const EdgeInsets.only(left: 23, right: 17),
           child: TextFormField(
@@ -110,7 +111,7 @@ class MyStoreAddedProduct extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 27,),
-        const Text("Product", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+        const Text("Products", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
         const SizedBox(height: 16,),
         Row(
           children: [

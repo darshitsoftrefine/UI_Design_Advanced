@@ -111,10 +111,7 @@ class CustomWidgets{
       child: Stack(
           children:[
           Image.asset(image, width: 100,),
-            Padding(
-              padding: EdgeInsets.only(top: top, left: left, right: right, bottom: bottom),
-              child: Text(title, style: const TextStyle(color: Colors.white, fontSize: 11),),
-            ),
+            Center(child: Text(title, style: const TextStyle(color: Colors.white, fontSize: 11),)),
           ]
       ),
     );
@@ -124,35 +121,41 @@ class CustomWidgets{
 
   // Product Details Widget
   Widget productList(String image, String title, String logoText, String price, String cancelPrice){
-    return Container(
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey.shade300)
-      ),
-      width: 160,
-      height: 200,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Image.asset(image),
-          const SizedBox(height: 5,),
-           Text(title),
-          const SizedBox(height: 10,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                backgroundColor: CustomColors.primaryColor,
-                radius: 13,
-                child: const Text('T'),
-              ),
-              Text(logoText),
-              const SizedBox(width: 10,),
-               Text(cancelPrice, style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-              const SizedBox(width: 5,),
-              Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
-            ],
-          )
-        ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 6, bottom: 10),
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey.shade300),
+            borderRadius: BorderRadius.circular(10)
+        ),
+        width: 160,
+        height: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: double.infinity,
+                child: Image.asset(image, fit: BoxFit.fill,)),
+            const SizedBox(height: 5,),
+             Text("  $title",),
+            const SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(width: 5,),
+                CircleAvatar(
+                  backgroundColor: CustomColors.primaryColor,
+                  radius: 13,
+                  child: const Text('T'),
+                ),
+                Text(logoText),
+                 Text(cancelPrice, style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
@@ -218,6 +221,7 @@ class CustomWidgets{
                 butText,
                 style: TextStyle(fontSize: 10, color: buttextcol),
               ),),
+            Divider(color: Colors.grey.shade400, thickness: 10,)
           ]
       ),
     );
@@ -225,36 +229,38 @@ class CustomWidgets{
 
   Widget newProduct(String image, String productName, String logoText, String price){
     return Padding(
-      padding: const EdgeInsets.only(right: 10, left: 10),
+      padding: const EdgeInsets.only(right: 8, left: 8),
       child: ClipRect(
         child: Container(
           width: 160,
-          height: 190,
+          height: 200,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey.shade300),
-            borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(image),
               const SizedBox(height: 10,),
-              Text(" $productName", style: const TextStyle(fontWeight: FontWeight.w500),),
+              Text("   $productName", style: const TextStyle(fontWeight: FontWeight.w500),),
               const SizedBox(height: 10,),
-              Row(
-                children: [
-                  const SizedBox(width: 2,),
-                  CircleAvatar(
-                    backgroundColor: CustomColors.primaryColor,
-                    radius: 10,
-                    child: const Text('T'),
-                  ),
-                  const SizedBox(width: 3,),
-                  Text(" $logoText"),
-                  const SizedBox(width: 45,),
-                  Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
-                  //SizedBox(width: 15,)
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 7, right: 0.5),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: CustomColors.primaryColor,
+                      radius: 10,
+                      child: const Text('T'),
+                    ),
+                    const SizedBox(width: 3,),
+                    Text(" $logoText"),
+                    const SizedBox(width: 25,),
+                    Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
+                    //SizedBox(width: 15,)
+                  ],
+                ),
               ),
             ],
           ),
@@ -324,13 +330,15 @@ class CustomWidgets{
           border: Border.all(color: Colors.grey.shade300),
         borderRadius: const BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(10), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
       ),
-      width: double.infinity,
-      height: double.infinity,
+     width: 160,
+      height: 200,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(image, fit: BoxFit.fill,),
+          SizedBox(
+            width: double.infinity,
+              child: Image.asset(image, fit: BoxFit.fill,)),
           const SizedBox(height: 5,),
           Text("  $title"),
           const SizedBox(height: 10,),

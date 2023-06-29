@@ -22,15 +22,14 @@ class MyStore extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (context) => const WishlistScreen()),
             );
-          }, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
-          const SizedBox(width: 10,),
+          }, icon: const Icon(Icons.favorite, color: Colors.white,)),
           IconButton(onPressed: (){
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const CartAddAddress()),
             );
-          }, icon: const Icon(Icons.shopping_cart, size: 30, color: Colors.white,)),
-
+          }, icon: const Icon(Icons.shopping_cart, color: Colors.white,)),
+          SizedBox(width: 15,),
         ],
       ),
       body: Padding(

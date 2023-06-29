@@ -17,42 +17,42 @@ class CartAddedAddress extends StatelessWidget {
             centerTitle: true,
             backgroundColor: CustomColors.primaryColor,
           ),
-          body: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(5),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text("Deliever to Tradly Team. 75119"),
-                              Text("Kualalumpur Malaysia"),
-                            ],
-                          ),
-                          const SizedBox(width: 15,),
-                          ElevatedButton(onPressed: (){
-                            Navigator.pop(context);
-                          },   style: ElevatedButton.styleFrom(
-                            fixedSize: const Size(94, 23),
-                            backgroundColor: CustomColors.primaryColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(32)),
-                          ),
-                            child: const Text(
-                              "Change",
-                              style: TextStyle(fontSize: 12, color:Colors.white),
-                            ),),
-                        ],
-                      ),
+          body: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(left: 19, right: 12, top: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text("Deliever to Tradly Team. 75119"),
+                            Text("Kualalumpur Malaysia"),
+                          ],
+                        ),
+                        const SizedBox(width: 15,),
+                        ElevatedButton(onPressed: (){
+                          Navigator.pop(context);
+                        },   style: ElevatedButton.styleFrom(
+                          fixedSize: const Size(94, 23),
+                          backgroundColor: CustomColors.primaryColor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(32)),
+                        ),
+                          child: const Text(
+                            "Change",
+                            style: TextStyle(fontSize: 12, color:Colors.white),
+                          ),),
+                      ],
                     ),
-                  const SizedBox(height: 30,),
-                  Column(
+                  ),
+                SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 10,),),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Column(
                     children: [
                       Row(
                         children: [
@@ -65,7 +65,7 @@ class CartAddedAddress extends StatelessWidget {
                               const SizedBox(height: 10,),
                               Row(
                                 children: [
-                                  Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 25),),
+                                  Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 18),),
                                   const SizedBox(width: 10,),
                                   const Text("\$50", style: TextStyle(decoration: TextDecoration.lineThrough),),
                                   const Text(" 50% off")
@@ -97,54 +97,50 @@ class CartAddedAddress extends StatelessWidget {
                       )
                     ],
                   ),
-                  const Divider(
-                    height: 20,
-                    thickness: 0.5,
-                    indent: 20,
-                    endIndent: 20,
-                    color: Colors.grey,
+                ),
+                Divider(
+                  height: 20,
+                  thickness: 0.5,
+                  color: Colors.grey.shade300,
+                ),
+                const Text("Remove", style: TextStyle(color: Colors.grey),),
+                SizedBox(height: 8,),
+                Divider(color: Colors.grey.shade200, thickness: 10,),
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 20,),
+                      const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                      const SizedBox(height: 20,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text("Price (1 item) "),
+                          Text("\$ 25")
+                        ],
+                      ),
+                      const SizedBox(height: 10,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text("Delievery Fee"),
+                          Text("Info")
+                        ],
+                      ),
+                      SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                          Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
+                        ],
+                      )
+                    ],
                   ),
-                  const Text("Remove", style: TextStyle(color: Colors.grey),),
-                  Container(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 40,),
-                        const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-                        const SizedBox(height: 20,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
-                            Text("Price (1 item) "),
-                            SizedBox(width: 180,),
-                            Text("\$ 25")
-                          ],
-                        ),
-                        const SizedBox(height: 10,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
-                            Text("Delievery Fee"),
-                            SizedBox(width: 180,),
-                            Text("Info")
-                          ],
-                        ),
-                        const SizedBox(height: 30,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
-                            Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-                            SizedBox(width: 130,),
-                            Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 137,),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
       bottomNavigationBar: Padding(

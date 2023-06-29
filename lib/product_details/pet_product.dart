@@ -17,43 +17,46 @@ class PetProduct extends StatelessWidget {
         title: const Text("Pet Care", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton.icon(onPressed: (){
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(110, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton.icon(onPressed: (){
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(110, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                ElevatedButton.icon(onPressed: (){
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(118, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                    icon: const Icon(Icons.sort), label: const Text("Sort By", style: TextStyle(color: Colors.white, fontSize: 12),),
                   ),
-                ),
-                  icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-                ElevatedButton.icon(onPressed: (){
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(125, 30),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                    side: const BorderSide(width: 1, color: Colors.white),
+                  ElevatedButton.icon(onPressed: (){
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(118, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
                   ),
-                ),
-                  icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
-                ),
-              ]
+                    icon: const Icon(Icons.location_on), label: const Text("Location", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                  ElevatedButton.icon(onPressed: (){
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(125, 30),
+                    backgroundColor: CustomColors.primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                      side: const BorderSide(width: 1, color: Colors.white),
+                    ),
+                  ),
+                    icon: const Icon(Icons.category), label: const Text("Category", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  ),
+                ]
+            ),
           ),
         ),
       ),

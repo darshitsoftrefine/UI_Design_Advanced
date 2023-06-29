@@ -49,7 +49,7 @@ class AddNewAddress extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(20.0),
         child:ElevatedButton(onPressed: (){
           Navigator.push(
             context,
