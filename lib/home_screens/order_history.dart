@@ -24,6 +24,7 @@ class OrderHistory extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const WishlistScreen()),
             );
           }, icon: const Icon(Icons.favorite, size: 30, color: Colors.white,)),
+          const SizedBox(width: 10,),
           IconButton(onPressed: (){
             Navigator.push(
               context,

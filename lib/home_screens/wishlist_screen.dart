@@ -30,7 +30,7 @@ class WishlistScreen extends StatelessWidget {
                   crossAxisSpacing: 10,
                   crossAxisCount: 2),
               itemBuilder: (context, index){
-                return CustomWidgets().browsepage(browseList[index].image, browseList[index].productName);
+                return CustomWidgets().newProduct(browseList[index].image, browseList[index].productName, browseList[index].logoText, browseList[index].price);
               })
       ),
     );

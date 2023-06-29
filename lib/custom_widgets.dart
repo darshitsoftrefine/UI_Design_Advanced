@@ -181,78 +181,83 @@ class CustomWidgets{
 
   // Order History Widget
   Widget orderhist(String image, String title, String butText, double wid, double hei, Color butColor, Color buttextcol, double widspacing){
-    return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Image.asset(image, width: 47, height: 47,),
-          const SizedBox(width: 10,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: const TextStyle(),),
-              const SizedBox(height: 5,),
-              Row(
-                children: [
-                  Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-                ],
-              ),
-            ],
-          ),
-          SizedBox(width: widspacing,),
-          ElevatedButton(onPressed: (){
-
-          },   style: ElevatedButton.styleFrom(
-            fixedSize: Size(wid, hei),
-            backgroundColor: butColor,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(32),
-                side: BorderSide(
-                  color: CustomColors.primaryColor,
-                  width: 1,
-                )
+    return Container(
+      padding: EdgeInsets.all(10),
+      child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Image.asset(image, width: 47, height: 47,),
+            const SizedBox(width: 10,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title, style: const TextStyle(),),
+                const SizedBox(height: 5,),
+                Row(
+                  children: [
+                    Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+                  ],
+                ),
+              ],
             ),
-          ),
-            child: Text(
-              butText,
-              style: TextStyle(fontSize: 10, color: buttextcol),
-            ),),
-        ]
+            SizedBox(width: widspacing,),
+            ElevatedButton(onPressed: (){
+
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: Size(wid, hei),
+              backgroundColor: butColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32),
+                  side: BorderSide(
+                    color: CustomColors.primaryColor,
+                    width: 1,
+                  )
+              ),
+            ),
+              child: Text(
+                butText,
+                style: TextStyle(fontSize: 10, color: buttextcol),
+              ),),
+          ]
+      ),
     );
   }
 
   Widget newProduct(String image, String productName, String logoText, String price){
     return Padding(
       padding: const EdgeInsets.only(right: 10, left: 10),
-      child: Container(
-        width: 160,
-        height: 190,
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey.shade300),
-          borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(image),
-            const SizedBox(height: 10,),
-            Text(" $productName", style: const TextStyle(fontWeight: FontWeight.w500),),
-            const SizedBox(height: 10,),
-            Row(
-              children: [
-                const SizedBox(width: 2,),
-                CircleAvatar(
-                  backgroundColor: CustomColors.primaryColor,
-                  radius: 10,
-                  child: const Text('T'),
-                ),
-                const SizedBox(width: 3,),
-                Text(" $logoText"),
-                const SizedBox(width: 45,),
-                Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
-                //SizedBox(width: 15,)
-              ],
-            ),
-          ],
+      child: ClipRect(
+        child: Container(
+          width: 160,
+          height: 190,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey.shade300),
+            borderRadius: const BorderRadius.only(topLeft: Radius.circular(32), topRight: Radius.circular(32), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(image),
+              const SizedBox(height: 10,),
+              Text(" $productName", style: const TextStyle(fontWeight: FontWeight.w500),),
+              const SizedBox(height: 10,),
+              Row(
+                children: [
+                  const SizedBox(width: 2,),
+                  CircleAvatar(
+                    backgroundColor: CustomColors.primaryColor,
+                    radius: 10,
+                    child: const Text('T'),
+                  ),
+                  const SizedBox(width: 3,),
+                  Text(" $logoText"),
+                  const SizedBox(width: 45,),
+                  Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
+                  //SizedBox(width: 15,)
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
