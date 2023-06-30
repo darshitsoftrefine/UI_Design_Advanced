@@ -6,12 +6,8 @@ import 'package:device_preview/device_preview.dart';
 import 'bottom_bar.dart';
 
 void main() {
-  runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => MyApp(), // Wrap your app
-    ),
-  );
+  runApp(MyApp(), // Wrap your app
+    );
 }
 
 class MyApp extends StatelessWidget {
@@ -28,7 +24,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,
       ),
-      home: const BottomBar(),
+      home: const Splash(),
     );
   }
 }
