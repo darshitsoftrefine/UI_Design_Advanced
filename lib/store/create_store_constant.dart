@@ -14,7 +14,7 @@ class CreateStoreConstant extends StatelessWidget {
 
             const Text("StoreName", style: TextStyle(color: Colors.grey),),
             const SizedBox(height: 6,),
-            const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),),
+            const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.w300, fontSize: 16),),
              SizedBox(height: 30, child: Divider(thickness: 1, color: Colors.grey.shade300,),),
             const Text("Store Web Address", style: TextStyle(color: Colors.grey),),
             const SizedBox(height: 6,),

@@ -22,6 +22,7 @@ class CartAddedAddress extends StatelessWidget {
             child: Column(
               children: [
                 Container(
+                  color: Colors.white,
                   padding: const EdgeInsets.only(left: 19, right: 12, top: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,69 +50,75 @@ class CartAddedAddress extends StatelessWidget {
                       ],
                     ),
                   ),
-                SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 10,),),
-                Padding(
-                  padding: const EdgeInsets.only(left: 16.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/Rectangle 292.png'),
-                          const SizedBox(width: 20,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text("Coca Cola", style: TextStyle(),),
-                              const SizedBox(height: 10,),
-                              Row(
-                                children: [
-                                  Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 18),),
-                                  const SizedBox(width: 10,),
-                                  const Text("\$50", style: TextStyle(decoration: TextDecoration.lineThrough),),
-                                  const Text(" 50% off")
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  const Text("Qty: "),
+                SizedBox(height: 30),
+                Container(
+                  color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16.0, bottom: 10, top: 29),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset('assets/images/Rectangle 292.png'),
+                            const SizedBox(width: 20,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(height: 15,),
+                                const Text("Coca Cola", style: TextStyle(),),
+                                const SizedBox(height: 10,),
+                                Row(
+                                  children: [
+                                    Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 18),),
+                                    const SizedBox(width: 10,),
+                                    const Text("\$50", style: TextStyle(decoration: TextDecoration.lineThrough),),
+                                    const Text(" 50% off")
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    const Text("Qty: "),
 
-                                  DropdownButton<int>(
-                                    value: 1, //selected
-                                    icon: const Icon(Icons.arrow_drop_down),
-                                    iconSize: 24,
-                                    elevation: 16,
-                                    onChanged: (int? newValue) {},
-                                    items: <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                                        .map<DropdownMenuItem<int>>((int value) {
-                                      return DropdownMenuItem<int>(
-                                        value: value,
-                                        child: Text(value.toString()),
-                                      );
-                                    }).toList(),
-                                  )
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      )
-                    ],
+                                    DropdownButton<int>(
+                                      value: 1, //selected
+                                      icon: const Icon(Icons.arrow_drop_down),
+                                      iconSize: 24,
+                                      elevation: 16,
+                                      onChanged: (int? newValue) {},
+                                      items: <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                                          .map<DropdownMenuItem<int>>((int value) {
+                                        return DropdownMenuItem<int>(
+                                          value: value,
+                                          child: Text(value.toString()),
+                                        );
+                                      }).toList(),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                        Divider(
+                          height: 20,
+                          thickness: 0.5,
+                          color: Colors.grey.shade300,
+                        ),
+                        const Text("Remove", style: TextStyle(color: Colors.grey),),
+                        SizedBox(height: 10,)
+                      ],
+                    ),
                   ),
                 ),
-                Divider(
-                  height: 20,
-                  thickness: 0.5,
-                  color: Colors.grey.shade300,
-                ),
-                const Text("Remove", style: TextStyle(color: Colors.grey),),
-                SizedBox(height: 8,),
-                Divider(color: Colors.grey.shade200, thickness: 10,),
+
+                SizedBox(height: 28, child: Divider(color: Colors.grey.shade200, thickness: 7,),),
+                //Divider(color: Colors.grey.shade200, thickness: 10,),
                 Container(
+                  color: Colors.white,
                   padding: const EdgeInsets.all(15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 20,),
                       const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                       const SizedBox(height: 20,),
                       Row(
@@ -143,23 +150,37 @@ class CartAddedAddress extends StatelessWidget {
               ],
             ),
           ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child:ElevatedButton(onPressed: (){
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const PaymentScreen()),
-          );
-        },   style: ElevatedButton.styleFrom(
-          fixedSize: const Size(100, 40),
-          backgroundColor: CustomColors.primaryColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(32)),
+      bottomNavigationBar:Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 32, right: 32, top: 12),
+          child:Container(
+            decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey, //set the shadow color
+                    blurRadius: 50.0, //set the blur radius
+                    offset: Offset(0, -5), //set the offset to be on top of the button
+                  )
+                ]
+            ),
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PaymentScreen()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(190, 40),
+              backgroundColor: CustomColors.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Coninue to Payment",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
+          ),
         ),
-          child: const Text(
-            "Coninue to Payment",
-            style: TextStyle(fontSize: 18, color:Colors.white),
-          ),),
       ),
         );
 

@@ -36,14 +36,14 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 250,
-                      height: 150,
+                      width: 260,
+                      height: 160,
                       child: Stack(
                         children: [
                           Center(child: Image.asset('assets/images/visa.png', height: 140,)),
                           Positioned(
-                            top: 120,
-                            left: 220,
+                            top: 128,
+                            left: 228,
                             child: CircleAvatar(
                               radius: 12,
                               backgroundColor: CustomColors.onboardColor,
@@ -177,7 +177,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
             ),
             SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 10,),),
             Container(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.only(left: 19, right: 12),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -205,7 +205,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
             ),
             SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 10,),),
             Container(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.only(left: 19, right: 12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -241,23 +241,37 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child:ElevatedButton(onPressed: (){
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const CheckoutSuccessScreen()),
-          );
-        },   style: ElevatedButton.styleFrom(
-          fixedSize: const Size(190, 40),
-          backgroundColor: CustomColors.primaryColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(32)),
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 32, right: 32, top: 12),
+          child:Container(
+            decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey, //set the shadow color
+                    blurRadius: 50.0, //set the blur radius
+                    offset: Offset(0, -5), //set the offset to be on top of the button
+                  )
+                ]
+            ),
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CheckoutSuccessScreen()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(190, 40),
+              backgroundColor: CustomColors.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Checkout",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
+          ),
         ),
-          child: const Text(
-            "Checkout",
-            style: TextStyle(fontSize: 20, color:Colors.white),
-          ),),
       ),
     );
   }

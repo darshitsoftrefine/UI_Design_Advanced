@@ -56,7 +56,7 @@ class EditStore extends StatelessWidget {
                             alignment: Alignment.topRight,
                             child: CircleAvatar(
                               radius: 12,
-                              backgroundColor: Colors.black,
+                              backgroundColor: Colors.grey,
                               child: Icon(Icons.close, color: Colors.white,),),
                           ),
                         )
@@ -104,7 +104,7 @@ class EditStore extends StatelessWidget {
               const SizedBox(height: 6,),
               Row(
                 children: const [
-                  Text("Kualalumpur, Malaysia", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
+                  Text("Kualalumpur, Malaysia", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),),
                   SizedBox(width: 100,),
                   Icon(Icons.bar_chart, color: Colors.grey,)
                 ],
@@ -113,7 +113,7 @@ class EditStore extends StatelessWidget {
               const SizedBox(height: 28,),
               const Text("Product Description", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
-              const Text("Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w100),),
+              const Text("Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),),
               const SizedBox(height: 20,),
               const Text("Price Type", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
@@ -167,23 +167,37 @@ class EditStore extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ElevatedButton(onPressed: (){
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const MyStoreAddedProduct()),
-          );
-        },   style: ElevatedButton.styleFrom(
-          fixedSize: const Size(190, 40),
-          backgroundColor: CustomColors.primaryColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(32)),
+      bottomNavigationBar:Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 35, right: 35, top: 12),
+          child:Container(
+            decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey, //set the shadow color
+                    blurRadius: 50.0, //set the blur radius
+                    offset: Offset(0, -5), //set the offset to be on top of the button
+                  )
+                ]
+            ),
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MyStoreAddedProduct()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(310, 40),
+              backgroundColor: CustomColors.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Edit Product",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
+          ),
         ),
-          child: const Text(
-            "Edit Product",
-            style: TextStyle(fontSize: 20, color:Colors.white),
-          ),),
       ),
     );
   }

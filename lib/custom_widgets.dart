@@ -122,7 +122,7 @@ class CustomWidgets{
   // Product Details Widget
   Widget productList(String image, String title, String logoText, String price, String cancelPrice){
     return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 6, bottom: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
       child: Container(
         decoration: BoxDecoration(
             border: Border.all(color: Colors.grey.shade300),
@@ -141,7 +141,7 @@ class CustomWidgets{
              Text("  $title",),
             const SizedBox(height: 10,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(width: 5,),
                 CircleAvatar(
@@ -149,8 +149,11 @@ class CustomWidgets{
                   radius: 13,
                   child: const Text('T'),
                 ),
+                SizedBox(width: 5,),
                 Text(logoText),
+                 SizedBox(width: 15,),
                  Text(cancelPrice, style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
+                SizedBox(width: 5,),
                 Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
               ],
             )
@@ -229,41 +232,40 @@ class CustomWidgets{
 
   Widget newProduct(String image, String productName, String logoText, String price){
     return Padding(
-      padding: const EdgeInsets.only(right: 8, left: 8),
-      child: ClipRect(
-        child: Container(
-          width: 160,
-          height: 200,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey.shade300),
-            borderRadius: const BorderRadius.all(Radius.circular(10)),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.asset(image),
-              const SizedBox(height: 10,),
-              Text("   $productName", style: const TextStyle(fontWeight: FontWeight.w500),),
-              const SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.only(left: 7, right: 0.5),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: CustomColors.primaryColor,
-                      radius: 10,
-                      child: const Text('T'),
-                    ),
-                    const SizedBox(width: 3,),
-                    Text(" $logoText"),
-                    const SizedBox(width: 25,),
-                    Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
-                    //SizedBox(width: 15,)
-                  ],
-                ),
+      padding: const EdgeInsets.only(right: 3, left: 8),
+      child: Container(
+        width: 160,
+        height: 200,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey.shade300),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(image),
+            const SizedBox(height: 10,),
+            Text("   $productName", style: const TextStyle(fontWeight: FontWeight.w500),),
+            const SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.only(left: 7, right: 7),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CircleAvatar(
+                    backgroundColor: CustomColors.primaryColor,
+                    radius: 10,
+                    child: const Text('T'),
+                  ),
+                  const SizedBox(width: 1,),
+                  Text("$logoText"),
+                  const SizedBox(width: 25,),
+                  Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
+                  //SizedBox(width: 15,)
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

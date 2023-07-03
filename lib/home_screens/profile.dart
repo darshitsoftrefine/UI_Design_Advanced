@@ -52,51 +52,58 @@ class Profile extends StatelessWidget {
                   left: 40,
                   right: 40,
                   child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     width: 335,
                     height: 266,
                     padding: const EdgeInsets.all(20),
-                  color: Colors.white,
                   child: CustomWidgets().profilewid()
     )
               ),
               Container(
+                padding: EdgeInsets.only(left: 40, top: 15),
                 height: 110,
                 width: 500,
-                padding: const EdgeInsets.all(10),
                 color: CustomColors.primaryColor,
                 child: Row(
                   children: [
                     Stack(
                       children: [
                         Container(
+                          width: 64,
+                          height: 64,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.white, width: 1)
                           ),
                           child: CircleAvatar(
-                            radius: 65,
+                            radius: 41,
                             backgroundColor: Colors.white,
                             child: CircleAvatar(
-                              radius: 60,
+                              radius: 40,
                               backgroundColor: CustomColors.primaryColor,
-                              child: const Text("T", style: TextStyle(fontSize: 55, fontWeight: FontWeight.bold, color: Colors.white),),
+                              child: const Text("T", style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Colors.white),),
                             ),
                           ),
                         ),
                         const Positioned(
-                            top: 70,
-                            left: 94,
-                            child: CircleAvatar(radius: 7, backgroundColor: Colors.white,))
+                            top: 40,
+                            left: 45,
+                            child: CircleAvatar(radius: 10, backgroundColor: Colors.white,))
                       ],
                     ),
+                    SizedBox(width: 15,),
                     Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          Text("Tradly Team", style: TextStyle(fontSize: 15,color: Colors.white, fontWeight: FontWeight.w700),),
+                          SizedBox(height: 20,),
+                          Text("Tradly Team", style: TextStyle(fontSize: 14,color: Colors.white, fontWeight: FontWeight.w700),),
                           SizedBox(height: 5,),
-                          Text("+1 9998887776", style: TextStyle(fontSize: 15, color: Colors.white),),
+                          Text("+1 9998887776", style: TextStyle(fontSize: 14, color: Colors.white),),
                           SizedBox(height: 5,),
-                          Text("info@tradly.com", style: TextStyle(fontSize: 15, color: Colors.white),),
+                          Text("info@tradly.com", style: TextStyle(fontSize: 14, color: Colors.white),),
                         ]
                     ),
                   ],

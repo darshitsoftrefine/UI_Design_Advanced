@@ -33,7 +33,7 @@ class AddCardScreen extends StatelessWidget {
               ],
             ),
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.only(left: 46, right: 46),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -57,7 +57,7 @@ class AddCardScreen extends StatelessWidget {
                           SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),)
                         ],
                       ),
-                      const SizedBox(width: 130,),
+                      const SizedBox(width: 120,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -75,33 +75,36 @@ class AddCardScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child:Container(
-          decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.shade400, //set the shadow color
-                  blurRadius: 60.0, //set the blur radius
-                  offset: Offset(0, -5), //set the offset to be on top of the button
-                )
-              ]
-          ),
-          child: ElevatedButton(onPressed: (){
-              Navigator.push( //navigate to a new route
-               context,
-              MaterialPageRoute(builder: (context) => const NewPaymentScreen())
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 32, right: 32, top: 12),
+          child:Container(
+            decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey, //set the shadow color
+                    blurRadius: 50.0, //set the blur radius
+                    offset: Offset(0, -5), //set the offset to be on top of the button
+                  )
+                ]
+            ),
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NewPaymentScreen()),
               );
-          },   style: ElevatedButton.styleFrom(
-            fixedSize: const Size(150, 50),
-            backgroundColor: CustomColors.primaryColor,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(32)),
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(190, 40),
+              backgroundColor: CustomColors.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Add Credit Card",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
           ),
-            child: const Text(
-              "Add Credit Card",
-              style: TextStyle(fontSize: 20, color:Colors.white),
-            ),),
         ),
       ),
     );

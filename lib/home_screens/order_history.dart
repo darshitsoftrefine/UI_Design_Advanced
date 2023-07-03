@@ -12,6 +12,7 @@ class OrderHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         toolbarHeight: 100,
         automaticallyImplyLeading: false,
@@ -73,8 +74,11 @@ class OrderHistory extends StatelessWidget {
       //     );
       //   }),
       // ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      Container(
+        padding: EdgeInsets.only(top: 15, bottom: 15),
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
     Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
     const SizedBox(width: 20,),
@@ -90,139 +94,152 @@ class OrderHistory extends StatelessWidget {
     const Text(" 50% off"),
     ],
     ),
-        ],
+          ],
+        ),
+        const SizedBox(width: 70,),
+        ElevatedButton(onPressed: (){
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => MyStore()),
+        // );
+        },   style: ElevatedButton.styleFrom(
+        fixedSize: const Size(96, 23),
+        backgroundColor: CustomColors.primaryColor,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(32)),
+        ),
+        child: const Text(
+          "Delievered",
+          style: TextStyle(fontSize: 10, color:Colors.white),
+        ),),
+        ]
+        ),
       ),
-      const SizedBox(width: 70,),
-      ElevatedButton(onPressed: (){
-      // Navigator.push(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => MyStore()),
-      // );
-      },   style: ElevatedButton.styleFrom(
-      fixedSize: const Size(96, 25),
-      backgroundColor: CustomColors.primaryColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(32)),
-      ),
-      child: const Text(
-        "Delievered",
-        style: TextStyle(fontSize: 10, color:Colors.white),
-      ),),
-      ]
-      ),
-          SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 8,),),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                const SizedBox(width: 20,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("Coca Cola", style: TextStyle(),),
-                    const SizedBox(height: 5,),
-                    Row(
-                      children: [
-                        Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 87,),
-                ElevatedButton(onPressed: (){
-
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(106, 25),
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),
-                    side: BorderSide(
-                      color: CustomColors.primaryColor,
-                      width: 1,
-                    )
+          SizedBox(height: 10, child: Divider(color: Colors.grey.shade200, thickness: 8,),),
+          Container(
+            padding: EdgeInsets.only(top: 15, bottom: 15),
+            color: Colors.white,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+                  const SizedBox(width: 20,),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("Coca Cola", style: TextStyle(),),
+                      const SizedBox(height: 5,),
+                      Row(
+                        children: [
+                          Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+                        ],
+                      ),
+                    ],
                   ),
-                ),
-                  child: const Text(
-                    "Order Placed",
-                    style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
-                  ),),
-              ]
-          ),
-          SizedBox(height: 30,  child: Divider(color: Colors.grey.shade200, thickness: 8,),),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                const SizedBox(width: 20,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("Coca Cola", style: TextStyle(),),
-                    const SizedBox(height: 5,),
-                    Row(
-                      children: [
-                        Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 42,),
-                ElevatedButton(onPressed: (){
+                  const SizedBox(width: 87,),
+                  ElevatedButton(onPressed: (){
 
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(155, 23),
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(106, 23),
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(32),
                       side: BorderSide(
                         color: CustomColors.primaryColor,
                         width: 1,
                       )
-                  ),
-                ),
-                  child: const Text(
-                    "Payment Confirmed",
-                    style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
-                  ),),
-              ]
-          ),
-          SizedBox(height: 30,  child: Divider(color: Colors.grey.shade200, thickness: 8,),),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
-                const SizedBox(width: 20,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("Coca Cola", style: TextStyle(),),
-                    const SizedBox(height: 5,),
-                    Row(
-                      children: [
-                        Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
-                      ],
                     ),
-                  ],
-                ),
-                const SizedBox(width: 100,),
-                ElevatedButton(onPressed: (){
-
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(96, 25),
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),
-                      side: BorderSide(
-                        color: CustomColors.primaryColor,
-                        width: 1,
-                      )
                   ),
-                ),
-                  child: const Text(
-                    "Processed",
-                    style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
-                  ),),
-              ]
+                    child: const Text(
+                      "Order Placed",
+                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
+                    ),),
+                ]
+            ),
+          ),
+          SizedBox(height: 10,  child: Divider(color: Colors.grey.shade200, thickness: 8,),),
+          Container(
+            padding: EdgeInsets.only(top: 15, bottom: 15),
+            color: Colors.white,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+                  const SizedBox(width: 20,),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("Coca Cola", style: TextStyle(),),
+                      const SizedBox(height: 5,),
+                      Row(
+                        children: [
+                          Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 42,),
+                  ElevatedButton(onPressed: (){
+
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(155, 23),
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(32),
+                        side: BorderSide(
+                          color: CustomColors.primaryColor,
+                          width: 1,
+                        )
+                    ),
+                  ),
+                    child: const Text(
+                      "Payment Confirmed",
+                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
+                    ),),
+                ]
+            ),
+          ),
+          SizedBox(height: 10,  child: Divider(color: Colors.grey.shade200, thickness: 8,),),
+          Container(
+            padding: EdgeInsets.only(top: 15, bottom: 15),
+            color: Colors.white,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+                  const SizedBox(width: 20,),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("Coca Cola", style: TextStyle(),),
+                      const SizedBox(height: 5,),
+                      Row(
+                        children: [
+                          Text("\$25", style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 14),),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 100,),
+                  ElevatedButton(onPressed: (){
+
+                  },   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(96, 23),
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(32),
+                        side: BorderSide(
+                          color: CustomColors.primaryColor,
+                          width: 1,
+                        )
+                    ),
+                  ),
+                    child: const Text(
+                      "Processed",
+                      style: TextStyle(fontSize: 10, color: Color(0xFF3A8877)),
+                    ),),
+                ]
+            ),
           ),
       ]
     )

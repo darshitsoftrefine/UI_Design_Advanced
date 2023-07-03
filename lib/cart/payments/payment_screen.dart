@@ -30,7 +30,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 68, right: 61, top: 10),
+                  padding: const EdgeInsets.only(left: 68, right: 61, top: 30),
                   child: DottedBorder(
                     color: Colors.grey.shade300, //color of dotted border
                     strokeWidth: 2, //thickness of dots
@@ -73,6 +73,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                   ],
                 ),
+                SizedBox(height: 20,),
+                SizedBox(height: 15, child: Divider(color: Colors.grey.shade300, thickness: 5,),),
                 ListTile(
                   title: const Text('Debit/Credit Card'),
                   leading: Radio<SingingCharacter>(
@@ -156,7 +158,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
                 Divider(color: Colors.grey.shade200, thickness: 10,),
                 Container(
-                  padding: const EdgeInsets.all(5),
+                  padding: const EdgeInsets.only(left: 19, right: 12),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -222,19 +224,24 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ),
           ),
         ),
-        bottomNavigationBar: Padding(
-    padding: const EdgeInsets.all(8.0),
-    child:ElevatedButton(onPressed: null,   style: ElevatedButton.styleFrom(
-      fixedSize: const Size(190, 40),
-      backgroundColor: CustomColors.primaryColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(32)),
-    ),
-      child: const Text(
-        "Checkout",
-        style: TextStyle(fontSize: 20, color:Colors.white),
-      ),),
-    ),
+        bottomNavigationBar: Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 32, right: 32, top: 12),
+            child:Container(
+              child: ElevatedButton(onPressed: (){},   style: ElevatedButton.styleFrom(
+                fixedSize: const Size(190, 40),
+                backgroundColor: CustomColors.onboardColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32)),
+              ),
+                child: const Text(
+                  "Checkout",
+                  style: TextStyle(fontSize: 18, color:Colors.white),
+                ),),
+            ),
+          ),
+        ),
       );
   }
 }

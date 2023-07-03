@@ -35,10 +35,10 @@ class _Onboarding3State extends State<Onboarding3> {
                   children: [
                     const SizedBox(height: 50,),
                     Image.asset('assets/images/Group 4.png'),
-                    const SizedBox(height: 50,),
+                    const SizedBox(height: 70,),
                     Text("Donate, Invest and Support", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
                     Text("infrastructure projects", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                    const SizedBox(height: 70,),
+                    const SizedBox(height: 60,),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -59,27 +59,50 @@ class _Onboarding3State extends State<Onboarding3> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 40,),
+                    const SizedBox(height: 70,),
 
-                    ElevatedButton(onPressed: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Login()),
-                      );
-                    },   style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(306, 50),
-                      backgroundColor: CustomColors.primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32)),
-                    ),
-                      child: const Text(
-                        "Finish",
-                        style: TextStyle(fontSize: 20, color:Colors.white),
-                      ),),
+                    // ElevatedButton(onPressed: (){
+                    //   Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(builder: (context) => const Login()),
+                    //   );
+                    // },   style: ElevatedButton.styleFrom(
+                    //   minimumSize: const Size(306, 50),
+                    //   backgroundColor: CustomColors.primaryColor,
+                    //   shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(32)),
+                    // ),
+                    //   child: const Text(
+                    //     "Finish",
+                    //     style: TextStyle(fontSize: 20, color:Colors.white),
+                    //   ),),
                   ],
                 ),
               ))
         ],
+      ),
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 35, right: 35, bottom: 21),
+          child:Container(
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Login()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(310, 40),
+              backgroundColor: CustomColors.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Finish",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
+          ),
+        ),
       ),
     );
   }

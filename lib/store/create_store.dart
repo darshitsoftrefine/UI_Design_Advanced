@@ -38,24 +38,38 @@ class CreateStore extends StatelessWidget {
       ),
           ),
       ),
-        bottomNavigationBar: Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: ElevatedButton(onPressed: (){
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const StoreProduct()),
-    );
-    },   style: ElevatedButton.styleFrom(
-    fixedSize: const Size(190, 40),
-    backgroundColor: CustomColors.primaryColor,
-    shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(32)),
-    ),
-    child: const Text(
-    "Create",
-    style: TextStyle(fontSize: 18, color:Colors.white, fontWeight: FontWeight.bold),
-    ),),
-    ),
+        bottomNavigationBar: Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 35, right: 35, top: 12),
+            child:Container(
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey, //set the shadow color
+                      blurRadius: 50.0, //set the blur radius
+                      offset: Offset(0, -5), //set the offset to be on top of the button
+                    )
+                  ]
+              ),
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const StoreProduct()),
+                );
+              },   style: ElevatedButton.styleFrom(
+                fixedSize: const Size(310, 40),
+                backgroundColor: CustomColors.primaryColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32)),
+              ),
+                child: const Text(
+                  "Create",
+                  style: TextStyle(fontSize: 18, color:Colors.white),
+                ),),
+            ),
+          ),
+        ),
     );
   }
 }

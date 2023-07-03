@@ -51,12 +51,12 @@ class AddProductStore extends StatelessWidget {
                       children: [
                         Image.asset('assets/images/add_product.png'),
                         const Padding(
-                          padding: EdgeInsets.only(right: 41, top: 10),
+                          padding: EdgeInsets.only(right: 35, top: 10),
                           child: Align(
                             alignment: Alignment.topRight,
                             child: CircleAvatar(
                               radius: 12,
-                              backgroundColor: Colors.black,
+                              backgroundColor: Colors.grey,
                               child: Icon(Icons.close, color: Colors.white,),),
                           ),
                         )
@@ -113,7 +113,7 @@ class AddProductStore extends StatelessWidget {
               const SizedBox(height: 28,),
               const Text("Product Description", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
-              const Text("Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w100),),
+              const Text("Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
               const SizedBox(height: 20,),
               const Text("Price Type", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
@@ -126,7 +126,7 @@ class AddProductStore extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(195, 24),
+                      fixedSize: const Size(163, 24),
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
@@ -137,15 +137,15 @@ class AddProductStore extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Cash on Delievery"),
-                        Icon(Icons.close)
+                        Text("Cash on delivery"),
+                        Icon(Icons.close, size: 14,)
                       ],
                     ),
                   ),
                   const SizedBox(width: 3),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(126, 24),
+                      fixedSize: const Size(116, 24),
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
@@ -157,7 +157,7 @@ class AddProductStore extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                   Text("Available"),
-                  Icon(Icons.close)
+                  Icon(Icons.close, size: 14,)
                 ],
               ),
                   ),
@@ -167,23 +167,37 @@ class AddProductStore extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ElevatedButton(onPressed: (){
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const MyStoreAddedProduct()),
-          );
-        },   style: ElevatedButton.styleFrom(
-          fixedSize: const Size(190, 40),
-          backgroundColor: CustomColors.primaryColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(32)),
+      bottomNavigationBar:Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 35, right: 35, top: 12),
+          child:Container(
+            decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey, //set the shadow color
+                    blurRadius: 50.0, //set the blur radius
+                    offset: Offset(0, -5), //set the offset to be on top of the button
+                  )
+                ]
+            ),
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MyStoreAddedProduct()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(310, 40),
+              backgroundColor: CustomColors.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Add Product",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
+          ),
         ),
-          child: const Text(
-            "Add Product",
-            style: TextStyle(fontSize: 20, color:Colors.white),
-          ),),
       ),
     );
   }

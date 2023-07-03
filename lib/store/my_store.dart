@@ -46,7 +46,7 @@ class MyStore extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const CreateStore()),
               );
             },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(219, 48),
+              fixedSize: const Size(229, 48),
               backgroundColor: CustomColors.primaryColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(32)),

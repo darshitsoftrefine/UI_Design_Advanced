@@ -29,21 +29,22 @@ class _OnboardingState extends State<Onboarding> {
             color: CustomColors.primaryColor,
           ),
           Positioned(
-            top: 90,
+            top: 85,
               left: 31,
               right: 39,
               child: Container(
                 color: Colors.white,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //mainAxisAlignment: MainAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 50,),
                 Image.asset('assets/images/Group6.png', width: 285, height: 243,),
-                 const SizedBox(height: 40,),
-                Center(child: Text("Empowering Artisans Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500)))),
+                 const SizedBox(height: 70,),
+                Text("Empowering Artisans ", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
+                Text("Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
                 //Text("Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
-                const SizedBox(height: 40,),
+                const SizedBox(height: 60,),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -67,26 +68,49 @@ class _OnboardingState extends State<Onboarding> {
 
                 // Adding Three Dots preview
 
-                const SizedBox(height: 40,),
-                ElevatedButton(onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Onboarding2()),
-                  );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(306, 48),
-                  backgroundColor: CustomColors.primaryColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32)),
-                ),
-                  child: const Text(
-                    "Next",
-                    style: TextStyle(fontSize: 20, color:Colors.white),
-                  ),),
+                const SizedBox(height: 70,),
+                // ElevatedButton(onPressed: (){
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(builder: (context) => const Onboarding2()),
+                //   );
+                // },   style: ElevatedButton.styleFrom(
+                //   minimumSize: const Size(306, 50),
+                //   backgroundColor: CustomColors.primaryColor,
+                //   shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadius.circular(32)),
+                // ),
+                //   child: const Text(
+                //     "Next",
+                //     style: TextStyle(fontSize: 20, color:Colors.white),
+                //   ),),
               ],
             ),
           )),
         ],
+      ),
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 35, right: 35, bottom: 21),
+          child:Container(
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Onboarding2()),
+              );
+            },   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(310, 40),
+              backgroundColor: CustomColors.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
+            ),
+              child: const Text(
+                "Next",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
+          ),
+        ),
       ),
     );
   }

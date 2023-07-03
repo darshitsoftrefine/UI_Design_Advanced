@@ -116,7 +116,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: GridView.builder(
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: prodList.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
