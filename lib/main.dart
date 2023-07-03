@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,
       ),
-      home: const BottomBar(),
+      home: const Splash(),
     );
   }
 }
