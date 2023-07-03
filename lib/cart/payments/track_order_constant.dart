@@ -71,9 +71,9 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
                    children: [
                      Text(
                        trackOrderList[index].time,
-                       style: const TextStyle(fontSize: 10.0),
+                       style: const TextStyle(fontSize: 10.0, color: Colors.grey),
                      ),
-                     Text(trackOrderList[index].date,style: const TextStyle(fontSize: 10),)
+                     Text(trackOrderList[index].date,style: const TextStyle(fontSize: 10, color: Colors.grey),)
                    ],
                  )
                 ],

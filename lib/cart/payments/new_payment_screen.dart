@@ -41,13 +41,13 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                       child: Stack(
                         children: [
                           Center(child: Image.asset('assets/images/visa.png', height: 140,)),
-                          Positioned(
+                          const Positioned(
                             top: 128,
                             left: 228,
                             child: CircleAvatar(
                               radius: 12,
-                              backgroundColor: CustomColors.onboardColor,
-                              child: const Icon(Icons.arrow_forward, color: Colors.white,),
+                              backgroundColor: Color(0xFF2BDBC0),
+                              child: Icon(Icons.arrow_forward, color: Colors.white,),
                             ),
                           )
                         ],
@@ -56,7 +56,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                     const SizedBox(width: 15,),
                     DottedBorder(
                       borderType: BorderType.RRect,
-                      radius: Radius.circular(10),
+                      radius: const Radius.circular(10),
                       color: Colors.grey, //color of dotted border
                       strokeWidth: 2, //thickness of dots
                       dashPattern: const [8, 4], //length and space between dots
@@ -244,7 +244,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
         ),
       ),
       bottomNavigationBar: Container(
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
     boxShadow: [
     BoxShadow(
       color: Colors.grey, //set the shadow color
