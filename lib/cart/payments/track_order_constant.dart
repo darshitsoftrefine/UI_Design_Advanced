@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
-import 'package:im_stepper/main.dart';
 import 'package:im_stepper/stepper.dart';
 
 import '../../models/track_list.dart';
@@ -19,7 +18,7 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
 
     return  Row(
       children: [
-        Container(
+        SizedBox(
           height: MediaQuery.of(context).size.height / 2,
           width: MediaQuery.of(context).size.width / 6,
           child: IconStepper(
@@ -38,8 +37,8 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
             icons: [
               Icon(Icons.check, color: CustomColors.primaryColor),
               Icon(Icons.circle_rounded, color: CustomColors.primaryColor,),
-              Icon(Icons.circle_outlined, color: Colors.grey),
-              Icon(Icons.circle_rounded, color: Colors.grey),
+              const Icon(Icons.circle_outlined, color: Colors.grey),
+              const Icon(Icons.circle_rounded, color: Colors.grey),
             ],
           ),
 
@@ -52,18 +51,18 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
             itemBuilder: (context, index) {
               return Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width / 1.5,
                     child: ListTile(
                       contentPadding:
-                      EdgeInsets.symmetric(vertical: 16.0),
+                      const EdgeInsets.symmetric(vertical: 16.0),
                       title: Text(
                         trackOrderList[index].title,
-                        style: TextStyle(fontSize: 14.0),
+                        style: const TextStyle(fontSize: 14.0),
                       ),
                       subtitle: Text(
                         trackOrderList[index].subtitle,
-                        style: TextStyle(fontSize: 10.0),
+                        style: const TextStyle(fontSize: 10.0),
                       ),
                     ),
                   ),
@@ -72,9 +71,9 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
                    children: [
                      Text(
                        trackOrderList[index].time,
-                       style: TextStyle(fontSize: 10.0),
+                       style: const TextStyle(fontSize: 10.0),
                      ),
-                     Text(trackOrderList[index].date,style: TextStyle(fontSize: 10),)
+                     Text(trackOrderList[index].date,style: const TextStyle(fontSize: 10),)
                    ],
                  )
                 ],

@@ -96,11 +96,20 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
               ),
             ),
             SizedBox(height: 10, child: Divider(color: Colors.grey.shade200, thickness: 10,),),
-            const Text("Track Order", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0, top: 10),
+              child: Text("Track Order", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            ),
             const SizedBox(height: 10,),
-            const Text('Order ID - 123455'),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text('Order ID - 123455'),
+            ),
             const SizedBox(height: 10,),
-            Image.asset('assets/images/Line 2.png'),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Image.asset('assets/images/Line 2.png'),
+            ),
             const TrackOrderConstant(),
             Divider(color: Colors.grey.shade200, thickness: 10,),
             //Image.asset('assets/images/Fill 33.png'),
@@ -125,7 +134,7 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
                         );
                       },
                       child: const Text("Back to Home", style: TextStyle(fontWeight: FontWeight.bold),)),),
-                  SizedBox(height: 15,),
+                  const SizedBox(height: 15,),
                 ],
               ),
             )
