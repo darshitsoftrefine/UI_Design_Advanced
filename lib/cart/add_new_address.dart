@@ -49,36 +49,36 @@ class AddNewAddress extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 32, right: 32, top: 12),
-          child:Container(
-            decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey, //set the shadow color
-                    blurRadius: 50.0, //set the blur radius
-                    offset: Offset(0, -5), //set the offset to be on top of the button
-                  )
-                ]
-            ),
-            child: ElevatedButton(onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const CartAddedAddress()),
-              );
-            },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(190, 40),
-              backgroundColor: CustomColors.primaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32)),
-            ),
-              child: const Text(
-                "Save",
-                style: TextStyle(fontSize: 18, color:Colors.white),
-              ),),
-          ),
+        decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey, //set the shadow color
+                blurRadius: 50.0, //set the blur radius
+                offset: Offset(0, -5), //set the offset to be on top of the button
+              )
+            ]
         ),
+        child: Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 32, right: 32, top: 12, bottom: 28),
+            child: ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CartAddedAddress()),
+                );
+              },   style: ElevatedButton.styleFrom(
+                fixedSize: const Size(190, 40),
+                backgroundColor: CustomColors.primaryColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32)),
+              ),
+                child: const Text(
+                  "Save",
+                  style: TextStyle(fontSize: 18, color:Colors.white),
+                ),),
+            ),
+          ),
       ),
     );
   }

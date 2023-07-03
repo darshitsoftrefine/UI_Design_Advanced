@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/bottom_bar.dart';
 import 'package:tradly/cart/payments/track_order_constant.dart';
 import 'package:tradly/home_screens/home_dashboard.dart';
 import '../../themes/themes.dart';
@@ -12,6 +13,7 @@ class CheckoutSuccessScreen extends StatefulWidget {
 
 class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
 
+  int selectedValue = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
             child: IconButton(onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const HomeDashboard()),
+                MaterialPageRoute(builder: (context) => const BottomBar()),
               );
             }, icon: const Icon(Icons.close, size: 40, color: Colors.white,)),
           ),
@@ -70,23 +72,19 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
                             children: [
                               const Text("Qty: "),
 
-                              DropdownButton<int>(
-                                value: 1, //selected
-                                icon: const Icon(Icons.arrow_drop_down),
-                                iconSize: 24,
-                                elevation: 16,
-                                underline: Container(
-                                  height: 2,
-                                  color: Colors.black,
-                                ),
-                                onChanged: (int? newValue) {},
-                                items: <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                                    .map<DropdownMenuItem<int>>((int value) {
+                              DropdownButton(
+                                value: selectedValue, // the current value of the dropdown button as an int
+                                items: [1, 2, 3].map((value) {
                                   return DropdownMenuItem<int>(
                                     value: value,
                                     child: Text(value.toString()),
                                   );
                                 }).toList(),
+                                onChanged: (value) {
+                                  setState(() {
+                                    selectedValue = value!; // this updates the selected value when the dropdown button is pressed
+                                  });
+                                },
                               )
                             ],
                           ),
@@ -106,23 +104,32 @@ class _CheckoutSuccessScreenState extends State<CheckoutSuccessScreen> {
             const TrackOrderConstant(),
             Divider(color: Colors.grey.shade200, thickness: 10,),
             //Image.asset('assets/images/Fill 33.png'),
-            const Text("Delievery Address", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-            const SizedBox(height: 25,),
-            const Text("Tradly Team"),
-            const SizedBox(height: 8,),
-            const Text("Flat Number 512, Eden Garden Rewari", style: TextStyle(fontSize: 12),),
-            const SizedBox(height: 8,),
-            const Text("Mobile: 9876543210"),
-            const SizedBox(height: 30,),
-            Center(child: GestureDetector(
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomeDashboard()),
-                );
-              },
-                child: const Text("Back to Home", style: TextStyle(fontWeight: FontWeight.bold),)),),
-            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text("Delievery Address", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                  const SizedBox(height: 25,),
+                  const Text("Tradly Team"),
+                  const SizedBox(height: 8,),
+                  const Text("Flat Number 512, Eden Garden Rewari", style: TextStyle(fontSize: 12),),
+                  const SizedBox(height: 8,),
+                  const Text("Mobile: 9876543210"),
+                  const SizedBox(height: 30,),
+                  Center(child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const BottomBar()),
+                        );
+                      },
+                      child: const Text("Back to Home", style: TextStyle(fontWeight: FontWeight.bold),)),),
+                  SizedBox(height: 15,),
+                ],
+              ),
+            )
+
         ],
         ),
       ),

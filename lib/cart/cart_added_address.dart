@@ -4,9 +4,15 @@ import 'package:tradly/cart/payments/payment_screen.dart';
 import '../themes/themes.dart';
 import 'add_new_address.dart';
 
-class CartAddedAddress extends StatelessWidget {
+class CartAddedAddress extends StatefulWidget {
   const CartAddedAddress({super.key});
 
+  @override
+  State<CartAddedAddress> createState() => _CartAddedAddressState();
+}
+
+class _CartAddedAddressState extends State<CartAddedAddress> {
+  int selectedValue = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +44,7 @@ class CartAddedAddress extends StatelessWidget {
                         ElevatedButton(onPressed: (){
                           Navigator.pop(context);
                         },   style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(94, 23),
+                          minimumSize: const Size(94, 23),
                           backgroundColor: CustomColors.primaryColor,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(32)),
@@ -79,19 +85,19 @@ class CartAddedAddress extends StatelessWidget {
                                   children: [
                                     const Text("Qty: "),
 
-                                    DropdownButton<int>(
-                                      value: 1, //selected
-                                      icon: const Icon(Icons.arrow_drop_down),
-                                      iconSize: 24,
-                                      elevation: 16,
-                                      onChanged: (int? newValue) {},
-                                      items: <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                                          .map<DropdownMenuItem<int>>((int value) {
+                                    DropdownButton(
+                                      value: selectedValue, // the current value of the dropdown button as an int
+                                      items: [1, 2, 3].map((value) {
                                         return DropdownMenuItem<int>(
                                           value: value,
                                           child: Text(value.toString()),
                                         );
                                       }).toList(),
+                                      onChanged: (value) {
+                                        setState(() {
+                                          selectedValue = value!; // this updates the selected value when the dropdown button is pressed
+                                        });
+                                      },
                                     )
                                   ],
                                 ),
@@ -151,38 +157,37 @@ class CartAddedAddress extends StatelessWidget {
             ),
           ),
       bottomNavigationBar:Container(
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 32, right: 32, top: 12),
-          child:Container(
-            decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey, //set the shadow color
-                    blurRadius: 50.0, //set the blur radius
-                    offset: Offset(0, -5), //set the offset to be on top of the button
-                  )
-                ]
+        decoration: BoxDecoration(
+          boxShadow: [
+           BoxShadow(
+            color: Colors.grey, //set the shadow color
+            blurRadius: 50.0, //set the blur radius
+            offset: Offset(0, -5), //set the offset to be on top of the button
+            )
+            ]
+             ),
+        child: Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 32, right: 32, top: 12, bottom: 28),
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const PaymentScreen()),
+                );
+              },   style: ElevatedButton.styleFrom(
+                fixedSize: const Size(190, 40),
+                backgroundColor: CustomColors.primaryColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32)),
+              ),
+                child: const Text(
+                  "Coninue to Payment",
+                  style: TextStyle(fontSize: 18, color:Colors.white),
+                ),),
             ),
-            child: ElevatedButton(onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const PaymentScreen()),
-              );
-            },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(190, 40),
-              backgroundColor: CustomColors.primaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32)),
-            ),
-              child: const Text(
-                "Coninue to Payment",
-                style: TextStyle(fontSize: 18, color:Colors.white),
-              ),),
           ),
-        ),
       ),
-        );
-
+    );
   }
 }

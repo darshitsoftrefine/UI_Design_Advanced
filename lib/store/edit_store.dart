@@ -46,12 +46,13 @@ class EditStore extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(width: 10,),
                   Expanded(
                     child: Stack(
                       children: [
-                        Image.asset('assets/images/add_product.png'),
+                        Image.asset('assets/images/add_products1.png'),
                         const Padding(
-                          padding: EdgeInsets.only(right: 41, top: 10),
+                          padding: EdgeInsets.only(right: 50, bottom: 50),
                           child: Align(
                             alignment: Alignment.topRight,
                             child: CircleAvatar(

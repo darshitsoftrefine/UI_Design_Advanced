@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/themes/themes.dart';
 
 class TrackOrderConstant extends StatefulWidget {
   const TrackOrderConstant({Key? key}) : super(key: key);
@@ -13,43 +14,77 @@ class _MyHomePageState extends State<TrackOrderConstant> {
   Widget build(BuildContext context) {
 
     int _currentStep = 0;
-    return Stepper(
-      currentStep: _currentStep, //the index of the current step
-      onStepTapped: (int index) {
-      },
-      onStepContinue: () {
-      },
-      onStepCancel: () {
-      },
-      steps: const <Step>[
-        Step(
-          title: Text("Order Placed"),
-          subtitle: Text("Order #123455 from Fashion Point"),//the title of the step
-          content: Text(""), //the content of the step, //the state of the step
-          isActive: true, //whether the step is active or not
+    return Theme(
+      
+      data: ThemeData(
+        colorScheme:  Theme.of(context).colorScheme.copyWith(
+          primary: CustomColors.primaryColor, // for light mode
+          secondary: Colors.grey.shade300 // for dark mode
         ),
-        Step(
-          title: Text("Payment Confirmed"),
-          subtitle: Text("Payment Confirmed Status"),
-          content: Text("Your order has been confirmed by the seller."),
-          state: StepState.indexed,
-          isActive: true,
-        ),
-        Step(
-          title: Text("Processed"),
-          subtitle: Text("Processed Status"),
-          content: Text("Your order has been shipped by the courier."),
-          state: StepState.indexed,
-          isActive: true,
-        ),
-        Step(
-          title: Text("Delivered"),
-          subtitle: Text("Delievered Status"),
-          content: Text("Your order will be delivered soon."),
-          state: StepState.complete,
-          isActive: false,
-        ),
-      ],
+      ),
+      child: Stepper(
+        controlsBuilder: (context, details) {
+          return SizedBox.shrink(); // or any other empty widget
+        },
+        currentStep: _currentStep, //the index of the current step
+
+        onStepContinue: () {
+        },
+        onStepCancel: () {
+        },
+        steps: <Step>[
+          Step(
+            state: StepState.complete,
+            title: Text("Order Placed"),
+            subtitle: Text("Order #123455 from Fashion Point"),//the title of the step
+            content: Row(
+              children: [
+                Spacer(), // this will create an empty space between the title and the content
+                Text("05/08/2019 \n 11:10 AM",),
+              ],
+            ),
+
+            //Text(""), //the content of the step, //the state of the step
+            isActive: true, //whether the step is active or not
+          ),
+          Step(
+            title: Text("Payment Confirmed"),
+            subtitle: Text("Payment Confirmed Status"),
+            content: Row(
+              children: [
+                Spacer(), // this will create an empty space between the title and the content
+                Text("05/08/2019 \n 11:10 AM",),
+              ],
+            ),
+            state: StepState.complete,
+            isActive: true,
+          ),
+          Step(
+            title: Text("Processed"),
+            subtitle: Text("Processed Status"),
+            content:  Row(
+              children: [
+                Spacer(), // this will create an empty space between the title and the content
+                Text("05/08/2019 \n 11:10 AM",),
+              ],
+            ),
+            state: StepState.complete,
+            isActive: false,
+          ),
+          Step(
+            title: Text("Delivered"),
+            subtitle: Text("Delievered Status"),
+            content:  Row(
+              children: [
+                Spacer(), // this will create an empty space between the title and the content
+                Text("05/08/2019 \n 11:10 AM",),
+              ],
+            ),
+            state: StepState.complete,
+            isActive: false,
+          ),
+        ],
+      ),
     );
     //SingleChildScrollView(
     //   scrollDirection: Axis.vertical,

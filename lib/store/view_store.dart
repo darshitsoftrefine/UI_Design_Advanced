@@ -140,53 +140,94 @@ class ViewStore extends StatelessWidget {
 
                       ElevatedButton(onPressed: (){
 
-                      },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(120, 30),
-                        backgroundColor: CustomColors.primaryColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32),
-                          side: const BorderSide(width: 1, color: Colors.white),
+                      }, style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.pressed)) {
+                              return Colors.white;
+                            }
+                            return CustomColors.primaryColor;
+                          },
                         ),
                       ),
-                        child: const Text("All Product",),
+                        // style: ElevatedButton.styleFrom(
+                      //   fixedSize: const Size(120, 30),
+                      //   backgroundColor: CustomColors.primaryColor,
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(32),
+                      //     side: const BorderSide(width: 1, color: Colors.white),
+                      //   ),
+                      // ),
+                        child: const Text("All Product", style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
 
                       ElevatedButton(onPressed: (){
-                      },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(70, 30),
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32),
-                          side: const BorderSide(width: 1, color: Colors.black),
+                      }, style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.pressed)) {
+                              return CustomColors.primaryColor;
+                            }
+                            return Colors.white;
+                          },
                         ),
                       ),
+                        //style: ElevatedButton.styleFrom(
+                      //   fixedSize: const Size(70, 30),
+                      //   backgroundColor: Colors.white,
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(32),
+                      //     side: const BorderSide(width: 1, color: Colors.black),
+                      //   ),
+                      // ),
                         child: const Text('Fruit', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
 
                       ElevatedButton(onPressed: (){
-                      },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(120, 30),
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32),
-                          side: const BorderSide(width: 1, color: Colors.black),
+                      },  style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.pressed)) {
+                              return CustomColors.primaryColor;
+                            }
+                            return Colors.white;
+                          },
                         ),
                       ),
+                        //   style: ElevatedButton.styleFrom(
+                      //   fixedSize: const Size(120, 30),
+                      //   backgroundColor: Colors.white,
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(32),
+                      //     side: const BorderSide(width: 1, color: Colors.black),
+                      //   ),
+                      // ),
                         child: const Text('Vegetables', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
 
                       ElevatedButton(onPressed: (){
-                      },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(80, 30),
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32),
-                          side: const BorderSide(width: 1, color: Colors.black),
+                      },
+                          style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.pressed)) {
+                              return CustomColors.primaryColor;
+                            }
+                            return Colors.white;
+                          },
                         ),
                       ),
+                      //     style: ElevatedButton.styleFrom(
+                      //   fixedSize: const Size(80, 30),
+                      //   backgroundColor: Colors.white,
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(32),
+                      //     side: const BorderSide(width: 1, color: Colors.black),
+                      //   ),
+                      // ),
                         child: const Text('Home', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(height: 20,)
@@ -202,8 +243,8 @@ class ViewStore extends StatelessWidget {
                     itemCount: browseList.length,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         childAspectRatio: 0.8,
-                        mainAxisSpacing: 2,
-                        crossAxisSpacing: 2,
+                        mainAxisSpacing: 10,
+                        crossAxisSpacing: 10,
                         crossAxisCount: 2),
                     itemBuilder: (context, index){
                       return CustomWidgets().browsepage(browseList[index].image, browseList[index].productName);

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../cart/cart_add_address.dart';
+import '../home_screens/wishlist_screen.dart';
 import '../themes/themes.dart';
 import 'add_product_store.dart';
 
@@ -16,8 +18,18 @@ class StoreProduct extends StatelessWidget {
         title: const Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
-          IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, color: Colors.white,)),
-          IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart, color: Colors.white,)),
+          IconButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const WishlistScreen()),
+            );
+          }, icon: const Icon(Icons.favorite, color: Colors.white,)),
+          IconButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const CartAddAddress()),
+            );
+          }, icon: const Icon(Icons.shopping_cart, color: Colors.white,)),
           SizedBox(width: 10,),
         ],
       ),
@@ -38,14 +50,14 @@ class StoreProduct extends StatelessWidget {
                     ),
           const SizedBox(height: 16,),
           const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-          SizedBox(height: 25,),
+          SizedBox(height: 14,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
                 ElevatedButton(onPressed: (){
 
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(106, 23),
+                  minimumSize: const Size(106, 23),
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32),
@@ -64,7 +76,7 @@ class StoreProduct extends StatelessWidget {
                 ElevatedButton(onPressed: (){
 
                 },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(111, 23),
+                  minimumSize: const Size(111, 23),
                   backgroundColor: CustomColors.primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32)),

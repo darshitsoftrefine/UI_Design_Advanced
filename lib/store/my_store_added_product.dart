@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:tradly/home_screens/wishlist_screen.dart';
 import 'package:tradly/store/view_store.dart';
+import '../cart/cart_add_address.dart';
 import '../themes/themes.dart';
 import 'edit_store.dart';
 
@@ -18,8 +20,18 @@ class MyStoreAddedProduct extends StatelessWidget {
         title: const Text("My Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
-          IconButton(onPressed: (){}, icon: const Icon(Icons.favorite, color: Colors.white,)),
-          IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart,  color: Colors.white,)),
+          IconButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const WishlistScreen()),
+            );
+          }, icon: const Icon(Icons.favorite, color: Colors.white,)),
+          IconButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const CartAddAddress()),
+            );
+          }, icon: const Icon(Icons.shopping_cart,  color: Colors.white,)),
           SizedBox(width: 10,),
         ],
       ),
@@ -45,7 +57,7 @@ class MyStoreAddedProduct extends StatelessWidget {
         Container(
           alignment: Alignment.center,
             child: const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),)),
-        const SizedBox(height: 20,),
+        const SizedBox(height: 14,),
         Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -55,7 +67,7 @@ class MyStoreAddedProduct extends StatelessWidget {
           MaterialPageRoute(builder: (context) => const EditStore()),
         );
         },   style: ElevatedButton.styleFrom(
-        fixedSize: const Size(106, 23),
+        minimumSize: const Size(96, 23),
         backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(32),
@@ -77,7 +89,7 @@ class MyStoreAddedProduct extends StatelessWidget {
           MaterialPageRoute(builder: (context) => const ViewStore()),
         );
         },   style: ElevatedButton.styleFrom(
-        fixedSize: const Size(111, 23),
+        minimumSize: const Size(111, 23),
         backgroundColor: CustomColors.primaryColor,
         shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(32)),
@@ -106,21 +118,25 @@ class MyStoreAddedProduct extends StatelessWidget {
         ),),),
         Padding(
           padding: const EdgeInsets.only(left: 23, right: 17),
-          child: TextFormField(
-            enabled: true,
-            style: const TextStyle(color: Colors.white),
-            controller: control,
-            decoration: InputDecoration(
-              filled: true,
-              hintText: 'Search Product',
-              hintStyle: const TextStyle(color: Colors.grey),
-              fillColor: Colors.white,
-              prefixIcon: Icon(Icons.search, color: CustomColors.primaryColor,),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(32.0),
-                borderSide: const BorderSide(
-                  color: Colors.white,
-                  width: 1.0,
+          child: SizedBox(
+            height: 48,
+            child: TextFormField(
+              textAlign: TextAlign.left,
+              enabled: true,
+              style: const TextStyle(color: Colors.white),
+              controller: control,
+              decoration: InputDecoration(
+                filled: true,
+                hintText: 'Search Product',
+                hintStyle: const TextStyle(color: Colors.grey, ),
+                fillColor: Colors.white,
+                prefixIcon: Icon(Icons.search, color: CustomColors.primaryColor,),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(32.0),
+                  borderSide: const BorderSide(
+                    color: Colors.white,
+                    width: 1.0,
+                  ),
                 ),
               ),
             ),
@@ -138,26 +154,26 @@ class MyStoreAddedProduct extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Image.asset('assets/images/Product.png'),
+                  Image.asset('assets/images/Productsale.png'),
                   const Positioned(
                     top: 40,
-                    left: 40,
-                    right: 80,
+                    left: 20,
+                    right: 90,
                     bottom: 100,
                     child: CircleAvatar(
                       backgroundColor: Colors.grey,
-                      radius: 15,
+                      radius: 13,
                       child: Icon(Icons.edit, color: Colors.white,),
                     ),
                   ),
                   const Positioned(
                     top: 40,
                     left: 110,
-                    right: 70,
+                    right: 60,
                     bottom: 100,
                     child: CircleAvatar(
                       backgroundColor: Colors.grey,
-                      radius: 15,
+                      radius: 13,
                       child: Icon(Icons.delete, color: Colors.white,),
                     ),
                   )

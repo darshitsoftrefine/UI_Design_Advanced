@@ -32,6 +32,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 68, right: 61, top: 30),
                   child: DottedBorder(
+                    borderType: BorderType.RRect,
+                    radius: Radius.circular(10),
                     color: Colors.grey.shade300, //color of dotted border
                     strokeWidth: 2, //thickness of dots
                     dashPattern: const [8, 4], //length and space between dots
@@ -173,7 +175,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       ElevatedButton(onPressed: (){
                         Navigator.pop(context);
                       },   style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(94, 23),
+                        minimumSize: const Size(94, 23),
                         backgroundColor: CustomColors.primaryColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(32)),
@@ -227,7 +229,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         bottomNavigationBar: Container(
           color: Colors.white,
           child: Padding(
-            padding: const EdgeInsets.only(left: 32, right: 32, top: 12),
+            padding: const EdgeInsets.only(left: 32, right: 32, top: 12, bottom: 28),
             child:Container(
               child: ElevatedButton(onPressed: (){},   style: ElevatedButton.styleFrom(
                 fixedSize: const Size(190, 40),

@@ -103,7 +103,7 @@ class OrderHistory extends StatelessWidget {
         //   MaterialPageRoute(builder: (context) => MyStore()),
         // );
         },   style: ElevatedButton.styleFrom(
-        fixedSize: const Size(96, 23),
+        minimumSize: const Size(96, 23),
         backgroundColor: CustomColors.primaryColor,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(32)),
@@ -140,7 +140,7 @@ class OrderHistory extends StatelessWidget {
                   ElevatedButton(onPressed: (){
 
                   },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(106, 23),
+                    minimumSize: const Size(106, 23),
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
@@ -182,7 +182,7 @@ class OrderHistory extends StatelessWidget {
                   ElevatedButton(onPressed: (){
 
                   },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(155, 23),
+                    minimumSize: const Size(155, 23),
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
@@ -224,7 +224,7 @@ class OrderHistory extends StatelessWidget {
                   ElevatedButton(onPressed: (){
 
                   },   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(96, 23),
+                    minimumSize: const Size(96, 23),
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),

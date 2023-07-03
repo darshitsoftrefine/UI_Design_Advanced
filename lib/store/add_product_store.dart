@@ -23,14 +23,17 @@ class AddProductStore extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   DottedBorder(
+                    borderType: BorderType.RRect,
+                    radius: Radius.circular(10),
                     color: Colors.grey.shade300, //color of dotted border
                     strokeWidth: 2, //thickness of dots
                     dashPattern: const [8, 4], //length and space between dots
                     child: Container(
                       width: 140,
-                      height: 102,
+                      height: 105,
                       color: Colors.white,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -46,12 +49,13 @@ class AddProductStore extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(width: 10,),
                   Expanded(
                     child: Stack(
                       children: [
-                        Image.asset('assets/images/add_product.png'),
+                        Image.asset('assets/images/add_products1.png'),
                         const Padding(
-                          padding: EdgeInsets.only(right: 35, top: 10),
+                          padding: EdgeInsets.only(right: 50,bottom: 50),
                           child: Align(
                             alignment: Alignment.topRight,
                             child: CircleAvatar(
@@ -66,6 +70,7 @@ class AddProductStore extends StatelessWidget {
                  
                 ],
               ),
+              SizedBox(height: 10,),
               const Text("Max. 4 photos per product", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 45,),
               const Text("Product Name", style: TextStyle(color: Colors.grey),),
@@ -167,37 +172,38 @@ class AddProductStore extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar:Container(
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 35, right: 35, top: 12),
-          child:Container(
-            decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey, //set the shadow color
-                    blurRadius: 50.0, //set the blur radius
-                    offset: Offset(0, -5), //set the offset to be on top of the button
-                  )
-                ]
-            ),
-            child: ElevatedButton(onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const MyStoreAddedProduct()),
-              );
-            },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(310, 40),
-              backgroundColor: CustomColors.primaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32)),
-            ),
-              child: const Text(
-                "Add Product",
-                style: TextStyle(fontSize: 18, color:Colors.white),
-              ),),
+      bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+          boxShadow: [
+          BoxShadow(
+            color: Colors.grey, //set the shadow color
+            blurRadius: 50.0, //set the blur radius
+            offset: Offset(0, -5), //set the offset to be on top of the button
+          )
+          ]
           ),
-        ),
+        child: Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 35, right: 35, top: 12, bottom: 28),
+
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyStoreAddedProduct()),
+                );
+              },   style: ElevatedButton.styleFrom(
+                fixedSize: const Size(310, 40),
+                backgroundColor: CustomColors.primaryColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32)),
+              ),
+                child: const Text(
+                  "Add Product",
+                  style: TextStyle(fontSize: 18, color:Colors.white),
+                ),),
+            ),
+          ),
       ),
     );
   }
