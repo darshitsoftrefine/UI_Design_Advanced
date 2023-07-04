@@ -46,7 +46,7 @@ class EditStore extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(
                     child: Stack(
                       children: [
@@ -82,7 +82,7 @@ class EditStore extends StatelessWidget {
                   const SizedBox(height: 20,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text("Price", style: TextStyle(color: Colors.grey),),
                       SizedBox(height: 10,),
                       Text("\$        30", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
@@ -91,7 +91,7 @@ class EditStore extends StatelessWidget {
                   const SizedBox(width: 127,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text("Offer Price", style: TextStyle(color: Colors.grey),),
                       SizedBox(height: 10,),
                       Text("\$        15", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
@@ -137,7 +137,7 @@ class EditStore extends StatelessWidget {
                     onPressed: null,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text("Cash on Delievery"),
                         Icon(Icons.close)
                       ],
@@ -156,7 +156,7 @@ class EditStore extends StatelessWidget {
                     onPressed: null,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text("Available"),
                         Icon(Icons.close)
                       ],
@@ -173,7 +173,7 @@ class EditStore extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(left: 35, right: 35, top: 12),
           child:Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey, //set the shadow color

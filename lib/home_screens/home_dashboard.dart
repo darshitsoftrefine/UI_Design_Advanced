@@ -26,9 +26,9 @@ class HomeDashboard extends StatefulWidget {
 
 class _HomeDashboardState extends State<HomeDashboard> {
 
-  TextEditingController control = TextEditingController();
+  final TextEditingController _control = TextEditingController();
   Future<bool> _onWillPop() async {
-    return false; //<-- SEE HERE
+    return false;
   }
 
   @override
@@ -89,7 +89,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 TextFormField(
                   enabled: true,
                   style: const TextStyle(color: Colors.white),
-                  controller: control,
+                  controller: _control,
                   decoration: InputDecoration(
                     filled: true,
                     hintText: 'Search Product',
@@ -121,7 +121,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
                 child: GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: prodList.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

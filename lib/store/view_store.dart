@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/store/search_store.dart';
-
 import '../custom_widgets.dart';
 import '../models/browse_list.dart';
 import '../themes/themes.dart';
@@ -63,7 +62,7 @@ class ViewStore extends StatelessWidget {
             ),
             const SizedBox(height: 20,),
             Container(
-              padding: EdgeInsets.only(left: 30, right: 30),
+              padding: const EdgeInsets.only(left: 30, right: 30),
                 child: const Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic', style: TextStyle(fontSize: 12),)),
             const SizedBox(height: 20,),
             Padding(
@@ -79,7 +78,7 @@ class ViewStore extends StatelessWidget {
                     onPressed: null,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text("Groceries"),
                         Icon(Icons.close)
                       ],
@@ -96,7 +95,7 @@ class ViewStore extends StatelessWidget {
                     onPressed: null,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text("Vegetables"),
                         Icon(Icons.close)
                       ],
@@ -105,7 +104,7 @@ class ViewStore extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Divider(color: Colors.grey.shade200, thickness: 20,),
             const SizedBox(height: 20,),
             Row(
@@ -126,7 +125,7 @@ class ViewStore extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Divider(color: Colors.grey.shade200, thickness: 20,),
             const SizedBox(height: 14,),
             SingleChildScrollView(
@@ -150,14 +149,6 @@ class ViewStore extends StatelessWidget {
                           },
                         ),
                       ),
-                        // style: ElevatedButton.styleFrom(
-                      //   fixedSize: const Size(120, 30),
-                      //   backgroundColor: CustomColors.primaryColor,
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(32),
-                      //     side: const BorderSide(width: 1, color: Colors.white),
-                      //   ),
-                      // ),
                         child: const Text("All Product", style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
@@ -173,14 +164,6 @@ class ViewStore extends StatelessWidget {
                           },
                         ),
                       ),
-                        //style: ElevatedButton.styleFrom(
-                      //   fixedSize: const Size(70, 30),
-                      //   backgroundColor: Colors.white,
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(32),
-                      //     side: const BorderSide(width: 1, color: Colors.black),
-                      //   ),
-                      // ),
                         child: const Text('Fruit', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
@@ -196,14 +179,6 @@ class ViewStore extends StatelessWidget {
                           },
                         ),
                       ),
-                        //   style: ElevatedButton.styleFrom(
-                      //   fixedSize: const Size(120, 30),
-                      //   backgroundColor: Colors.white,
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(32),
-                      //     side: const BorderSide(width: 1, color: Colors.black),
-                      //   ),
-                      // ),
                         child: const Text('Vegetables', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
@@ -220,14 +195,7 @@ class ViewStore extends StatelessWidget {
                           },
                         ),
                       ),
-                      //     style: ElevatedButton.styleFrom(
-                      //   fixedSize: const Size(80, 30),
-                      //   backgroundColor: Colors.white,
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(32),
-                      //     side: const BorderSide(width: 1, color: Colors.black),
-                      //   ),
-                      // ),
+
                         child: const Text('Home', style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(height: 20,)
@@ -238,7 +206,7 @@ class ViewStore extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.only(top: 30, left: 23, right: 23, bottom: 20),
                 child: GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     itemCount: browseList.length,

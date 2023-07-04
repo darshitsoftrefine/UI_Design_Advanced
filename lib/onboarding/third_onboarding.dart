@@ -60,22 +60,6 @@ class _Onboarding3State extends State<Onboarding3> {
                       ],
                     ),
                     const SizedBox(height: 70,),
-
-                    // ElevatedButton(onPressed: (){
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (context) => const Login()),
-                    //   );
-                    // },   style: ElevatedButton.styleFrom(
-                    //   minimumSize: const Size(306, 50),
-                    //   backgroundColor: CustomColors.primaryColor,
-                    //   shape: RoundedRectangleBorder(
-                    //       borderRadius: BorderRadius.circular(32)),
-                    // ),
-                    //   child: const Text(
-                    //     "Finish",
-                    //     style: TextStyle(fontSize: 20, color:Colors.white),
-                    //   ),),
                   ],
                 ),
               ))

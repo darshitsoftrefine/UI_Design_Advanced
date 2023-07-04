@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
 import 'package:tradly/models/browse_list.dart';
-
-import '../bottom_bar.dart';
 import '../cart/cart_add_address.dart';
 import '../custom_widgets.dart';
 import '../product_details/product_detail.dart';
 import '../themes/themes.dart';
-import 'home_dashboard.dart';
 
 class Browse extends StatefulWidget {
   const Browse({super.key});
@@ -18,9 +15,9 @@ class Browse extends StatefulWidget {
 
 class _BrowseState extends State<Browse> {
 
-  TextEditingController control = TextEditingController();
+  final TextEditingController _control = TextEditingController();
   Future<bool> _onWillPop() async {
-    return false; //<-- SEE HERE
+    return false;
   }
 
   @override
@@ -72,7 +69,7 @@ class _BrowseState extends State<Browse> {
                     child: TextFormField(
                       enabled: true,
                       style: const TextStyle(color: Colors.white),
-                      controller: control,
+                      controller: _control,
                       decoration: InputDecoration(
                         filled: true,
                         hintText: 'Search Product',

@@ -14,8 +14,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-  TextEditingController email = TextEditingController();
-  TextEditingController pass = TextEditingController();
+  TextEditingController _email = TextEditingController();
+  TextEditingController _pass = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,9 @@ class _LoginState extends State<Login> {
             const SizedBox(height: 66,),
             const Text("Login to your account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),),
             const SizedBox(height: 30,),
-            CustomField(label: '  Email/Mobile Number', control: email, obs: false),
+            CustomField(label: '  Email/Mobile Number', control: _email, obs: false),
             const SizedBox(height: 10,),
-            CustomField(label: '  Password', control: pass, obs: true),
+            CustomField(label: '  Password', control: _pass, obs: true),
             const SizedBox(height: 40,),
             ElevatedButton(onPressed: (){
               Navigator.push(

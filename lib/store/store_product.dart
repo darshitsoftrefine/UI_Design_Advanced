@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../cart/cart_add_address.dart';
 import '../home_screens/wishlist_screen.dart';
 import '../themes/themes.dart';
@@ -30,13 +29,13 @@ class StoreProduct extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const CartAddAddress()),
             );
           }, icon: const Icon(Icons.shopping_cart, color: Colors.white,)),
-          SizedBox(width: 10,),
+          const SizedBox(width: 10,),
         ],
       ),
       body: Column(
         children: [
               Container(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 color: Colors.white,
                 child: Column(
                   children: [
@@ -50,7 +49,7 @@ class StoreProduct extends StatelessWidget {
                     ),
           const SizedBox(height: 16,),
           const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-          SizedBox(height: 14,),
+          const SizedBox(height: 14,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -89,32 +88,20 @@ class StoreProduct extends StatelessWidget {
           ),
           SizedBox(height: 36, child: Divider(color: Colors.grey.shade300, thickness: 1,),),
           const Text("Remove Store", style: TextStyle(color: Colors.grey),),
-          SizedBox(height: 8,),
+          const SizedBox(height: 8,),
           ]
                 ),
               ),
-          // Container(
-          //   decoration: BoxDecoration(
-          //     boxShadow: [
-          //       BoxShadow(
-          //         color: Colors.grey.shade400.withOpacity(0.5),
-          //         spreadRadius: 5,
-          //         blurRadius: 19,
-          //         offset: Offset(0, 3), // changes position of shadow
-          //       ),
-          //     ],
-          //   ),
-          //    ),
           SizedBox(height: 20, child: Container( decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.shade300, //set the shadow color
                   blurRadius: 45.0, //set the blur radius
-                  offset: Offset(0, 1), //set the offset to be on top of the button
+                  offset: const Offset(0, 1), //set the offset to be on top of the button
                 )
               ]
           ),),),
-          SizedBox(height: 40,),
+          const SizedBox(height: 40,),
           Container(
             child: Column(
               children: [

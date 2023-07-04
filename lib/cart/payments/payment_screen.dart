@@ -33,7 +33,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   padding: const EdgeInsets.only(left: 68, right: 61, top: 30),
                   child: DottedBorder(
                     borderType: BorderType.RRect,
-                    radius: Radius.circular(10),
+                    radius: const Radius.circular(10),
                     color: Colors.grey.shade300, //color of dotted border
                     strokeWidth: 2, //thickness of dots
                     dashPattern: const [8, 4], //length and space between dots
@@ -75,7 +75,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 SizedBox(height: 15, child: Divider(color: Colors.grey.shade300, thickness: 5,),),
                 ListTile(
                   title: const Text('Debit/Credit Card'),
@@ -230,18 +230,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
           color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.only(left: 32, right: 32, top: 12, bottom: 28),
-            child:Container(
-              child: ElevatedButton(onPressed: (){},   style: ElevatedButton.styleFrom(
-                fixedSize: const Size(190, 40),
-                backgroundColor: CustomColors.onboardColor,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32)),
-              ),
-                child: const Text(
-                  "Checkout",
-                  style: TextStyle(fontSize: 18, color:Colors.white),
-                ),),
+            child:ElevatedButton(onPressed: (){},   style: ElevatedButton.styleFrom(
+              fixedSize: const Size(190, 40),
+              backgroundColor: CustomColors.onboardColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32)),
             ),
+              child: const Text(
+                "Checkout",
+                style: TextStyle(fontSize: 18, color:Colors.white),
+              ),),
           ),
         ),
       );

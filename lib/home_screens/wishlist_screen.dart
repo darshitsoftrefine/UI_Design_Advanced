@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
-
 import '../custom_widgets.dart';
 import '../models/browse_list.dart';
-import '../product_details/product_detail.dart';
 
 class WishlistScreen extends StatelessWidget {
   const WishlistScreen({super.key});

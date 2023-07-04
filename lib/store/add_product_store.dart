@@ -27,7 +27,7 @@ class AddProductStore extends StatelessWidget {
                 children: [
                   DottedBorder(
                     borderType: BorderType.RRect,
-                    radius: Radius.circular(10),
+                    radius: const Radius.circular(10),
                     color: Colors.grey.shade300, //color of dotted border
                     strokeWidth: 2, //thickness of dots
                     dashPattern: const [8, 4], //length and space between dots
@@ -49,7 +49,7 @@ class AddProductStore extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   Expanded(
                     child: Stack(
                       children: [
@@ -70,7 +70,7 @@ class AddProductStore extends StatelessWidget {
                  
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               const Text("Max. 4 photos per product", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 45,),
               const Text("Product Name", style: TextStyle(color: Colors.grey),),
@@ -86,7 +86,7 @@ class AddProductStore extends StatelessWidget {
                   const SizedBox(height: 20,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text("Price", style: TextStyle(color: Colors.grey),),
                       SizedBox(height: 10,),
                       Text("\$        30", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
@@ -95,7 +95,7 @@ class AddProductStore extends StatelessWidget {
                   const SizedBox(width: 127,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text("Offer Price", style: TextStyle(color: Colors.grey),),
                       SizedBox(height: 10,),
                       Text("\$        15", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
@@ -141,7 +141,7 @@ class AddProductStore extends StatelessWidget {
                     onPressed: null,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text("Cash on delivery"),
                         Icon(Icons.close, size: 14,)
                       ],
@@ -160,7 +160,7 @@ class AddProductStore extends StatelessWidget {
                     onPressed: null,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                   Text("Available"),
                   Icon(Icons.close, size: 14,)
                 ],
@@ -173,7 +173,7 @@ class AddProductStore extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
           boxShadow: [
           BoxShadow(
             color: Colors.grey, //set the shadow color

@@ -13,11 +13,11 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
 
-  TextEditingController firstname = TextEditingController();
-  TextEditingController lastname = TextEditingController();
-  TextEditingController email = TextEditingController();
-  TextEditingController passw = TextEditingController();
-  TextEditingController repassw = TextEditingController();
+  TextEditingController _firstname = TextEditingController();
+  TextEditingController _lastname = TextEditingController();
+  TextEditingController _email = TextEditingController();
+  TextEditingController _passw = TextEditingController();
+  TextEditingController _repassw = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,15 +40,15 @@ class _SignUpState extends State<SignUp> {
               const SizedBox(height: 50,),
               const Text("SignUp to your account", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400),),
               const SizedBox(height: 20,),
-              CustomField(label: 'First Name', control: firstname, obs: false),
+              CustomField(label: 'First Name', control: _firstname, obs: false),
               const SizedBox(height: 5,),
-              CustomField(label: 'Last Name', control: lastname, obs: true),
+              CustomField(label: 'Last Name', control: _lastname, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Email ID/Phone Number', control: email, obs: true),
+              CustomField(label: 'Email ID/Phone Number', control: _email, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Password', control: passw, obs: true),
+              CustomField(label: 'Password', control: _passw, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Re-enter Password', control: repassw, obs: true),
+              CustomField(label: 'Re-enter Password', control: _repassw, obs: true),
               const SizedBox(height: 40,),
               ElevatedButton(onPressed: (){
                 Navigator.push(

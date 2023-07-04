@@ -49,7 +49,7 @@ class AddNewAddress extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             boxShadow: [
               BoxShadow(
                 color: Colors.grey, //set the shadow color

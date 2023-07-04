@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/cart/add_new_address.dart';
-
 import '../themes/themes.dart';
 
 class CartAddAddress extends StatefulWidget {
@@ -11,7 +10,7 @@ class CartAddAddress extends StatefulWidget {
 }
 
 class _CartAddAddressState extends State<CartAddAddress> {
-  int selectedValue = 1;
+  int _selectedValue = 1;
 
 
 
@@ -70,7 +69,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 15,),
+                            const SizedBox(height: 15,),
                             const Text("Coca Cola", style: TextStyle(),),
                             const SizedBox(height: 10,),
                             Row(
@@ -85,7 +84,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
         children: [
           const Text("Qty: "),
                 DropdownButton(
-                  value: selectedValue, // the current value of the dropdown button as an int
+                  value: _selectedValue, // the current value of the dropdown button as an int
                   items: [1, 2, 3].map((value) {
                     return DropdownMenuItem<int>(
                       value: value,
@@ -94,27 +93,10 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   }).toList(),
                   onChanged: (value) {
                     setState(() {
-                      selectedValue = value!; // this updates the selected value when the dropdown button is pressed
+                      _selectedValue = value!; // this updates the selected value when the dropdown button is pressed
                     });
                   },
                 )
-                // DropdownButton<int>(
-          //       value: 1, //selected
-          //       icon: const Icon(Icons.arrow_drop_down),
-          //       iconSize: 24,
-          //       elevation: 16,
-          //
-          //       onChanged: (int? newValue) {
-          //
-          //       },
-          //       items: <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-          //           .map<DropdownMenuItem<int>>((int value) {
-          //         return DropdownMenuItem<int>(
-          //           value: value,
-          //           child: Text(value.toString()),
-          //         );
-          //       }).toList(),
-          // )
         ],
     ),
                           ],
@@ -127,7 +109,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
                       color: Colors.grey.shade300,
                     ),
                     const Text("Remove", style: TextStyle(color: Colors.grey),),
-                    SizedBox(height: 15, )
+                    const SizedBox(height: 15, )
                   ],
                 ),
               ),
@@ -138,22 +120,10 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   BoxShadow(
                     color: Colors.grey.shade200, //set the shadow color
                     blurRadius: 35.0, //set the blur radius
-                    offset: Offset(0, 1), //set the offset to be on top of the button
+                    offset: const Offset(0, 1), //set the offset to be on top of the button
                   )
                 ]
             ),),),
-            // Container(
-            //   decoration: BoxDecoration(
-            //     boxShadow: [
-            //       BoxShadow(
-            //         color: Colors.grey.shade300.withOpacity(0.5),
-            //         spreadRadius: 8,
-            //         blurRadius: 19,
-            //         offset: Offset(0, 3), // changes position of shadow
-            //       ),
-            //     ],
-            //   ),
-            // ),
             Container(
               color: Colors.white,
               child: Padding(
@@ -188,7 +158,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
                         Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
                       ],
                     ),
-                    SizedBox(height: 20,)
+                    const SizedBox(height: 20,)
                   ],
                 ),
               ),
@@ -197,7 +167,7 @@ class _CartAddAddressState extends State<CartAddAddress> {
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             boxShadow: [
               BoxShadow(
                 color: Colors.grey, //set the shadow color

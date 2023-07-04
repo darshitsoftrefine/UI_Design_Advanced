@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/themes/themes.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-
 import '../bottom_bar.dart';
-import '../home_screens/home_dashboard.dart';
 
 class OtpVerification extends StatefulWidget {
   const OtpVerification({super.key});

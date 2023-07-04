@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../cart/cart_add_address.dart';
 import '../home_screens/wishlist_screen.dart';
 import '../themes/themes.dart';
@@ -29,7 +28,7 @@ class MyStore extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const CartAddAddress()),
             );
           }, icon: const Icon(Icons.shopping_cart, color: Colors.white,)),
-          SizedBox(width: 15,),
+          const SizedBox(width: 15,),
         ],
       ),
       body: Padding(

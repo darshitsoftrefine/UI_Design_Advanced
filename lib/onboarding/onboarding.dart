@@ -12,7 +12,7 @@ class Onboarding extends StatefulWidget {
 
 class _OnboardingState extends State<Onboarding> {
 
-  final pushButtonTextStyle = GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor));
+  final _pushButtonTextStyle = GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,8 +35,6 @@ class _OnboardingState extends State<Onboarding> {
               child: Container(
                 color: Colors.white,
             child: Column(
-              //mainAxisAlignment: MainAxisAlignment.center,
-              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 50,),
                 Image.asset('assets/images/Group6.png', width: 285, height: 243,),
@@ -65,25 +63,7 @@ class _OnboardingState extends State<Onboarding> {
                     ),
                   ],
                 ),
-
-                // Adding Three Dots preview
-
                 const SizedBox(height: 70,),
-                // ElevatedButton(onPressed: (){
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => const Onboarding2()),
-                //   );
-                // },   style: ElevatedButton.styleFrom(
-                //   minimumSize: const Size(306, 50),
-                //   backgroundColor: CustomColors.primaryColor,
-                //   shape: RoundedRectangleBorder(
-                //       borderRadius: BorderRadius.circular(32)),
-                // ),
-                //   child: const Text(
-                //     "Next",
-                //     style: TextStyle(fontSize: 20, color:Colors.white),
-                //   ),),
               ],
             ),
           )),

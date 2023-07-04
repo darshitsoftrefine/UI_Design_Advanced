@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../themes/themes.dart';
 import 'new_payment_screen.dart';
 
@@ -51,9 +50,9 @@ class AddCardScreen extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Expires Dates", style: TextStyle(color: Colors.grey),),
-                          SizedBox(height: 10,),
-                          Text("12/08", style: TextStyle(fontWeight: FontWeight.w600),),
+                          const Text("Expires Dates", style: TextStyle(color: Colors.grey),),
+                          const SizedBox(height: 10,),
+                          const Text("12/08", style: TextStyle(fontWeight: FontWeight.w600),),
                           SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),)
                         ],
                       ),
@@ -76,7 +75,7 @@ class AddCardScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
             boxShadow: [
             BoxShadow(
               color: Colors.grey, //set the shadow color

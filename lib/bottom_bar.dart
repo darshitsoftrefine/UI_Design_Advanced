@@ -81,6 +81,5 @@ class _BottomBarState extends State<BottomBar> {
         unselectedFontSize: 13.0,
       ),
     );
-    //
   }
 }

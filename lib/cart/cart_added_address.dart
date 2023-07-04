@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tradly/cart/payments/payment_screen.dart';
 
 import '../themes/themes.dart';
-import 'add_new_address.dart';
 
 class CartAddedAddress extends StatefulWidget {
   const CartAddedAddress({super.key});
@@ -12,7 +11,7 @@ class CartAddedAddress extends StatefulWidget {
 }
 
 class _CartAddedAddressState extends State<CartAddedAddress> {
-  int selectedValue = 1;
+  int _selectedValue = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +55,7 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
                       ],
                     ),
                   ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Container(
                   color: Colors.white,
                   child: Padding(
@@ -70,7 +69,7 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(height: 15,),
+                                const SizedBox(height: 15,),
                                 const Text("Coca Cola", style: TextStyle(),),
                                 const SizedBox(height: 10,),
                                 Row(
@@ -86,7 +85,7 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
                                     const Text("Qty: "),
 
                                     DropdownButton(
-                                      value: selectedValue, // the current value of the dropdown button as an int
+                                      value: _selectedValue, // the current value of the dropdown button as an int
                                       items: [1, 2, 3].map((value) {
                                         return DropdownMenuItem<int>(
                                           value: value,
@@ -95,7 +94,7 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
                                       }).toList(),
                                       onChanged: (value) {
                                         setState(() {
-                                          selectedValue = value!; // this updates the selected value when the dropdown button is pressed
+                                          _selectedValue = value!; // this updates the selected value when the dropdown button is pressed
                                         });
                                       },
                                     )
@@ -111,7 +110,7 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
                           color: Colors.grey.shade300,
                         ),
                         const Text("Remove", style: TextStyle(color: Colors.grey),),
-                        SizedBox(height: 10,)
+                        const SizedBox(height: 10,)
                       ],
                     ),
                   ),
@@ -157,7 +156,7 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
             ),
           ),
       bottomNavigationBar:Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           boxShadow: [
            BoxShadow(
             color: Colors.grey, //set the shadow color

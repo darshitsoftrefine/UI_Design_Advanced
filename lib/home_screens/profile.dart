@@ -41,7 +41,7 @@ class _ProfileState extends State<Profile> {
                   MaterialPageRoute(builder: (context) => const CartAddAddress()),
                 );
               }, icon: const Icon(Icons.shopping_cart, color: Colors.white,)),
-              SizedBox(width: 15,),
+              const SizedBox(width: 15,),
             ],
           ),
           body: Stack(
@@ -73,7 +73,7 @@ class _ProfileState extends State<Profile> {
       )
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 40, top: 15),
+                  padding: const EdgeInsets.only(left: 40, top: 15),
                   height: 110,
                   width: 500,
                   color: CustomColors.primaryColor,
@@ -104,7 +104,7 @@ class _ProfileState extends State<Profile> {
                               child: CircleAvatar(radius: 10, backgroundColor: Colors.white,))
                         ],
                       ),
-                      SizedBox(width: 15,),
+                      const SizedBox(width: 15,),
                       Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const [

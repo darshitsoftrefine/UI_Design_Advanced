@@ -115,8 +115,6 @@ class CustomWidgets{
           ]
       ),
     );
-
-
   }
 
   // Product Details Widget
@@ -230,6 +228,8 @@ class CustomWidgets{
     );
   }
 
+
+  //New Product Widget
   Widget newProduct(String image, String productName, String logoText, String price){
     return Padding(
       padding: const EdgeInsets.only(right: 3, left: 8),
@@ -271,6 +271,7 @@ class CustomWidgets{
     );
   }
 
+  //Store Follow screen widget
   Widget storfollow(String image, Color color, String logo, String logoText){
     return Padding(
       padding: const EdgeInsets.only(left: 8, right: 8),
@@ -326,6 +327,8 @@ class CustomWidgets{
     );
   }
 
+
+  //Browse Screen Widget
   Widget browsepage(String image, String title){
     return Container(
       decoration: BoxDecoration(

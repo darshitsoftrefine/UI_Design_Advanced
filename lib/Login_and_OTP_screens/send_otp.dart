@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/Login_and_OTP_screens/otp_verification.dart';
-import 'package:tradly/constants/custom_field.dart';
 import 'package:tradly/themes/themes.dart';
 
 class SendOtp extends StatefulWidget {
@@ -12,7 +11,7 @@ class SendOtp extends StatefulWidget {
 
 class _SendOtpState extends State<SendOtp> {
 
-  TextEditingController control = TextEditingController();
+  final TextEditingController _control = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,7 @@ class _SendOtpState extends State<SendOtp> {
             TextFormField(
               enabled: true,
               style: const TextStyle(color: Colors.white),
-              controller: control,
+              controller: _control,
               obscureText: false,
               decoration: InputDecoration(
                 labelText: '+91 9876543210', labelStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
@@ -51,29 +50,20 @@ class _SendOtpState extends State<SendOtp> {
                 width: 1.0,
               ),
             ),
-                focusedBorder: UnderlineInputBorder(
+                focusedBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.white),
                 ),
 
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(32.0),
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.white,
                     style: BorderStyle.solid
                   ),
                 ),
-                // enabledBorder: OutlineInputBorder(
-                //   borderRadius: BorderRadius.circular(32.0),
-                //   borderSide: const BorderSide(
-                //     color: Colors.white,
-                //     width: 1.0,
-                //   ),
-                // ),
-
 
               ),
             ),
-            //CustomField(label: '+91  9876543210', control: control, obs: false),
             const SizedBox(height: 64,),
             Text('Or login with Social Network', style: TextStyle(color: CustomColors.secondaryColor, fontSize: 18, fontWeight: FontWeight.w400),),
             const SizedBox(height: 20,),

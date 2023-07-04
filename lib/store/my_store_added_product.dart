@@ -32,7 +32,7 @@ class MyStoreAddedProduct extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const CartAddAddress()),
             );
           }, icon: const Icon(Icons.shopping_cart,  color: Colors.white,)),
-          SizedBox(width: 10,),
+          const SizedBox(width: 10,),
         ],
       ),
     body: SingleChildScrollView(
@@ -41,7 +41,7 @@ class MyStoreAddedProduct extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
       children: [
       Container(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         color: Colors.white,
         child: Column(
           children: [
@@ -102,17 +102,17 @@ class MyStoreAddedProduct extends StatelessWidget {
         ),
         const SizedBox(height: 30,),
         const Center(child: Text("Remove Store", style: TextStyle(color: Colors.grey),)),
-            SizedBox(height: 10,)
+            const SizedBox(height: 10,)
           ],
         ),
       ),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
         SizedBox(height: 15, child: Container( decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.shade400, //set the shadow color
                 blurRadius: 45.0, //set the blur radius
-                offset: Offset(0, 1), //set the offset to be on top of the button
+                offset: const Offset(0, 1), //set the offset to be on top of the button
               )
             ]
         ),),),
@@ -143,9 +143,9 @@ class MyStoreAddedProduct extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 27,),
-        Padding(
-          padding: const EdgeInsets.only(left: 19.0),
-          child: const Text("Products", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+        const Padding(
+          padding: EdgeInsets.only(left: 19.0),
+          child: Text("Products", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
         ),
         const SizedBox(height: 16,),
         Padding(
@@ -156,36 +156,33 @@ class MyStoreAddedProduct extends StatelessWidget {
                 children: [
                   Image.asset('assets/images/Productsale.png'),
                   Positioned(
-                    top: 40,
+                    top: 50,
                     left: 20,
-                    right: 90,
+                    right: 5,
                     bottom: 100,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey.withOpacity(0.5),
-                      radius: 10,
-                      child: Icon(Icons.edit, color: Colors.white,),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.grey.withOpacity(0.5),
+                          child: const Icon(Icons.edit, color: Colors.white,),
+                        ),
+                        SizedBox(width: 40,),
+                        CircleAvatar(
+                          backgroundColor: Colors.grey.withOpacity(0.5),
+                          child: const Icon(Icons.delete, color: Colors.white,),
+                        )
+                      ],
                     ),
                   ),
-                  Positioned(
-                    top: 40,
-                    left: 110,
-                    right: 60,
-                    bottom: 100,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey.withOpacity(0.5),
-                      radius: 10,
-                      child: Icon(Icons.delete, color: Colors.white,),
-                    ),
-                  )
                 ],
               ),
               const SizedBox(width: 12),
               DottedBorder(
                 borderType: BorderType.RRect,
-                radius: Radius.circular(10),
+                radius: const Radius.circular(10),
                 color: Colors.grey, //color of dotted border
                 strokeWidth: 2, //thickness of dots
-                dashPattern: [8, 4], //length and space between dots
+                dashPattern: const [8, 4], //length and space between dots
                 child: Container(
                   width: 160,
                   height: 200,

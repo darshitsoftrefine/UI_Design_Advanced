@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tradly/custom_widgets.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
-import 'package:tradly/models/order_history_list.dart';
-
 import '../cart/cart_add_address.dart';
 import '../themes/themes.dart';
 
@@ -67,23 +64,6 @@ class _OrderHistoryState extends State<OrderHistory> {
               ),
             ),
         const SizedBox(height: 30,),
-
-        // ListView(
-        //   itemExtent: 70,
-        //   shrinkWrap: true,
-        //   children: List.generate(orderHistList.length, (index) {
-        //     return CustomWidgets().orderhist(
-        //         orderHistList[index].image,
-        //         orderHistList[index].productName,
-        //         orderHistList[index].butText,
-        //         orderHistList[index].wid,
-        //         orderHistList[index].hei,
-        //         orderHistList[index].butColor,
-        //         orderHistList[index].textColor,
-        //         orderHistList[index].widspacing
-        //     );
-        //   }),
-        // ),
         Container(
           padding: EdgeInsets.only(top: 15, bottom: 15),
           color: Colors.white,
@@ -108,10 +88,6 @@ class _OrderHistoryState extends State<OrderHistory> {
           ),
           const SizedBox(width: 70,),
           ElevatedButton(onPressed: (){
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => MyStore()),
-          // );
           },   style: ElevatedButton.styleFrom(
           minimumSize: const Size(96, 23),
           backgroundColor: CustomColors.primaryColor,
