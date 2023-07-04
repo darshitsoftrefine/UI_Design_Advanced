@@ -13,11 +13,11 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
 
-  TextEditingController fname = TextEditingController();
-  TextEditingController lname = TextEditingController();
+  TextEditingController firstname = TextEditingController();
+  TextEditingController lastname = TextEditingController();
   TextEditingController email = TextEditingController();
-  TextEditingController pass = TextEditingController();
-  TextEditingController repass = TextEditingController();
+  TextEditingController passw = TextEditingController();
+  TextEditingController repassw = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,15 +40,15 @@ class _SignUpState extends State<SignUp> {
               const SizedBox(height: 50,),
               const Text("SignUp to your account", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400),),
               const SizedBox(height: 20,),
-              CustomField(label: 'First Name', control: fname, obs: false),
+              CustomField(label: 'First Name', control: firstname, obs: false),
               const SizedBox(height: 5,),
-              CustomField(label: 'Last Name', control: lname, obs: true),
+              CustomField(label: 'Last Name', control: lastname, obs: true),
               const SizedBox(height: 5,),
               CustomField(label: 'Email ID/Phone Number', control: email, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Password', control: pass, obs: true),
+              CustomField(label: 'Password', control: passw, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Re-enter Password', control: repass, obs: true),
+              CustomField(label: 'Re-enter Password', control: repassw, obs: true),
               const SizedBox(height: 40,),
               ElevatedButton(onPressed: (){
                 Navigator.push(

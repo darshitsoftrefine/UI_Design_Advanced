@@ -155,25 +155,25 @@ class MyStoreAddedProduct extends StatelessWidget {
               Stack(
                 children: [
                   Image.asset('assets/images/Productsale.png'),
-                  const Positioned(
+                  Positioned(
                     top: 40,
                     left: 20,
                     right: 90,
                     bottom: 100,
                     child: CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      radius: 13,
+                      backgroundColor: Colors.grey.withOpacity(0.5),
+                      radius: 10,
                       child: Icon(Icons.edit, color: Colors.white,),
                     ),
                   ),
-                  const Positioned(
+                  Positioned(
                     top: 40,
                     left: 110,
                     right: 60,
                     bottom: 100,
                     child: CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      radius: 13,
+                      backgroundColor: Colors.grey.withOpacity(0.5),
+                      radius: 10,
                       child: Icon(Icons.delete, color: Colors.white,),
                     ),
                   )

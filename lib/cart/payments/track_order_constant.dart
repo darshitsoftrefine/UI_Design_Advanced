@@ -16,7 +16,7 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
   @override
   Widget build(BuildContext context) {
 
-    return  Row(
+    return Row(
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.height / 2,
@@ -32,7 +32,7 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
             activeStepColor: CustomColors.primaryColor,
             lineColor: Colors.grey,
             lineLength: 70.0,
-            lineDotRadius: 0.1,
+            lineDotRadius: 0.5,
             stepRadius: 16.0,
             icons: [
               Icon(Icons.check, color: CustomColors.primaryColor),
@@ -45,6 +45,7 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
         ),
         Expanded(
           child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             padding: EdgeInsets.zero,
             itemCount: trackOrderList.length,
@@ -85,3 +86,161 @@ class TrackOrderConstantState extends State<TrackOrderConstant> {
     );
   }
 }
+// Padding(
+// padding: const EdgeInsets.only(left: 5.0),
+// child: Container(
+// child: Column(
+// children: [
+// Row(
+// mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+// children: [
+// CircleAvatar(
+// radius: 10,
+// backgroundColor: CustomColors.primaryColor,
+// ),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.start,
+// children: [
+// Text("Order Placed", style: TextStyle(fontSize: 14)),
+// SizedBox(height: 8,),
+// Text("Prder 123455 from Fashion Point", style: TextStyle(fontSize: 10, color: Colors.grey))
+// ],
+// ),
+// SizedBox(width: 40,),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.end,
+// children: [
+// Text("11:10 AM", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// Text("05/08/2019", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// ],
+// )
+// ],
+// ),
+//
+// ],
+// ),
+// ),
+// ),
+// SizedBox(
+// height: 70,
+// child: VerticalDivider(color: CustomColors.primaryColor, thickness: 2, width: 73,)),
+// Container(
+// child: Column(
+// children: [
+// Row(
+// mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+// children: [
+// Stack(
+// children: [
+// CircleAvatar(
+// radius: 15,
+// backgroundColor: CustomColors.onboardColor,
+// ),
+// Positioned(
+// top: 5,
+// left: 5,
+// child: CircleAvatar(
+// radius: 10,
+// backgroundColor: CustomColors.primaryColor,
+// ),
+// )
+// ],
+// ),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.start,
+// children: [
+// Text("Order Placed", style: TextStyle(fontSize: 14),),
+// SizedBox(height: 8,),
+// Text("Prder 123455 from Fashion Point", style: TextStyle(fontSize: 10, color: Colors.grey),)
+// ],
+// ),
+// SizedBox(width: 40,),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.end,
+// children: [
+// Text("11:10 AM", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// Text("05/08/2019", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// ],
+// )
+// ],
+// ),
+//
+// ],
+// ),
+// ),
+// SizedBox(
+// height: 70,
+// child: VerticalDivider(color: Colors.grey, thickness: 2, width: 73,)),
+// Padding(
+// padding: const EdgeInsets.only(left: 5.0),
+// child: Container(
+// child: Column(
+// children: [
+// Row(
+// mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+// children: [
+// CircleAvatar(
+// radius: 10,
+// backgroundColor: Colors.grey,
+// ),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.start,
+// children: [
+// Text("Order Placed", style: TextStyle(fontSize: 14)),
+// SizedBox(height: 8,),
+// Text("Prder 123455 from Fashion Point", style: TextStyle(fontSize: 10, color: Colors.grey))
+// ],
+// ),
+// SizedBox(width: 40,),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.end,
+// children: [
+// Text("11:10 AM", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// Text("05/08/2019", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// ],
+// )
+// ],
+// ),
+//
+// ],
+// ),
+// ),
+// ),
+// SizedBox(
+// height: 70,
+// child: VerticalDivider(color: Colors.grey, thickness: 2, width: 73,)),
+// Padding(
+// padding: const EdgeInsets.only(left: 5.0),
+// child: Container(
+// child: Column(
+// children: [
+// Row(
+// mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+// children: [
+// CircleAvatar(
+// radius: 10,
+// backgroundColor: Colors.grey,
+// ),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.start,
+// children: [
+// Text("Order Placed", style: TextStyle(fontSize: 14)),
+// SizedBox(height: 8,),
+// Text("Prder 123455 from Fashion Point", style: TextStyle(fontSize: 10, color: Colors.grey))
+// ],
+// ),
+// SizedBox(width: 40,),
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.end,
+// children: [
+// Text("11:10 AM", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// Text("05/08/2019", style: TextStyle(fontSize: 10, color: Colors.grey)),
+// ],
+// )
+// ],
+// ),
+//
+// ],
+// ),
+// ),
+// ),

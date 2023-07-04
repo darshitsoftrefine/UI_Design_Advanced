@@ -238,6 +238,7 @@ class ViewStore extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.only(top: 30, left: 23, right: 23, bottom: 20),
                 child: GridView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     itemCount: browseList.length,
