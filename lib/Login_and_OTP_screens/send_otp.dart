@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tradly/Login_and_OTP_screens/otp_verification.dart';
 import 'package:tradly/themes/themes.dart';
 
+import '../string_constants.dart';
+
 class SendOtp extends StatefulWidget {
   const SendOtp({super.key});
 
@@ -28,10 +30,10 @@ class _SendOtpState extends State<SendOtp> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(child: Text("Verify your Phone Number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 22, fontWeight: FontWeight.w500),)),
+            Center(child: Text(ConstantStrings.sendOtpHeading, style: TextStyle(color: CustomColors.secondaryColor, fontSize: 22, fontWeight: FontWeight.w500),)),
             const SizedBox(height: 40,),
-            Text("We have sent you an SMS with a code to", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16,),),
-            Center(child: Text("enter number", style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16),)),
+            Text(ConstantStrings.sendOtpText, style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16,),),
+            Center(child: Text(ConstantStrings.sendOtpSecondText, style: TextStyle(color: CustomColors.secondaryColor, fontSize: 16),)),
             const SizedBox(height: 20,),
             //NumberDropdownTextField(),
             TextFormField(
@@ -40,7 +42,7 @@ class _SendOtpState extends State<SendOtp> {
               controller: _control,
               obscureText: false,
               decoration: InputDecoration(
-                labelText: '+91 9876543210', labelStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                labelText: ConstantStrings.sendOtpTextField, labelStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
                 fillColor: Colors.white,
                 focusColor: Colors.white,
                 enabledBorder: OutlineInputBorder(

@@ -3,6 +3,7 @@ import 'package:tradly/Login_and_OTP_screens/send_otp.dart';
 import 'package:tradly/themes/themes.dart';
 
 import '../constants/custom_field.dart';
+import '../string_constants.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -16,8 +17,8 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController _firstname = TextEditingController();
   final TextEditingController _lastname = TextEditingController();
   final TextEditingController _email = TextEditingController();
-  final TextEditingController _passw = TextEditingController();
-  final TextEditingController _repassw = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+  final TextEditingController _repassword = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -36,19 +37,19 @@ class _SignUpState extends State<SignUp> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text("Welcome to Tradly", style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500),),
+              const Text(ConstantStrings.welcomeHeading, style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500),),
               const SizedBox(height: 50,),
-              const Text("SignUp to your account", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400),),
+              const Text(ConstantStrings.signUpSubHeading, style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400),),
               const SizedBox(height: 20,),
-              CustomField(label: 'First Name', control: _firstname, obs: false),
+              CustomField(label: ConstantStrings.signUpFirstNameTextField, control: _firstname, obs: false),
               const SizedBox(height: 5,),
-              CustomField(label: 'Last Name', control: _lastname, obs: true),
+              CustomField(label: ConstantStrings.signUpLastNameTextField, control: _lastname, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Email ID/Phone Number', control: _email, obs: true),
+              CustomField(label: ConstantStrings.signUpEmailTextField, control: _email, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Password', control: _passw, obs: true),
+              CustomField(label: ConstantStrings.signUpPasswordTextField, control: _password, obs: true),
               const SizedBox(height: 5,),
-              CustomField(label: 'Re-enter Password', control: _repassw, obs: true),
+              CustomField(label: ConstantStrings.signUpRePasswordTextField, control: _repassword, obs: true),
               const SizedBox(height: 40,),
               ElevatedButton(onPressed: (){
                 Navigator.push(

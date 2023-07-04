@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/image_constants.dart';
 import 'package:tradly/onboarding/third_onboarding.dart';
+import 'package:tradly/string_constants.dart';
 import 'package:tradly/themes/themes.dart';
 
 class Onboarding2 extends StatefulWidget {
@@ -35,10 +37,10 @@ class _Onboarding2State extends State<Onboarding2> {
                 child: Column(
                   children: [
                     const SizedBox(height: 50,),
-                    Image.asset('assets/images/Group (1).png'),
+                    Image.asset(ImageConstants.secondOnboardingScreen),
                     const SizedBox(height: 80,),
-                    Text("Connecting NGOs, Social", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                    Text("Enterprises with Communities", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
+                    Text(ConstantStrings.secondOnboardingText, style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
+                    Text(ConstantStrings.secondOnboardingSecondText, style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
                     const SizedBox(height: 60,),
 
                     Row(

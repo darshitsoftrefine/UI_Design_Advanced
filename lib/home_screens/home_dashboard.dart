@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/custom_widgets.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
+import 'package:tradly/image_constants.dart';
 import 'package:tradly/models/fol_store_list.dart';
 import 'package:tradly/models/new_product_list.dart';
 import 'package:tradly/models/product_grid_list.dart';
@@ -16,6 +17,7 @@ import '../models/popular_product_list.dart';
 import '../product_details/bread_product.dart';
 import '../product_details/egg_product.dart';
 import '../product_details/frozen_product.dart';
+import '../string_constants.dart';
 
 class HomeDashboard extends StatefulWidget {
   const HomeDashboard({super.key});
@@ -115,7 +117,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 padding: const EdgeInsets.only(left: 8, top: 15, right: 8),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: CustomWidgets().cardHomeDashboard('assets/images/food_home.png', 'READY TO DELIVER TO \n YOUR HOME')
+                  child: CustomWidgets().cardHomeDashboard(ImageConstants.homeDashBoardCardImage, ConstantStrings.homeDashboardCardText)
                 ),
               ),
               Padding(

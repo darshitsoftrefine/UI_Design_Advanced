@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/Login_and_OTP_screens/login.dart';
+import 'package:tradly/image_constants.dart';
+import 'package:tradly/string_constants.dart';
 import 'package:tradly/themes/themes.dart';
 
 class Onboarding3 extends StatefulWidget {
@@ -34,10 +36,10 @@ class _Onboarding3State extends State<Onboarding3> {
                 child: Column(
                   children: [
                     const SizedBox(height: 50,),
-                    Image.asset('assets/images/Group 4.png'),
+                    Image.asset(ImageConstants.thirdOnboardingScreen),
                     const SizedBox(height: 70,),
-                    Text("Donate, Invest and Support", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
-                    Text("infrastructure projects", style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
+                    Text(ConstantStrings.thirdOnboardingText, style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
+                    Text(ConstantStrings.thirdOnboardingSecondText, style: TextStyle(color: CustomColors.primaryColor, fontSize: 20),),
                     const SizedBox(height: 60,),
 
                     Row(

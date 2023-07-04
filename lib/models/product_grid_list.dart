@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-
-import '../product_details/beverages_product.dart';
 
 class ProductGridList {
   final String image;

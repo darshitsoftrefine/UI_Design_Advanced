@@ -4,6 +4,7 @@ import 'package:tradly/Login_and_OTP_screens/signup.dart';
 import 'package:tradly/themes/themes.dart';
 
 import '../constants/custom_field.dart';
+import '../string_constants.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -15,7 +16,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
 
   final TextEditingController _email = TextEditingController();
-  final TextEditingController _pass = TextEditingController();
+  final TextEditingController _password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +27,13 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text("Welcome to tradly", style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500),),
+           const Text(ConstantStrings.loginWelcomeHeading, style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w500),),
             const SizedBox(height: 66,),
-            const Text("Login to your account", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),),
+            const Text(ConstantStrings.loginSubHeading, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),),
             const SizedBox(height: 30,),
-            CustomField(label: '  Email/Mobile Number', control: _email, obs: false),
+            CustomField(label: ConstantStrings.loginEmailTextField, control: _email, obs: false),
             const SizedBox(height: 10,),
-            CustomField(label: '  Password', control: _pass, obs: true),
+            CustomField(label: ConstantStrings.loginPasswordTextField, control: _password, obs: true),
             const SizedBox(height: 40,),
             ElevatedButton(onPressed: (){
               Navigator.push(
@@ -50,12 +51,12 @@ class _LoginState extends State<Login> {
                 style: TextStyle(fontSize: 20, color:Color(0xFF13B58C)),
               ),),
             const SizedBox(height: 40,),
-            const Text("Forgot your password ?", style: TextStyle(color: Colors.white, fontSize: 20),),
+            const Text(ConstantStrings.loginForgotPassword, style: TextStyle(color: Colors.white, fontSize: 20),),
             const SizedBox(height: 30,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("Don't have an account? ", style: TextStyle(color: Colors.white, fontSize: 20),),
+                const Text(ConstantStrings.loginDontHaveAccount, style: TextStyle(color: Colors.white, fontSize: 20),),
                 GestureDetector(
                   onTap: (){
                     Navigator.push(
