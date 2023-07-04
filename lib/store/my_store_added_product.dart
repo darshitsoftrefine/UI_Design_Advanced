@@ -166,7 +166,7 @@ class MyStoreAddedProduct extends StatelessWidget {
                           backgroundColor: Colors.grey.withOpacity(0.5),
                           child: const Icon(Icons.edit, color: Colors.white,),
                         ),
-                        SizedBox(width: 40,),
+                        const SizedBox(width: 40,),
                         CircleAvatar(
                           backgroundColor: Colors.grey.withOpacity(0.5),
                           child: const Icon(Icons.delete, color: Colors.white,),

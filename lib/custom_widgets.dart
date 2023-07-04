@@ -141,17 +141,17 @@ class CustomWidgets{
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(width: 5,),
+                const SizedBox(width: 5,),
                 CircleAvatar(
                   backgroundColor: CustomColors.primaryColor,
                   radius: 13,
                   child: const Text('T'),
                 ),
-                SizedBox(width: 5,),
+                const SizedBox(width: 5,),
                 Text(logoText),
-                 SizedBox(width: 15,),
+                 const SizedBox(width: 15,),
                  Text(cancelPrice, style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 10),),
-                SizedBox(width: 5,),
+                const SizedBox(width: 5,),
                 Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),)
               ],
             )
@@ -186,7 +186,7 @@ class CustomWidgets{
   // Order History Widget
   Widget orderhist(String image, String title, String butText, double wid, double hei, Color butColor, Color buttextcol, double widspacing){
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -258,7 +258,7 @@ class CustomWidgets{
                     child: const Text('T'),
                   ),
                   const SizedBox(width: 1,),
-                  Text("$logoText"),
+                  Text(logoText),
                   const SizedBox(width: 25,),
                   Text(price, style: TextStyle(color: CustomColors.primaryColor, fontWeight: FontWeight.bold),),
                   //SizedBox(width: 15,)

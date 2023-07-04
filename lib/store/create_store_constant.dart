@@ -50,7 +50,7 @@ class CreateStoreConstant extends StatelessWidget {
                 )
               ),
               onPressed: null, child: Row(
-              children: [
+              children: const [
                 Text("Groceries"),
                 SizedBox(width: 5,),
                 Icon(Icons.close)

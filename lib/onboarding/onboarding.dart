@@ -12,7 +12,6 @@ class Onboarding extends StatefulWidget {
 
 class _OnboardingState extends State<Onboarding> {
 
-  final _pushButtonTextStyle = GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +40,6 @@ class _OnboardingState extends State<Onboarding> {
                  const SizedBox(height: 70,),
                 Text("Empowering Artisans ", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
                 Text("Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
-                //Text("Farmers and Micro Business", style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
                 const SizedBox(height: 60,),
 
                 Row(
@@ -73,23 +71,21 @@ class _OnboardingState extends State<Onboarding> {
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.only(left: 35, right: 35, bottom: 21),
-          child:Container(
-            child: ElevatedButton(onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Onboarding2()),
-              );
-            },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(310, 40),
-              backgroundColor: CustomColors.primaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32)),
-            ),
-              child: const Text(
-                "Next",
-                style: TextStyle(fontSize: 18, color:Colors.white),
-              ),),
+          child:ElevatedButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Onboarding2()),
+            );
+          },   style: ElevatedButton.styleFrom(
+            fixedSize: const Size(310, 40),
+            backgroundColor: CustomColors.primaryColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(32)),
           ),
+            child: const Text(
+              "Next",
+              style: TextStyle(fontSize: 18, color:Colors.white),
+            ),),
         ),
       ),
     );

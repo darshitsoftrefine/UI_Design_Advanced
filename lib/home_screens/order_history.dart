@@ -39,7 +39,7 @@ class _OrderHistoryState extends State<OrderHistory> {
                 MaterialPageRoute(builder: (context) => const CartAddAddress()),
               );
             }, icon: const Icon(Icons.shopping_cart,  color: Colors.white,)),
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
           ],
         ),
         body: Column(
@@ -65,7 +65,7 @@ class _OrderHistoryState extends State<OrderHistory> {
             ),
         const SizedBox(height: 30,),
         Container(
-          padding: EdgeInsets.only(top: 15, bottom: 15),
+          padding: const EdgeInsets.only(top: 15, bottom: 15),
           color: Colors.white,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,7 +103,7 @@ class _OrderHistoryState extends State<OrderHistory> {
         ),
             SizedBox(height: 10, child: Divider(color: Colors.grey.shade200, thickness: 8,),),
             Container(
-              padding: EdgeInsets.only(top: 15, bottom: 15),
+              padding: const EdgeInsets.only(top: 15, bottom: 15),
               color: Colors.white,
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -145,7 +145,7 @@ class _OrderHistoryState extends State<OrderHistory> {
             ),
             SizedBox(height: 10,  child: Divider(color: Colors.grey.shade200, thickness: 8,),),
             Container(
-              padding: EdgeInsets.only(top: 15, bottom: 15),
+              padding: const EdgeInsets.only(top: 15, bottom: 15),
               color: Colors.white,
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -187,7 +187,7 @@ class _OrderHistoryState extends State<OrderHistory> {
             ),
             SizedBox(height: 10,  child: Divider(color: Colors.grey.shade200, thickness: 8,),),
             Container(
-              padding: EdgeInsets.only(top: 15, bottom: 15),
+              padding: const EdgeInsets.only(top: 15, bottom: 15),
               color: Colors.white,
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

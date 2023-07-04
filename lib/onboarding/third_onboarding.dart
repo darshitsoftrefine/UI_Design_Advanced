@@ -69,23 +69,21 @@ class _Onboarding3State extends State<Onboarding3> {
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.only(left: 35, right: 35, bottom: 21),
-          child:Container(
-            child: ElevatedButton(onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Login()),
-              );
-            },   style: ElevatedButton.styleFrom(
-              fixedSize: const Size(310, 40),
-              backgroundColor: CustomColors.primaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32)),
-            ),
-              child: const Text(
-                "Finish",
-                style: TextStyle(fontSize: 18, color:Colors.white),
-              ),),
+          child:ElevatedButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Login()),
+            );
+          },   style: ElevatedButton.styleFrom(
+            fixedSize: const Size(310, 40),
+            backgroundColor: CustomColors.primaryColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(32)),
           ),
+            child: const Text(
+              "Finish",
+              style: TextStyle(fontSize: 18, color:Colors.white),
+            ),),
         ),
       ),
     );

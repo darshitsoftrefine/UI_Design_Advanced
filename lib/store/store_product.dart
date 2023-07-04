@@ -102,33 +102,31 @@ class StoreProduct extends StatelessWidget {
               ]
           ),),),
           const SizedBox(height: 40,),
-          Container(
-            child: Column(
-              children: [
-                const Text("You don't have product", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 37,),
-                ElevatedButton(onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AddProductStore()),
-                  );
-                },   style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(219, 48),
-                  backgroundColor: Colors.grey.shade100,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),
-                      side: BorderSide(
-                          width: 1,
-                          color: CustomColors.primaryColor
-                      )
-                  ),
+          Column(
+            children: [
+              const Text("You don't have product", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+              const SizedBox(height: 37,),
+              ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AddProductStore()),
+                );
+              },   style: ElevatedButton.styleFrom(
+                fixedSize: const Size(219, 48),
+                backgroundColor: Colors.grey.shade100,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32),
+                    side: BorderSide(
+                        width: 1,
+                        color: CustomColors.primaryColor
+                    )
                 ),
-                  child: const Text(
-                    "Add Product",
-                    style: TextStyle(fontSize: 18, color: Color(0xFF3A8877), fontWeight: FontWeight.w600),
-                  ),),
-              ],
-            ),
+              ),
+                child: const Text(
+                  "Add Product",
+                  style: TextStyle(fontSize: 18, color: Color(0xFF3A8877), fontWeight: FontWeight.w600),
+                ),),
+            ],
           )
 
         ],
