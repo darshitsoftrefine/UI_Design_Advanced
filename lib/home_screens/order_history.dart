@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
+import 'package:tradly/image_constants.dart';
 import '../cart/cart_add_address.dart';
+import '../string_constants.dart';
 import '../themes/themes.dart';
 
 class OrderHistory extends StatefulWidget {
@@ -70,12 +72,12 @@ class _OrderHistoryState extends State<OrderHistory> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-      Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+      Image.asset(ImageConstants.cocacolaOrderHistoryImage, width: 47, height: 47,),
       const SizedBox(width: 20,),
       Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-      const Text("Coca Cola", style: TextStyle(),),
+      const Text(ConstantStrings.cocacolaText, style: TextStyle(),),
       const SizedBox(height: 5,),
       Row(
       children: [
@@ -108,12 +110,12 @@ class _OrderHistoryState extends State<OrderHistory> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+                    Image.asset(ImageConstants.cocacolaOrderHistoryImage, width: 47, height: 47,),
                     const SizedBox(width: 20,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Coca Cola", style: TextStyle(),),
+                        const Text(ConstantStrings.cocacolaText, style: TextStyle(),),
                         const SizedBox(height: 5,),
                         Row(
                           children: [
@@ -150,12 +152,12 @@ class _OrderHistoryState extends State<OrderHistory> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+                    Image.asset(ImageConstants.cocacolaOrderHistoryImage, width: 47, height: 47,),
                     const SizedBox(width: 20,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Coca Cola", style: TextStyle(),),
+                        const Text(ConstantStrings.cocacolaText, style: TextStyle(),),
                         const SizedBox(height: 5,),
                         Row(
                           children: [
@@ -192,12 +194,12 @@ class _OrderHistoryState extends State<OrderHistory> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('assets/images/Rectangle 292.png', width: 47, height: 47,),
+                    Image.asset(ImageConstants.cocacolaOrderHistoryImage, width: 47, height: 47,),
                     const SizedBox(width: 20,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Coca Cola", style: TextStyle(),),
+                        const Text(ConstantStrings.cocacolaText, style: TextStyle(),),
                         const SizedBox(height: 5,),
                         Row(
                           children: [

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:tradly/image_constants.dart';
+import 'package:tradly/string_constants.dart';
 import '../../themes/themes.dart';
 import 'checkout_success_screen.dart';
 
@@ -40,7 +42,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                       height: 160,
                       child: Stack(
                         children: [
-                          Center(child: Image.asset('assets/images/visa.png', height: 140,)),
+                          Center(child: Image.asset(ImageConstants.smallCardImage, height: 140,)),
                           const Positioned(
                             top: 128,
                             left: 228,
@@ -103,7 +105,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
             ),
             SizedBox(height: 20, child: Divider(color: Colors.grey.shade200, thickness: 10,),),
             ListTile(
-              title: const Text('Debit/Credit Card'),
+              title: const Text(ConstantStrings.debitCard),
               leading: Radio<SingingCharacter>(
                 value: SingingCharacter.card,
                 groupValue: _character,
@@ -122,7 +124,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
             ),
             Divider(color: Colors.grey.shade200, thickness: 1,),
             ListTile(
-              title: const Text('Net Banking'),
+              title: const Text(ConstantStrings.netBankingText),
               leading: Radio<SingingCharacter>(
                 value: SingingCharacter.net,
                 groupValue: _character,
@@ -141,7 +143,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
             ),
             Divider(color: Colors.grey.shade200, thickness: 1,),
             ListTile(
-              title: const Text('Cash on Delievery'),
+              title: const Text(ConstantStrings.cashOnDelievery),
               leading: Radio<SingingCharacter>(
                 value: SingingCharacter.cash,
                 groupValue: _character,
@@ -160,7 +162,7 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
             ),
             Divider(color: Colors.grey.shade200, thickness: 1,),
             ListTile(
-              title: const Text('Wallet'),
+              title: const Text(ConstantStrings.walletText),
               leading: Radio<SingingCharacter>(
                 value: SingingCharacter.wallet,
                 groupValue: _character,
@@ -186,8 +188,8 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Text("Deliever to Tradly Team. 75119"),
-                      Text("Kualalumpur Malaysia"),
+                      Text(ConstantStrings.deliverDetails),
+                      Text(ConstantStrings.locationText),
                     ],
                   ),
                   ElevatedButton(onPressed: (){
@@ -212,29 +214,29 @@ class _NewPaymentScreenState extends State<NewPaymentScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20,),
-                  const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                  const Text(ConstantStrings.priceDetailsText, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 20,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Text("Price (1 item) "),
-                      Text("\$ 25")
+                      Text(ConstantStrings.priceDetailsSecondText),
+                      Text(ConstantStrings.totalPriceText)
                     ],
                   ),
                   const SizedBox(height: 10,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Text("Delievery Fee"),
-                      Text("Info")
+                      Text(ConstantStrings.priceDetailsFourthText),
+                      Text(ConstantStrings.priceDetailsFifthText)
                     ],
                   ),
                   SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-                      Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
+                      Text(ConstantStrings.totalDetailsText, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                      Text(ConstantStrings.totalPriceText, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
                     ],
                   )
                 ],

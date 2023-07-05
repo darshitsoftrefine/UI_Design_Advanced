@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:tradly/store/my_store_added_product.dart';
+import 'package:tradly/string_constants.dart';
 import '../themes/themes.dart';
 
 class AddProductStore extends StatelessWidget {
@@ -11,7 +12,7 @@ class AddProductStore extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 100,
-        title: const Text("Add Product", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text(ConstantStrings.addProductText, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         centerTitle: true,
         backgroundColor: CustomColors.primaryColor,
       ),
@@ -75,11 +76,11 @@ class AddProductStore extends StatelessWidget {
               const SizedBox(height: 45,),
               const Text("Product Name", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 12,),
-              const Text("Brocolli", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+              const Text(ConstantStrings.brocolliText, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
               SizedBox(height: 22, child: Divider(color: Colors.grey.shade300, thickness: 1,),),
               const Text("Category Product", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
-              const Text("Vegetables", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+              const Text(ConstantStrings.vegetablesText, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
               SizedBox(height: 24,child: Divider(color: Colors.grey.shade300, thickness: 1,),),
               Row(
                 children: [
@@ -109,7 +110,7 @@ class AddProductStore extends StatelessWidget {
               const SizedBox(height: 6,),
               Row(
                 children: const [
-                  Text("Kualalumpur, Malaysia", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
+                  Text(ConstantStrings.locationText, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
                   SizedBox(width: 140,),
                   Icon(Icons.bar_chart, color: Colors.grey,)
                 ],
@@ -118,7 +119,7 @@ class AddProductStore extends StatelessWidget {
               const SizedBox(height: 28,),
               const Text("Product Description", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
-              const Text("Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
+              const Text(ConstantStrings.productDescription, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
               const SizedBox(height: 20,),
               const Text("Price Type", style: TextStyle(color: Colors.grey),),
               const SizedBox(height: 10,),
@@ -199,7 +200,7 @@ class AddProductStore extends StatelessWidget {
                     borderRadius: BorderRadius.circular(32)),
               ),
                 child: const Text(
-                  "Add Product",
+                  ConstantStrings.addProductText,
                   style: TextStyle(fontSize: 18, color:Colors.white),
                 ),),
             ),

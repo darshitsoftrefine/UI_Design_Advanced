@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/cart/add_new_address.dart';
+import 'package:tradly/image_constants.dart';
+import 'package:tradly/string_constants.dart';
 import '../themes/themes.dart';
 
 class CartAddAddress extends StatefulWidget {
@@ -64,13 +66,13 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   children: [
                     Row(
                       children: [
-                        Image.asset('assets/images/Rectangle 292.png'),
+                        Image.asset(ImageConstants.cocacolaOrderHistoryImage),
                         const SizedBox(width: 20,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const SizedBox(height: 15,),
-                            const Text("Coca Cola", style: TextStyle(),),
+                            const Text(ConstantStrings.cocacolaText, style: TextStyle(),),
                             const SizedBox(height: 10,),
                             Row(
                               children: [
@@ -132,30 +134,30 @@ class _CartAddAddressState extends State<CartAddAddress> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 16,),
-                    const Text("Price Details", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                    const Text(ConstantStrings.priceDetailsText, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                     const SizedBox(height: 15,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
-                        Text("Price (1 item) "),
-                        Text("\$ 25")
+                        Text(ConstantStrings.priceDetailsSecondText),
+                        Text(ConstantStrings.totalPriceText)
                       ],
                     ),
                     const SizedBox(height: 10,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
-                        Text("Delievery Fee"),
-                        Text("Info")
+                        Text(ConstantStrings.priceDetailsFourthText),
+                        Text(ConstantStrings.priceDetailsFifthText)
                       ],
                     ),
                     SizedBox(height: 30, child: Divider(color: Colors.grey.shade200, thickness: 1,),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
-                        Text("Total Amount", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                        Text(ConstantStrings.totalDetailsText, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
 
-                        Text("\$ 25", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
+                        Text(ConstantStrings.totalPriceText, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
                       ],
                     ),
                     const SizedBox(height: 20,)

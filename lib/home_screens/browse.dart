@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
 import 'package:tradly/models/browse_list.dart';
+import 'package:tradly/string_constants.dart';
 import '../cart/cart_add_address.dart';
 import '../custom_widgets.dart';
 import '../product_details/product_detail.dart';
@@ -72,7 +73,7 @@ class _BrowseState extends State<Browse> {
                       controller: _control,
                       decoration: InputDecoration(
                         filled: true,
-                        hintText: 'Search Product',
+                        hintText: ConstantStrings.searchProductTextField,
                         fillColor: Colors.white,
                         prefixIcon: const Icon(Icons.search),
                         enabledBorder: OutlineInputBorder(

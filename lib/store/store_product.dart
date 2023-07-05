@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/string_constants.dart';
 import '../cart/cart_add_address.dart';
 import '../home_screens/wishlist_screen.dart';
 import '../themes/themes.dart';
@@ -48,7 +49,7 @@ class StoreProduct extends StatelessWidget {
                       ),
                     ),
           const SizedBox(height: 16,),
-          const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+          const Text(ConstantStrings.tradlyStoreText, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
           const SizedBox(height: 14,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -66,7 +67,7 @@ class StoreProduct extends StatelessWidget {
                   ),
                 ),
                   child: const Text(
-                    "Edit Store",
+                    ConstantStrings.editStoreText,
                     style: TextStyle(fontSize: 12, color: Color(0xFF3A8877)),
                   ),),
 
@@ -81,7 +82,7 @@ class StoreProduct extends StatelessWidget {
                       borderRadius: BorderRadius.circular(32)),
                 ),
                   child: const Text(
-                    "View Store",
+                    ConstantStrings.viewStoreText,
                     style: TextStyle(fontSize: 12, color:Colors.white),
                   ),),
             ],

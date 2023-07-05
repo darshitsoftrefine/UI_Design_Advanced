@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:tradly/image_constants.dart';
 import 'package:tradly/themes/themes.dart';
 
 class FolStoreList {
@@ -14,7 +15,7 @@ class FolStoreList {
 
 }
 List<FolStoreList> folProductList = [
-  FolStoreList(image: 'assets/images/trad_store.png', logoText: 'Tradly Store', button: 'Follow', color: CustomColors.primaryColor, logo: 'T'),
-  FolStoreList(image: 'assets/images/groc_stor.png', logoText: 'Groceries Store', button: 'Follow',color: CustomColors.circColor, logo: 'A'),
-  FolStoreList(image: 'assets/images/trad_store.png',logoText: 'Tradly Store', button: 'Follow', color: CustomColors.primaryColor, logo: 'T'),
+  FolStoreList(image: ImageConstants.storeFollowTradlyStoreImage, logoText: 'Tradly Store', button: 'Follow', color: CustomColors.primaryColor, logo: 'T'),
+  FolStoreList(image: ImageConstants.storeFollowGroceriesStoreImage, logoText: 'Groceries Store', button: 'Follow',color: CustomColors.circColor, logo: 'A'),
+  FolStoreList(image: ImageConstants.storeFollowTradlyStoreImage,logoText: 'Tradly Store', button: 'Follow', color: CustomColors.primaryColor, logo: 'T'),
 ];

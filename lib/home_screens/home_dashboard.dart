@@ -94,7 +94,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                   controller: _control,
                   decoration: InputDecoration(
                     filled: true,
-                    hintText: 'Search Product',
+                    hintText: ConstantStrings.searchProductTextField,
                     fillColor: Colors.white,
                     prefixIcon: const Icon(Icons.search),
                     enabledBorder: OutlineInputBorder(

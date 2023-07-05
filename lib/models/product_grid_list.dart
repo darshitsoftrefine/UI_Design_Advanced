@@ -1,3 +1,4 @@
+import 'package:tradly/image_constants.dart';
 
 class ProductGridList {
   final String image;
@@ -12,13 +13,13 @@ class ProductGridList {
 
 }
  List<ProductGridList> prodList = [
-  ProductGridList(image: 'assets/images/Rectangle 28.png', productName: 'Beverages', top: 40, bottom: 20, left: 8, right: 7),
-   ProductGridList(image: 'assets/images/Rectangle 29.png', productName: 'Bread&Bakery', top: 40, bottom: 20, left: 0, right: 0),
-   ProductGridList(image: 'assets/images/Rectangle 30.png', productName: 'Vegetables', top: 40, bottom: 20, left: 10, right: 8),
-   ProductGridList(image: 'assets/images/Rectangle 31.png', productName: 'Fruits', top: 40, bottom: 20, left: 27, right: 0),
-   ProductGridList(image: 'assets/images/Rectangle 32.png', productName: 'Egg', top: 40, bottom: 20, left: 35, right: 8),
-   ProductGridList(image: 'assets/images/Rectangle 33.png', productName: 'Frozen Veg', top: 40, bottom: 20, left: 8, right: 8),
-   ProductGridList(image: 'assets/images/Rectangle 34.png', productName: 'Homecare', top: 40, bottom: 20, left: 13, right: 8),
-   ProductGridList(image: 'assets/images/Rectangle 35.png', productName: 'Pet Care', top: 40, bottom: 20, left: 22, right: 8),
+  ProductGridList(image: ImageConstants.productGridListBeveragesImage, productName: 'Beverages', top: 40, bottom: 20, left: 8, right: 7),
+   ProductGridList(image: ImageConstants.productGridListBreadImage, productName: 'Bread&Bakery', top: 40, bottom: 20, left: 0, right: 0),
+   ProductGridList(image: ImageConstants.productGridListVegetablesImage, productName: 'Vegetables', top: 40, bottom: 20, left: 10, right: 8),
+   ProductGridList(image: ImageConstants.productGridListFruitsImage, productName: 'Fruits', top: 40, bottom: 20, left: 27, right: 0),
+   ProductGridList(image: ImageConstants.productFridListEggImage, productName: 'Egg', top: 40, bottom: 20, left: 35, right: 8),
+   ProductGridList(image: ImageConstants.productGridListFrozenVegImage, productName: 'Frozen Veg', top: 40, bottom: 20, left: 8, right: 8),
+   ProductGridList(image: ImageConstants.productGridListHomeCareImage, productName: 'Homecare', top: 40, bottom: 20, left: 13, right: 8),
+   ProductGridList(image: ImageConstants.productGridListPetCareImage, productName: 'Pet Care', top: 40, bottom: 20, left: 22, right: 8),
 
  ];

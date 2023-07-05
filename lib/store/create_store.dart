@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/image_constants.dart';
 import 'package:tradly/store/create_store_constant.dart';
 import 'package:tradly/store/store_product.dart';
 
@@ -22,7 +23,7 @@ class CreateStore extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
                 children: [
-            Center(child: Image.asset('assets/images/undraw_business_shop_qw5t.png')),
+            Center(child: Image.asset(ImageConstants.storeMainImage)),
       const SizedBox(height: 35,),
                   const Text("This information is used to set up"),
                   const Text('your shop', style: TextStyle(fontSize: 14),),

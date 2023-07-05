@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/image_constants.dart';
 import '../cart/cart_add_address.dart';
 import '../home_screens/wishlist_screen.dart';
 import '../themes/themes.dart';
@@ -35,7 +36,7 @@ class MyStore extends StatelessWidget {
         padding: const EdgeInsets.only(top: 57, left: 40, right: 40, bottom: 10),
         child: Column(
           children: [
-            Center(child: Image.asset('assets/images/undraw_business_shop_qw5t.png')),
+            Center(child: Image.asset(ImageConstants.storeMainImage)),
             const SizedBox(height: 28,),
             const Text("You Don't Have a Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
             const SizedBox(height: 37,),

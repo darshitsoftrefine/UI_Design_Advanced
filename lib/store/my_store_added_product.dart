@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:tradly/home_screens/wishlist_screen.dart';
+import 'package:tradly/image_constants.dart';
 import 'package:tradly/store/view_store.dart';
+import 'package:tradly/string_constants.dart';
 import '../cart/cart_add_address.dart';
 import '../themes/themes.dart';
 import 'edit_store.dart';
@@ -56,7 +58,7 @@ class MyStoreAddedProduct extends StatelessWidget {
         const SizedBox(height: 16,),
         Container(
           alignment: Alignment.center,
-            child: const Text("Tradly Store", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),)),
+            child: const Text(ConstantStrings.tradlyStoreText, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),)),
         const SizedBox(height: 14,),
         Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -77,7 +79,7 @@ class MyStoreAddedProduct extends StatelessWidget {
         ),
         ),
         child: const Text(
-        "Edit Store",
+        ConstantStrings.editStoreText,
         style: TextStyle(fontSize: 12, color: Color(0xFF3A8877)),
         ),),
 
@@ -95,7 +97,7 @@ class MyStoreAddedProduct extends StatelessWidget {
         borderRadius: BorderRadius.circular(32)),
         ),
         child: const Text(
-        "View Store",
+        ConstantStrings.viewStoreText,
         style: TextStyle(fontSize: 12, color:Colors.white),
         ),),
         ],
@@ -127,7 +129,7 @@ class MyStoreAddedProduct extends StatelessWidget {
               controller: control,
               decoration: InputDecoration(
                 filled: true,
-                hintText: 'Search Product',
+                hintText: ConstantStrings.searchProductTextField,
                 hintStyle: const TextStyle(color: Colors.grey, ),
                 fillColor: Colors.white,
                 prefixIcon: Icon(Icons.search, color: CustomColors.primaryColor,),
@@ -154,7 +156,7 @@ class MyStoreAddedProduct extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Image.asset('assets/images/Productsale.png'),
+                  Image.asset(ImageConstants.productWithTwoIcons),
                   Positioned(
                     top: 50,
                     left: 20,
@@ -193,7 +195,7 @@ class MyStoreAddedProduct extends StatelessWidget {
                     children: [
                       Icon(Icons.add, size: 52, color: Colors.grey.shade400,),
                       Text(
-                        "Add Product", style: TextStyle(color: Colors.grey.shade400, fontSize: 18),
+                        ConstantStrings.addProductText, style: TextStyle(color: Colors.grey.shade400, fontSize: 18),
                         textAlign: TextAlign.center, //also center the text
                       ),
                     ],

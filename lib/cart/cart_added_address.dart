@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/cart/payments/payment_screen.dart';
+import 'package:tradly/image_constants.dart';
+import 'package:tradly/string_constants.dart';
 
 import '../themes/themes.dart';
 
@@ -36,7 +38,7 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const [
                             Text("Deliever to Tradly Team. 75119"),
-                            Text("Kualalumpur Malaysia"),
+                            Text(ConstantStrings.locationText),
                           ],
                         ),
                         const SizedBox(width: 15,),
@@ -64,13 +66,13 @@ class _CartAddedAddressState extends State<CartAddedAddress> {
                       children: [
                         Row(
                           children: [
-                            Image.asset('assets/images/Rectangle 292.png'),
+                            Image.asset(ImageConstants.cocacolaOrderHistoryImage),
                             const SizedBox(width: 20,),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const SizedBox(height: 15,),
-                                const Text("Coca Cola", style: TextStyle(),),
+                                const Text(ConstantStrings.cocacolaText, style: TextStyle(),),
                                 const SizedBox(height: 10,),
                                 Row(
                                   children: [

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tradly/store/search_store.dart';
+import 'package:tradly/string_constants.dart';
 import '../custom_widgets.dart';
 import '../models/browse_list.dart';
 import '../themes/themes.dart';
@@ -13,7 +14,7 @@ class ViewStore extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         centerTitle: true,
-        title: const Text("Tradly Store", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
+        title: const Text(ConstantStrings.tradlyStoreText, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: CustomColors.primaryColor,
         actions: <Widget>[
           IconButton(onPressed: ()
@@ -38,7 +39,7 @@ class ViewStore extends StatelessWidget {
                   ),
                   Column(
                     children: const [
-                      Text("Tradly Store", style: TextStyle(fontSize: 14),),
+                      Text(ConstantStrings.tradlyStoreText, style: TextStyle(fontSize: 14),),
                       SizedBox(height: 5,),
                       Text("tradly.app", style: TextStyle(fontSize: 12, color: Colors.grey),)
                     ],
@@ -63,7 +64,7 @@ class ViewStore extends StatelessWidget {
             const SizedBox(height: 20,),
             Container(
               padding: const EdgeInsets.only(left: 30, right: 30),
-                child: const Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic', style: TextStyle(fontSize: 12),)),
+                child: const Text(ConstantStrings.productDescription, style: TextStyle(fontSize: 12),)),
             const SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.only(left: 35, right: 35),
@@ -96,7 +97,7 @@ class ViewStore extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
-                        Text("Vegetables"),
+                        Text(ConstantStrings.vegetablesText),
                         Icon(Icons.close)
                       ],
                     ),
@@ -179,7 +180,7 @@ class ViewStore extends StatelessWidget {
                           },
                         ),
                       ),
-                        child: const Text('Vegetables', style: TextStyle(color: Colors.black),),
+                        child: const Text(ConstantStrings.vegetablesText, style: TextStyle(color: Colors.black),),
                       ),
                       const SizedBox(width: 10,),
 

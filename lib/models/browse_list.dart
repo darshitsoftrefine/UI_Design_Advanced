@@ -1,3 +1,5 @@
+import 'package:tradly/image_constants.dart';
+
 class BrowseList {
   final String image;
   final String productName;
@@ -10,11 +12,11 @@ class BrowseList {
 
 }
 List<BrowseList> browseList = [
-  BrowseList(image: 'assets/images/apple.png', productName: ' Apple', logoText: 'Tradly', price: '\$25', cancelPrice: '\$25'),
-  BrowseList(image: 'assets/images/orange.png', productName: ' Orange', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  BrowseList(image: 'assets/images/moist.png', productName: ' Moisturizer', logoText: 'Tradly', price: '\$25',  cancelPrice: ''),
-  BrowseList(image: 'assets/images/broc.png', productName: ' Brocolli', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  BrowseList(image: 'assets/images/brown.png', productName: ' Brown Egg', logoText: 'Tradly', price: '\$25',  cancelPrice: ''),
-  BrowseList(image: 'assets/images/fruit_punch.png', productName: ' Fruit Punch', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BrowseList(image: ImageConstants.browseAppleImage, productName: ' Apple', logoText: 'Tradly', price: '\$25', cancelPrice: '\$25'),
+  BrowseList(image: ImageConstants.browseOrangeImage, productName: ' Orange', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BrowseList(image: ImageConstants.browseMoisturizerImage, productName: ' Moisturizer', logoText: 'Tradly', price: '\$25',  cancelPrice: ''),
+  BrowseList(image: ImageConstants.browseBrocolliImage, productName: ' Brocolli', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BrowseList(image: ImageConstants.browseEggImage, productName: ' Brown Egg', logoText: 'Tradly', price: '\$25',  cancelPrice: ''),
+  BrowseList(image: ImageConstants.browseFruitImage, productName: ' Fruit Punch', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
 
 ];

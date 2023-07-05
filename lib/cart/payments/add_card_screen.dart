@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradly/image_constants.dart';
 import '../../themes/themes.dart';
 import 'new_payment_screen.dart';
 
@@ -28,7 +29,7 @@ class AddCardScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   color: CustomColors.primaryColor,
                 ),
-                Center(child: Image.asset('assets/images/mastercard.png'))
+                Center(child: Image.asset(ImageConstants.masterCardImage))
               ],
             ),
             Container(
