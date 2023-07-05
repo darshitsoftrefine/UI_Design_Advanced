@@ -1,3 +1,5 @@
+import 'package:tradly/image_constants.dart';
+
 class BreadList {
   final String image;
   final String productName;
@@ -10,10 +12,10 @@ class BreadList {
 
 }
 List<BreadList> browseList = [
-  BreadList(image: 'assets/images/bread_chocolate.png', productName: ' Bread Chocolate', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  BreadList(image: 'assets/images/circle_bakery.png', productName: ' Circle Bakery', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  BreadList(image: 'assets/images/cookies.png', productName: ' Cookies', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  BreadList(image: 'assets/images/long_bread.png', productName: ' Long Bread', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  BreadList(image: 'assets/images/donut.png', productName: ' Donut', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  BreadList(image: 'assets/images/bread.png', productName: ' Bread', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BreadList(image: ImageConstants.breadBreadChocoImage, productName: ' Bread Chocolate', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  BreadList(image: ImageConstants.breadCircleBakeryImage, productName: ' Circle Bakery', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BreadList(image: ImageConstants.breadCookiesImage, productName: ' Cookies', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  BreadList(image: ImageConstants.breadLongImage, productName: ' Long Bread', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  BreadList(image: ImageConstants.breadDonutImage, productName: ' Donut', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BreadList(image: ImageConstants.breadImage, productName: ' Bread', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
 ];

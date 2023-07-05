@@ -48,10 +48,11 @@ class _OtpVerificationState extends State<OtpVerification> {
               Text(ConstantStrings.resentNewCode, style: TextStyle(color: CustomColors.secondaryColor, fontSize: 18, fontWeight: FontWeight.w400),),
               const SizedBox(height: 60,),
               ElevatedButton(onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const BottomBar()),
-                );
+                // Navigator.pushReplacement(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => const BottomBar()),
+                // );
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const BottomBar()), (route) => false);
               },   style: ElevatedButton.styleFrom(
                 fixedSize: const Size(314, 48),
                 backgroundColor: Colors.white,

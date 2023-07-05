@@ -1,3 +1,5 @@
+import 'package:tradly/image_constants.dart';
+
 class BeverageList {
   final String image;
   final String productName;
@@ -10,11 +12,11 @@ class BeverageList {
 
 }
 List<BeverageList> beverageList = [
-  BeverageList(image: 'assets/images/strawberry.png', productName: ' Strawberry Punch', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  BeverageList(image: 'assets/images/lemonade.png', productName: ' Lemonade', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  BeverageList(image: 'assets/images/chocolate.png', productName: ' Chocolate', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  BeverageList(image: 'assets/images/whisky.png', productName: ' Whisky', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  BeverageList(image: 'assets/images/choco_bakery.png', productName: ' Chocolate Bakery', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  BeverageList(image: 'assets/images/fruit_punch.png', productName: ' Fruit Punch', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BeverageList(image: ImageConstants.beveragesStrawBerryImage, productName: ' Strawberry Punch', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  BeverageList(image: ImageConstants.beveragesLemonadeImage, productName: ' Lemonade', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BeverageList(image: ImageConstants.beveragesChocolateImage, productName: ' Chocolate', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  BeverageList(image: ImageConstants.beveragesWhiskyImage, productName: ' Whisky', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  BeverageList(image: ImageConstants.beveragesChocoBakeryImage, productName: ' Chocolate Bakery', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  BeverageList(image: ImageConstants.beveragesFruitPunchImage, productName: ' Fruit Punch', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
 
 ];

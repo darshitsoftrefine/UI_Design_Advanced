@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tradly/image_constants.dart';
 import 'package:tradly/string_constants.dart';
 import 'package:tradly/themes/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'second_onboarding.dart';
 
 class Onboarding extends StatefulWidget {
@@ -40,8 +39,8 @@ class _OnboardingState extends State<Onboarding> {
                 const SizedBox(height: 50,),
                 Image.asset(ImageConstants.firstOnboardingScreen, width: 285, height: 243,),
                  const SizedBox(height: 70,),
-                Text(ConstantStrings.firstOnboardingText, style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
-                Text(ConstantStrings.firstOnboardingSecondText, style: GoogleFonts.montserrat(textStyle: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500))),
+                Text(ConstantStrings.firstOnboardingText, style: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500)),
+                Text(ConstantStrings.firstOnboardingSecondText, style: TextStyle(color: CustomColors.primaryColor, fontSize: 20, fontWeight: FontWeight.w500)),
                 const SizedBox(height: 60,),
 
                 Row(

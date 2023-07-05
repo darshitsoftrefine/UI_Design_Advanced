@@ -1,3 +1,5 @@
+import 'package:tradly/image_constants.dart';
+
 class FruitList {
   final String image;
   final String productName;
@@ -10,11 +12,11 @@ class FruitList {
 
 }
 List<FruitList> vegeList = [
-  FruitList(image: 'assets/images/avocado.png', productName: ' Avocado', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  FruitList(image: 'assets/images/banana.png', productName: ' Banana', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  FruitList(image: 'assets/images/orange.png', productName: ' Orage', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  FruitList(image: 'assets/images/papaya.png', productName: ' Papaya', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  FruitList(image: 'assets/images/pineapple.png', productName: ' Pineapple', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  FruitList(image: 'assets/images/watermelon.png', productName: ' Watermelon', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  FruitList(image: ImageConstants.fruitAvocadoImage, productName: ' Avocado', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  FruitList(image: ImageConstants.fruitBananaImage, productName: ' Banana', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  FruitList(image: ImageConstants.fruitOrangeImage, productName: ' Orange', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  FruitList(image: ImageConstants.fruitPapayaImage, productName: ' Papaya', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  FruitList(image: ImageConstants.fruitPineappleImage, productName: ' Pineapple', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  FruitList(image: ImageConstants.fruitWatermelonImage, productName: ' Watermelon', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
 
 ];

@@ -1,3 +1,5 @@
+import 'package:tradly/image_constants.dart';
+
 class EggList {
   final String image;
   final String productName;
@@ -10,11 +12,11 @@ class EggList {
 
 }
 List<EggList> eggList = [
-  EggList(image: 'assets/images/brown.png', productName: ' Brown Egg', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  EggList(image: 'assets/images/fresh.png', productName: ' Fresh Egg', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  EggList(image: 'assets/images/bundle.png', productName: ' Bundle Egg', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  EggList(image: 'assets/images/blue.png', productName: ' Blue Egg', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
-  EggList(image: 'assets/images/bird.png', productName: ' Bird Egg', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  EggList(image: 'assets/images/egg.png', productName: ' Egg', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  EggList(image: ImageConstants.eggBrownImage, productName: ' Brown Egg', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  EggList(image: ImageConstants.eggFreshImage, productName: ' Fresh Egg', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  EggList(image: ImageConstants.eggBundleImage, productName: ' Bundle Egg', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  EggList(image: ImageConstants.eggBlueImage, productName: ' Blue Egg', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  EggList(image: ImageConstants.eggBirdImage, productName: ' Bird Egg', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  EggList(image: ImageConstants.eggImage, productName: ' Egg', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
 
 ];

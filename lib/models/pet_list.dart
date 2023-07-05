@@ -1,3 +1,5 @@
+import 'package:tradly/image_constants.dart';
+
 class PetList {
   final String image;
   final String productName;
@@ -10,6 +12,6 @@ class PetList {
 
 }
 List<PetList> petList = [
-  PetList(image: 'assets/images/snack.png', productName: ' Pet Snack', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
-  PetList(image: 'assets/images/potion.png', productName: ' Potion Pet', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
+  PetList(image: ImageConstants.petSnackImage, productName: ' Pet Snack', logoText: 'Tradly', price: '\$25', cancelPrice: '\$35'),
+  PetList(image: ImageConstants.petPotionImage, productName: ' Potion Pet', logoText: 'Tradly', price: '\$25', cancelPrice: ''),
 ];
